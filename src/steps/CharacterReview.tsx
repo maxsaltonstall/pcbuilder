@@ -24,6 +24,7 @@ import {
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SaveIcon from '@mui/icons-material/Save';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 import PersonIcon from '@mui/icons-material/Person';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import ShieldIcon from '@mui/icons-material/Shield';
@@ -31,7 +32,9 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import SchoolIcon from '@mui/icons-material/School';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
+import { useState } from 'react';
 import { useCharacter } from '../context/CharacterContext';
+import { CharacterState } from '../types/character';
 import { calculateTotalSkillPoints, getAbilityModifier, getSkillPointsPerLevel, getMagicItemIntBonus } from '../services/skillCalculator';
 import { allocateSkillPoints } from '../services/skillRecommendations';
 import { recommendFeats } from '../services/featRecommendations';
@@ -40,6 +43,7 @@ import { recommendEquipment } from '../services/equipmentRecommendations';
 import { detectActiveFeatChains, analyzeFeatSynergies } from '../services/featChainDetector';
 import { saveCharacterToFile, loadCharacterFromFile } from '../services/characterStorage';
 import { SpellList } from '../components/SpellList';
+import CharacterComparison from '../components/CharacterComparison';
 
 interface CharacterReviewProps {
   onBack: () => void;
@@ -47,6 +51,8 @@ interface CharacterReviewProps {
 
 function CharacterReview({ onBack }: CharacterReviewProps) {
   const { state, resetCharacter, loadCharacter } = useCharacter();
+  const [comparisonCharacter, setComparisonCharacter] = useState<CharacterState | null>(null);
+  const [showComparison, setShowComparison] = useState(false);
 
   const handleSave = () => {
     try {
@@ -81,6 +87,17 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
   const handleNewCharacter = () => {
     if (window.confirm('Are you sure? This will clear all character data.')) {
       resetCharacter();
+    }
+  };
+
+  const handleCompare = async () => {
+    try {
+      const savedCharacter = await loadCharacterFromFile();
+      setComparisonCharacter(savedCharacter);
+      setShowComparison(true);
+    } catch (error) {
+      console.error('Error loading character for comparison:', error);
+      alert('Failed to load character for comparison.');
     }
   };
 
@@ -194,6 +211,17 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
   const abilityIncreases = progression
     .filter(l => l.abilityIncrease)
     .map(l => ({ level: l.levelNumber, ability: l.abilityIncrease! }));
+
+  // Show comparison view if active
+  if (showComparison && comparisonCharacter) {
+    return (
+      <CharacterComparison
+        character1={state}
+        character2={comparisonCharacter}
+        onClose={() => setShowComparison(false)}
+      />
+    );
+  }
 
   return (
     <Box>
@@ -993,7 +1021,7 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
 
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Button onClick={onBack}>Back</Button>
-        <Box sx={{ display: 'flex', gap: 2 }}>
+        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
           <Button
             startIcon={<FolderOpenIcon />}
             onClick={handleLoad}
@@ -1008,6 +1036,14 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
             color="success"
           >
             Save Character
+          </Button>
+          <Button
+            startIcon={<CompareArrowsIcon />}
+            onClick={handleCompare}
+            variant="outlined"
+            color="info"
+          >
+            Compare
           </Button>
           <Button onClick={handleNewCharacter} color="warning">
             New Character
