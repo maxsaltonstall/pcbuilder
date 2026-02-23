@@ -1,0 +1,31 @@
+[
+  {
+    "type": "Boost",
+    "actionType": "Swift action",
+    "description": "Augments attacks or abilities for the current turn",
+    "duration": "Usually until end of turn",
+    "examples": "Add fire damage to attacks, gain bonus to speed, enhance strikes"
+  },
+  {
+    "type": "Counter",
+    "actionType": "Immediate action",
+    "description": "Defensive reaction to enemy action",
+    "duration": "Instantaneous",
+    "examples": "Deflect arrows, avoid charges, counter attacks"
+  },
+  {
+    "type": "Strike",
+    "actionType": "Standard or full-round action",
+    "description": "Special attack with additional effects",
+    "duration": "One attack",
+    "examples": "Powerful blows with extra damage or special effects"
+  },
+  {
+    "type": "Stance",
+    "actionType": "Swift action to enter",
+    "description": "Continuous fighting style that provides ongoing benefits",
+    "duration": "Until changed or rendered helpless",
+    "examples": "Defensive postures, offensive stances, special movement modes",
+    "note": "Never expended, always available, only one active at a time"
+  }
+]

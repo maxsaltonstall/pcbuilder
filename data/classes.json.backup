@@ -1,0 +1,77 @@
+[
+  {
+    "id": "fighter",
+    "name": "Fighter",
+    "description": "A master of combat, skilled with a variety of weapons and armor.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": ["climb", "craft", "handle-animal", "intimidate", "jump", "ride", "swim"],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "wizard",
+    "name": "Wizard",
+    "description": "A powerful arcane spellcaster who studies magical arts.",
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": ["concentration", "craft", "decipher-script", "knowledge-arcana", "knowledge-all", "profession", "spellcraft"],
+    "baseAttackBonus": "poor",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "rogue",
+    "name": "Rogue",
+    "description": "A skilled thief and scout, master of stealth and deception.",
+    "hitDie": 6,
+    "skillPointsPerLevel": 8,
+    "classSkills": ["appraise", "balance", "bluff", "climb", "craft", "decipher-script", "diplomacy", "disable-device", "disguise", "escape-artist", "forgery", "gather-information", "hide", "intimidate", "jump", "listen", "move-silently", "open-lock", "perform", "profession", "search", "sense-motive", "sleight-of-hand", "spot", "swim", "tumble", "use-magic-device", "use-rope"],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "cleric",
+    "name": "Cleric",
+    "description": "A divine spellcaster who channels the power of a deity.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": ["concentration", "craft", "diplomacy", "heal", "knowledge-arcana", "knowledge-history", "knowledge-religion", "knowledge-planes", "profession", "spellcraft"],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "ranger",
+    "name": "Ranger",
+    "description": "A skilled woodsman and tracker who defends the wilderness.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 6,
+    "classSkills": ["climb", "concentration", "craft", "handle-animal", "heal", "hide", "jump", "knowledge-dungeoneering", "knowledge-geography", "knowledge-nature", "listen", "move-silently", "profession", "ride", "search", "spot", "survival", "swim", "use-rope"],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "source": "Player's Handbook"
+  }
+]

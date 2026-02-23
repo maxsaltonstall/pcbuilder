@@ -1,0 +1,407 @@
+[
+  {
+    "id": "appraise",
+    "name": "Appraise",
+    "description": "Use this skill to tell an antique from old junk, a sword that's old and fancy from an elven heirloom, and high-quality jewelry from cheap stuff made to look good.",
+    "keyAbility": "int",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "balance",
+    "name": "Balance",
+    "description": "Use this skill to keep your footing on narrow surfaces, uneven ground, or precarious surfaces.",
+    "keyAbility": "dex",
+    "trainedOnly": false,
+    "armorCheckPenalty": true,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "bluff",
+    "name": "Bluff",
+    "description": "Use this skill to deceive, trick, or mislead others.",
+    "keyAbility": "cha",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "climb",
+    "name": "Climb",
+    "description": "Use this skill to scale walls, cliffs, and other steep slopes.",
+    "keyAbility": "str",
+    "trainedOnly": false,
+    "armorCheckPenalty": true,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "concentration",
+    "name": "Concentration",
+    "description": "Use this skill to cast spells in difficult circumstances or maintain concentration.",
+    "keyAbility": "con",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "craft",
+    "name": "Craft",
+    "description": "Use this skill to make items using raw materials, such as armor, weapons, or other goods.",
+    "keyAbility": "int",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "decipher-script",
+    "name": "Decipher Script",
+    "description": "Use this skill to piece together the meaning of ancient runes, interpret an unfamiliar language, or read an encoded message.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "diplomacy",
+    "name": "Diplomacy",
+    "description": "Use this skill to negotiate, calm situations, or change attitudes.",
+    "keyAbility": "cha",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "disable-device",
+    "name": "Disable Device",
+    "description": "Use this skill to disarm traps or sabotage mechanical devices.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "disguise",
+    "name": "Disguise",
+    "description": "Use this skill to change your appearance or that of another person.",
+    "keyAbility": "cha",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "escape-artist",
+    "name": "Escape Artist",
+    "description": "Use this skill to slip bonds, wriggle through tight spaces, or escape from grapples.",
+    "keyAbility": "dex",
+    "trainedOnly": false,
+    "armorCheckPenalty": true,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "forgery",
+    "name": "Forgery",
+    "description": "Use this skill to create a fake document or detect a forged one.",
+    "keyAbility": "int",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "gather-information",
+    "name": "Gather Information",
+    "description": "Use this skill to pick up rumors, locate items or people, or get general information about a topic.",
+    "keyAbility": "cha",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "handle-animal",
+    "name": "Handle Animal",
+    "description": "Use this skill to drive a team of horses, teach a dog tricks, or train a griffon to bear a rider.",
+    "keyAbility": "cha",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "heal",
+    "name": "Heal",
+    "description": "Use this skill to tend to wounds, treat diseases, or care for poisoned characters.",
+    "keyAbility": "wis",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "hide",
+    "name": "Hide",
+    "description": "Use this skill to conceal yourself from enemies, slink past guards, or tail someone.",
+    "keyAbility": "dex",
+    "trainedOnly": false,
+    "armorCheckPenalty": true,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "intimidate",
+    "name": "Intimidate",
+    "description": "Use this skill to frighten or coerce others.",
+    "keyAbility": "cha",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "jump",
+    "name": "Jump",
+    "description": "Use this skill to leap over pits, jump down from heights, or vault obstacles.",
+    "keyAbility": "str",
+    "trainedOnly": false,
+    "armorCheckPenalty": true,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge-arcana",
+    "name": "Knowledge (Arcana)",
+    "description": "Use this skill to recall information about ancient mysteries, magic traditions, arcane symbols, cryptic phrases, constructs, dragons, and magical beasts.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge-architecture-and-engineering",
+    "name": "Knowledge (Architecture and Engineering)",
+    "description": "Use this skill to recall information about buildings, aqueducts, bridges, and fortifications.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge-dungeoneering",
+    "name": "Knowledge (Dungeoneering)",
+    "description": "Use this skill to recall information about aberrations, caverns, oozes, and spelunking.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge-geography",
+    "name": "Knowledge (Geography)",
+    "description": "Use this skill to recall information about lands, terrain, climate, and people.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge-history",
+    "name": "Knowledge (History)",
+    "description": "Use this skill to recall information about royalty, wars, colonies, migrations, and founding of cities.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge-local",
+    "name": "Knowledge (Local)",
+    "description": "Use this skill to recall information about legends, personalities, inhabitants, laws, customs, traditions, and humanoids.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge-nature",
+    "name": "Knowledge (Nature)",
+    "description": "Use this skill to recall information about animals, fey, giants, monstrous humanoids, plants, seasons and cycles, weather, and vermin.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge-nobility-and-royalty",
+    "name": "Knowledge (Nobility and Royalty)",
+    "description": "Use this skill to recall information about lineages, heraldry, family trees, mottoes, and personalities.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge-religion",
+    "name": "Knowledge (Religion)",
+    "description": "Use this skill to recall information about deities, ecclesiastical tradition, holy symbols, and undead.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge-the-planes",
+    "name": "Knowledge (The Planes)",
+    "description": "Use this skill to recall information about the Inner Planes, the Outer Planes, the Astral Plane, the Ethereal Plane, outsiders, elementals, and magic related to the planes.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "listen",
+    "name": "Listen",
+    "description": "Use this skill to hear approaching enemies, detect someone sneaking up on you, or eavesdrop.",
+    "keyAbility": "wis",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "move-silently",
+    "name": "Move Silently",
+    "description": "Use this skill to sneak up on someone or move quietly past guards.",
+    "keyAbility": "dex",
+    "trainedOnly": false,
+    "armorCheckPenalty": true,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "open-lock",
+    "name": "Open Lock",
+    "description": "Use this skill to pick locks.",
+    "keyAbility": "dex",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "perform",
+    "name": "Perform",
+    "description": "Use this skill to sing, dance, play an instrument, or put on any kind of performance.",
+    "keyAbility": "cha",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "profession",
+    "name": "Profession",
+    "description": "Use this skill to earn a living in a trade or professional role, such as cook, miner, or sailor.",
+    "keyAbility": "wis",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "ride",
+    "name": "Ride",
+    "description": "Use this skill to control a mount in combat, ride bareback, or stay mounted when your horse rears.",
+    "keyAbility": "dex",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "search",
+    "name": "Search",
+    "description": "Use this skill to find secret doors, traps, hidden compartments, or other details.",
+    "keyAbility": "int",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "sense-motive",
+    "name": "Sense Motive",
+    "description": "Use this skill to detect lies, predict someone's next action, or get a hunch about a social situation.",
+    "keyAbility": "wis",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "sleight-of-hand",
+    "name": "Sleight of Hand",
+    "description": "Use this skill to pick pockets, palm objects, or perform other acts of legerdemain.",
+    "keyAbility": "dex",
+    "trainedOnly": true,
+    "armorCheckPenalty": true,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "speak-language",
+    "name": "Speak Language",
+    "description": "Use this skill to learn to speak and understand additional languages.",
+    "keyAbility": "none",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "spellcraft",
+    "name": "Spellcraft",
+    "description": "Use this skill to identify spells, magic items, or magical effects.",
+    "keyAbility": "int",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "spot",
+    "name": "Spot",
+    "description": "Use this skill to notice details, detect hidden creatures, or see things at a distance.",
+    "keyAbility": "wis",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "survival",
+    "name": "Survival",
+    "description": "Use this skill to track creatures, hunt for food, avoid natural hazards, or predict the weather.",
+    "keyAbility": "wis",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "swim",
+    "name": "Swim",
+    "description": "Use this skill to move through water or other liquids.",
+    "keyAbility": "str",
+    "trainedOnly": false,
+    "armorCheckPenalty": true,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "tumble",
+    "name": "Tumble",
+    "description": "Use this skill to dive, roll, somersault, flip, and move through threatened squares.",
+    "keyAbility": "dex",
+    "trainedOnly": true,
+    "armorCheckPenalty": true,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "use-magic-device",
+    "name": "Use Magic Device",
+    "description": "Use this skill to activate magic items, including wands, scrolls, and other devices.",
+    "keyAbility": "cha",
+    "trainedOnly": true,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "use-rope",
+    "name": "Use Rope",
+    "description": "Use this skill to tie knots, bind prisoners, or splice rope together.",
+    "keyAbility": "dex",
+    "trainedOnly": false,
+    "armorCheckPenalty": false,
+    "source": "Player's Handbook"
+  }
+]

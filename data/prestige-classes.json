@@ -1,0 +1,3997 @@
+[
+  {
+    "name": "Black Flame Zealot",
+    "source": "Complete Divine",
+    "description": "Devoted to fire and darkness",
+    "hitDie": "d8"
+  },
+  {
+    "id": "abolisher",
+    "name": "Abolisher",
+    "description": "The abolisher is more than merely a devoted servant of the natural world. She is a crusader against that which taints, usurps, and replaces the ordered nature of things with alien desires and monstrous needs. She opposes aberrations with all her will and might in a constant battle to preserve what is pure in nature from that which lurks beyond the rim of sanity.",
+    "requirements": "Type: Cannot be an aberration. Alignment: Any nonchaotic. Skills: Knowledge (dungeoneering) 4 ranks, Knowledge (nature) 9 ranks. Feat: Track. Special: Wild empathy class feature.",
+    "source": "Lords of Madness"
+  },
+  {
+    "id": "acolyte-of-the-skin",
+    "name": "Acolyte of the Skin",
+    "description": "Vorta Nehalem: Male human warlock 6/acolyte of the skin 3; CR 9; Medium humanoid; 30 ft.; AC 23, touch 15, flat-footed 19; Base Atk",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "agent-retriever",
+    "name": "Agent Retriever",
+    "description": "Finding items, especially long-lost ones, is an agent retriever's specialty. A member of this class has a knack for hunting down unique and valuable items.",
+    "hitDie": "d6",
+    "requirements": [
+      {
+        "type": "alignment",
+        "restriction": "lawful"
+      },
+      {
+        "type": "skill",
+        "skillId": "gather-information",
+        "minimumRanks": 24
+      },
+      {
+        "type": "skill",
+        "skillId": "knowledge-planes",
+        "minimumRanks": 15
+      },
+      {
+        "type": "feat",
+        "featId": "track"
+      }
+    ],
+    "classSkills": [
+      "Appraise",
+      "Decipher Script",
+      "Diplomacy",
+      "Forgery",
+      "Gather Information",
+      "Knowledge (arcana)",
+      "Knowledge (geography)",
+      "Knowledge (history)",
+      "Knowledge (the planes)",
+      "Listen",
+      "Search",
+      "Spot"
+    ],
+    "skillPointsPerLevel": 6,
+    "source": "Epic Level Handbook",
+    "epicPrestige": true
+  },
+  {
+    "id": "alienist",
+    "name": "Alienist",
+    "description": "Alienists deal with powers and entities from terrifyingly Class Skills remote reaches of space and time. For them, magical power The alienist’s class skills (and the key ability for each skill) are is the triumph of the mind over the rude boundaries of Concentration (Con), Gather Information (Cha), Knowledge dimension, distance, and often, sanity. With knowledge and (all skills, taken individually) (Int), Listen (Wis), Profession determination, they pierce the barrier at the edge of time itself.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "int-modifier"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "animal-lord",
+    "name": "Animal Lord",
+    "description": "For an animal lord, a humanoid form is simply an accident of birth. In spirit, he belongs with the wild pack of wolves, the running herd of horses, or the dancing school of ﬁsh. His nearly hairless, two-legged form is a hindrance to being one with his true kind, but it is a hindrance he Each animal lord forms a bond with one group of animals. Apelords, bearlords, birdlords, catlords, horselords, sharklords, snakelords, and wolﬂords all exist. Animals",
+    "hitDie": 10,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "move-silently",
+      "survival"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 5
+      },
+      {
+        "type": "skill",
+        "skillId": "handle-animal",
+        "ranks": 4
+      },
+      {
+        "type": "feat",
+        "featId": "each-kind-of-animal\ncatlord:-cat"
+      },
+      {
+        "type": "feat",
+        "featId": "cheetah"
+      },
+      {
+        "type": "feat",
+        "featId": "dire-lion"
+      },
+      {
+        "type": "feat",
+        "featId": "dire-tiger"
+      },
+      {
+        "type": "feat",
+        "featId": "leopard"
+      },
+      {
+        "type": "text",
+        "description": "abilities, and so forth"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "arcane-archer",
+    "name": "Arcane Archer",
+    "description": "A master of both bow and magic, who imbues arrows with arcane power.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "craft",
+      "hide",
+      "listen",
+      "move-silently",
+      "ride",
+      "spot",
+      "survival",
+      "use-rope"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "race",
+        "description": "Elf or half-elf"
+      },
+      {
+        "type": "baseAttackBonus",
+        "description": "Base attack bonus +6",
+        "minimumBonus": 6
+      },
+      {
+        "type": "feat",
+        "description": "Point Blank Shot",
+        "featId": "point-blank-shot"
+      },
+      {
+        "type": "feat",
+        "description": "Precise Shot",
+        "featId": "precise-shot"
+      },
+      {
+        "type": "feat",
+        "description": "Weapon Focus (longbow or shortbow)",
+        "featId": "weapon-focus-bow"
+      },
+      {
+        "type": "casterLevel",
+        "description": "Ability to cast 1st-level arcane spells",
+        "minimumLevel": 1,
+        "spellType": "arcane"
+      }
+    ]
+  },
+  {
+    "id": "arcane-trickster",
+    "name": "Arcane Trickster",
+    "description": "A rogue who combines arcane magic with stealth and trickery.",
+    "hitDie": 4,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "appraise",
+      "balance",
+      "bluff",
+      "climb",
+      "concentration",
+      "craft",
+      "decipher-script",
+      "diplomacy",
+      "disable-device",
+      "disguise",
+      "escape-artist",
+      "gather-information",
+      "hide",
+      "jump",
+      "knowledge-arcana",
+      "listen",
+      "move-silently",
+      "open-lock",
+      "profession",
+      "sense-motive",
+      "search",
+      "sleight-of-hand",
+      "spellcraft",
+      "spot",
+      "swim",
+      "tumble",
+      "use-rope"
+    ],
+    "baseAttackBonus": "poor",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "good"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "alignment",
+        "description": "Any nonlawful"
+      },
+      {
+        "type": "skill",
+        "description": "Decipher Script 7 ranks",
+        "skillId": "decipher-script",
+        "minimumRanks": 7
+      },
+      {
+        "type": "skill",
+        "description": "Disable Device 7 ranks",
+        "skillId": "disable-device",
+        "minimumRanks": 7
+      },
+      {
+        "type": "skill",
+        "description": "Escape Artist 7 ranks",
+        "skillId": "escape-artist",
+        "minimumRanks": 7
+      },
+      {
+        "type": "skill",
+        "description": "Knowledge (arcana) 4 ranks",
+        "skillId": "knowledge-arcana",
+        "minimumRanks": 4
+      },
+      {
+        "type": "casterLevel",
+        "description": "Ability to cast mage hand and at least one arcane spell of 3rd level or higher",
+        "minimumLevel": 3,
+        "spellType": "arcane"
+      },
+      {
+        "type": "special",
+        "description": "Sneak attack +2d6"
+      }
+    ]
+  },
+  {
+    "id": "argent-savant",
+    "name": "Argent Savant",
+    "description": "",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "assassin",
+    "name": "Assassin",
+    "description": "A master of dealing quick, lethal blows and infiltration.",
+    "hitDie": 6,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "balance",
+      "bluff",
+      "climb",
+      "craft",
+      "decipher-script",
+      "diplomacy",
+      "disable-device",
+      "disguise",
+      "escape-artist",
+      "forgery",
+      "gather-information",
+      "hide",
+      "intimidate",
+      "jump",
+      "listen",
+      "move-silently",
+      "open-lock",
+      "search",
+      "sense-motive",
+      "sleight-of-hand",
+      "spot",
+      "swim",
+      "tumble",
+      "use-magic-device",
+      "use-rope"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "alignment",
+        "description": "Any evil"
+      },
+      {
+        "type": "skill",
+        "description": "Disguise 4 ranks",
+        "skillId": "disguise",
+        "minimumRanks": 4
+      },
+      {
+        "type": "skill",
+        "description": "Hide 8 ranks",
+        "skillId": "hide",
+        "minimumRanks": 8
+      },
+      {
+        "type": "skill",
+        "description": "Move Silently 8 ranks",
+        "skillId": "move-silently",
+        "minimumRanks": 8
+      },
+      {
+        "type": "special",
+        "description": "The character must kill someone for no other reason than to join the assassins"
+      }
+    ]
+  },
+  {
+    "id": "avenging-executioner",
+    "name": "Avenging Executioner",
+    "description": "“Scream. Scream like you made me scream.”",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "balance",
+      "bluff",
+      "climb",
+      "craft",
+      "disguise",
+      "escape-artist",
+      "hide",
+      "intimidate",
+      "jump",
+      "listen",
+      "move-silently",
+      "open-lock",
+      "profession",
+      "spot",
+      "use-rope"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 5
+      },
+      {
+        "type": "skill",
+        "skillId": "hide",
+        "ranks": 4
+      },
+      {
+        "type": "skill",
+        "skillId": "intimidate",
+        "ranks": 6
+      },
+      {
+        "type": "skill",
+        "skillId": "move-silently",
+        "ranks": 4
+      },
+      {
+        "type": "text",
+        "description": "Must have been tragically wronged in some manner"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "battle-trickster",
+    "name": "Battle Trickster",
+    "description": "“Oh, I’m terribly sorry. Is that my blade in your gut?” The battle trickster engages in combat not only to defeat enemies but to impress them with martial and acrobatic prowess. He amazes onlookers with daring and death-defying stunts, making a spectacle of war.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "balance",
+      "bluff",
+      "climb",
+      "craft",
+      "handle-animal",
+      "jump",
+      "profession",
+      "ride",
+      "swim",
+      "tumble",
+      "use-rope"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 5
+      },
+      {
+        "type": "skill",
+        "skillId": "any-three-skills",
+        "ranks": 6
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "bear-warrior",
+    "name": "Bear Warrior",
+    "description": "Bear Form (Su): A bear warrior can transform into a bear Many people, particularly those in “uncivilized” regions of (similar to the polymorph spell) while in a rage or frenzy. His the world, revere bears as symbols of the warrior’s strength only limit on the number of times per day he can assume a and battle prowess. By adopting the bear as a totem anima, bear form is the number of times per day he enters a rage or warriors of these people hope to tap into some of the bear’s frenzy, and the bea",
+    "hitDie": 12,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "beastmaster",
+    "name": "Beastmaster",
+    "description": "A beastmaster feels more at home among the animals of nature than fellow sentient beings. Over time, these wanderers befriend a wide variety of animals, from mighty dire lions to tiny weasels. Eventually, a beastmaster takes on aspects of her animal companions, becoming almost Druids and rangers are the most common beastmasters, thanks to those characters’ natural link with the animal world. Some barbarians, ﬁghters, or scouts also become beastmasters, particularly those with a strong afﬁnity fo",
+    "hitDie": 10,
+    "skillPointsPerLevel": 4,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "blackguard",
+    "name": "Blackguard",
+    "description": "A dark antipaladin who serves evil deities and consorts with fiends.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "diplomacy",
+      "handle-animal",
+      "heal",
+      "hide",
+      "intimidate",
+      "knowledge-religion",
+      "profession",
+      "ride"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "alignment",
+        "description": "Any evil"
+      },
+      {
+        "type": "baseAttackBonus",
+        "description": "Base attack bonus +6",
+        "minimumBonus": 6
+      },
+      {
+        "type": "skill",
+        "description": "Hide 5 ranks",
+        "skillId": "hide",
+        "minimumRanks": 5
+      },
+      {
+        "type": "skill",
+        "description": "Knowledge (religion) 2 ranks",
+        "skillId": "knowledge-religion",
+        "minimumRanks": 2
+      },
+      {
+        "type": "feat",
+        "description": "Cleave",
+        "featId": "cleave"
+      },
+      {
+        "type": "feat",
+        "description": "Improved Sunder",
+        "featId": "improved-sunder"
+      },
+      {
+        "type": "feat",
+        "description": "Power Attack",
+        "featId": "power-attack"
+      },
+      {
+        "type": "special",
+        "description": "The character must have made peaceful contact with an evil outsider who was summoned by him or someone else"
+      }
+    ]
+  },
+  {
+    "id": "bladesinger",
+    "name": "Bladesinger",
+    "description": "between black, brown, and dire bear forms. While in dire bear form, he gains a +20 bonus to Strength, a +2 bonus to Dexterity, and a +8 bonus to Constitution. Scent (Ex): At 3rd level, a bear warrior gains the scent special ability (see page 314 of the Monster Manual) while in Rage +1/Day (Ex): When a bear warrior attains 7th level, the number of times per day that he can enter a state of rage or frenzy increases by one. For example, a 7th-level barbarian/ 7th-level bear warrior can rage three t",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "while-raging",
+      "perform",
+      "spellcraft",
+      "medium",
+      "tumble"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 5
+      },
+      {
+        "type": "skill",
+        "skillId": "balance",
+        "ranks": 2
+      },
+      {
+        "type": "skill",
+        "skillId": "concentration",
+        "ranks": 4
+      },
+      {
+        "type": "skill",
+        "skillId": "tumble",
+        "ranks": 2
+      },
+      {
+        "type": "feat",
+        "featId": "combat-casting"
+      },
+      {
+        "type": "feat",
+        "featId": "combat-expertise"
+      },
+      {
+        "type": "feat",
+        "featId": "weapon\ndamage-reduction-1/–"
+      },
+      {
+        "type": "feat",
+        "featId": "improved-uncanny-dodge"
+      },
+      {
+        "type": "casterLevel",
+        "minimumCasterLevel": 1
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "blood-magus",
+    "name": "Blood Magus",
+    "description": "",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "bloodclaw-master",
+    "name": "Bloodclaw Master",
+    "description": "Shifter or wild shaper who combines Tiger Claw maneuvers with animal fury",
+    "requirements": "Tiger Claw stance, ability to shift or wild shape, Jump 9 ranks",
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "bloodhound",
+    "name": "Bloodhound",
+    "description": "A bandit king raids caravans on the road. An ogre pillages farms to the north. A sorcerer has kidnapped the mayor’s son and hidden him somewhere in the marsh—and the soldiers of the king cannot seem to stem the tide. The terriﬁed citizens have only one choice, and it isn’t cheap. A bloodhound tracks down wrongdoers and brings them to whatever justice awaits them. Low-level bloodhounds depend on their keen senses and careful training to hunt their targets. As they gain experience, their obsessive",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "bloodstorm-blade",
+    "name": "Bloodstorm Blade",
+    "description": "Thrown weapon specialist combining ranged attacks with martial disciplines",
+    "requirements": "Point Blank Shot, Weapon Focus (thrown weapon), Iron Heart or Desert Wind maneuver, BAB +5",
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "cancer_mage",
+    "name": "Cancer Mage",
+    "description": "A twisted arcane spellcaster who has been afflicted with a supernatural disease that grants dark powers. Cancer mages draw power from their own corruption and suffering.",
+    "requirements": "Skills: Heal 8 ranks, Knowledge (arcana) 8 ranks. Feats: Iron Will. Spells: Ability to cast 3rd-level arcane spells. Special: Must have been afflicted with a supernatural disease.",
+    "source": "Libris Mortis"
+  },
+  {
+    "id": "cavalier",
+    "name": "Cavalier",
+    "description": "Skill Points at Each Level: 2 + Int modifier. Representing the ultimate in mounted warfare, the cavalier is the quintessential knight in shining armor. The charge of Class Features the cavalier is among the most devastating offensive weapons All of the following are class features of the cavalier prestige",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "cerebremancer",
+    "name": "Cerebremancer",
+    "description": "A character who accesses both the arcane mysteries of spellcasting and the psionic powers of the mind. Cerebremancers are driven, ambitious sorts willing to sacrifice more subtle abilities for pure power.",
+    "requirements": {
+      "skills": [
+        {
+          "name": "Knowledge (arcana)",
+          "ranks": 6
+        },
+        {
+          "name": "Knowledge (psionics)",
+          "ranks": 6
+        }
+      ],
+      "feats": [],
+      "spellcasting": "Able to cast 2nd-level arcane spells",
+      "manifesting": "Able to manifest 2nd-level powers"
+    },
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft-alchemy",
+      "decipher-script",
+      "knowledge-arcana",
+      "knowledge-psionics",
+      "profession",
+      "psicraft",
+      "spellcraft"
+    ],
+    "source": "Expanded Psionics Handbook"
+  },
+  {
+    "id": "cloaked-dancer",
+    "name": "Cloaked Dancer",
+    "description": "“Watch me. Watch my dance. Ignore my hands. Ignore your —Mina Longacre, reciting the cloaked dancer’s mantra",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "appraise",
+      "balance",
+      "bluff",
+      "climb",
+      "concentration",
+      "craft",
+      "diplomacy",
+      "disguise",
+      "escape\nartist",
+      "gather-information",
+      "jump",
+      "perform",
+      "profession",
+      "sense-motive",
+      "sleight-of-hand",
+      "speak-language",
+      "swim",
+      "tumble",
+      "use\nmagic-device",
+      "use-rope"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "disable-device",
+        "ranks": 6
+      },
+      {
+        "type": "skill",
+        "skillId": "search",
+        "ranks": 6
+      },
+      {
+        "type": "feat",
+        "featId": "chord-of-distraction*"
+      },
+      {
+        "type": "feat",
+        "featId": "mobility"
+      },
+      {
+        "type": "feat",
+        "featId": "quick-draw"
+      },
+      {
+        "type": "text",
+        "description": "Actions bardic music 7/day (inspire courage +1, fascinate 3 targets, countersong, suggestion), enchanting dance\n3/day (beguiling dance, wearying dance; DC 17)\nCombat Gear panic button (escaping)*, 2 p"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "combat-trapsmith",
+    "name": "Combat Trapsmith",
+    "description": "“Go on ahead. I’ve got a surprise for those guys.” Combat trapsmiths can litter a battlefield or dungeon with devices of their own cunning design. They can put together a variety of traps, ranging from annoying to deadly, in mere seconds. With a bit of preparation, a combat trapsmith can turn a difficult battle into an easy",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "appraise",
+      "balance",
+      "climb",
+      "concentration",
+      "craft",
+      "disable-device",
+      "escape-artist",
+      "hide",
+      "jump",
+      "knowledge",
+      "listen",
+      "move-silently",
+      "open-lock",
+      "profession",
+      "search",
+      "spot",
+      "tumble",
+      "use-rope"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "disable-device",
+        "ranks": 6
+      },
+      {
+        "type": "skill",
+        "skillId": "search",
+        "ranks": 6
+      },
+      {
+        "type": "text",
+        "description": "Trapfinding"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "cosmic-descryer",
+    "name": "Cosmic Descryer",
+    "description": "The cosmic descryer is the premier class for those who would explore the cosmos and unlock its secrets.",
+    "hitDie": "d6",
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "knowledge-planes",
+        "minimumRanks": 24
+      },
+      {
+        "type": "skill",
+        "skillId": "spellcraft",
+        "minimumRanks": 24
+      },
+      {
+        "type": "spellcasting",
+        "minimumSpellLevel": 7
+      },
+      {
+        "type": "other",
+        "description": "Must have previously traveled to any other plane of existence"
+      }
+    ],
+    "classSkills": [
+      "Concentration",
+      "Craft (any)",
+      "Knowledge (all skills, taken individually)",
+      "Profession",
+      "Spellcraft"
+    ],
+    "skillPointsPerLevel": 2,
+    "source": "Epic Level Handbook",
+    "epicPrestige": true
+  },
+  {
+    "id": "daggerspell-mage",
+    "name": "Daggerspell Mage",
+    "description": "In a reclusive monastery in the heart of an ancient forest, a varied group of druids and arcane spellcasters train together. The adherents of this monastery work to perfect a unique ﬁghting and spellcasting style that relies on wielding a pair of daggers at all times. Some of these students—known as daggerspell mages—blend Daggerspell mages see the quick movements of their deadly daggers as an attendant part of their spellcasting. These sometimes reclusive ﬁgures remain spellcasters ﬁrst and mel",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "darkrunner",
+    "name": "Darkrunner",
+    "description": "Darkrunners devote their lives to traveling the haunted underground depths. Some hire out their services as guides to those who wish to navigate the lightless ways, while others are lone wolves who simply wish to explore the deepest reaches of this wondrous and dangerous realm. They understand the lay of the subterranean world like no other, and use its terrain and features to great advantage in combat.",
+    "requirements": "Skills: Knowledge (dungeoneering) 5 ranks, Search 5 ranks, Survival 7 ranks. Feats: Alertness, Track. Special: Darkvision as a racial trait or class feature. Special: You must seek out a chapter house of the Darkrunner Guild and successfully petition to join the guild.",
+    "source": "Lords of Madness"
+  },
+  {
+    "id": "deepstone-sentinel",
+    "name": "Deepstone Sentinel",
+    "description": "Defender who masters Stone Dragon discipline and mountain's endurance",
+    "requirements": "Stone Dragon stance, Endurance, Dodge, BAB +5",
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "dervish",
+    "name": "Dervish",
+    "description": "Combat Style (Ex): Nexal has selected archery. He gains the Rapid Shot feat without having to meet the normal prerequisites. Dodge Critical (Ex): Once per day Nexal can attempt a Reflex save (DC 20 + weapon’s enhancement bonus) to turn a Elf Traits (Ex): Immunity to magic sleep spells and effects; +2 bonus on saves against enchantments; entitled to a Search check when within 5 feet of a secret or concealed door. Favored Enemy (Ex): Nexal gains a +2 bonus on his Bluff, Listen, Sense Motive, Spot,",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "int-modifier"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 5
+      },
+      {
+        "type": "skill",
+        "skillId": "tumble",
+        "ranks": 3
+      },
+      {
+        "type": "feat",
+        "featId": "combat-expertise"
+      },
+      {
+        "type": "feat",
+        "featId": "mobility"
+      },
+      {
+        "type": "feat",
+        "featId": "weapon-focus\nany-slashing-melee-weapon"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "divine-emissary",
+    "name": "Divine Emissary",
+    "description": "A divine emissary is a mortal who has been selected by a deity to serve as a representative of the deity's interests in the mortal world.",
+    "hitDie": "d10",
+    "requirements": [
+      {
+        "type": "other",
+        "description": "Must be selected by a deity"
+      },
+      {
+        "type": "level",
+        "minimumLevel": 21
+      },
+      {
+        "type": "other",
+        "description": "Must have 10,000 XP or more"
+      }
+    ],
+    "classSkills": [
+      "Varies by deity"
+    ],
+    "skillPointsPerLevel": 8,
+    "source": "Epic Level Handbook",
+    "epicPrestige": true
+  },
+  {
+    "id": "dragon-disciple",
+    "name": "Dragon Disciple",
+    "description": "A sorcerer who ignites their dragon blood to gain draconic powers.",
+    "hitDie": 12,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "diplomacy",
+      "escape-artist",
+      "gather-information",
+      "knowledge-all",
+      "listen",
+      "profession",
+      "search",
+      "speak-language",
+      "spellcraft",
+      "spot"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "race",
+        "description": "Any nondragon (cannot already be a half-dragon)"
+      },
+      {
+        "type": "skill",
+        "description": "Knowledge (arcana) 8 ranks",
+        "skillId": "knowledge-arcana",
+        "minimumRanks": 8
+      },
+      {
+        "type": "language",
+        "description": "Draconic"
+      },
+      {
+        "type": "special",
+        "description": "Ability to cast arcane spells without preparation"
+      }
+    ]
+  },
+  {
+    "id": "dread-pirate",
+    "name": "Dread Pirate",
+    "description": "Thugs and cutthroats in every port lay claim to the title “pirate,” but actually making a fortune through piracy is no easy task. A dread pirate, however, has mastered every aspect of larceny on the high seas. His network of contacts tells him when a particularly valuable cargo is shipping out. After a ﬂawless ambush at sea, he swings aboard the target ship on a rope, rapier in hand. Once he and his shipmates have overpowered the prize vessel’s crew, they liberate the cargo and make their escape",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "dread_necromancer",
+    "name": "Dread Necromancer",
+    "description": "A base class focused on necromancy and creating undead. Dread necromancers are master manipulators of negative energy and command over the undead. They gain their power through dark pacts and forbidden knowledge.",
+    "requirements": "This is a base class, not a prestige class. See Libris Mortis for full class details.",
+    "source": "Libris Mortis"
+  },
+  {
+    "id": "duelist",
+    "name": "Duelist",
+    "description": "A nimble fighter who makes precise attacks with light weapons.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "balance",
+      "bluff",
+      "escape-artist",
+      "jump",
+      "listen",
+      "perform",
+      "sense-motive",
+      "spot",
+      "tumble"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "description": "Base attack bonus +6",
+        "minimumBonus": 6
+      },
+      {
+        "type": "skill",
+        "description": "Perform 3 ranks",
+        "skillId": "perform",
+        "minimumRanks": 3
+      },
+      {
+        "type": "skill",
+        "description": "Tumble 5 ranks",
+        "skillId": "tumble",
+        "minimumRanks": 5
+      },
+      {
+        "type": "feat",
+        "description": "Dodge",
+        "featId": "dodge"
+      },
+      {
+        "type": "feat",
+        "description": "Mobility",
+        "featId": "mobility"
+      },
+      {
+        "type": "feat",
+        "description": "Weapon Finesse",
+        "featId": "weapon-finesse"
+      }
+    ]
+  },
+  {
+    "id": "dungeon-delver",
+    "name": "Dungeon Delver",
+    "description": "who lack the necessary skill and savvy perish anonymously on unsuccessful expeditions, leaving behind their bones Adaptation: Some of the most interesting adaptations for the dungeon delver prestige class involve associating it with a certain race. Although dwarves and gnomes are natural choices because of their ties with underground life, dungeon delvers of less obvious races such as humans, dark elves, and halﬂings are interesting as well because such characters offer something other than the ",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "dwarven-defender",
+    "name": "Dwarven Defender",
+    "description": "A dwarven champion who becomes an immovable bastion of defense.",
+    "hitDie": 12,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "craft",
+      "listen",
+      "sense-motive",
+      "spot"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "race",
+        "description": "Dwarf"
+      },
+      {
+        "type": "alignment",
+        "description": "Any lawful"
+      },
+      {
+        "type": "baseAttackBonus",
+        "description": "Base attack bonus +7",
+        "minimumBonus": 7
+      },
+      {
+        "type": "feat",
+        "description": "Dodge",
+        "featId": "dodge"
+      },
+      {
+        "type": "feat",
+        "description": "Endurance",
+        "featId": "endurance"
+      },
+      {
+        "type": "feat",
+        "description": "Toughness",
+        "featId": "toughness"
+      }
+    ]
+  },
+  {
+    "id": "effigy-master",
+    "name": "Effigy Master",
+    "description": "",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "eldritch-knight",
+    "name": "Eldritch Knight",
+    "description": "A warrior who blends martial prowess with arcane magic.",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "decipher-script",
+      "jump",
+      "knowledge-arcana",
+      "knowledge-nobility",
+      "ride",
+      "sense-motive",
+      "spellcraft",
+      "swim"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "feat",
+        "description": "Weapon Proficiency (martial or exotic)",
+        "featId": "martial-weapon-proficiency"
+      },
+      {
+        "type": "casterLevel",
+        "description": "Ability to cast 3rd-level arcane spells",
+        "minimumLevel": 3,
+        "spellType": "arcane"
+      }
+    ]
+  },
+  {
+    "id": "elemental-savant",
+    "name": "Elemental Savant",
+    "description": "",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "elocater",
+    "name": "Elocater",
+    "description": "A psionic character who has tapped into the speed inherent in all psionic energy, becoming one with motion itself. Elocaters move at impossible speeds and gain supernatural mobility.",
+    "requirements": {
+      "skills": [
+        {
+          "name": "Concentration",
+          "ranks": 8
+        },
+        {
+          "name": "Jump",
+          "ranks": 5
+        },
+        {
+          "name": "Perform (dance)",
+          "ranks": 2
+        },
+        {
+          "name": "Tumble",
+          "ranks": 5
+        }
+      ],
+      "feats": [
+        "dodge",
+        "mobility",
+        "spring-attack"
+      ],
+      "special": "Ability to manifest 1st-level powers"
+    },
+    "hitDie": 6,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "balance",
+      "climb",
+      "concentration",
+      "craft",
+      "diplomacy",
+      "escape-artist",
+      "jump",
+      "knowledge-psionics",
+      "listen",
+      "perform",
+      "profession",
+      "psicraft",
+      "sense-motive",
+      "spot",
+      "swim",
+      "tumble",
+      "use-psionic-device",
+      "use-rope"
+    ],
+    "source": "Expanded Psionics Handbook"
+  },
+  {
+    "id": "enlightened-fist",
+    "name": "Enlightened Fist",
+    "description": "Not all monks pursue metaphysical perfection to the exclusion of all other study. Some monks combine a rigorous discipline of academic study with martial arts and development of the body. For these monks, that study includes the practice of magic and the implementation of certain arcane tricks into their unarmed combat styles. These enlightened fists master the use of touch spells, creating new forms of combat where their fists strike with blinding speed, phenomenal power, and magical energy. Mo",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "int-modifier"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "epic-infiltrator",
+    "name": "Epic Infiltrator",
+    "description": "An epic infiltrator is a master of disguise and deception, capable of infiltrating any location or organization.",
+    "hitDie": "d6",
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "bluff",
+        "minimumRanks": 24
+      },
+      {
+        "type": "skill",
+        "skillId": "disguise",
+        "minimumRanks": 24
+      },
+      {
+        "type": "skill",
+        "skillId": "gather-information",
+        "minimumRanks": 10
+      },
+      {
+        "type": "classFeature",
+        "feature": "sneak-attack",
+        "dice": 6
+      }
+    ],
+    "classSkills": [
+      "Balance",
+      "Bluff",
+      "Climb",
+      "Diplomacy",
+      "Disable Device",
+      "Disguise",
+      "Escape Artist",
+      "Forgery",
+      "Gather Information",
+      "Hide",
+      "Intimidate",
+      "Jump",
+      "Listen",
+      "Move Silently",
+      "Open Lock",
+      "Search",
+      "Sense Motive",
+      "Sleight of Hand",
+      "Spot",
+      "Tumble",
+      "Use Magic Device",
+      "Use Rope"
+    ],
+    "skillPointsPerLevel": 8,
+    "source": "Epic Level Handbook",
+    "epicPrestige": true
+  },
+  {
+    "id": "eternal-blade",
+    "name": "Eternal Blade",
+    "description": "Time-manipulating warrior using Diamond Mind to control flow of battle",
+    "requirements": "Diamond Mind stance, Concentration 10 ranks, BAB +5",
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "exemplar",
+    "name": "Exemplar",
+    "description": "An exemplar is someone who believes that most individuals and creatures possess a wellspring of untapped talent and capability, and that the multiverse would be a better place if only they would all try to live up to their potential. To her mind, the best way to encourage this behavior in",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "exotic-weapon-master",
+    "name": "Exotic Weapon Master",
+    "description": "Characters of any race or background can become exotic Double Weapon Defense: When wielding an exotic double weapon masters; the only real requirement is commitment weapon with both hands, the character gains a +1 shield and perseverance. Nevertheless, most exotic weapon masters are human, because members of that race have the most expoExotic Reach: When wielding an exotic weapon with reach, sure to new cultures and thus the most opportunity to take the character may make an attack of opportunit",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "craft",
+      "intimidate",
+      "profesfeat"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 6
+      },
+      {
+        "type": "feat",
+        "featId": "exotic-weapon-proficiency-any-exotic-weapon"
+      },
+      {
+        "type": "feat",
+        "featId": "his-mastery-with-an-exotic-weapon"
+      },
+      {
+        "type": "feat",
+        "featId": "confound-his-oppoweapon-focus-any-exotic-weapon"
+      },
+      {
+        "type": "text",
+        "description": "Races that have familiarity with an exotic weapon\na single opponent within 30 feet that can see him, adding\nhis base attack bonus to the result"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "eye-of-gruumsh",
+    "name": "Eye of Gruumsh",
+    "description": "Most people think they have seen the worst that orcs can breed when an orc barbarian comes raging over a hilltop— until they see a one-eyed orc barbarian come raging over a hilltop. This creature may well be an eye of Gruumsh, an orc so devoted to his evil deity that he has disfigured himself in In an epic battle at the dawn of time, the elven deity Corellon Larethian stabbed out Gruumsh’s left eye. Filled with rage and hatred, the orc deity called for followers loyal enough to serve in his imag",
+    "hitDie": 12,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 6
+      },
+      {
+        "type": "feat",
+        "featId": "exotic-weapon-proficiency-orc-double-axe"
+      },
+      {
+        "type": "feat",
+        "featId": "within-30-feet-of-him"
+      },
+      {
+        "type": "text",
+        "description": "The character must be a worshiper of Gruumsh\na +2 morale bonus on Will saves"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "fist-of-the-forest",
+    "name": "Fist of the Forest",
+    "description": "“To be one with the wild, you must become wild yourself. It’s only",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Champion"
+  },
+  {
+    "id": "fist-of-zuoken",
+    "name": "Fist of Zuoken",
+    "description": "A master of unarmed combat who channels psionic energy through their body. Fists of Zuoken combine monk-like martial arts with psionic power, following the teachings of the legendary psion-monk Zuoken.",
+    "requirements": {
+      "skills": [
+        {
+          "name": "Concentration",
+          "ranks": 9
+        },
+        {
+          "name": "Knowledge (psionics)",
+          "ranks": 4
+        }
+      ],
+      "feats": [
+        "improved-unarmed-strike",
+        "wild-talent"
+      ],
+      "special": "Still mind class feature"
+    },
+    "hitDie": 6,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "autohypnosis",
+      "balance",
+      "concentration",
+      "craft",
+      "escape-artist",
+      "hide",
+      "jump",
+      "knowledge-psionics",
+      "listen",
+      "move-silently",
+      "profession",
+      "psicraft",
+      "sense-motive",
+      "spot",
+      "tumble"
+    ],
+    "source": "Expanded Psionics Handbook"
+  },
+  {
+    "id": "fleshwarper",
+    "name": "Fleshwarper",
+    "description": "Fleshwarpers are masters of biological manipulation, using arcane magic to reshape living flesh into new and often disturbing forms. They study the secrets of aberrations and apply them to create monstrous grafts and transformations.",
+    "requirements": "Skills: Craft (any) 4 ranks, Heal 8 ranks, Knowledge (arcana) 4 ranks. Feats: Graft Flesh. Spells: Able to cast 3rd-level arcane spells.",
+    "source": "Lords of Madness"
+  },
+  {
+    "id": "fochlucan-lyrist",
+    "name": "Fochlucan Lyrist",
+    "description": "Warrior, thief, spy, poet, woodland champion—the Fochlucan lyrist is a legendary ﬁgure who serves as the herald and teacher to great kings, the champion of the common folk, and the keeper of lore long forgotten elsewhere. Only the best and brightest are invited to become Fochlucan lyrists, and those who eventually win the approval of the Fochlucan College’s masters are remarkable individuals indeed, skilled in swordplay, Those who aspire to join the Fochlucan College face a long and difﬁcult roa",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "frenzied-berserker",
+    "name": "Frenzied Berserker",
+    "description": "The random madness of the thunderstorm and the unpredictAttack ability of the slaadi come together in the soul of the frenzied berserker. Unlike most other characters, she does not fight to achieve some heroic goal or defeat a loathsome villain. Those are mere excuses—it is the thrill of combat that draws her.",
+    "hitDie": 12,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "frostburn_pc_cloud_anchorite",
+    "name": "Cloud Anchorite",
+    "description": "Monastic recluses who establish monasteries on remote mountaintops above 12,000 feet, training in rarefied chill air to achieve immortality while maintaining life and awareness. They excel at climbing and surviving in high altitudes.",
+    "requirements": "Alignment: Any nonchaotic; Base Fortitude Save: +5; Skills: Climb 9 ranks, Jump 9 ranks, Knowledge (religion) 9 ranks, Survival 4 ranks; Feats: Improved Unarmed Combat, Mountaineer; Special: Must live for a week on their own in a wilderness region above 12,000 feet altitude",
+    "source": "Frostburn"
+  },
+  {
+    "id": "frostburn_pc_cryokineticist",
+    "name": "Cryokineticist",
+    "description": "Master of cold psionic energy who finds beauty in the crystalline structure cold imposes on all it touches. Develops abilities to harness pure elemental cold for protection, transfiguration, and attack.",
+    "requirements": "Alignment: Any lawful; Skills: Concentration 8 ranks, Craft (alchemy) 1 rank, Knowledge (psionics) 2 ranks; Powers: Able to manifest the energy emanation power",
+    "source": "Frostburn"
+  },
+  {
+    "id": "frostburn_pc_disciple_of_thrym",
+    "name": "Disciple of Thrym",
+    "description": "Dedicated clergy of Thrym, Lord of the Frost Giants, who travel the multiverse preaching about Fimbulwinter, an enduring cold that heralds the end of the world. They undermine servants of Thor and Loki while preparing for Ragnarok.",
+    "requirements": "Alignment: Any nongood; Skills: Intimidate 4 ranks, Survival 8 ranks; Base Attack Bonus: +4; Feat: Weapon Focus (greataxe); Special: Cold Endurance feat or cold subtype",
+    "source": "Frostburn"
+  },
+  {
+    "id": "frostburn_pc_frost_mage",
+    "name": "Frost Mage",
+    "description": "Spellcaster from lands of cold, snow, and ice who becomes adapted to cold environments as their skin slowly turns to frost. They harness the natural or magically enhanced frostfell environment to empower their own spells.",
+    "requirements": "Feats: Frozen Magic; Skills: Knowledge (arcana) 8 ranks; Spells: Able to cast 1st-level arcane spells; Special: Must spend 24 hours unprotected in a blizzard",
+    "source": "Frostburn"
+  },
+  {
+    "id": "frostburn_pc_frostrager",
+    "name": "Frostrager",
+    "description": "Barbarian whose ferocity and rage impress even their fellow barbarians. Believed by some to be gifted (and by others cursed) by the frost giant deity Thrym with an unstable but powerful supernatural battle rage that causes them to increase in size and infuse their fists and weapons with cold shards of ice.",
+    "requirements": "Base Attack Bonus: +6; Skills: Intimidate 4 ranks, Survival 4 ranks; Feats: Frozen Berserker, Improved Unarmed Strike, Power Attack; Special: Rage as a class ability; Special: Must have been reduced to fewer than 0 hit points by cold damage",
+    "source": "Frostburn"
+  },
+  {
+    "id": "frostburn_pc_knight_iron_glacier",
+    "name": "Knight of the Iron Glacier",
+    "description": "Member of a mercenary company founded nearly two hundred years ago by exiled general Aengrist. They provide pockets of shelter and law in the frostfell, regularly patrol trade routes, and ride atop war-trained megaloceroses. Aengrist has become a young deity worshiped by the order.",
+    "requirements": "Alignment: Lawful good or lawful neutral; Skills: Handle Animal 5 ranks, Ride 9 ranks, Survival 2 ranks; Feats: Animal Affinity, Exotic Weapon Proficiency (bastard sword), Mounted Combat, Ride-By Attack; Special: Must prove noble intentions through a quest or task",
+    "source": "Frostburn"
+  },
+  {
+    "id": "frostburn_pc_primeval",
+    "name": "Primeval",
+    "description": "Warrior who has tapped into racial memories to find and forge a bond with an ancient creature. Draws incredible power and strength from this bond, and can change form into this creature with increasing skill. Many neanderthal tribes count primevals among their strongest warriors.",
+    "requirements": "Alignment: Any nonlawful; Base Attack Bonus: +8; Skills: Handle Animal 5 ranks, Knowledge (nature) 5 ranks, Survival 5 ranks; Feats: Endurance, Self-Sufficient, Toughness",
+    "source": "Frostburn"
+  },
+  {
+    "id": "frostburn_pc_rimefire_witch",
+    "name": "Rimefire Witch",
+    "description": "Character who follows the call of a rimefire eidolon (fragments of the defeated uldra deity Hleid) and becomes infused with great power. Gains magical abilities including channeling rimefire as a ranged attack, and slowly transforms into a devoted guardian of the eidolon.",
+    "requirements": "Skills: Concentration 6 ranks, Knowledge (history) 6 ranks, Knowledge (religion) 9 ranks, Spellcraft 6 ranks; Feats: Iron Will, Mark of Hleid; Spells: Able to cast 1st-level divine spells; Patron Deity: Hleid; Special: Must receive a vivid dream call and travel to the rimefire eidolon's iceberg",
+    "source": "Frostburn"
+  },
+  {
+    "id": "frostburn_pc_stormsinger",
+    "name": "Stormsinger",
+    "description": "Bard who has learned secret methods of harnessing the magic powers of music to influence and control the weather. These songs have greater effects in the frostfell than in temperate or tropical regions. Often hired by ships to protect against powerful storms.",
+    "requirements": "Skills: Concentration 8 ranks, Knowledge (arcana) 8 ranks, Knowledge (geography) 4 ranks, Knowledge (nature) 4 ranks, Perform (sing) 8 ranks, Spellcraft 4 ranks; Feats: Magical Aptitude, Storm Magic; Special: Must have the bardic music class ability",
+    "source": "Frostburn"
+  },
+  {
+    "id": "frostburn_pc_winterhaunt_iborighu",
+    "name": "Winterhaunt of Iborighu",
+    "description": "Minion of the cult of Iborighu, the Frozen King, who lusts for nothing less than eternal winter and aims to bring down an eternal ice age upon the world. Especially feared for their ability to wield cold magic so powerful it can harm creatures normally immune to cold.",
+    "requirements": "Alignment: Chaotic neutral, chaotic evil, or neutral evil; Skills: Concentration 8 ranks, Knowledge (arcana) 5 ranks, Knowledge (religion) 8 ranks; Feats: Chosen of Iborighu, Craft Wondrous Item, Piercing Cold; Spells: Able to cast 1st-level divine spells; Patron Deity: Iborighu; Special: Must successfully create an iceheart",
+    "source": "Frostburn"
+  },
+  {
+    "id": "geometer",
+    "name": "Geometer",
+    "description": "",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "ghost-faced-killer",
+    "name": "Ghost-Faced Killer",
+    "description": "From out of nothing the specter of death appears, an armored shadow with a brilliant blade held high. In a ﬂash the katana falls, severing life from limb in a bloody arc. All around, screams of terror and shouts of fear erupt, as quaking hands draw blades to ﬁght the masked murderer. His target dead, the ghost-faced killer walks calmly away as swords and ﬁsts pass harmlessly through Long ago, a persecuted clan of dangerous warriors sought a way to take revenge against their oppressors. Through s",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "gnome-giant-slayer",
+    "name": "Gnome Giant-Slayer",
+    "description": "In every gnome community, only a select few individuals of extraordinary courage take up the mantle of giant-slayer. Relying on a combination of agility, combat prowess, and pure craftiness, the gnome giant-slayer is the bane of all creatures who use their size to terrorize the small or weak. The champion of those far-too-often trampled underfoot, the gnome giant-slayer stands far taller than his stature would suggest. As the ultimate believers that “The bigger they are, the harder they fall,” t",
+    "hitDie": 10,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "int-modifier"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 5
+      },
+      {
+        "type": "skill",
+        "skillId": "escape-artist",
+        "ranks": 3
+      },
+      {
+        "type": "skill",
+        "skillId": "ride",
+        "ranks": 6
+      },
+      {
+        "type": "skill",
+        "skillId": "spot",
+        "ranks": 3
+      },
+      {
+        "type": "feat",
+        "featId": "mobility"
+      },
+      {
+        "type": "feat",
+        "featId": "spring-attack"
+      },
+      {
+        "type": "casterLevel",
+        "minimumCasterLevel": 1
+      },
+      {
+        "type": "text",
+        "description": "ability), he can attempt to roll with the damage"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "gray-guard",
+    "name": "Gray Guard",
+    "description": "“Does your stout armor give you peace of mind? Does your holy sword help you sleep at night? Mine do not.” The typical image of a paladin is a proud knight of noble bearing, resplendent in armor bright as sunlight and bearing a sword shining with the purity of his cause. This archetype, upheld by both idealistic knights and their enemies, has killed countless honorable warriors. Taking a cue from the enemies of their faith, many good-aligned religions have established secretive orders of the mos",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "bluff",
+      "concentration",
+      "disguise",
+      "forgery",
+      "handle-animal",
+      "heal",
+      "intimidate",
+      "knowledge",
+      "knowledge",
+      "knowledge",
+      "ride",
+      "sense-motive"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "green-star-adept",
+    "name": "Green Star Adept",
+    "description": "becoming a Green Star adept, he must decide to which class to add each level for the purpose of determining spells per Damage Reduction (Ex): The starmetal infusion reinforces the flesh of a Green Star adept, making him resistant to physical blows. He gains damage reduction 1/adamantine. Each level thereafter, his damage reduction improves by 1, until by 10th level, he Improved Caster Level (Ex): A Green Star adept adds his class level to his caster level in another arcane spellcasting class to ",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "guardian-paramount",
+    "name": "Guardian Paramount",
+    "description": "The guardian paramount is the ultimate protector, a warrior dedicated to defending others at all costs.",
+    "hitDie": "d12",
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimum": 23
+      },
+      {
+        "type": "skill",
+        "skillId": "listen",
+        "minimumRanks": 15
+      },
+      {
+        "type": "skill",
+        "skillId": "sense-motive",
+        "minimumRanks": 15
+      },
+      {
+        "type": "skill",
+        "skillId": "spot",
+        "minimumRanks": 15
+      },
+      {
+        "type": "feat",
+        "featId": "combat-reflexes"
+      },
+      {
+        "type": "feat",
+        "featId": "improved-disarm"
+      }
+    ],
+    "classSkills": [
+      "Climb",
+      "Craft",
+      "Handle Animal",
+      "Intimidate",
+      "Jump",
+      "Listen",
+      "Ride",
+      "Sense Motive",
+      "Spot",
+      "Swim"
+    ],
+    "skillPointsPerLevel": 2,
+    "source": "Epic Level Handbook",
+    "epicPrestige": true
+  },
+  {
+    "id": "hallowed_witch",
+    "name": "Hallowed Witch",
+    "description": "A divine spellcaster who channels positive energy to protect the living and destroy undead. Hallowed witches are blessed with holy power to combat the forces of undeath.",
+    "requirements": "Alignment: Any good. Skills: Knowledge (religion) 8 ranks. Spells: Ability to cast 3rd-level divine spells. Special: Able to turn undead.",
+    "source": "Libris Mortis"
+  },
+  {
+    "id": "hellbreaker",
+    "name": "Hellbreaker",
+    "description": "“They steal our souls, I steal their stuff. That’s fair, right?” Hellbreakers are consummate adventurers. Called thieves by their detractors and heroes by their apologists, they",
+    "requirements": [],
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+  },
+  {
+    "id": "hellfire_warlock",
+    "name": "Hellfire Warlock",
+    "description": "“It is not the weapon that is evil, but the wielder.” The hellfire warlocks are a secretive group of specialist warlocks who have mastered hellfire, a dangerous energy found only in the Nine Hells. By tapping into this infernal power,",
+    "requirements": [
+      "Skills: Intimidate 6 ranks, Knowledge (the planes) 12 ranks,"
+    ],
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+  },
+  {
+    "id": "hellreaver",
+    "name": "Hellreaver",
+    "description": "“I cannot stand by while wickedness spreads, while the fiends destroy our families and our lives. The time for prayer is past. Now is the time for action!”",
+    "requirements": [
+      "Alignment: Any good.",
+      "Base Attack Bonus: +5.",
+      "Skills: Knowledge (the planes) 4 ranks.",
+      "Feats: Power Attack.",
+      "Special: Must slay an outsider with the evil subtype."
+    ],
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+  },
+  {
+    "id": "hierophant",
+    "name": "Hierophant",
+    "description": "A divine spellcaster who gains deeper understanding of channeled power.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "diplomacy",
+      "heal",
+      "knowledge-arcana",
+      "knowledge-religion",
+      "profession",
+      "spellcraft"
+    ],
+    "baseAttackBonus": "poor",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "skill",
+        "description": "Knowledge (religion) 15 ranks",
+        "skillId": "knowledge-religion",
+        "minimumRanks": 15
+      },
+      {
+        "type": "feat",
+        "description": "Any metamagic feat"
+      },
+      {
+        "type": "casterLevel",
+        "description": "Ability to cast 7th-level divine spells",
+        "minimumLevel": 7,
+        "spellType": "divine"
+      }
+    ]
+  },
+  {
+    "id": "high-proselytizer",
+    "name": "High Proselytizer",
+    "description": "A high proselytizer is a divine spellcaster who has devoted themselves to spreading their deity's faith and converting others.",
+    "hitDie": "d8",
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "diplomacy",
+        "minimumRanks": 24
+      },
+      {
+        "type": "skill",
+        "skillId": "knowledge-religion",
+        "minimumRanks": 10
+      },
+      {
+        "type": "feat",
+        "featId": "persuasive"
+      },
+      {
+        "type": "spellcasting",
+        "divine": true,
+        "minimumSpellLevel": 7
+      }
+    ],
+    "classSkills": [
+      "Concentration",
+      "Craft",
+      "Diplomacy",
+      "Heal",
+      "Knowledge (religion)",
+      "Profession",
+      "Sense Motive",
+      "Spellcraft"
+    ],
+    "skillPointsPerLevel": 2,
+    "source": "Epic Level Handbook",
+    "epicPrestige": true
+  },
+  {
+    "id": "highland-stalker",
+    "name": "Highland Stalker",
+    "description": "The mountains are unforgiving, and the ability to ﬁnd food at high altitude often means the difference between survival and starvation. For those who live in such climes, hunters provide not only food but also clothing, shelter, and tools when they bring back animal skins and bones.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "holt-warden",
+    "name": "Holt Warden",
+    "description": "+1 level of existing divine spellcasting class +1 level of existing divine spellcasting class +1 level of existing divine spellcasting class +1 level of existing divine spellcasting class +1 level of existing divine spellcasting class +1 level of existing divine spellcasting class +1 level of existing divine spellcasting class +1 level of existing divine spellcasting class +1 level of existing divine spellcasting class +1 level of existing divine spellcasting class",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "diplomacy",
+      "handle-animal",
+      "heal",
+      "hide",
+      "knowledge",
+      "knowledge",
+      "listen",
+      "move-silently",
+      "spellcraft",
+      "spot",
+      "survival"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Champion"
+  },
+  {
+    "id": "horizon-walker",
+    "name": "Horizon Walker",
+    "description": "A tireless traveler who develops mystical connections with terrain.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "balance",
+      "climb",
+      "diplomacy",
+      "handle-animal",
+      "hide",
+      "knowledge-geography",
+      "listen",
+      "move-silently",
+      "profession",
+      "ride",
+      "speak-language",
+      "spot",
+      "survival"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "skill",
+        "description": "Knowledge (geography) 8 ranks",
+        "skillId": "knowledge-geography",
+        "minimumRanks": 8
+      },
+      {
+        "type": "feat",
+        "description": "Endurance",
+        "featId": "endurance"
+      }
+    ]
+  },
+  {
+    "id": "hunter-of-the-dead",
+    "name": "Hunter of the Dead",
+    "description": "spells have a DC of 10 + spell level + the hunter of the dead’s The hunter of the dead is the hated enemy of all undead. She Wisdom bonus (if any). When the hunter of the dead gets spends each restless night tracking undead to their lairs and 0 spells per day of a given spell level (for instance, 1st-level cleansing the land of their foul presence. The hunter of the dead has many tools with which to spells for a 1st-level hunter of the dead), she gains only the fight such creatures. Her skill wi",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "illithid-slayer",
+    "name": "Illithid Slayer",
+    "description": "A warrior dedicated to hunting and destroying mind flayers. Illithid slayers develop special abilities and resistances specifically designed to counter the powers of these alien creatures.",
+    "requirements": {
+      "baseAttackBonus": 4,
+      "skills": [
+        {
+          "name": "Knowledge (dungeoneering)",
+          "ranks": 2
+        }
+      ],
+      "feats": [
+        "iron-will",
+        "weapon-focus"
+      ],
+      "special": "Must have had a favorable encounter with a mind flayer"
+    },
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "bluff",
+      "climb",
+      "concentration",
+      "intimidate",
+      "jump",
+      "knowledge-dungeoneering",
+      "listen",
+      "psicraft",
+      "sense-motive",
+      "spot",
+      "swim"
+    ],
+    "source": "Expanded Psionics Handbook"
+  },
+  {
+    "id": "incandescent_champion",
+    "name": "Incandescent Champion",
+    "description": "Incandescent champions are warriors of pure incarnum who focus their essentia into radiant displays of power. They channel incarnum through their weapons and armor, becoming living beacons of their alignment's ideals.",
+    "requirements": {
+      "baseAttackBonus": 5,
+      "feats": [
+        "Weapon Focus (any)"
+      ],
+      "special": "Must have at least 1 point of essentia in essentia pool"
+    },
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "incarnum_blade",
+    "name": "Incarnum Blade",
+    "description": "Incarnum blades are warriors who bind incarnum to weapons, creating powerful magical armaments. They learn to invest essentia into their weapons to enhance their combat prowess and gain special abilities.",
+    "requirements": {
+      "baseAttackBonus": 5,
+      "skills": {
+        "Concentration": 8
+      },
+      "feats": [
+        "Weapon Focus (any)"
+      ],
+      "special": "Ability to shape at least one soulmeld"
+    },
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "invisible-blade",
+    "name": "Invisible Blade",
+    "description": "Who is this fool who dares to challenge you in the arena? You brandish a greatsword, and he whips out a dagger. You unsheathe your longsword, and he throws off his armor. You advance menacingly, and he only smiles at you—a big, maniacal grin. Is he mad? Does he have a death wish? No, he is an invisible blade, and you have made the classic mistake of underestimating his prowess. As you fight, he seems almost relaxed, stepping lightly to the side, dodging your blows easily. His eyes note your ever",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "ironsoul_forgemaster",
+    "name": "Ironsoul Forgemaster",
+    "description": "Ironsoul forgemasters are crafters who have learned to work incarnum into physical items. They create soulbound items and invest essentia into their creations, blending traditional crafting with incarnum manipulation.",
+    "requirements": {
+      "skills": {
+        "Craft (any)": 8
+      },
+      "feats": [
+        "Bonus Essentia or Shape Soulmeld"
+      ],
+      "special": "Must be able to invest at least 1 point of essentia"
+    },
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "jade-phoenix-mage",
+    "name": "Jade Phoenix Mage",
+    "description": "Blends arcane spellcasting with martial maneuvers",
+    "requirements": "Arcane caster level 3rd, martial maneuver, Concentration 4 ranks",
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "keeper-of-the-cerulean-sign",
+    "name": "Keeper of the Cerulean Sign",
+    "description": "Keepers of the Cerulean Sign are dedicated to protecting the world from aberrant threats using ancient symbols and rituals. They master the cerulean sign, an ancient symbol said to embody the purity of the natural world and is anathema to aberrations.",
+    "requirements": "Skills: Knowledge (dungeoneering) 5 ranks, Knowledge (religion or arcana) 8 ranks. Feats: Combat Casting. Spells: Able to cast invoke the cerulean sign.",
+    "source": "Lords of Madness"
+  },
+  {
+    "id": "knight_of_the_pearl",
+    "name": "Knight of the Pearl",
+    "description": "A loyal defender of the aventi people, dedicated to the service of Aventernus and his appointed kings. Knights of the pearl are paladins who have taken the defense and prosperity of their people as their sacred charge, granted the Blessings of the Pearl to infuse waters with positive energy.",
+    "requirements": {
+      "Alignment": "Lawful good",
+      "Base Attack Bonus": "+5",
+      "Feats": "Extra Turning",
+      "Skills": "Knowledge (religion) 5 ranks",
+      "Special": "Turn undead, proficiency with at least one martial weapon and with heavy armor, must be accepted as a member of the Order of the Pearl"
+    },
+    "source": "Stormwrack"
+  },
+  {
+    "id": "knight_of_the_raven",
+    "name": "Knight of the Raven",
+    "description": "A divine warrior who serves the Raven Queen and protects the natural order of life and death. Knights of the Raven hunt down necromancers and destroy undead abominations.",
+    "requirements": "Alignment: Lawful good, lawful neutral, or neutral good. Base Attack Bonus: +5. Skills: Knowledge (religion) 2 ranks. Spells: Ability to cast 1st-level divine spells. Special: Able to turn undead.",
+    "source": "Libris Mortis"
+  },
+  {
+    "id": "legendary-dreadnought",
+    "name": "Legendary Dreadnought",
+    "description": "The legendary dreadnought is a nearly unstoppable warrior, a master of combat who has honed their skills to perfection.",
+    "hitDie": "d12",
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimum": 23
+      },
+      {
+        "type": "feat",
+        "featId": "combat-reflexes"
+      },
+      {
+        "type": "feat",
+        "featId": "great-cleave"
+      },
+      {
+        "type": "feat",
+        "featId": "improved-critical"
+      },
+      {
+        "type": "feat",
+        "featId": "improved-sunder"
+      },
+      {
+        "type": "feat",
+        "featId": "power-attack"
+      },
+      {
+        "type": "feat",
+        "featId": "weapon-focus"
+      }
+    ],
+    "classSkills": [
+      "Climb",
+      "Craft",
+      "Intimidate",
+      "Jump",
+      "Ride",
+      "Swim"
+    ],
+    "skillPointsPerLevel": 2,
+    "source": "Epic Level Handbook",
+    "epicPrestige": true
+  },
+  {
+    "id": "legendary_captain",
+    "name": "Legendary Captain",
+    "description": "Those who can urge their ships and crews to exceptional feats through sheer determination, leadership, and tactical skill. A legendary captain might be the commander of a fleet's flagship or a bloodthirsty pirate, but whatever the role, her reputation is widespread and her crew fanatically loyal.",
+    "requirements": {
+      "Base Attack Bonus": "+4",
+      "Skills": "Profession (sailor) 8 ranks, Knowledge (geography) 8 ranks",
+      "Feats": "Leadership",
+      "Special": "Must be the captain or master of a ship"
+    },
+    "source": "Stormwrack"
+  },
+  {
+    "id": "leviathan_hunter",
+    "name": "Leviathan Hunter",
+    "description": "A specialist in tracking and slaying the great beasts of the sea - krakens, dragon turtles, whales, and other enormous aquatic creatures. Leviathan hunters combine tracking skills with combat prowess to hunt the most dangerous prey.",
+    "requirements": {
+      "Base Attack Bonus": "+5",
+      "Feats": "Iron Will, Track",
+      "Skills": "Knowledge (nature) 4 ranks",
+      "Special": "Favored enemy (aberrations, animals, dragons, or magical beasts)"
+    },
+    "source": "Stormwrack"
+  },
+  {
+    "id": "loremaster",
+    "name": "Loremaster",
+    "description": "A spellcaster who concentrates on knowledge and secrets.",
+    "hitDie": 4,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "appraise",
+      "concentration",
+      "craft",
+      "decipher-script",
+      "gather-information",
+      "handle-animal",
+      "heal",
+      "knowledge-all",
+      "perform",
+      "profession",
+      "speak-language",
+      "spellcraft",
+      "use-magic-device"
+    ],
+    "baseAttackBonus": "poor",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "skill",
+        "description": "Knowledge (any two) 10 ranks in each"
+      },
+      {
+        "type": "feat",
+        "description": "Any three metamagic or item creation feats"
+      },
+      {
+        "type": "feat",
+        "description": "Skill Focus (Knowledge [any individual Knowledge skill])",
+        "featId": "skill-focus"
+      },
+      {
+        "type": "special",
+        "description": "Able to cast seven different divination spells, one of which must be 3rd level or higher"
+      }
+    ]
+  },
+  {
+    "id": "maester",
+    "name": "Maester",
+    "description": "The maester’s class skills (and the key ability for each skill) are Appraise (Int), Concentration (Con), Craft (Int), Disable Device (Int), Knowledge (arcana) (Int), Knowledge (architecture and engineering) (Int), Spellcraft (Int), Skill Points at Each Level: 4 + Int modiﬁer.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "magical-trickster",
+    "name": "Magical Trickster",
+    "description": "“Don’t make the mistake of assuming that spells are the only",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "bluff",
+      "climb",
+      "concentration",
+      "craft",
+      "diplomacy",
+      "jump",
+      "knowledge",
+      "knowledge",
+      "profession",
+      "spellcraft",
+      "tumble",
+      "use-rope"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "bluff",
+        "ranks": 4
+      },
+      {
+        "type": "feat",
+        "featId": "alertnessb-if-familiar-within-5-ft"
+      },
+      {
+        "type": "text",
+        "description": "Actions metamagic trick, spontaneous trickster\nCombat Gear 3 potions of cure moderate wounds\nSorcerer Spells Known (CL 10th; 1d20 +12 to overcome SR):\n5th (4/day)—dominate person (DC 20)\n\nIllus"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "malconvoker",
+    "name": "Malconvoker",
+    "description": "“Take him, my slaves! Drag his soul back to your dark masters!” —Argyll Te’Shea, servant of Pelor and malconvoker The standard concept of the perpetual war between good and evil is clichéd to some: a black-and-white vision of reality, suitable only for religious sermonizing. A few who understand the complexity of the battles that rage throughout the planes have taken up a dangerous path, entering into powerful pacts with the foulest abominations of the Lower Planes to turn evil against evil. The",
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "bluff",
+      "concentration",
+      "craft",
+      "disguise",
+      "knowledge",
+      "knowledge",
+      "knowledge",
+      "profession",
+      "spellcraft"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "bluff",
+        "ranks": 4
+      },
+      {
+        "type": "feat",
+        "featId": "augment-summoning"
+      },
+      {
+        "type": "feat",
+        "featId": "spell-focus-conjuration"
+      },
+      {
+        "type": "text",
+        "description": "Ability to cast summon monster III"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "master-of-many-forms",
+    "name": "Master of Many Forms",
+    "description": "A master of many forms has no shape that she calls her own. Instead, she occupies whatever body is most expedient for her at the time. While others base their identities largely on their external forms, a master of many forms actually comes closer to her true self through her transformations. Of necessity, her sense of self is based not on her outward form, but on her soul, which is truly the only constant about her. It is the inner strength of that soul that enables her to take on any shape and",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "master-of-masks",
+    "name": "Master of Masks",
+    "description": "Belief and perception shape reality. In worlds where religions derive might from the faith of believers and where amazing magic sways the mind, those who command the senses hold great power. In such an environment, the master of masks takes center stage. Wearer of a thousand faces, with an identity as fluid as that of a crowd of strangers, this thespian of possibilities decides what is real and",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "appraise",
+      "bluff",
+      "craft",
+      "disguise",
+      "forgery",
+      "perform",
+      "sleight-of-hand",
+      "speak-language"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "bluff",
+        "ranks": 8
+      },
+      {
+        "type": "skill",
+        "skillId": "disguise",
+        "ranks": 8
+      },
+      {
+        "type": "text",
+        "description": "Must have successfully impersonated an individual,\nfooling even that person’s friends and associates"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "master-of-nine",
+    "name": "Master of Nine",
+    "description": "Ultimate martial adept seeking mastery of all nine disciplines",
+    "requirements": "Maneuvers from three different disciplines, Martial Lore 10 ranks, BAB +5",
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "master-of-the-unseen-hand",
+    "name": "Master of the Unseen Hand",
+    "description": "telekinesis. He adds his levels in master of the unseen hand Masters of the unseen hand delight in crushing their foes to his caster level (whether from actual spellcasting levels or with invisible force, flinging massive objects into the sky, determined by the spell-like ability) when using his telekineand disarming enemies with a single thought. Their mastery sis ability. For example, a 10th-level sorcerer/3rd-level master of the craft of telekinesis makes masters of the unseen hand of the uns",
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "concentration",
+        "ranks": 8
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "master-thrower",
+    "name": "Master Thrower",
+    "description": "(Int), Jump (Str), Perform (Cha), Profession (Int), Sleight of “Only a master thrower would invent a new style of fighting Hand (Dex), Spot (Wis), Tumble (Dex), and Use Rope (Dex). that involves cleverly disarming herself.” That’s how many Skill Points at Each Level: 4 + Int modifier. more traditional weapon masters think of master throwers. Indeed, many master throwers see those who dabble Class Features in thrown weapons the same way. If a character tosses away All of the following are class f",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 5
+      },
+      {
+        "type": "skill",
+        "skillId": "sleight-of-hand",
+        "ranks": 4
+      },
+      {
+        "type": "feat",
+        "featId": "point-blank-shot"
+      },
+      {
+        "type": "feat",
+        "featId": "precise-shot"
+      },
+      {
+        "type": "feat",
+        "featId": "weapon-focus-any\nfarther-than-5-feet-away"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "master-transmogrifist",
+    "name": "Master Transmogrifist",
+    "description": "",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "master_of_shrouds",
+    "name": "Master of Shrouds",
+    "description": "An evil spellcaster who magically seizes incorporeal undead and sets them to do her bidding. Plucking vile creatures such as wraiths and shadows from their restless haunts, she summons them to her presence and commands them to work her will.",
+    "requirements": "Alignment: Any nongood. Skills: Knowledge (religion) 8 ranks. Feats: Spell Focus (necromancy). Spells: Ability to cast 3rd-level divine spells. Special: Able to rebuke undead.",
+    "source": "Libris Mortis"
+  },
+  {
+    "id": "metamind",
+    "name": "Metamind",
+    "description": "A psionic specialist who focuses on expanding and perfecting their power point reserve. Metaminds develop vast stores of mental energy and learn to manipulate power points with unmatched efficiency.",
+    "requirements": {
+      "skills": [
+        {
+          "name": "Concentration",
+          "ranks": 8
+        },
+        {
+          "name": "Knowledge (psionics)",
+          "ranks": 4
+        },
+        {
+          "name": "Psicraft",
+          "ranks": 4
+        }
+      ],
+      "feats": [
+        "psicrystal-affinity"
+      ],
+      "special": "Manifester level 4th"
+    },
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "autohypnosis",
+      "concentration",
+      "craft-any",
+      "knowledge-psionics",
+      "psicraft"
+    ],
+    "source": "Expanded Psionics Handbook"
+  },
+  {
+    "id": "mindbender",
+    "name": "Mindbender",
+    "description": "its involuntary service or releasing it in the future. NPC mindbenders therefore tend to be found in positions where their enchantment abilities allow them to amass great wealth and influence, ruling small towns or isolated keeps as the power behind the throne, secret masters who brook no rival Adaptation: The most straightforward adaptation of this class is to make it psionic, barring it completely from being taken by arcanists. In this case, eliminate the spellcasting requirement, and replace ",
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "bluff",
+        "ranks": 4
+      },
+      {
+        "type": "skill",
+        "skillId": "diplomacy",
+        "ranks": 4
+      },
+      {
+        "type": "skill",
+        "skillId": "intimidate",
+        "ranks": 4
+      },
+      {
+        "type": "skill",
+        "skillId": "sense-motive",
+        "ranks": 4
+      },
+      {
+        "type": "casterLevel",
+        "minimumCasterLevel": 5
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "mindspy",
+    "name": "Mindspy",
+    "description": "Success in combat relies on anticipating your enemy’s every move. A mindspy knows how easy that can be if you’re privy to your foe’s every thought. By reading the minds of her enemies, a mindspy knows exactly what they’re going to do a fraction of a second before they do it. Eventually she learns to probe deeper, finding weak spots in her enemy’s training. Because the class relies utterly on detect thoughts, most mindspies are creatures who have it as a spell-like or supernatural ability usable ",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "int-modifier"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 3
+      },
+      {
+        "type": "skill",
+        "skillId": "concentration",
+        "ranks": 8
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "mountebank",
+    "name": "Mountebank",
+    "description": "“The best defense is to never let an enemy see your true self.” Mountebanks are frauds and con artists, capable of slipping into new identities as others change clothing. While they can fit in just about anywhere they go, they are also adept",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "appraise",
+      "bluff",
+      "concentration",
+      "diplomacy",
+      "disguise",
+      "escape-artist",
+      "forgery",
+      "intimidate",
+      "jump",
+      "knowledge",
+      "knowledge",
+      "knowledge",
+      "listen",
+      "sense-motive",
+      "sleight-of\nhand",
+      "spellcraft",
+      "spot",
+      "tumble"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "mystic-theurge",
+    "name": "Mystic Theurge",
+    "description": "A spellcaster who masters both divine and arcane magic.",
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "decipher-script",
+      "knowledge-arcana",
+      "knowledge-religion",
+      "profession",
+      "sense-motive",
+      "spellcraft"
+    ],
+    "baseAttackBonus": "poor",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "skill",
+        "description": "Knowledge (arcana) 6 ranks",
+        "skillId": "knowledge-arcana",
+        "minimumRanks": 6
+      },
+      {
+        "type": "skill",
+        "description": "Knowledge (religion) 6 ranks",
+        "skillId": "knowledge-religion",
+        "minimumRanks": 6
+      },
+      {
+        "type": "casterLevel",
+        "description": "Ability to cast 2nd-level divine spells",
+        "minimumLevel": 2,
+        "spellType": "divine"
+      },
+      {
+        "type": "casterLevel",
+        "description": "Ability to cast 2nd-level arcane spells",
+        "minimumLevel": 2,
+        "spellType": "arcane"
+      }
+    ]
+  },
+  {
+    "id": "mythic-exemplar",
+    "name": "Mythic Exemplar",
+    "description": "“Nobody today can match the great heroes of the epic past. But by following closely in their footsteps, perhaps we can come close.”",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Champion"
+  },
+  {
+    "id": "necrocarnate",
+    "name": "Necrocarnate",
+    "description": "Necrocarnates are dark meldshapers who have learned to shape necrocarnum, incarnum tainted by death and undeath. They gain power over undead and can shape specialized necrocarnum soulmelds.",
+    "requirements": {
+      "alignment": "Any nongood",
+      "skills": {
+        "Knowledge (religion)": 8
+      },
+      "special": "Ability to shape at least three soulmelds"
+    },
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "nightsong-enforcer",
+    "name": "Nightsong Enforcer",
+    "description": "Throughout the city, even the vilest assassin does not command more respect than the nightsong enforcers. They could be anywhere—they could strike at any time. You cannot escape their uncanny senses. And worst of The enforcers of the Nightsong Guild (see page 177) focus on the stealth-centered combat training that rogues usually learn; they forgo some of the sleight of hand or fast-talking aspects of being a thief. However, nightsong enforcers are not mere thugs. They are deadly opponents who st",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "nightsong-infiltrator",
+    "name": "Nightsong Infiltrator",
+    "description": "An expert at breaking into “secure” areas, a nightsong inﬁltrator is the perfect thief and the perfect spy. Whether she is there to steal gold, information, jewels, or secrets, an inﬁltrator of the Nightsong Guild (see page 177) is trained to do her job quickly and efﬁciently. She practices extensively with locks and traps, focusing on doing her job under pressure and in unfavorable conditions. For example, nightsong inﬁltrators train extensively in climbing, since they often have to scale walls",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "occult-slayer",
+    "name": "Occult Slayer",
+    "description": "The occult slayer is driven to confront any arcane or divine spellcaster who crosses her path. Occult slayers believe that mortals are too irresponsible to wield magic, and that those who dare to do so must be slain. Spellcasters who become occult slayers are considered to have seen the error of their ways—although they may still cast spells, they rely primarily on their battle prowess and their ability to resist magical The occult slayer comes into her own through exhaustive training. Every reg",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "int-modifier"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 5
+      },
+      {
+        "type": "feat",
+        "featId": "hide-+11"
+      },
+      {
+        "type": "feat",
+        "featId": "knowledge-arcana-+4"
+      },
+      {
+        "type": "feat",
+        "featId": "listen-+9"
+      },
+      {
+        "type": "feat",
+        "featId": "archer’s-progress-along-the-way"
+      },
+      {
+        "type": "text",
+        "description": "auras, not their strength or school"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "ollam",
+    "name": "Ollam",
+    "description": "Skills: Knowledge (history) 10 ranks, Knowledge (any other) 10 ranks, Perform (oratory) 5 ranks.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "ordained-champion",
+    "name": "Ordained Champion",
+    "description": "“You will yield to the might of Hextor—or you will yield to Steeped in a tradition older than most religions, the ordained champions stride through the chaotic fog of violence and bloodshed. Driven by a zealous devotion to Herald of Hell, and to war itself—these harbingers of death and destruction are schooled in techniques of divine magic that enhance their combat capabilities far beyond those The ordained champion is an ancient creation of Hextor, so old that it predates the final schism betwe",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Champion"
+  },
+  {
+    "id": "pale_master",
+    "name": "Pale Master",
+    "description": "A necromancer who studies the relationship between the quick and the dead and seeks to master the power of undeath. Pale masters gain power from creating and commanding undead, and many aspire to become undead themselves.",
+    "requirements": "Alignment: Any nongood. Skills: Knowledge (religion) 8 ranks. Feats: Spell Focus (necromancy). Spells: Ability to cast 3rd-level arcane spells including at least two necromancy spells.",
+    "source": "Libris Mortis"
+  },
+  {
+    "id": "paragnostic-apostle",
+    "name": "Paragnostic Apostle",
+    "description": "“If knowledge is power, omniscience is omnipotence. When we understand the nature of the world, we become its masters.” —Pallavarta Santalieri, Master of the Unturned Page",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Champion"
+  },
+  {
+    "id": "perfect-wight",
+    "name": "Perfect Wight",
+    "description": "A perfect wight is a master of stealth and subterfuge, moving unseen and striking from the shadows.",
+    "hitDie": "d6",
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "hide",
+        "minimumRanks": 24
+      },
+      {
+        "type": "skill",
+        "skillId": "move-silently",
+        "minimumRanks": 24
+      },
+      {
+        "type": "classFeature",
+        "feature": "sneak-attack",
+        "dice": 8
+      },
+      {
+        "type": "classFeature",
+        "feature": "defensive-roll"
+      }
+    ],
+    "classSkills": [
+      "Appraise",
+      "Balance",
+      "Bluff",
+      "Climb",
+      "Craft",
+      "Decipher Script",
+      "Diplomacy",
+      "Disable Device",
+      "Disguise",
+      "Escape Artist",
+      "Forgery",
+      "Gather Information",
+      "Hide",
+      "Intimidate",
+      "Jump",
+      "Listen",
+      "Move Silently",
+      "Open Lock",
+      "Perform",
+      "Search",
+      "Sense Motive",
+      "Sleight of Hand",
+      "Spot",
+      "Swim",
+      "Tumble",
+      "Use Magic Device",
+      "Use Rope"
+    ],
+    "skillPointsPerLevel": 8,
+    "source": "Epic Level Handbook",
+    "epicPrestige": true
+  },
+  {
+    "id": "psibond-agent",
+    "name": "Psibond Agent",
+    "description": "A psibond agent sees through the eyes of others, gently guiding (or in some cases forcefully commanding) her puppet to go places she could never enter herself.",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "appraise",
+      "balance",
+      "bluff",
+      "climb",
+      "concentration",
+      "craft",
+      "decipher-script",
+      "diplomacy",
+      "disable-device",
+      "disguise",
+      "escape-artist",
+      "forgery",
+      "gather-information",
+      "hide",
+      "intimidate",
+      "jump",
+      "knowledge",
+      "listen",
+      "move-silently",
+      "open-lock"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "gather-information",
+        "ranks": 8
+      },
+      {
+        "type": "skill",
+        "skillId": "sense-motive",
+        "ranks": 4
+      },
+      {
+        "type": "text",
+        "description": "Sneak attack +1d6"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "psion-uncarnate",
+    "name": "Psion Uncarnate",
+    "description": "A psionic character who has transcended physical form, becoming an entity of pure psionic consciousness. Psion uncarnates gradually shed their material existence to become incorporeal beings of mental energy.",
+    "requirements": {
+      "skills": [
+        {
+          "name": "Knowledge (psionics)",
+          "ranks": 8
+        },
+        {
+          "name": "Psicraft",
+          "ranks": 8
+        }
+      ],
+      "feats": [
+        "psionic-body",
+        "psionic-meditation"
+      ],
+      "special": "Manifester level 7th"
+    },
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "autohypnosis",
+      "bluff",
+      "concentration",
+      "craft-any",
+      "disguise",
+      "knowledge-arcana",
+      "knowledge-planes",
+      "knowledge-psionics",
+      "psicraft",
+      "sense-motive"
+    ],
+    "source": "Expanded Psionics Handbook"
+  },
+  {
+    "id": "purple-dragon-knight",
+    "name": "Purple Dragon Knight",
+    "description": "Weapon and Armor Proficiency: Purple Dragon knights The famous Purple Dragons are regarded across the land as exemplars of disciplined, skilled, loyal soldiers. Their reputaHeroic Shield (Ex): A Purple Dragon knight can use the tion is deserved partly because of the heroic actions of their aid another action to give an ally a +4 circumstance bonus to Purple Dragon knights develop uncanny skills related to Rallying Cry (Su): Up to three times per day as a free coordinating and leading soldiers. M",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "pyrokineticist",
+    "name": "Pyrokineticist",
+    "description": "A psionic character obsessed with fire, transforming their body into living flame. Pyrokineticists wield devastating fire powers and eventually become fire elementals themselves.",
+    "requirements": {
+      "alignment": "Any chaotic",
+      "skills": [
+        {
+          "name": "Concentration",
+          "ranks": 8
+        },
+        {
+          "name": "Craft (alchemy)",
+          "ranks": 1
+        },
+        {
+          "name": "Knowledge (psionics)",
+          "ranks": 2
+        },
+        {
+          "name": "Psicraft",
+          "ranks": 8
+        }
+      ],
+      "feats": [],
+      "special": "Must have set oneself on fire and survived"
+    },
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "autohypnosis",
+      "concentration",
+      "craft",
+      "intimidate",
+      "knowledge-psionics",
+      "psicraft"
+    ],
+    "source": "Expanded Psionics Handbook"
+  },
+  {
+    "id": "rage-mage",
+    "name": "Rage Mage",
+    "description": "if she had also gained a level in an arcane spellcasting class At first, it seems like a contradiction—an arcane spellcaster she belonged to before adding the prestige class. In no case, that “loses herself” in a blind fury. Yet, the rage mage makes however, does she gain any other benefit a character of that for an interesting case, since her approach to magic is based class would have gained, except for an increased effective on the primal passion of magic more than the studious quasilevel of ",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "ronin",
+    "name": "Ronin",
+    "description": "(Int), Ride (Dex), and Sense Motive (Wis). Skill Points at Each Level: 2 + Int modifier. When a samurai or other noble warrior is exiled from the service of his feudal lord, he may become a ronin—a masterless warrior cast adrift in the world, but still clinging to the rem- Class Features All of the following are class features of the ronin prestige nants of his former life. Blade in hand, a ronin wanders from job to job, trying to stay one step ahead of his enemies—and Weapon and Armor Proficien",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "ruby-knight-vindicator",
+    "name": "Ruby Knight Vindicator",
+    "description": "Divine caster who combines faith with martial prowess",
+    "requirements": "Divine caster level 3rd, Devoted Spirit maneuver, Concentration 4 ranks",
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "sanctified-mind",
+    "name": "Sanctified Mind",
+    "description": "Sanctified minds are psionic warriors who have dedicated themselves to combating aberrations and protecting their allies from mental domination. They train their minds to resist the terrible mental powers of illithids and other aberrations.",
+    "requirements": "Base Attack Bonus: +4. Skills: Concentration 8 ranks, Knowledge (dungeoneering) 2 ranks. Feats: Iron Will, Wild Talent. Psionics: Must be a psionic character.",
+    "source": "Lords of Madness"
+  },
+  {
+    "id": "sanctified-one",
+    "name": "Sanctified One",
+    "description": "“I come in the name of the Brawler, and no evil shall stand",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Champion"
+  },
+  {
+    "id": "sandstorm_pc_1",
+    "name": "Ashworm Dragoon",
+    "description": "“Only the desert has a fascination: to ride alone—in the sun of the forever unpossessed country—away from man. That is a great temptation.” —Nebkhas, an ashworm dragoon 10th",
+    "requirements": {
+      "skills": "Survival 8 ranks.",
+      "feats": "Scorpion’s Resolve.",
+      "spells": "Ability to cast 2nd-level divine spells."
+    },
+    "source": "Sandstorm"
+  },
+  {
+    "id": "sandstorm_pc_2",
+    "name": "Lord Of Tides",
+    "description": "must have the water subtype. The ability is otherwise identical to the summon monster VI spell (see page 287 of the Player’s Handbook). When you reach 8th level, this ability improves: You can summon either an elder elemental once",
+    "requirements": {
+      "skills": "Knowledge (nature) 4 ranks, Survival 4 ranks."
+    },
+    "source": "Sandstorm"
+  },
+  {
+    "id": "sandstorm_pc_3",
+    "name": "Sand Shaper",
+    "description": "Base Attack Fort Ref Will Level Bonus Save Save Save",
+    "requirements": {
+      "bab": "+5.",
+      "skills": "Diplomacy 8 ranks, Swim 4 ranks.",
+      "special": "You must be blessed by Tem-Et-Nu in a ritual held in one of her temples. Possessions: quarterstaff, headband of intellect +2, burnoose of 1,001 thorns†, cloak of resistance +1, staff of the nomad†, wand of fireball (5th, 25 charges), scroll of endure elements, scroll CLASS FEATURES"
+    },
+    "source": "Sandstorm"
+  },
+  {
+    "id": "sandstorm_pc_4",
+    "name": "Scion Of Tem-et-Nu",
+    "description": "Hit Die: d10 Base Attack Fort Ref",
+    "requirements": {
+      "bab": "+3.",
+      "skills": "Hide 8 ranks, Knowledge (nature) 4 ranks, Survival",
+      "special": "Must have survived the venomous sting of a has the same connection to an item or a place that the monstrous scorpion. mount does. Share Spells (Su): Karlott may have any spell she casts on"
+    },
+    "source": "Sandstorm"
+  },
+  {
+    "id": "sandstorm_pc_5",
+    "name": "Walker In The Waste",
+    "description": "“The waste is a monument filled with eternal reminders.” —Abesukh Habah, a walker in the waste A walker in the waste embodies the harsh, unforgiving nature of the desert. The waste’s dryness can perfectly preserve a royal city, a wondrous creature, or a towering",
+    "requirements": {
+      "spells": "Ability to cast at least three spells of the Sand or"
+    },
+    "source": "Sandstorm"
+  },
+  {
+    "id": "sapphire_hierarch",
+    "name": "Sapphire Hierarch",
+    "description": "Sapphire hierarchs are divine spellcasters who have learned to blend their faith with incarnum manipulation. They can convert spell slots into essentia and use incarnum to enhance their divine magic.",
+    "requirements": {
+      "skills": {
+        "Knowledge (religion)": 8
+      },
+      "spells": "Ability to cast 2nd-level divine spells",
+      "special": "Ability to turn or rebuke undead"
+    },
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "scarlet_corsair",
+    "name": "Scarlet Corsair",
+    "description": "A fearsome pirate who uses fear as a weapon. Scarlet corsairs are masters of intimidation and feints, striking terror into the hearts of their enemies and using psychological warfare to defeat foes before the first blow is struck.",
+    "requirements": {
+      "Alignment": "Any nonlawful",
+      "Base Attack Bonus": "+5",
+      "Skills": "Bluff 8 ranks, Intimidate 8 ranks, Profession (sailor) 4 ranks",
+      "Special": "Must have established a reputation as a fearsome pirate"
+    },
+    "source": "Stormwrack"
+  },
+  {
+    "id": "sea_witch",
+    "name": "Sea Witch",
+    "description": "A chaotic arcane spellcaster who has made dark bargains with oceanic powers. Sea witches gain the ability to curse their enemies with transformations and maritime misfortunes, drawing on the vengeful power of the sea itself.",
+    "requirements": {
+      "Alignment": "Any chaotic",
+      "Speak Language": "Aquan",
+      "Spells": "Ability to cast arcane spells, which must include at least one spell with the water descriptor",
+      "Special": "Must have negotiated a bargain with a chaotic sea creature or power"
+    },
+    "source": "Stormwrack"
+  },
+  {
+    "id": "seeker-of-the-song",
+    "name": "Seeker of the Song",
+    "description": "Beyond magic, beyond sound, beyond good or evil, lies music so profound and powerful that even deities quake at its sound. This primal music—of unknown origin and with no limit to its power—is incomprehensible to the mortal ear. To some who hear a fragment of this music, it becomes beauty incarnate, and they devote their lives to its discovery. These seekers wield the power of music in ways that amaze even United only by their quest, seekers of the song have incredibly diverse goals and motivati",
+    "hitDie": 6,
+    "skillPointsPerLevel": 4,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "shadow-sun-ninja",
+    "name": "Shadow Sun Ninja",
+    "description": "Assassin combining Shadow Hand stealth with Setting Sun techniques",
+    "requirements": "Shadow Hand and Setting Sun maneuvers, Hide 8 ranks, Move Silently 8 ranks",
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "shadowbane-inquisitor",
+    "name": "Shadowbane Inquisitor",
+    "description": "Clad in bone-white armor and wreathed in righteous conviction, shadowbane inquisitors battle incessantly against evil in whatever form it takes. Every shadowbane inquisitor belongs to a fellowship of religious knights called the Order of Illumination (see page 179). The order advocates merciless aggression against evil, and its members train to detect and destroy evil creatures and individuals. Filled with fervor, an inquisitor knows only one solution to an infestation of evil: the sword. The pu",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "shadowbane-stalker",
+    "name": "Shadowbane Stalker",
+    "description": "Those they name as heretics or servants of evil call them zealots. Those they protect from darkness call them saviors and defenders of the truth. Whatever their label, shadowbane stalkers rank as some of the most feared All shadowbane stalkers belong to the Order of Illumination (see page 179), a fellowship of holy knights dedicated to ﬁnding and rooting out hidden evil. The Order of Illumination hunts evil—from liars and petty con artists to mind ﬂayer cabals hidden in the heart of a",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "shadowdancer",
+    "name": "Shadowdancer",
+    "description": "A nimble performer who operates in the border between light and darkness.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 6,
+    "classSkills": [
+      "balance",
+      "bluff",
+      "decipher-script",
+      "diplomacy",
+      "disguise",
+      "escape-artist",
+      "hide",
+      "jump",
+      "listen",
+      "move-silently",
+      "perform",
+      "profession",
+      "search",
+      "sleight-of-hand",
+      "spot",
+      "tumble",
+      "use-rope"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "source": "Dungeon Master's Guide",
+    "isPrestige": true,
+    "requirements": [
+      {
+        "type": "skill",
+        "description": "Move Silently 8 ranks",
+        "skillId": "move-silently",
+        "minimumRanks": 8
+      },
+      {
+        "type": "skill",
+        "description": "Hide 10 ranks",
+        "skillId": "hide",
+        "minimumRanks": 10
+      },
+      {
+        "type": "skill",
+        "description": "Perform (dance) 5 ranks",
+        "skillId": "perform",
+        "minimumRanks": 5
+      },
+      {
+        "type": "feat",
+        "description": "Combat Reflexes",
+        "featId": "combat-reflexes"
+      },
+      {
+        "type": "feat",
+        "description": "Dodge",
+        "featId": "dodge"
+      },
+      {
+        "type": "feat",
+        "description": "Mobility",
+        "featId": "mobility"
+      }
+    ]
+  },
+  {
+    "id": "shadowmind",
+    "name": "Shadowmind",
+    "description": "A specter in the thoughts of the unwary, the shadowmind moves through the twisting pathways of the mind as easily as she slides through the dark alleyways of the city. A shadowmind blends psionic powers and uncanny stealth into an effective whole. Although they can be capable spies or thieves, shadowminds view themselves as much more. Shadowminds see their training and psychic powers as an extension of a deep self-examination process that requires the knowledge of the innermost goals and While a",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "shadowspy",
+    "name": "Shadowspy",
+    "description": "“Perhaps you see it as a curse that I must deny myself the light of the Shining One so that his enemies might be exposed and destroyed. But it is my honor and duty to make such a sacrifice, and in truth, I see the gifts of the Shining One as proof that I am still within his sight, despite the shadows that cling to me.” Shadowspies are the covert arm of Pelor’s Shadow Guard (see page 75). Members of this subsect work individually or in small groups to locate hidden sources of evil. Although they ",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Champion"
+  },
+  {
+    "id": "shadowstriker",
+    "name": "Shadowstriker",
+    "description": "rarely exhibit, due in part to the fact that shadowstriker cells are composed primarily of laypersons brought together by their common faith in your two patron deities. The forces of evil cannot long stand before such a zealous and devoted group—indeed, When you are with the other members of your cell, you are unstoppable and capable of accomplishing any goal. Even when you are alone, you are a force to be reckoned with, and you don’t mind letting",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Champion"
+  },
+  {
+    "id": "soulcaster",
+    "name": "Soulcaster",
+    "description": "Soulcasters are arcane spellcasters who have learned to infuse their spells with incarnum. They can invest essentia into metamagic effects and shape soulmelds that enhance their spellcasting abilities.",
+    "requirements": {
+      "skills": {
+        "Spellcraft": 8
+      },
+      "spells": "Ability to cast 2nd-level arcane spells",
+      "feats": [
+        "Any one metamagic feat"
+      ],
+      "special": "Ability to invest at least 1 point of essentia"
+    },
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "soulguard",
+    "name": "Soulguard",
+    "description": "“Your claim on this soul is unjust. Free him at once, lest I take him by force.” Hell’s devils are crafty fiends, always angling for some way",
+    "requirements": [
+      "Alignment: Lawful good or lawful neutral.",
+      "Skills: Intimidate 4 ranks, Knowledge (religion) 9 ranks,"
+    ],
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+  },
+  {
+    "id": "spellwarp-sniper",
+    "name": "Spellwarp Sniper",
+    "description": "“Oppose me, and I shall show you whole new universes of The spellwarp sniper contorts spells, changing area effects into rays that deliver precise, devastating attacks.",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "hide",
+      "intimidate",
+      "knowledge",
+      "move-silently",
+      "profession",
+      "spellcraft",
+      "spot"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "concentration",
+        "ranks": 8
+      },
+      {
+        "type": "skill",
+        "skillId": "spellcraft",
+        "ranks": 8
+      },
+      {
+        "type": "feat",
+        "featId": "point-blank-shot"
+      },
+      {
+        "type": "text",
+        "description": "Sneak attack or sudden strike +1d6"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "spinemeld_warrior",
+    "name": "Spinemeld Warrior",
+    "description": "Spinemeld warriors are skarn warriors who have mastered the art of using their racial spines in combination with incarnum. They learn to bind soulmelds that enhance their spine attacks and gain new combat abilities.",
+    "requirements": {
+      "race": "Skarn",
+      "baseAttackBonus": 4,
+      "feats": [
+        "Improved Unarmed Strike"
+      ],
+      "special": "Ability to shape at least one soulmeld"
+    },
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "spymaster",
+    "name": "Spymaster",
+    "description": "Some adventurers glory in their reputations—the wider their exploits are known, the happier they are. By contrast, the spymaster prefers to avoid attention. She does her work quietly and in private, keeping well away from public scrutiny. To allay suspicions, she often maintains a cover identity by pretending to be a member of some other class—typically the one in which she Spymasters are rarely popular, but so long as nation distrusts nation there will be work for those who can gather informati",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "stormcaster",
+    "name": "Stormcaster",
+    "description": "A spellcaster who has dedicated themselves to mastering the power of storms, wind, and lightning. Stormcasters can call forth thunderbolts, summon storms, and shield themselves with howling winds.",
+    "requirements": {
+      "Alignment": "Any nonlawful",
+      "Skills": "Knowledge (arcana) 4 ranks, Knowledge (nature) 4 ranks",
+      "Spells": "Ability to cast 3rd-level arcane spells",
+      "Special": "Must know at least two spells with the electricity or sonic descriptor"
+    },
+    "source": "Stormwrack"
+  },
+  {
+    "id": "sublime-chord",
+    "name": "Sublime Chord",
+    "description": "of their training as bards, a small number of sorcerers and wizards are drawn to this class, enticed by the notion of an ultimate truth linking the power of song and the power Sublime chords are often drawn to colleges, universities, and other gatherings of learned folk. In some places, such as the Starry Lyceum in the city of Osterhaven, they gather in small circles of musical scholars. The Starry Lyceum is dedicated to the pursuit and preservation of knowledge, and its members are known for th",
+    "hitDie": 6,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "int-modifier"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "listen",
+        "ranks": 13
+      },
+      {
+        "type": "skill",
+        "skillId": "spellcraft",
+        "ranks": 6
+      },
+      {
+        "type": "casterLevel",
+        "minimumCasterLevel": 3
+      },
+      {
+        "type": "text",
+        "description": "Bardic music ability"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "tattooed-monk",
+    "name": "Tattooed Monk",
+    "description": "Certain monastic orders bestow supernatural or spell-like powers on their members by inscribing magic tattoos on their skin. These tattooed monks shave their heads, speak in cryptic riddles and maxims, and—in many cases—travel the countryside furthering their quest for enlightenment by The great majority of tattooed monks begin their careers as monks. A small number of fighters, druids, and even a few clerics adopt the tattooed monk prestige class. In general, tattooed monks are drawn almost exc",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "tempest",
+    "name": "Tempest",
+    "description": "swords, while an exotic group of human warriors might",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "thief-acrobat",
+    "name": "Thief-Acrobat",
+    "description": "is locked and well guarded, a thief-acrobat simply jumps atop the building from the roof of a nearby inn, throws a grappling hook to the highest minaret, runs up the attached rope to a shuttered window, and quickly picks the lock. Should a thief-acrobat’s escape go awry once she has the goods, her gymnastic combat style keeps her Most thief-acrobats are rogues who worked their way up through the ranks of the local thieves guild before learning the second-story trade from more experienced burglar",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "thrallherd",
+    "name": "Thrallherd",
+    "description": "A psionic character who masters the art of mental domination, gathering followers through telepathic control. Thrallherds command believers and thralls who serve them without question.",
+    "requirements": {
+      "skills": [
+        {
+          "name": "Diplomacy",
+          "ranks": 4
+        },
+        {
+          "name": "Knowledge (psionics)",
+          "ranks": 8
+        }
+      ],
+      "feats": [
+        "inquisitor"
+      ],
+      "special": "Manifester level 5th, must know mindlink power"
+    },
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "autohypnosis",
+      "bluff",
+      "concentration",
+      "craft-any",
+      "diplomacy",
+      "knowledge-psionics",
+      "psicraft",
+      "sense-motive"
+    ],
+    "source": "Expanded Psionics Handbook"
+  },
+  {
+    "id": "tomb_warden",
+    "name": "Tomb Warden",
+    "description": "A guardian who protects sacred burial sites and fights against those who would desecrate the dead. Tomb wardens are devoted to maintaining the sanctity of the grave.",
+    "requirements": "Alignment: Any lawful. Base Attack Bonus: +5. Skills: Knowledge (religion) 2 ranks. Feats: Improved Initiative. Special: Able to turn undead.",
+    "source": "Libris Mortis"
+  },
+  {
+    "id": "topaz-guardian",
+    "name": "Topaz Guardian",
+    "description": "The elite champions of the Topaz Order are known as topaz guardians. Each one carries a special topaz diadem, a magic gem that protects against evil magic. They are experts in fighting mind flayers and other aberrations, combining martial prowess with divine spellcasting.",
+    "requirements": "Alignment: Lawful good. Base Attack Bonus: +5. Skills: Knowledge (dungeoneering) 2 ranks, Knowledge (religion) 4 ranks. Feats: Blind-Fight, Iron Will. Spells: Able to cast 1st-level divine spells.",
+    "source": "Lords of Madness"
+  },
+  {
+    "id": "totem_rager",
+    "name": "Totem Rager",
+    "description": "Totem ragers combine the primal fury of the barbarian's rage with the beast-shaping powers of the totemist. They can bind totemic soulmelds while raging to gain bestial combat powers.",
+    "requirements": {
+      "skills": {
+        "Intimidate": 4
+      },
+      "special": "Ability to rage, ability to bind to totem chakra"
+    },
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "true_necromancer",
+    "name": "True Necromancer",
+    "description": "A spellcaster who combines arcane and divine magic in pursuit of the secrets of life and death. True necromancers are masters of both positive and negative energy, able to wield the forces of life and death with equal facility.",
+    "requirements": "Spells: Ability to cast 2nd-level arcane spells and 2nd-level divine spells. Special: Must have undead as an available wizard specialist school or have access to the Death domain.",
+    "source": "Libris Mortis"
+  },
+  {
+    "id": "umbral_disciple",
+    "name": "Umbral Disciple",
+    "description": "Umbral disciples are shadow warriors who blend stealth and incarnum. They learn to use incarnum to enhance their stealth abilities and strike from darkness with devastating effect.",
+    "requirements": {
+      "alignment": "Any nongood",
+      "skills": {
+        "Hide": 8,
+        "Move Silently": 8
+      },
+      "special": "Sneak attack +2d6, ability to invest at least 1 point of essentia"
+    },
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "uncanny-trickster",
+    "name": "Uncanny Trickster",
+    "description": "“If you liked that, just wait’ll you see what’s next!” The uncanny trickster combines the features of his primary class with a wider range of skill tricks than any other",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "appraise",
+      "balance",
+      "bluff",
+      "climb",
+      "craft",
+      "decipher-script",
+      "diplomacy",
+      "disable-device",
+      "disguise",
+      "escape-artist",
+      "forgery",
+      "gather-information",
+      "hide",
+      "intimidate",
+      "jump",
+      "listen",
+      "move-silently",
+      "open-lock",
+      "perform",
+      "profession"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "any-four-skills",
+        "ranks": 8
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Scoundrel"
+  },
+  {
+    "id": "undead_lieutenant",
+    "name": "Undead Lieutenant",
+    "description": "An undead creature that has retained its skills and serves as a commander of lesser undead. Undead lieutenants are intelligent undead who lead armies of the dead.",
+    "requirements": "Type: Undead. Base Attack Bonus: +3. Skills: Intimidate 4 ranks. Special: Ability to rebuke or command undead.",
+    "source": "Libris Mortis"
+  },
+  {
+    "id": "vigilante",
+    "name": "Vigilante",
+    "description": "Some vigilantes have suffered personally at the hands of criminals and are bent on revenge. Others have lost loved ones to knives in the alleyway. Still others are atoning for the time they spent on the wrong side of the law. But they all have one thing in common: a burning desire to solve crimes and bring criminals to justice. The vigilante combines magical and mundane investigative techniques to assess a crime scene. He is adept at learning “the word on the street” about a crime, analyzing clu",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "war-mind",
+    "name": "War Mind",
+    "description": "A psionic warrior who achieves a battle-focused state of mind, becoming an unstoppable combatant. War minds unite martial and psionic might to devastating effect on the battlefield.",
+    "requirements": {
+      "baseAttackBonus": 3,
+      "skills": [
+        {
+          "name": "Knowledge (psionics)",
+          "ranks": 2
+        }
+      ],
+      "feats": [
+        "combat-manifestation",
+        "weapon-focus"
+      ],
+      "special": "Manifester level 3rd"
+    },
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "autohypnosis",
+      "climb",
+      "concentration",
+      "intimidate",
+      "jump",
+      "knowledge-psionics",
+      "psicraft",
+      "swim"
+    ],
+    "source": "Expanded Psionics Handbook"
+  },
+  {
+    "id": "warshaper",
+    "name": "Warshaper",
+    "description": "finds those options sadly limiting, instead growing and to change their form, and many are shapechangers such as doppelgangers and lycanthropes. Wizards and sorcerers who know the polymorph spell can take levels in the prestige class, as can druids who have mastered the wild shape class Most warshapers can change their outward appearance in the blink of an eye, so they don’t stand out among the ranks of their allies. It’s not until the soldier you’re fighting",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "int-modifier"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "baseAttackBonus",
+        "minimumBAB": 4
+      },
+      {
+        "type": "text",
+        "description": "Must be able to change shape in one of the following five ways:\n• Change shape supernatural ability (aranea, hound archon,\nbarghest, doppelganger, rakshasa, slaad)"
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Warrior"
+  },
+  {
+    "id": "wavekeeper",
+    "name": "Wavekeeper",
+    "description": "A divine spellcaster who serves as guardian and master of the waters. Wavekeepers develop a supernatural bond with aquatic environments and their animal companions, becoming true masters of the marine realm.",
+    "requirements": {
+      "Alignment": "Any neutral",
+      "Base Attack Bonus": "+4",
+      "Skills": "Survival 8 ranks, Swim 5 ranks",
+      "Spellcasting": "Able to cast 1st-level divine spells",
+      "Special": "Animal companion with aquatic subtype or swim speed"
+    },
+    "source": "Stormwrack"
+  },
+  {
+    "id": "wayfarer-guide",
+    "name": "Wayfarer Guide",
+    "description": "The wayfarer guide focuses on honing her skill at instantaneous magical transportation. Unlike spellcasters of other prestigious associations, a wayfarer guide need not devote years of her life to the art of teleportation nor focus her attention overmuch on the pursuit of perfection. Still, she learns secrets of the trade that are available only through employment with the Wayfarers Union. The Union is, at its heart, a transportation service that specialty spellcasters Most wayfarer guides are w",
+    "hitDie": 6,
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "wild-mage",
+    "name": "Wild Mage",
+    "description": "Magic is one of the most capricious and unpredictable of all natural or supernatural forces in the universe. Attempts to codify spellcasting through arcane formulas, or to impose order on magic through the force of will, are essentially pointless—or so wild mages believe. Instead, those who would truly master magic must forget what they know and abandon their willful control of the arcane. Within this paradox lies the awesome power of wild magic. The wild mage aspires to cast spells without stru",
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "int-modifier"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [
+      {
+        "type": "skill",
+        "skillId": "spellcraft",
+        "ranks": 8
+      },
+      {
+        "type": "skill",
+        "skillId": "use-magic-device",
+        "ranks": 4
+      },
+      {
+        "type": "feat",
+        "featId": "magical-aptitude"
+      },
+      {
+        "type": "feat",
+        "featId": "any-metamagic-feat"
+      },
+      {
+        "type": "casterLevel",
+        "minimumCasterLevel": 1
+      }
+    ],
+    "isPrestige": true,
+    "source": "Complete Arcane"
+  },
+  {
+    "id": "wild-plains-outrider",
+    "name": "Wild Plains Outrider",
+    "description": "Skill Points at Each Level: 4 + Int modiﬁer.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "requirements": [],
+    "isPrestige": true,
+    "source": "Complete Adventurer"
+  },
+  {
+    "id": "witchborn_binder",
+    "name": "Witchborn Binder",
+    "description": "Witchborn binders are spellcasters who have learned to bind incarnum in unusual ways, creating hybrid effects between soulmelds and spells. They can manipulate both arcane energies and incarnum simultaneously.",
+    "requirements": {
+      "skills": {
+        "Spellcraft": 4,
+        "Knowledge (arcana)": 4
+      },
+      "spells": "Ability to cast 1st-level arcane spells",
+      "special": "Ability to shape at least one soulmeld"
+    },
+    "source": "Magic of Incarnum"
+  }
+]

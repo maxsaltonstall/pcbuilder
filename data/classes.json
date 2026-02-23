@@ -1,0 +1,714 @@
+[
+  {
+    "name": "Dragonfire Adept",
+    "type": "Base Class",
+    "source": "Dragon Magic",
+    "hitDie": "d8",
+    "description": "A new base class that channels draconic power through breath weapons and invocations, emulating the abilities of dragons without being spellcasters."
+  },
+  {
+    "id": "barbarian",
+    "name": "Barbarian",
+    "description": "A fierce warrior of primitive background who can enter a battle rage.",
+    "hitDie": 12,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "climb",
+      "craft",
+      "handle-animal",
+      "intimidate",
+      "jump",
+      "listen",
+      "ride",
+      "survival",
+      "swim"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "bard",
+    "name": "Bard",
+    "description": "A performer whose music works magic, and a jack-of-all-trades.",
+    "hitDie": 6,
+    "skillPointsPerLevel": 6,
+    "classSkills": [
+      "appraise",
+      "balance",
+      "bluff",
+      "climb",
+      "concentration",
+      "craft",
+      "decipher-script",
+      "diplomacy",
+      "disguise",
+      "escape-artist",
+      "gather-information",
+      "hide",
+      "jump",
+      "knowledge-all",
+      "listen",
+      "move-silently",
+      "perform",
+      "profession",
+      "sense-motive",
+      "sleight-of-hand",
+      "speak-language",
+      "spellcraft",
+      "swim",
+      "tumble",
+      "use-magic-device"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "good"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "cleric",
+    "name": "Cleric",
+    "description": "A divine spellcaster who channels the power of a deity.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "diplomacy",
+      "heal",
+      "knowledge-arcana",
+      "knowledge-history",
+      "knowledge-religion",
+      "knowledge-planes",
+      "profession",
+      "spellcraft"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "druid",
+    "name": "Druid",
+    "description": "A divine spellcaster who draws power from nature and can wild shape.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "diplomacy",
+      "handle-animal",
+      "heal",
+      "knowledge-nature",
+      "listen",
+      "profession",
+      "ride",
+      "spellcraft",
+      "spot",
+      "survival",
+      "swim"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "fighter",
+    "name": "Fighter",
+    "description": "A master of combat, skilled with a variety of weapons and armor.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "climb",
+      "craft",
+      "handle-animal",
+      "intimidate",
+      "jump",
+      "ride",
+      "swim"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "incarnate",
+    "name": "Incarnate",
+    "description": "Incarnates are divine champions who channel the power of alignments through incarnum. They embody one alignment extreme (good, evil, law, or chaos) and can manipulate incarnum to create soulmelds that reflect their chosen ideal. Incarnates serve both a melee role and a supporting role through aligned auras and soulmelds.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "Concentration",
+      "Craft",
+      "Diplomacy",
+      "Knowledge (arcana)",
+      "Knowledge (religion)",
+      "Knowledge (the planes)",
+      "Profession",
+      "Spellcraft"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "specialAbilities": [
+      {
+        "level": 1,
+        "name": "Aligned Meldshaper",
+        "description": "Must choose one alignment component (good, evil, law, or chaos). Can only be neutral good, neutral evil, lawful neutral, or chaotic neutral. This choice affects soulmelds and class abilities."
+      },
+      {
+        "level": 1,
+        "name": "Soulmelds",
+        "description": "Can shape incarnum into soulmelds. Number of soulmelds shaped is limited by class level and Constitution score (max soulmelds = Constitution - 10)."
+      },
+      {
+        "level": 1,
+        "name": "Chakra Binds",
+        "description": "Can bind soulmelds to chakras to gain enhanced effects. Binds unlock at various levels: crown/feet/hands (least) at 3rd, arms/brow/shoulders (lesser) at 10th, throat/waist (greater) at 14th."
+      },
+      {
+        "level": 1,
+        "name": "Incarnum Radiance",
+        "description": "Can project an aura based on alignment choice that affects allies and enemies within range."
+      },
+      {
+        "level": 1,
+        "name": "Detect Opposition",
+        "description": "Can detect the opposing alignment (opposite of chosen alignment) at will as a spell-like ability."
+      }
+    ],
+    "source": "Magic of Incarnum",
+    "armorProficiencies": [
+      "Light",
+      "Medium",
+      "Shields"
+    ],
+    "weaponProficiencies": [
+      "Simple"
+    ]
+  },
+  {
+    "id": "monk",
+    "name": "Monk",
+    "description": "A martial artist whose unarmed strikes are as powerful as weapons.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "balance",
+      "climb",
+      "concentration",
+      "craft",
+      "diplomacy",
+      "escape-artist",
+      "hide",
+      "jump",
+      "knowledge-arcana",
+      "knowledge-religion",
+      "listen",
+      "move-silently",
+      "perform",
+      "profession",
+      "sense-motive",
+      "spot",
+      "swim",
+      "tumble"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "good",
+      "will": "good"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "paladin",
+    "name": "Paladin",
+    "description": "A champion of justice and destroyer of evil, protected and strengthened by divine power.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "diplomacy",
+      "handle-animal",
+      "heal",
+      "knowledge-nobility",
+      "knowledge-religion",
+      "profession",
+      "ride",
+      "sense-motive"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "psion",
+    "name": "Psion",
+    "description": "A master of the mind who draws power from strict mental discipline. Psions specialize in one of six disciplines: Clairsentience (Seers), Metacreativity (Shapers), Psychokinesis (Kineticists), Psychometabolism (Egoists), Psychoportation (Nomads), or Telepathy (Telepaths).",
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "knowledge-all",
+      "profession",
+      "psicraft"
+    ],
+    "baseAttackBonus": "poor",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Expanded Psionics Handbook",
+    "specialAbilities": [
+      "Power Points/Day: Base power points plus bonus from high Intelligence",
+      "Discipline: Choose one psionic discipline at 1st level (Clairsentience, Metacreativity, Psychokinesis, Psychometabolism, Psychoportation, or Telepathy)",
+      "Powers Known: Starts with 3 psion powers, gains more with each level",
+      "Bonus Feats: Gains bonus psionic feats at 1st, 5th, 10th, 15th, and 20th level"
+    ],
+    "disciplines": [
+      {
+        "name": "Seer (Clairsentience)",
+        "description": "Masters of precognitive powers and information gathering",
+        "additionalSkills": [
+          "gather-information",
+          "listen",
+          "spot"
+        ]
+      },
+      {
+        "name": "Shaper (Metacreativity)",
+        "description": "Creators of ectoplasmic constructs and matter from the Astral Plane",
+        "additionalSkills": [
+          "bluff",
+          "disguise",
+          "use-psionic-device"
+        ]
+      },
+      {
+        "name": "Kineticist (Psychokinesis)",
+        "description": "Masters of matter and energy manipulation, devastating energy blasts",
+        "additionalSkills": [
+          "autohypnosis",
+          "disable-device",
+          "intimidate"
+        ]
+      },
+      {
+        "name": "Egoist (Psychometabolism)",
+        "description": "Specialists in altering psychobiology, can heal and transform themselves",
+        "additionalSkills": [
+          "autohypnosis",
+          "balance",
+          "heal"
+        ]
+      },
+      {
+        "name": "Nomad (Psychoportation)",
+        "description": "Wielders of powers that propel or displace objects in space and time",
+        "additionalSkills": [
+          "climb",
+          "jump",
+          "ride",
+          "survival",
+          "swim"
+        ]
+      },
+      {
+        "name": "Telepath (Telepathy)",
+        "description": "Masters of mental contact and control, can deceive or destroy minds",
+        "additionalSkills": [
+          "bluff",
+          "diplomacy",
+          "gather-information",
+          "sense-motive"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "psychic-warrior",
+    "name": "Psychic Warrior",
+    "description": "A warrior who combines combat skill with psionic powers. The psychic warrior supplements physical attacks with psionic feats and abilities, achieving a balance between martial prowess and mental might.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "autohypnosis",
+      "climb",
+      "concentration",
+      "craft",
+      "jump",
+      "knowledge-psionics",
+      "profession",
+      "ride",
+      "search",
+      "swim"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "source": "Expanded Psionics Handbook",
+    "specialAbilities": [
+      "Power Points/Day: Base power points plus bonus from high Wisdom",
+      "Powers Known: Starts with 1 power, gains more with each level",
+      "Bonus Feats: Gains bonus combat-oriented feats at 1st, 2nd, 5th, 8th, 11th, 14th, 17th, and 20th level (can choose from fighter bonus feats or psionic feats)"
+    ]
+  },
+  {
+    "id": "ranger",
+    "name": "Ranger",
+    "description": "A skilled woodsman and tracker who defends the wilderness.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 6,
+    "classSkills": [
+      "climb",
+      "concentration",
+      "craft",
+      "handle-animal",
+      "heal",
+      "hide",
+      "jump",
+      "knowledge-dungeoneering",
+      "knowledge-geography",
+      "knowledge-nature",
+      "listen",
+      "move-silently",
+      "profession",
+      "ride",
+      "search",
+      "spot",
+      "survival",
+      "swim",
+      "use-rope"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "rogue",
+    "name": "Rogue",
+    "description": "A skilled thief and scout, master of stealth and deception.",
+    "hitDie": 6,
+    "skillPointsPerLevel": 8,
+    "classSkills": [
+      "appraise",
+      "balance",
+      "bluff",
+      "climb",
+      "craft",
+      "decipher-script",
+      "diplomacy",
+      "disable-device",
+      "disguise",
+      "escape-artist",
+      "forgery",
+      "gather-information",
+      "hide",
+      "intimidate",
+      "jump",
+      "listen",
+      "move-silently",
+      "open-lock",
+      "perform",
+      "profession",
+      "search",
+      "sense-motive",
+      "sleight-of-hand",
+      "spot",
+      "swim",
+      "tumble",
+      "use-magic-device",
+      "use-rope"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "sorcerer",
+    "name": "Sorcerer",
+    "description": "A spellcaster who draws on inherent magic from a gift or bloodline.",
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "bluff",
+      "concentration",
+      "craft",
+      "knowledge-arcana",
+      "profession",
+      "spellcraft"
+    ],
+    "baseAttackBonus": "poor",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "soulborn",
+    "name": "Soulborn",
+    "description": "Soulborn are warrior-priests who blend martial prowess with the power of incarnum. They are devoted champions who shape soulmelds to enhance their combat abilities and smite their foes. Soulborn channel their alignment ideals into physical manifestations of power.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "Concentration",
+      "Craft",
+      "Diplomacy",
+      "Intimidate",
+      "Jump",
+      "Knowledge (religion)",
+      "Knowledge (the planes)",
+      "Profession",
+      "Ride",
+      "Sense Motive"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "specialAbilities": [
+      {
+        "level": 1,
+        "name": "Aligned Meldshaper",
+        "description": "Must choose one alignment component (good, evil, law, or chaos). Alignment restriction: neutral good, neutral evil, lawful neutral, or chaotic neutral."
+      },
+      {
+        "level": 1,
+        "name": "Soulmelds",
+        "description": "Can shape soulborn soulmelds. Number of soulmelds is limited by Constitution score and class level."
+      },
+      {
+        "level": 1,
+        "name": "Smite Opposition",
+        "description": "Can smite creatures of opposing alignment, dealing extra damage based on soulborn level."
+      },
+      {
+        "level": 1,
+        "name": "Chakra Binds",
+        "description": "Can bind soulmelds to chakras: crown/feet/hands at 4th, arms/brow/shoulders at 11th, throat/waist at 18th."
+      }
+    ],
+    "source": "Magic of Incarnum",
+    "armorProficiencies": [
+      "Light",
+      "Medium",
+      "Heavy",
+      "Shields"
+    ],
+    "weaponProficiencies": [
+      "Simple",
+      "Martial"
+    ]
+  },
+  {
+    "id": "soulknife",
+    "name": "Soulknife",
+    "description": "A warrior who forges mental strength into a shimmering blade of semisolid psychic energy called a mind blade. Each mind blade is unique in color and shape, reflecting the soulknife's personality and mental strength.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "autohypnosis",
+      "climb",
+      "concentration",
+      "craft",
+      "hide",
+      "jump",
+      "knowledge-psionics",
+      "listen",
+      "move-silently",
+      "profession",
+      "spot",
+      "tumble"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "good"
+    },
+    "source": "Expanded Psionics Handbook",
+    "specialAbilities": [
+      "Mind Blade (Su): Create a semisolid blade of psychic energy as a move action (functions as short sword, improved at higher levels)",
+      "Weapon Focus (Mind Blade): Bonus feat at 1st level",
+      "Wild Talent: Bonus feat providing psionic power",
+      "Throw Mind Blade (Ex): Can throw mind blade as ranged weapon at 2nd level",
+      "Psychic Strike (Su): Imbue mind blade with extra 1d8 damage at 3rd level (scales with level)",
+      "Free Draw (Su): Materialize mind blade as free action at 5th level",
+      "Shape Mind Blade (Su): Change mind blade form or split into two at 5th level",
+      "Mind Blade Enhancement (Su): Add weapon special abilities starting at 6th level",
+      "Speed of Thought: Bonus feat at 6th level",
+      "Bladewind (Su): Fragment mind blade to attack all nearby opponents at 9th level",
+      "Greater Weapon Focus (Mind Blade): Bonus feat at 9th level",
+      "Knife to the Soul (Su): Deal ability damage instead of extra dice at 13th level",
+      "Multiple Throw (Ex): Throw multiple mind blades per round at 17th level"
+    ]
+  },
+  {
+    "id": "totemist",
+    "name": "Totemist",
+    "description": "Totemists are primal warriors who channel the souls of magical beasts and monstrous creatures through incarnum. They shape soulmelds based on creature totems, gaining animalistic and monstrous abilities. Totemists have a unique totem chakra that grants powerful bestial transformations.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "Balance",
+      "Climb",
+      "Concentration",
+      "Craft",
+      "Handle Animal",
+      "Hide",
+      "Jump",
+      "Knowledge (nature)",
+      "Move Silently",
+      "Profession",
+      "Survival",
+      "Swim"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "specialAbilities": [
+      {
+        "level": 1,
+        "name": "Soulmelds",
+        "description": "Can shape totemist soulmelds based on magical beasts and monsters. Number limited by Constitution score and class level."
+      },
+      {
+        "level": 1,
+        "name": "Totem Chakra",
+        "description": "Has access to the unique totem chakra which can be used to bind soulmelds for powerful creature-based transformations."
+      },
+      {
+        "level": 1,
+        "name": "Chakra Binds",
+        "description": "Can bind soulmelds to chakras: totem/crown/feet/hands at 1st, arms/brow/shoulders at 10th, throat/waist at 15th."
+      },
+      {
+        "level": 1,
+        "name": "Wild Empathy",
+        "description": "Can improve the attitude of animals, similar to the druid ability."
+      }
+    ],
+    "source": "Magic of Incarnum",
+    "armorProficiencies": [
+      "Light",
+      "Medium"
+    ],
+    "weaponProficiencies": [
+      "Simple",
+      "Martial"
+    ]
+  },
+  {
+    "id": "wilder",
+    "name": "Wilder",
+    "description": "A passionate, reckless psionic character who wields uncontrolled raw psionic power through emotion rather than discipline. Wilders can push their powers beyond normal limits through wild surges.",
+    "hitDie": 6,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "autohypnosis",
+      "balance",
+      "bluff",
+      "climb",
+      "concentration",
+      "craft",
+      "escape-artist",
+      "intimidate",
+      "jump",
+      "knowledge-psionics",
+      "listen",
+      "profession",
+      "psicraft",
+      "sense-motive",
+      "spot",
+      "swim",
+      "tumble"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Expanded Psionics Handbook",
+    "specialAbilities": [
+      "Power Points/Day: Base power points plus bonus from high Charisma",
+      "Powers Known: Starts with 1 power, gains more with each level",
+      "Wild Surge: Can boost manifester level by +1 to +4 (with risk of enervation)",
+      "Psychic Enervation: Temporary power loss if wild surge roll is 1",
+      "Elude Touch (Ex): Add Charisma bonus to AC at 2nd level",
+      "Surging Euphoria: Bonus on attack and damage rolls for 1 round after successful wild surge at 3rd level",
+      "Volatile Mind: Gain power resistance at 5th level (improves with level)"
+    ]
+  },
+  {
+    "id": "wizard",
+    "name": "Wizard",
+    "description": "A powerful arcane spellcaster who studies magical arts.",
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": [
+      "concentration",
+      "craft",
+      "decipher-script",
+      "knowledge-arcana",
+      "knowledge-all",
+      "profession",
+      "spellcraft"
+    ],
+    "baseAttackBonus": "poor",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Player's Handbook"
+  }
+]

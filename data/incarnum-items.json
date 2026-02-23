@@ -1,0 +1,44 @@
+[
+  {
+    "id": "ring_of_essentia",
+    "name": "Ring of Essentia",
+    "description": "This ring grants the wearer additional essentia that can be invested.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "amulet_of_incarnum_shielding",
+    "name": "Amulet of Incarnum Shielding",
+    "description": "This amulet protects against incarnum-based attacks and effects.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "cloak_of_soulbound_resistance",
+    "name": "Cloak of Soulbound Resistance",
+    "description": "This cloak grants resistance bonuses that scale with invested essentia.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "essentia_jewel",
+    "name": "Essentia Jewel",
+    "description": "This jewel stores essentia that can be drawn upon when needed.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "incarnum_focus",
+    "name": "Incarnum Focus",
+    "description": "This item enhances your ability to shape and bind soulmelds.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "soulbound_weapon",
+    "name": "Soulbound Weapon",
+    "description": "This weapon can have essentia invested into it for enhanced power.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "soulbound_armor",
+    "name": "Soulbound Armor",
+    "description": "This armor can have essentia invested into it for enhanced protection.",
+    "source": "Magic of Incarnum"
+  }
+]

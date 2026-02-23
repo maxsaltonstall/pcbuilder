@@ -1,0 +1,212 @@
+[
+  {
+    "id": "desert-wind",
+    "name": "Desert Wind",
+    "description": "Speed, mobility, and fire. Emphasizes quick strikes and burning attacks.",
+    "keySkill": "Tumble",
+    "preferredWeapons": [
+      "scimitar",
+      "light mace",
+      "light pick",
+      "falchion",
+      "spear"
+    ],
+    "philosophy": "Movement and flame - strike like a burning sirocco",
+    "availableTo": [
+      "Swordsage",
+      "Warblade (limited)"
+    ],
+    "maneuverTypes": [
+      "Fire damage",
+      "Movement boosts",
+      "Agile strikes"
+    ],
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "devoted-spirit",
+    "name": "Devoted Spirit",
+    "description": "Faith and spiritual strength. Healing, anti-evil abilities, and zealous power.",
+    "keySkill": "Intimidate",
+    "preferredWeapons": [
+      "falchion",
+      "greatclub",
+      "longsword",
+      "maul"
+    ],
+    "philosophy": "Purity and devotion - faith makes the warrior invincible",
+    "availableTo": [
+      "Crusader"
+    ],
+    "maneuverTypes": [
+      "Healing",
+      "Anti-alignment",
+      "Zealous strikes"
+    ],
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "diamond-mind",
+    "name": "Diamond Mind",
+    "description": "Mental discipline and perfect focus. Action without thought, counters and clarity.",
+    "keySkill": "Concentration",
+    "preferredWeapons": [
+      "rapier",
+      "shortspear",
+      "bastard sword (katana)",
+      "trident"
+    ],
+    "philosophy": "True quickness lies in the mind - achieve perfect clarity",
+    "availableTo": [
+      "Swordsage",
+      "Warblade"
+    ],
+    "maneuverTypes": [
+      "Mental focus",
+      "Counters",
+      "Initiative boosts"
+    ],
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "iron-heart",
+    "name": "Iron Heart",
+    "description": "Pure swordsmanship and weapon mastery. The most skilled bladework.",
+    "keySkill": "Balance",
+    "preferredWeapons": [
+      "bastard sword",
+      "dwarven waraxe",
+      "longsword",
+      "two-bladed sword"
+    ],
+    "philosophy": "Absolute mastery of the sword through endless practice",
+    "availableTo": [
+      "Warblade"
+    ],
+    "maneuverTypes": [
+      "Weapon mastery",
+      "Precise strikes",
+      "Perfect form"
+    ],
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "setting-sun",
+    "name": "Setting Sun",
+    "description": "Turning enemy strength against them. Throws, redirects, and counters.",
+    "keySkill": "Sense Motive",
+    "preferredWeapons": [
+      "short sword",
+      "quarterstaff",
+      "nunchaku",
+      "unarmed strike"
+    ],
+    "philosophy": "Use the opponent's power to defeat them",
+    "availableTo": [
+      "Swordsage"
+    ],
+    "maneuverTypes": [
+      "Throws",
+      "Redirects",
+      "Defensive counters"
+    ],
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "shadow-hand",
+    "name": "Shadow Hand",
+    "description": "Stealth, deception, and shadow magic. Strike from darkness.",
+    "keySkill": "Hide",
+    "preferredWeapons": [
+      "dagger",
+      "short sword",
+      "sai",
+      "siangham",
+      "unarmed strike",
+      "spiked chain"
+    ],
+    "philosophy": "Defeat enemies before they know danger exists",
+    "availableTo": [
+      "Swordsage"
+    ],
+    "maneuverTypes": [
+      "Stealth",
+      "Shadow/darkness",
+      "Teleportation"
+    ],
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "stone-dragon",
+    "name": "Stone Dragon",
+    "description": "Strength and endurance. Raw physical power like the mountain.",
+    "keySkill": "Balance",
+    "preferredWeapons": [
+      "greatsword",
+      "greataxe",
+      "heavy mace",
+      "unarmed strike"
+    ],
+    "philosophy": "Relentless force and unbreakable endurance",
+    "availableTo": [
+      "Crusader",
+      "Swordsage",
+      "Warblade"
+    ],
+    "maneuverTypes": [
+      "Power strikes",
+      "Durability",
+      "Crushing blows"
+    ],
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "tiger-claw",
+    "name": "Tiger Claw",
+    "description": "Primal fury and animal instincts. Savage strikes and feral power.",
+    "keySkill": "Jump",
+    "preferredWeapons": [
+      "kukri",
+      "kama",
+      "claw",
+      "handaxe",
+      "greataxe",
+      "unarmed strike"
+    ],
+    "philosophy": "Unleash the beast within - instinct over thought",
+    "availableTo": [
+      "Swordsage",
+      "Warblade"
+    ],
+    "maneuverTypes": [
+      "Savage strikes",
+      "Leaping attacks",
+      "Feral fury"
+    ],
+    "source": "Tome of Battle"
+  },
+  {
+    "id": "white-raven",
+    "name": "White Raven",
+    "description": "Tactics and leadership. Fighting as a coordinated unit.",
+    "keySkill": "Diplomacy",
+    "preferredWeapons": [
+      "longsword",
+      "battleaxe",
+      "warhammer",
+      "greatsword",
+      "halberd"
+    ],
+    "philosophy": "Teamwork and coordination multiply warrior strength",
+    "availableTo": [
+      "Crusader",
+      "Warblade"
+    ],
+    "maneuverTypes": [
+      "Team tactics",
+      "Leadership",
+      "Coordinated strikes"
+    ],
+    "source": "Tome of Battle"
+  }
+]

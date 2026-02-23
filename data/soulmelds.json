@@ -1,0 +1,543 @@
+[
+  {
+    "id": "acrobat_boots",
+    "name": "Acrobat Boots",
+    "description": "These ethereal boots enhance your agility and mobility, granting bonuses to Balance, Jump, and Tumble checks.",
+    "chakraBinds": [
+      "Feet",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases the competence bonus.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "adamant_pauldrons",
+    "name": "Adamant Pauldrons",
+    "description": "These shoulder guards of solid incarnum grant you enhanced protection and damage reduction.",
+    "chakraBinds": [
+      "Shoulders"
+    ],
+    "essentia": "Each point of essentia increases damage reduction.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "airstep_sandals",
+    "name": "Airstep Sandals",
+    "description": "These sandals allow you to walk on air for brief periods.",
+    "chakraBinds": [
+      "Feet"
+    ],
+    "essentia": "Each point of essentia increases duration of air walking.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "ankheg_breastplate",
+    "name": "Ankheg Breastplate",
+    "description": "This chitinous breastplate grants you enhanced natural armor and burrowing abilities.",
+    "chakraBinds": [
+      "Heart",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases natural armor bonus.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "apparition_ribbon",
+    "name": "Apparition Ribbon",
+    "description": "This ghostly ribbon allows you to become incorporeal for brief periods.",
+    "chakraBinds": [
+      "Waist"
+    ],
+    "essentia": "Each point of essentia increases incorporeal duration.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "arcane_focus",
+    "name": "Arcane Focus",
+    "description": "This soulmeld enhances your spellcasting abilities and concentration.",
+    "chakraBinds": [
+      "Crown",
+      "Brow"
+    ],
+    "essentia": "Each point of essentia increases spellcasting bonuses.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "armguards_of_disruption",
+    "name": "Armguards of Disruption",
+    "description": "These armguards allow you to disrupt enemy spellcasting with your attacks.",
+    "chakraBinds": [
+      "Arms"
+    ],
+    "essentia": "Each point of essentia increases disruption DC.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "basilisk_mask",
+    "name": "Basilisk Mask",
+    "description": "This stone mask grants you a petrifying gaze attack.",
+    "chakraBinds": [
+      "Brow",
+      "Throat",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases gaze save DC.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "beast_tamer_circlet",
+    "name": "Beast Tamer Circlet",
+    "description": "This circlet enhances your ability to control and command animals and magical beasts.",
+    "chakraBinds": [
+      "Crown"
+    ],
+    "essentia": "Each point of essentia increases Handle Animal bonus.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "behir_gorget",
+    "name": "Behir Gorget",
+    "description": "This throat guard grants you a lightning breath weapon.",
+    "chakraBinds": [
+      "Throat",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases breath weapon damage.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "blink_shirt",
+    "name": "Blink Shirt",
+    "description": "This shimmering shirt allows you to blink in and out of reality, granting miss chance.",
+    "chakraBinds": [
+      "Heart"
+    ],
+    "essentia": "Each point of essentia increases miss chance.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "bloodtalons",
+    "name": "Bloodtalons",
+    "description": "These crimson claws enhance your natural attacks and allow you to deal bleed damage.",
+    "chakraBinds": [
+      "Hands",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases claw damage.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "bloodwar_gauntlets",
+    "name": "Bloodwar Gauntlets",
+    "description": "These gauntlets of infernal or celestial power enhance your melee attacks with alignment-based damage.",
+    "chakraBinds": [
+      "Hands"
+    ],
+    "essentia": "Each point of essentia increases bonus damage.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "bluesteel_bracers",
+    "name": "Bluesteel Bracers",
+    "description": "These metallic bracers enhance your armor class and deflect attacks.",
+    "chakraBinds": [
+      "Arms"
+    ],
+    "essentia": "Each point of essentia increases AC bonus.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "brass_mane",
+    "name": "Brass Mane",
+    "description": "This metallic mane grants you enhanced senses and the ability to roar with devastating effect.",
+    "chakraBinds": [
+      "Throat",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases roar effects.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "cerulean_sandals",
+    "name": "Cerulean Sandals",
+    "description": "These blue sandals enhance your movement speed and allow you to avoid attacks of opportunity.",
+    "chakraBinds": [
+      "Feet"
+    ],
+    "essentia": "Each point of essentia increases speed bonus.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "crystal_helm",
+    "name": "Crystal Helm",
+    "description": "This crystalline helm protects you from mental attacks and enhances your mental clarity.",
+    "chakraBinds": [
+      "Crown",
+      "Brow"
+    ],
+    "essentia": "Each point of essentia increases mental protection.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "diadem_of_purelight",
+    "name": "Diadem of Purelight",
+    "description": "This radiant diadem allows you to emit light and harm undead and evil creatures.",
+    "chakraBinds": [
+      "Crown"
+    ],
+    "essentia": "Each point of essentia increases light radius and damage.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "disenchanter_mask",
+    "name": "Disenchanter Mask",
+    "description": "This mask allows you to drain magic from items and creatures.",
+    "chakraBinds": [
+      "Brow"
+    ],
+    "essentia": "Each point of essentia increases dispelling power.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "displacer_mantle",
+    "name": "Displacer Mantle",
+    "description": "This shadowy mantle causes you to appear displaced, granting a miss chance against attacks.",
+    "chakraBinds": [
+      "Shoulders",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases miss chance.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "dissolving_spittle",
+    "name": "Dissolving Spittle",
+    "description": "This soulmeld grants you a corrosive spit attack that deals acid damage.",
+    "chakraBinds": [
+      "Throat",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases acid damage.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "dread_carapace",
+    "name": "Dread Carapace",
+    "description": "This dark chitinous armor grants you natural armor and intimidating presence.",
+    "chakraBinds": [
+      "Heart",
+      "Soul"
+    ],
+    "essentia": "Each point of essentia increases natural armor and fear effects.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "enigma_helm",
+    "name": "Enigma Helm",
+    "description": "This mysterious helm protects your thoughts and grants you telepathic abilities.",
+    "chakraBinds": [
+      "Crown",
+      "Brow"
+    ],
+    "essentia": "Each point of essentia increases mental protection and telepathy range.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "fearsome_mask",
+    "name": "Fearsome Mask",
+    "description": "This terrifying mask allows you to demoralize and frighten opponents.",
+    "chakraBinds": [
+      "Brow"
+    ],
+    "essentia": "Each point of essentia increases Intimidate bonus and fear effects.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "fellmist_robe",
+    "name": "Fellmist Robe",
+    "description": "This shadowy robe grants you concealment and the ability to slip through shadows.",
+    "chakraBinds": [
+      "Shoulders",
+      "Heart"
+    ],
+    "essentia": "Each point of essentia increases concealment.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "flame_cincture",
+    "name": "Flame Cincture",
+    "description": "This belt of fire grants you fire resistance and allows you to deal fire damage with your attacks.",
+    "chakraBinds": [
+      "Waist"
+    ],
+    "essentia": "Each point of essentia increases fire damage and resistance.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "frost_helm",
+    "name": "Frost Helm",
+    "description": "This icy helm grants you cold resistance and a freezing touch.",
+    "chakraBinds": [
+      "Crown",
+      "Brow"
+    ],
+    "essentia": "Each point of essentia increases cold damage and resistance.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "girallon_arms",
+    "name": "Girallon Arms",
+    "description": "This soulmeld grants you additional arms, allowing you to make extra attacks.",
+    "chakraBinds": [
+      "Arms",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases attack bonuses.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "gloves_of_the_poisoned_soul",
+    "name": "Gloves of the Poisoned Soul",
+    "description": "These gloves allow you to deliver poison with your touch.",
+    "chakraBinds": [
+      "Hands"
+    ],
+    "essentia": "Each point of essentia increases poison save DC and damage.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "gorgon_mask",
+    "name": "Gorgon Mask",
+    "description": "This metallic mask grants you a petrifying breath weapon and enhanced defenses.",
+    "chakraBinds": [
+      "Brow",
+      "Throat",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases breath weapon save DC.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "great_raptor_mask",
+    "name": "Great Raptor Mask",
+    "description": "This eagle or owl mask grants you enhanced vision, including superior low-light vision and evasion.",
+    "chakraBinds": [
+      "Brow",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases Spot bonus.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "heart_of_fire",
+    "name": "Heart of Fire",
+    "description": "This blazing stone grants you fire damage on your attacks and resistance to cold. Based on the remorhaz.",
+    "chakraBinds": [
+      "Waist",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases fire damage dealt to attackers or on attacks.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "hunters_circlet",
+    "name": "Hunter's Circlet",
+    "description": "This ivy-like headband enhances your hunting abilities and tracking skills.",
+    "chakraBinds": [
+      "Crown",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases tracking and survival bonuses.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "illusion_veil",
+    "name": "Illusion Veil",
+    "description": "This veil allows you to create illusions and disguise yourself.",
+    "chakraBinds": [
+      "Brow",
+      "Throat"
+    ],
+    "essentia": "Each point of essentia increases illusion effectiveness.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "impulse_boots",
+    "name": "Impulse Boots",
+    "description": "These boots grant you enhanced jumping ability and allow you to leap great distances.",
+    "chakraBinds": [
+      "Feet"
+    ],
+    "essentia": "Each point of essentia increases Jump bonus.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "incarnate_avatar",
+    "name": "Incarnate Avatar",
+    "description": "This powerful soulmeld transforms you into an avatar of your alignment, granting numerous benefits.",
+    "chakraBinds": [
+      "Soul"
+    ],
+    "essentia": "Each point of essentia increases avatar powers.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "incarnate_weapon",
+    "name": "Incarnate Weapon",
+    "description": "This soulmeld creates a weapon of pure incarnum aligned to your chosen ideal.",
+    "chakraBinds": [
+      "Hands",
+      "Arms"
+    ],
+    "essentia": "Each point of essentia increases weapon enhancement bonus.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "keeneye_lenses",
+    "name": "Keeneye Lenses",
+    "description": "These lenses enhance your vision, granting bonuses to Search and Spot checks.",
+    "chakraBinds": [
+      "Brow"
+    ],
+    "essentia": "Each point of essentia increases visual perception.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "kraken_mantle",
+    "name": "Kraken Mantle",
+    "description": "This tentacled mantle grants you additional tentacle attacks and swimming ability.",
+    "chakraBinds": [
+      "Shoulders",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases tentacle damage.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "landshark_boots",
+    "name": "Landshark Boots",
+    "description": "These boots allow you to burrow through earth and stone.",
+    "chakraBinds": [
+      "Feet",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases burrow speed.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "necrocarnum_touch",
+    "name": "Necrocarnum Touch",
+    "description": "This dark soulmeld allows you to drain life energy with your touch.",
+    "chakraBinds": [
+      "Hands"
+    ],
+    "essentia": "Each point of essentia increases negative energy damage.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "necrocarnum_weapon",
+    "name": "Necrocarnum Weapon",
+    "description": "This weapon of death-infused incarnum deals negative energy damage.",
+    "chakraBinds": [
+      "Hands",
+      "Arms"
+    ],
+    "essentia": "Each point of essentia increases weapon power and negative energy effects.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "phoenix_belt",
+    "name": "Phoenix Belt",
+    "description": "This fiery belt grants you the ability to be reborn from death like a phoenix.",
+    "chakraBinds": [
+      "Waist"
+    ],
+    "essentia": "Each point of essentia increases rebirth power.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "soulspark_familiar",
+    "name": "Soulspark Familiar",
+    "description": "This soulmeld creates a familiar-like creature made of pure incarnum.",
+    "chakraBinds": [
+      "Crown"
+    ],
+    "essentia": "Each point of essentia increases familiar abilities.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "sphinx_claws",
+    "name": "Sphinx Claws",
+    "description": "These lion-like claws grant you powerful melee attacks and enhanced pouncing ability.",
+    "chakraBinds": [
+      "Hands",
+      "Feet",
+      "Totem"
+    ],
+    "essentia": "Each point of essentia increases claw damage.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "thunderstep_boots",
+    "name": "Thunderstep Boots",
+    "description": "These boots allow you to teleport short distances with a thunderous boom.",
+    "chakraBinds": [
+      "Feet"
+    ],
+    "essentia": "Each point of essentia increases teleport distance.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "totem_avatar",
+    "name": "Totem Avatar",
+    "description": "This powerful soulmeld transforms you into an avatar of your chosen totem creature.",
+    "chakraBinds": [
+      "Totem",
+      "Soul"
+    ],
+    "essentia": "Each point of essentia increases totem transformation powers.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "unicorn_horn",
+    "name": "Unicorn Horn",
+    "description": "This spiraling horn grants you healing powers and the ability to cure poison and disease.",
+    "chakraBinds": [
+      "Brow",
+      "Crown"
+    ],
+    "essentia": "Each point of essentia increases healing power.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "vitality_belt",
+    "name": "Vitality Belt",
+    "description": "This belt enhances your Constitution and grants you temporary hit points.",
+    "chakraBinds": [
+      "Waist"
+    ],
+    "essentia": "Each point of essentia increases Constitution bonus.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "wind_cloak",
+    "name": "Wind Cloak",
+    "description": "This airy cloak grants you enhanced speed and the ability to fly.",
+    "chakraBinds": [
+      "Shoulders"
+    ],
+    "essentia": "Each point of essentia increases fly speed.",
+    "source": "Magic of Incarnum"
+  },
+  {
+    "id": "winter_mask",
+    "name": "Winter Mask",
+    "description": "This icy mask grants you cold immunity and a freezing breath weapon.",
+    "chakraBinds": [
+      "Brow",
+      "Throat"
+    ],
+    "essentia": "Each point of essentia increases cold damage.",
+    "source": "Magic of Incarnum"
+  }
+]
