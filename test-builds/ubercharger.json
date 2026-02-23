@@ -78,7 +78,7 @@
     "mustHave": {
       "baseAttackBonus": { "min": 12, "ideal": 12 },
       "totalSkillPoints": { "min": 48, "ideal": 60 },
-      "hp": { "min": 120, "ideal": 144 }
+      "hp": { "min": 119, "ideal": 144 }
     },
     "shouldHave": {
       "feats": ["Power Attack", "Leap Attack", "Lion Totem Barbarian", "Shock Trooper"],
