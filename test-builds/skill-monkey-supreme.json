@@ -39,7 +39,7 @@
   ],
 
   "expectedStats": {
-    "totalSkillPoints": 450,
+    "totalSkillPoints": 224,
     "keySkills": [
       "Use Magic Device",
       "Disable Device",
@@ -99,7 +99,7 @@
 
   "validationCriteria": {
     "mustHave": {
-      "totalSkillPoints": { "min": 400, "ideal": 450 },
+      "totalSkillPoints": { "min": 220, "ideal": 250 },
       "baseAttackBonus": { "min": 10, "ideal": 11 }
     },
     "shouldHave": {

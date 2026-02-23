@@ -91,6 +91,17 @@ function distributeClassLevels(
     return [];
   }
 
+  // Check if levels are already specified in the input
+  const hasExplicitLevels = targetClasses.some(tc => 'levels' in tc && tc.levels !== undefined);
+
+  if (hasExplicitLevels) {
+    // Use explicitly specified levels from input
+    return targetClasses.map(tc => ({
+      ...tc,
+      levels: (tc as any).levels || 0
+    }));
+  }
+
   // If only one class, give it all levels
   if (targetClasses.length === 1) {
     return [{
@@ -616,6 +627,8 @@ function chooseAbilityIncrease(
       return 'wis';
     case 'hp':
       return 'con';
+    case 'skills':
+      return 'int';  // Maximize INT for skill points
     default:
       return 'str';
   }

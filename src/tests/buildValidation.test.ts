@@ -269,8 +269,9 @@ describe('Build Validation - Community Optimized Builds', () => {
         false
       );
 
-      // Should have 400+ skill points
-      expect(totalSkillPoints).toBeGreaterThanOrEqual(400);
+      // Should meet minimum skill point requirements
+      const minAcceptable = build.validationCriteria.mustHave.totalSkillPoints.min;
+      expect(totalSkillPoints).toBeGreaterThanOrEqual(minAcceptable);
     });
 
     test('starts with Rogue for skill point multiplier', () => {

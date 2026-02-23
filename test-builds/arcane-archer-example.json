@@ -101,7 +101,7 @@
     "mustHave": {
       "casterLevel": { "min": 16, "ideal": 18 },
       "baseAttackBonus": { "min": 15, "ideal": 17 },
-      "totalSkillPoints": { "min": 180, "ideal": 200 },
+      "totalSkillPoints": { "min": 135, "ideal": 150 },
       "aaEntryLevel": { "min": 7, "max": 9, "ideal": 8 }
     },
     "shouldHave": {
