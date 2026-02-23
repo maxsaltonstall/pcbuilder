@@ -19,6 +19,8 @@ import {
   LinearProgress,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import SaveIcon from '@mui/icons-material/Save';
+import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import { useCharacter } from '../context/CharacterContext';
 import { calculateTotalSkillPoints, getAbilityModifier, getSkillPointsPerLevel, getMagicItemIntBonus } from '../services/skillCalculator';
 import { allocateSkillPoints } from '../services/skillRecommendations';
@@ -26,34 +28,43 @@ import { recommendFeats } from '../services/featRecommendations';
 import { calculateCombatStats, calculateSpellSlots } from '../services/combatCalculations';
 import { recommendEquipment } from '../services/equipmentRecommendations';
 import { detectActiveFeatChains, analyzeFeatSynergies } from '../services/featChainDetector';
+import { saveCharacterToFile, loadCharacterFromFile } from '../services/characterStorage';
 
 interface CharacterReviewProps {
   onBack: () => void;
 }
 
 function CharacterReview({ onBack }: CharacterReviewProps) {
-  const { state, resetCharacter } = useCharacter();
+  const { state, resetCharacter, loadCharacter } = useCharacter();
 
-  const handleExport = () => {
-    // Export functionality to be implemented
-    const characterData = {
-      concept: state.concept,
-      level: state.totalLevel,
-      classes: state.targetClasses,
-      abilityScores: state.abilityScores,
-      progression: state.optimizedProgression,
-      desiredFeats: state.desiredFeats,
-      keySkills: state.keySkills,
-    };
+  const handleSave = () => {
+    try {
+      saveCharacterToFile(state, state.concept);
+      // Show success message
+      alert('Character saved successfully!');
+    } catch (error) {
+      console.error('Error saving character:', error);
+      alert('Failed to save character. Please try again.');
+    }
+  };
 
-    const dataStr = JSON.stringify(characterData, null, 2);
-    const dataBlob = new Blob([dataStr], { type: 'application/json' });
-    const url = URL.createObjectURL(dataBlob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `${state.concept.replace(/\s+/g, '_')}_level_${state.totalLevel}.json`;
-    link.click();
-    URL.revokeObjectURL(url);
+  const handleLoad = async () => {
+    if (state.concept && !window.confirm('Load a character? This will replace your current character.')) {
+      return;
+    }
+
+    try {
+      const savedCharacter = await loadCharacterFromFile();
+      loadCharacter(savedCharacter);
+      alert(`Character "${savedCharacter.characterName}" loaded successfully!`);
+    } catch (error) {
+      console.error('Error loading character:', error);
+      if (error instanceof Error) {
+        alert(`Failed to load character: ${error.message}`);
+      } else {
+        alert('Failed to load character. Please check the file and try again.');
+      }
+    }
   };
 
   const handleNewCharacter = () => {
@@ -862,11 +873,23 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Button onClick={onBack}>Back</Button>
         <Box sx={{ display: 'flex', gap: 2 }}>
+          <Button
+            startIcon={<FolderOpenIcon />}
+            onClick={handleLoad}
+            variant="outlined"
+          >
+            Load Character
+          </Button>
+          <Button
+            startIcon={<SaveIcon />}
+            onClick={handleSave}
+            variant="contained"
+            color="success"
+          >
+            Save Character
+          </Button>
           <Button onClick={handleNewCharacter} color="warning">
             New Character
-          </Button>
-          <Button variant="contained" onClick={handleExport}>
-            Export JSON
           </Button>
         </Box>
       </Box>

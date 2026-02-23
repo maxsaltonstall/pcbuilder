@@ -48,6 +48,7 @@ export interface CharacterContextType {
   setOptimizedProgression: (progression: LevelProgression[]) => void;
   setFinalCharacter: (character: CompleteCharacter) => void;
   resetCharacter: () => void;
+  loadCharacter: (character: CharacterState) => void;
 }
 
 export const initialCharacterState: CharacterState = {

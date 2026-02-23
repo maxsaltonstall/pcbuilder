@@ -23,7 +23,8 @@ type CharacterAction =
     }
   | { type: 'SET_OPTIMIZED_PROGRESSION'; payload: LevelProgression[] }
   | { type: 'SET_FINAL_CHARACTER'; payload: CompleteCharacter }
-  | { type: 'RESET_CHARACTER' };
+  | { type: 'RESET_CHARACTER' }
+  | { type: 'LOAD_CHARACTER'; payload: CharacterState };
 
 function characterReducer(state: CharacterState, action: CharacterAction): CharacterState {
   switch (action.type) {
@@ -60,6 +61,11 @@ function characterReducer(state: CharacterState, action: CharacterAction): Chara
       };
     case 'RESET_CHARACTER':
       return initialCharacterState;
+    case 'LOAD_CHARACTER':
+      return {
+        ...initialCharacterState,
+        ...action.payload,
+      };
     default:
       return state;
   }
@@ -83,6 +89,7 @@ export function CharacterProvider({ children }: { children: ReactNode }) {
     setFinalCharacter: (character) =>
       dispatch({ type: 'SET_FINAL_CHARACTER', payload: character }),
     resetCharacter: () => dispatch({ type: 'RESET_CHARACTER' }),
+    loadCharacter: (character) => dispatch({ type: 'LOAD_CHARACTER', payload: character }),
   };
 
   return <CharacterContext.Provider value={value}>{children}</CharacterContext.Provider>;

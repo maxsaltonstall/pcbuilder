@@ -14,15 +14,17 @@ import {
   SelectChangeEvent,
   ListSubheader,
 } from '@mui/material';
+import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import { useCharacter } from '../context/CharacterContext';
 import { getGroupedSources } from '../utils/extractSources';
+import { loadCharacterFromFile } from '../services/characterStorage';
 
 interface InitialSetupProps {
   onNext: () => void;
 }
 
 function InitialSetup({ onNext }: InitialSetupProps) {
-  const { state, updateInitialSetup } = useCharacter();
+  const { state, updateInitialSetup, loadCharacter } = useCharacter();
   const [level, setLevel] = useState(state.totalLevel);
   const [concept, setConcept] = useState(state.concept);
   const [sources, setSources] = useState<string[]>(state.rulesSources);
@@ -56,6 +58,27 @@ function InitialSetup({ onNext }: InitialSetupProps) {
   const handleNext = () => {
     updateInitialSetup(level, concept, sources);
     onNext();
+  };
+
+  const handleLoad = async () => {
+    if (concept && !window.confirm('Load a character? This will replace your current progress.')) {
+      return;
+    }
+
+    try {
+      const savedCharacter = await loadCharacterFromFile();
+      loadCharacter(savedCharacter);
+
+      // Update local state to reflect loaded character
+      setLevel(savedCharacter.totalLevel);
+      setConcept(savedCharacter.concept);
+      setSources(savedCharacter.rulesSources);
+
+      alert(`Character "${savedCharacter.characterName || savedCharacter.concept}" loaded successfully!`);
+    } catch (error) {
+      console.error('Error loading character:', error);
+      alert('Failed to load character. Please check the file and try again.');
+    }
   };
 
   const isValid = concept.trim() !== '' && sources.length > 0;
@@ -165,7 +188,14 @@ function InitialSetup({ onNext }: InitialSetupProps) {
         </Select>
       </FormControl>
 
-      <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 2 }}>
+        <Button
+          startIcon={<FolderOpenIcon />}
+          onClick={handleLoad}
+          variant="outlined"
+        >
+          Load Character
+        </Button>
         <Button variant="contained" onClick={handleNext} disabled={!isValid}>
           Next
         </Button>
