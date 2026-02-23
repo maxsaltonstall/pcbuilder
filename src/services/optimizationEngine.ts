@@ -37,7 +37,7 @@ export function optimizeClassProgression(
   const prestigeEntryLevels = calculatePrestigeEntryLevels(classesWithLevels, classMap, abilityScores);
 
   // Step 5: Order base class levels for skill optimization
-  const orderedClasses = orderClassesForSkills(classesWithLevels, classMap, prestigeEntryLevels, abilityScores);
+  const orderedClasses = orderClassesForSkills(classesWithLevels, classMap, prestigeEntryLevels, abilityScores, focus);
 
   // Step 6: Generate level progression
   const progression = generateProgression(
@@ -264,7 +264,8 @@ function orderClassesForSkills(
   targetClasses: Array<ClassSelection & { levels: number }>,
   classMap: Map<string, CharacterClass>,
   prestigeEntryLevels: Map<string, number>,
-  abilityScores: AbilityScores
+  abilityScores: AbilityScores,
+  focus: FocusType
 ): { classId: string; startLevel: number; count: number }[] {
   const baseClasses: { classId: string; count: number; classData: CharacterClass }[] = [];
   const prestigeClasses: { classId: string; count: number; entryLevel: number }[] = [];
@@ -289,10 +290,38 @@ function orderClassesForSkills(
     }
   }
 
-  // Sort base classes by skill points (descending)
+  // Sort base classes by skill points (descending) with focus-aware optimization
+  // OPTIMIZATION: Prioritize classes with most skill points to maximize level 1 ×4 multiplier
   const sortedBaseClasses = baseClasses.sort((a, b) => {
+    // Focus-specific optimization
+    if (focus === 'spells' || focus === 'healing') {
+      // For caster builds, prioritize full casters (Wizard, Cleric, Druid, Sorcerer)
+      const fullCasters = ['wizard', 'cleric', 'druid', 'sorcerer', 'psion'];
+      const aIsCaster = fullCasters.includes(a.classId);
+      const bIsCaster = fullCasters.includes(b.classId);
+      if (aIsCaster && !bIsCaster) return -1;
+      if (!aIsCaster && bIsCaster) return 1;
+    }
+
+    if (focus === 'melee' || focus === 'hp') {
+      // For melee builds, prioritize full BAB classes
+      const aIsMartial = a.classData.baseAttackBonus === 'good';
+      const bIsMartial = b.classData.baseAttackBonus === 'good';
+      if (aIsMartial && !bIsMartial) return -1;
+      if (!aIsMartial && bIsMartial) return 1;
+    }
+
+    // Default: sort by skill points (always valuable)
     const aPoints = calculateSkillPointsForLevel(1, a.classData, abilityScores.intelligence);
     const bPoints = calculateSkillPointsForLevel(1, b.classData, abilityScores.intelligence);
+
+    // If skill points are equal, prefer classes with better BAB for versatility
+    if (aPoints === bPoints) {
+      const aBab = a.classData.baseAttackBonus === 'good' ? 3 : a.classData.baseAttackBonus === 'average' ? 2 : 1;
+      const bBab = b.classData.baseAttackBonus === 'good' ? 3 : b.classData.baseAttackBonus === 'average' ? 2 : 1;
+      return bBab - aBab;
+    }
+
     return bPoints - aPoints;
   });
 

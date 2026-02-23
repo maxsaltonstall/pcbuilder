@@ -43,12 +43,16 @@ function loadTestBuild(buildName: string): TestBuild {
 }
 
 function convertToClassSelections(targetClasses: { className: string; levels: number }[]): ClassSelection[] {
-  return targetClasses.map(tc => ({
+  return targetClasses.map(tc => {
     // Convert class names to IDs (lowercase, hyphenated)
-    className: tc.className.toLowerCase().replace(/\s+/g, '-'),
-    levels: tc.levels,
-    priority: 'medium' as const,
-  }));
+    const classId = tc.className.toLowerCase().replace(/\s+/g, '-');
+    return {
+      classId,           // ID for lookup (e.g., "arcane-archer")
+      className: tc.className, // Display name (e.g., "Arcane Archer")
+      levels: tc.levels,
+      priority: 'medium' as const,
+    };
+  });
 }
 
 describe('Build Validation - Community Optimized Builds', () => {

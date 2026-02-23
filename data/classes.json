@@ -710,5 +710,83 @@
       "will": "good"
     },
     "source": "Player's Handbook"
+  },
+  {
+    "id": "factotum",
+    "name": "Factotum",
+    "description": "A jack-of-all-trades with the ability to mimic class abilities and spells through inspiration points.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 8,
+    "classSkills": [
+      "appraise",
+      "balance",
+      "bluff",
+      "climb",
+      "concentration",
+      "craft",
+      "decipher-script",
+      "diplomacy",
+      "disable-device",
+      "disguise",
+      "escape-artist",
+      "forgery",
+      "gather-information",
+      "heal",
+      "hide",
+      "intimidate",
+      "jump",
+      "knowledge-all",
+      "listen",
+      "move-silently",
+      "open-lock",
+      "profession",
+      "search",
+      "sense-motive",
+      "sleight-of-hand",
+      "speak-language",
+      "spellcraft",
+      "spot",
+      "survival",
+      "swim",
+      "tumble",
+      "use-magic-device",
+      "use-rope"
+    ],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "good"
+    },
+    "source": "Dungeonscape"
+  },
+  {
+    "id": "crusader",
+    "name": "Crusader",
+    "description": "A martial adept who combines combat prowess with divine fervor, wielding maneuvers from the Devoted Spirit and Stone Dragon disciplines.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 4,
+    "classSkills": [
+      "climb",
+      "concentration",
+      "craft",
+      "diplomacy",
+      "handle-animal",
+      "heal",
+      "intimidate",
+      "jump",
+      "knowledge-religion",
+      "profession",
+      "ride",
+      "sense-motive",
+      "swim"
+    ],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "source": "Tome of Battle"
   }
 ]
