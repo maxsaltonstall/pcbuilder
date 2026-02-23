@@ -7,6 +7,14 @@ import {
   canTakeFeat,
   getMinimumPrestigeEntryLevel,
 } from './prerequisiteValidator';
+import {
+  detectOptimizationGoals,
+  optimizeForDamage,
+  optimizeForSpellcasting,
+  optimizeForSkills,
+  optimizeForSurvivability,
+  selectOptimalFeat,
+} from './advancedOptimizer';
 
 import classesData from '@data/classes.json';
 import prestigeClassesData from '@data/prestige-classes.json';
@@ -326,6 +334,17 @@ function orderClassesForSkills(
     return ordered;
   }
 
+  // USE ADVANCED OPTIMIZATION STRATEGIES based on focus
+  if (focus === 'melee' || focus === 'ranged') {
+    return optimizeForDamage(targetClasses, classMap);
+  } else if (focus === 'spells') {
+    return optimizeForSpellcasting(targetClasses, classMap);
+  } else if (focus === 'skills') {
+    return optimizeForSkills(targetClasses, classMap, abilityScores);
+  } else if (focus === 'hp') {
+    return optimizeForSurvivability(targetClasses, classMap);
+  }
+
   // Sort base classes by skill points (descending) with focus-aware optimization
   // OPTIMIZATION: Prioritize classes with most skill points to maximize level 1 ×4 multiplier
   const sortedBaseClasses = baseClasses.sort((a, b) => {
@@ -505,7 +524,7 @@ function generateProgression(
     // Determine if feat is gained this level
     let featGained: string | undefined;
     if (shouldGainFeat(level, classData, classLevel)) {
-      featGained = selectNextFeat(progression, desiredFeats, featGraph, abilityScores);
+      featGained = selectNextFeat(progression, desiredFeats, featGraph, abilityScores, focus);
     }
 
     progression.push({
@@ -607,13 +626,16 @@ function selectNextFeat(
   currentProgression: LevelProgression[],
   desiredFeats: string[],
   featGraph: Map<string, string[]>,
-  abilityScores: AbilityScores
+  abilityScores: AbilityScores,
+  focus?: FocusType
 ): string | undefined {
   const takenFeats = currentProgression
     .filter(l => l.featGained)
     .map(l => l.featGained!);
 
-  // Topological sort: find feats whose prerequisites are all satisfied
+  // Find all available feats (prerequisites satisfied)
+  const availableFeats: string[] = [];
+
   for (const featId of desiredFeats) {
     if (takenFeats.includes(featId)) continue;
 
@@ -633,12 +655,26 @@ function selectNextFeat(
 
       const canTake = canTakeFeat(featId, currentProgression, abilityScoresRecord);
       if (canTake.valid) {
-        return featId;
+        availableFeats.push(featId);
       }
     }
   }
 
-  return undefined;
+  // Use advanced feat selection if we have a focus and multiple options
+  if (availableFeats.length > 1 && focus) {
+    const optimalFeat = selectOptimalFeat(
+      currentProgression.length,
+      takenFeats,
+      availableFeats,
+      desiredFeats,
+      featsData as Array<{ id: string; prerequisites: any[] }>,
+      focus
+    );
+    if (optimalFeat) return optimalFeat;
+  }
+
+  // Fall back to first available feat
+  return availableFeats[0];
 }
 
 /**
