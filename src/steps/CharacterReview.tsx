@@ -17,10 +17,20 @@ import {
   AccordionDetails,
   Alert,
   LinearProgress,
+  Tooltip,
+  Card,
+  CardContent,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SaveIcon from '@mui/icons-material/Save';
 import FolderOpenIcon from '@mui/icons-material/FolderOpen';
+import PersonIcon from '@mui/icons-material/Person';
+import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import ShieldIcon from '@mui/icons-material/Shield';
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
+import SchoolIcon from '@mui/icons-material/School';
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import { useCharacter } from '../context/CharacterContext';
 import { calculateTotalSkillPoints, getAbilityModifier, getSkillPointsPerLevel, getMagicItemIntBonus } from '../services/skillCalculator';
 import { allocateSkillPoints } from '../services/skillRecommendations';
@@ -194,33 +204,80 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
         Review your completed character and export when ready.
       </Typography>
 
-      <Paper elevation={2} sx={{ p: 3, mb: 3 }}>
-        <Typography variant="h6" gutterBottom color="primary">
-          {state.concept || 'Unnamed Character'}
-        </Typography>
+      <Paper elevation={3} sx={{ p: 3, mb: 3, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+          <PersonIcon sx={{ mr: 1, fontSize: 32 }} />
+          <Typography variant="h5" sx={{ fontWeight: 'bold' }}>
+            {state.concept || 'Unnamed Character'}
+          </Typography>
+        </Box>
 
-        <Grid container spacing={2} sx={{ mt: 1 }}>
-          <Grid item xs={12} sm={6}>
-            <Typography variant="subtitle2" color="text.secondary">Level</Typography>
-            <Typography variant="h4">
-              {state.totalLevel}
-              {state.totalLevel > 20 && (
-                <Typography component="span" variant="caption" color="warning.main" sx={{ ml: 1 }}>
-                  Epic
+        <Grid container spacing={2}>
+          <Grid item xs={12} sm={6} md={3}>
+            <Card sx={{ bgcolor: 'rgba(255,255,255,0.95)' }}>
+              <CardContent>
+                <Typography variant="caption" color="text.secondary">Level</Typography>
+                <Typography variant="h4" color="primary">
+                  {state.totalLevel}
+                  {state.totalLevel > 20 && (
+                    <Chip label="EPIC" size="small" color="warning" sx={{ ml: 1 }} />
+                  )}
                 </Typography>
-              )}
-            </Typography>
+              </CardContent>
+            </Card>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
-            <Typography variant="subtitle2" color="text.secondary">Classes</Typography>
-            <Typography variant="body1">
-              {Object.entries(classDistribution)
-                .map(([className, levels]) => `${className} ${levels}`)
-                .join(' / ')}
-            </Typography>
-          </Grid>
+          {combatStats && (
+            <>
+              <Grid item xs={12} sm={6} md={3}>
+                <Tooltip title="Hit Points - Your character's health pool">
+                  <Card sx={{ bgcolor: 'rgba(255,255,255,0.95)' }}>
+                    <CardContent>
+                      <Typography variant="caption" color="text.secondary">HP</Typography>
+                      <Typography variant="h4" color="error.main">
+                        {combatStats.hitPoints}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Tooltip>
+              </Grid>
+
+              <Grid item xs={12} sm={6} md={3}>
+                <Tooltip title="Base Attack Bonus - Your accuracy in combat">
+                  <Card sx={{ bgcolor: 'rgba(255,255,255,0.95)' }}>
+                    <CardContent>
+                      <Typography variant="caption" color="text.secondary">BAB</Typography>
+                      <Typography variant="h4" color="success.main">
+                        +{combatStats.baseAttackBonus}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Tooltip>
+              </Grid>
+
+              <Grid item xs={12} sm={6} md={3}>
+                <Tooltip title="Armor Class - Your defense against attacks">
+                  <Card sx={{ bgcolor: 'rgba(255,255,255,0.95)' }}>
+                    <CardContent>
+                      <Typography variant="caption" color="text.secondary">AC</Typography>
+                      <Typography variant="h4" color="info.main">
+                        {combatStats.armorClass}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Tooltip>
+              </Grid>
+            </>
+          )}
         </Grid>
+
+        <Box sx={{ mt: 2 }}>
+          <Typography variant="body2" sx={{ opacity: 0.9, fontWeight: 500 }}>
+            {Object.entries(classDistribution)
+              .map(([className, levels]) => `${className} ${levels}`)
+              .join(' / ')}
+          </Typography>
+        </Box>
 
         <Divider sx={{ my: 2 }} />
 
@@ -281,9 +338,12 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
 
         {combatStats && (
           <Box sx={{ mb: 2 }}>
-            <Typography variant="h6" color="primary" gutterBottom>
-              Combat Statistics
-            </Typography>
+            <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+              <FitnessCenterIcon sx={{ mr: 1, color: 'primary.main' }} />
+              <Typography variant="h6" color="primary">
+                Combat Statistics
+              </Typography>
+            </Box>
 
             <Grid container spacing={2} sx={{ mb: 2 }}>
               <Grid item xs={6} sm={3}>
@@ -369,9 +429,12 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
           <>
             <Divider sx={{ my: 2 }} />
             <Box sx={{ mb: 2 }}>
-              <Typography variant="h6" color="primary" gutterBottom>
-                Spells Per Day
-              </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                <AutoFixHighIcon sx={{ mr: 1, color: 'primary.main' }} />
+                <Typography variant="h6" color="primary">
+                  Spells Per Day
+                </Typography>
+              </Box>
               {spellSlots.map((caster) => (
                 <Paper key={caster.casterClass} variant="outlined" sx={{ p: 2, mb: 2 }}>
                   <Typography variant="subtitle1" gutterBottom>
@@ -498,9 +561,12 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
         <Divider sx={{ my: 2 }} />
 
         <Box sx={{ mb: 2 }}>
-          <Typography variant="h6" color="primary" gutterBottom>
-            Skill Points
-          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+            <SchoolIcon sx={{ mr: 1, color: 'primary.main' }} />
+            <Typography variant="h6" color="primary">
+              Skill Points
+            </Typography>
+          </Box>
           <Typography variant="h5" gutterBottom>
             Total: {totalSkillPoints} points
           </Typography>
