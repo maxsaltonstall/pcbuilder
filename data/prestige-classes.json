@@ -3,14 +3,33 @@
     "name": "Black Flame Zealot",
     "source": "Complete Divine",
     "description": "Devoted to fire and darkness",
-    "hitDie": "d8"
+    "hitDie": "d8",
+    "id": "black-flame-zealot",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "average",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "abolisher",
     "name": "Abolisher",
     "description": "The abolisher is more than merely a devoted servant of the natural world. She is a crusader against that which taints, usurps, and replaces the ordered nature of things with alien desires and monstrous needs. She opposes aberrations with all her will and might in a constant battle to preserve what is pure in nature from that which lurks beyond the rim of sanity.",
     "requirements": "Type: Cannot be an aberration. Alignment: Any nonchaotic. Skills: Knowledge (dungeoneering) 4 ranks, Knowledge (nature) 9 ranks. Feat: Track. Special: Wild empathy class feature.",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "acolyte-of-the-skin",
@@ -70,7 +89,14 @@
     ],
     "skillPointsPerLevel": 6,
     "source": "Epic Level Handbook",
-    "epicPrestige": true
+    "epicPrestige": true,
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "isPrestige": true
   },
   {
     "id": "alienist",
@@ -657,7 +683,16 @@
     "name": "Bloodclaw Master",
     "description": "Shifter or wild shaper who combines Tiger Claw maneuvers with animal fury",
     "requirements": "Tiger Claw stance, ability to shift or wild shape, Jump 9 ranks",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "bloodhound",
@@ -681,14 +716,32 @@
     "name": "Bloodstorm Blade",
     "description": "Thrown weapon specialist combining ranged attacks with martial disciplines",
     "requirements": "Point Blank Shot, Weapon Focus (thrown weapon), Iron Heart or Desert Wind maneuver, BAB +5",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "cancer_mage",
     "name": "Cancer Mage",
     "description": "A twisted arcane spellcaster who has been afflicted with a supernatural disease that grants dark powers. Cancer mages draw power from their own corruption and suffering.",
     "requirements": "Skills: Heal 8 ranks, Knowledge (arcana) 8 ranks. Feats: Iron Will. Spells: Ability to cast 3rd-level arcane spells. Special: Must have been afflicted with a supernatural disease.",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "cavalier",
@@ -738,7 +791,14 @@
       "psicraft",
       "spellcraft"
     ],
-    "source": "Expanded Psionics Handbook"
+    "source": "Expanded Psionics Handbook",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "isPrestige": true
   },
   {
     "id": "cloaked-dancer",
@@ -890,7 +950,14 @@
     ],
     "skillPointsPerLevel": 2,
     "source": "Epic Level Handbook",
-    "epicPrestige": true
+    "epicPrestige": true,
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "isPrestige": true
   },
   {
     "id": "daggerspell-mage",
@@ -914,14 +981,32 @@
     "name": "Darkrunner",
     "description": "Darkrunners devote their lives to traveling the haunted underground depths. Some hire out their services as guides to those who wish to navigate the lightless ways, while others are lone wolves who simply wish to explore the deepest reaches of this wondrous and dangerous realm. They understand the lay of the subterranean world like no other, and use its terrain and features to great advantage in combat.",
     "requirements": "Skills: Knowledge (dungeoneering) 5 ranks, Search 5 ranks, Survival 7 ranks. Feats: Alertness, Track. Special: Darkvision as a racial trait or class feature. Special: You must seek out a chapter house of the Darkrunner Guild and successfully petition to join the guild.",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "deepstone-sentinel",
     "name": "Deepstone Sentinel",
     "description": "Defender who masters Stone Dragon discipline and mountain's endurance",
     "requirements": "Stone Dragon stance, Endurance, Dodge, BAB +5",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "dervish",
@@ -988,7 +1073,14 @@
     ],
     "skillPointsPerLevel": 8,
     "source": "Epic Level Handbook",
-    "epicPrestige": true
+    "epicPrestige": true,
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "average",
+    "isPrestige": true
   },
   {
     "id": "dragon-disciple",
@@ -1061,7 +1153,16 @@
     "name": "Dread Necromancer",
     "description": "A base class focused on necromancy and creating undead. Dread necromancers are master manipulators of negative energy and command over the undead. They gain their power through dark pacts and forbidden knowledge.",
     "requirements": "This is a base class, not a prestige class. See Libris Mortis for full class details.",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "duelist",
@@ -1317,7 +1418,14 @@
       "use-psionic-device",
       "use-rope"
     ],
-    "source": "Expanded Psionics Handbook"
+    "source": "Expanded Psionics Handbook",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "isPrestige": true
   },
   {
     "id": "enlightened-fist",
@@ -1391,14 +1499,30 @@
     ],
     "skillPointsPerLevel": 8,
     "source": "Epic Level Handbook",
-    "epicPrestige": true
+    "epicPrestige": true,
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "isPrestige": true
   },
   {
     "id": "eternal-blade",
     "name": "Eternal Blade",
     "description": "Time-manipulating warrior using Diamond Mind to control flow of battle",
     "requirements": "Diamond Mind stance, Concentration 10 ranks, BAB +5",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "exemplar",
@@ -1550,14 +1674,30 @@
       "spot",
       "tumble"
     ],
-    "source": "Expanded Psionics Handbook"
+    "source": "Expanded Psionics Handbook",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "isPrestige": true
   },
   {
     "id": "fleshwarper",
     "name": "Fleshwarper",
     "description": "Fleshwarpers are masters of biological manipulation, using arcane magic to reshape living flesh into new and often disturbing forms. They study the secrets of aberrations and apply them to create monstrous grafts and transformations.",
     "requirements": "Skills: Craft (any) 4 ranks, Heal 8 ranks, Knowledge (arcana) 4 ranks. Feats: Graft Flesh. Spells: Able to cast 3rd-level arcane spells.",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "fochlucan-lyrist",
@@ -1598,70 +1738,160 @@
     "name": "Cloud Anchorite",
     "description": "Monastic recluses who establish monasteries on remote mountaintops above 12,000 feet, training in rarefied chill air to achieve immortality while maintaining life and awareness. They excel at climbing and surviving in high altitudes.",
     "requirements": "Alignment: Any nonchaotic; Base Fortitude Save: +5; Skills: Climb 9 ranks, Jump 9 ranks, Knowledge (religion) 9 ranks, Survival 4 ranks; Feats: Improved Unarmed Combat, Mountaineer; Special: Must live for a week on their own in a wilderness region above 12,000 feet altitude",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "frostburn_pc_cryokineticist",
     "name": "Cryokineticist",
     "description": "Master of cold psionic energy who finds beauty in the crystalline structure cold imposes on all it touches. Develops abilities to harness pure elemental cold for protection, transfiguration, and attack.",
     "requirements": "Alignment: Any lawful; Skills: Concentration 8 ranks, Craft (alchemy) 1 rank, Knowledge (psionics) 2 ranks; Powers: Able to manifest the energy emanation power",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "frostburn_pc_disciple_of_thrym",
     "name": "Disciple of Thrym",
     "description": "Dedicated clergy of Thrym, Lord of the Frost Giants, who travel the multiverse preaching about Fimbulwinter, an enduring cold that heralds the end of the world. They undermine servants of Thor and Loki while preparing for Ragnarok.",
     "requirements": "Alignment: Any nongood; Skills: Intimidate 4 ranks, Survival 8 ranks; Base Attack Bonus: +4; Feat: Weapon Focus (greataxe); Special: Cold Endurance feat or cold subtype",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "average",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "frostburn_pc_frost_mage",
     "name": "Frost Mage",
     "description": "Spellcaster from lands of cold, snow, and ice who becomes adapted to cold environments as their skin slowly turns to frost. They harness the natural or magically enhanced frostfell environment to empower their own spells.",
     "requirements": "Feats: Frozen Magic; Skills: Knowledge (arcana) 8 ranks; Spells: Able to cast 1st-level arcane spells; Special: Must spend 24 hours unprotected in a blizzard",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "frostburn_pc_frostrager",
     "name": "Frostrager",
     "description": "Barbarian whose ferocity and rage impress even their fellow barbarians. Believed by some to be gifted (and by others cursed) by the frost giant deity Thrym with an unstable but powerful supernatural battle rage that causes them to increase in size and infuse their fists and weapons with cold shards of ice.",
     "requirements": "Base Attack Bonus: +6; Skills: Intimidate 4 ranks, Survival 4 ranks; Feats: Frozen Berserker, Improved Unarmed Strike, Power Attack; Special: Rage as a class ability; Special: Must have been reduced to fewer than 0 hit points by cold damage",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "frostburn_pc_knight_iron_glacier",
     "name": "Knight of the Iron Glacier",
     "description": "Member of a mercenary company founded nearly two hundred years ago by exiled general Aengrist. They provide pockets of shelter and law in the frostfell, regularly patrol trade routes, and ride atop war-trained megaloceroses. Aengrist has become a young deity worshiped by the order.",
     "requirements": "Alignment: Lawful good or lawful neutral; Skills: Handle Animal 5 ranks, Ride 9 ranks, Survival 2 ranks; Feats: Animal Affinity, Exotic Weapon Proficiency (bastard sword), Mounted Combat, Ride-By Attack; Special: Must prove noble intentions through a quest or task",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "frostburn_pc_primeval",
     "name": "Primeval",
     "description": "Warrior who has tapped into racial memories to find and forge a bond with an ancient creature. Draws incredible power and strength from this bond, and can change form into this creature with increasing skill. Many neanderthal tribes count primevals among their strongest warriors.",
     "requirements": "Alignment: Any nonlawful; Base Attack Bonus: +8; Skills: Handle Animal 5 ranks, Knowledge (nature) 5 ranks, Survival 5 ranks; Feats: Endurance, Self-Sufficient, Toughness",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "frostburn_pc_rimefire_witch",
     "name": "Rimefire Witch",
     "description": "Character who follows the call of a rimefire eidolon (fragments of the defeated uldra deity Hleid) and becomes infused with great power. Gains magical abilities including channeling rimefire as a ranged attack, and slowly transforms into a devoted guardian of the eidolon.",
     "requirements": "Skills: Concentration 6 ranks, Knowledge (history) 6 ranks, Knowledge (religion) 9 ranks, Spellcraft 6 ranks; Feats: Iron Will, Mark of Hleid; Spells: Able to cast 1st-level divine spells; Patron Deity: Hleid; Special: Must receive a vivid dream call and travel to the rimefire eidolon's iceberg",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "frostburn_pc_stormsinger",
     "name": "Stormsinger",
     "description": "Bard who has learned secret methods of harnessing the magic powers of music to influence and control the weather. These songs have greater effects in the frostfell than in temperate or tropical regions. Often hired by ships to protect against powerful storms.",
     "requirements": "Skills: Concentration 8 ranks, Knowledge (arcana) 8 ranks, Knowledge (geography) 4 ranks, Knowledge (nature) 4 ranks, Perform (sing) 8 ranks, Spellcraft 4 ranks; Feats: Magical Aptitude, Storm Magic; Special: Must have the bardic music class ability",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "frostburn_pc_winterhaunt_iborighu",
     "name": "Winterhaunt of Iborighu",
     "description": "Minion of the cult of Iborighu, the Frozen King, who lusts for nothing less than eternal winter and aims to bring down an eternal ice age upon the world. Especially feared for their ability to wield cold magic so powerful it can harm creatures normally immune to cold.",
     "requirements": "Alignment: Chaotic neutral, chaotic evil, or neutral evil; Skills: Concentration 8 ranks, Knowledge (arcana) 5 ranks, Knowledge (religion) 8 ranks; Feats: Chosen of Iborighu, Craft Wondrous Item, Piercing Cold; Spells: Able to cast 1st-level divine spells; Patron Deity: Iborighu; Special: Must successfully create an iceheart",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "geometer",
@@ -1847,21 +2077,46 @@
     ],
     "skillPointsPerLevel": 2,
     "source": "Epic Level Handbook",
-    "epicPrestige": true
+    "epicPrestige": true,
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "isPrestige": true
   },
   {
     "id": "hallowed_witch",
     "name": "Hallowed Witch",
     "description": "A divine spellcaster who channels positive energy to protect the living and destroy undead. Hallowed witches are blessed with holy power to combat the forces of undeath.",
     "requirements": "Alignment: Any good. Skills: Knowledge (religion) 8 ranks. Spells: Ability to cast 3rd-level divine spells. Special: Able to turn undead.",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "hellbreaker",
     "name": "Hellbreaker",
     "description": "“They steal our souls, I steal their stuff. That’s fair, right?” Hellbreakers are consummate adventurers. Called thieves by their detractors and heroes by their apologists, they",
     "requirements": [],
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "hellfire_warlock",
@@ -1870,7 +2125,16 @@
     "requirements": [
       "Skills: Intimidate 6 ranks, Knowledge (the planes) 12 ranks,"
     ],
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "hellreaver",
@@ -1883,7 +2147,16 @@
       "Feats: Power Attack.",
       "Special: Must slay an outsider with the evil subtype."
     ],
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "hierophant",
@@ -1966,7 +2239,14 @@
     ],
     "skillPointsPerLevel": 2,
     "source": "Epic Level Handbook",
-    "epicPrestige": true
+    "epicPrestige": true,
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "isPrestige": true
   },
   {
     "id": "highland-stalker",
@@ -2109,7 +2389,14 @@
       "spot",
       "swim"
     ],
-    "source": "Expanded Psionics Handbook"
+    "source": "Expanded Psionics Handbook",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "isPrestige": true
   },
   {
     "id": "incandescent_champion",
@@ -2122,7 +2409,16 @@
       ],
       "special": "Must have at least 1 point of essentia in essentia pool"
     },
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "incarnum_blade",
@@ -2138,7 +2434,16 @@
       ],
       "special": "Ability to shape at least one soulmeld"
     },
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "invisible-blade",
@@ -2170,21 +2475,48 @@
       ],
       "special": "Must be able to invest at least 1 point of essentia"
     },
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "jade-phoenix-mage",
     "name": "Jade Phoenix Mage",
     "description": "Blends arcane spellcasting with martial maneuvers",
     "requirements": "Arcane caster level 3rd, martial maneuver, Concentration 4 ranks",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "keeper-of-the-cerulean-sign",
     "name": "Keeper of the Cerulean Sign",
     "description": "Keepers of the Cerulean Sign are dedicated to protecting the world from aberrant threats using ancient symbols and rituals. They master the cerulean sign, an ancient symbol said to embody the purity of the natural world and is anathema to aberrations.",
     "requirements": "Skills: Knowledge (dungeoneering) 5 ranks, Knowledge (religion or arcana) 8 ranks. Feats: Combat Casting. Spells: Able to cast invoke the cerulean sign.",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "knight_of_the_pearl",
@@ -2197,14 +2529,32 @@
       "Skills": "Knowledge (religion) 5 ranks",
       "Special": "Turn undead, proficiency with at least one martial weapon and with heavy armor, must be accepted as a member of the Order of the Pearl"
     },
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "knight_of_the_raven",
     "name": "Knight of the Raven",
     "description": "A divine warrior who serves the Raven Queen and protects the natural order of life and death. Knights of the Raven hunt down necromancers and destroy undead abominations.",
     "requirements": "Alignment: Lawful good, lawful neutral, or neutral good. Base Attack Bonus: +5. Skills: Knowledge (religion) 2 ranks. Spells: Ability to cast 1st-level divine spells. Special: Able to turn undead.",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "legendary-dreadnought",
@@ -2251,7 +2601,14 @@
     ],
     "skillPointsPerLevel": 2,
     "source": "Epic Level Handbook",
-    "epicPrestige": true
+    "epicPrestige": true,
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "isPrestige": true
   },
   {
     "id": "legendary_captain",
@@ -2263,7 +2620,16 @@
       "Feats": "Leadership",
       "Special": "Must be the captain or master of a ship"
     },
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "leviathan_hunter",
@@ -2275,7 +2641,16 @@
       "Skills": "Knowledge (nature) 4 ranks",
       "Special": "Favored enemy (aberrations, animals, dragons, or magical beasts)"
     },
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "loremaster",
@@ -2495,7 +2870,16 @@
     "name": "Master of Nine",
     "description": "Ultimate martial adept seeking mastery of all nine disciplines",
     "requirements": "Maneuvers from three different disciplines, Martial Lore 10 ranks, BAB +5",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "master-of-the-unseen-hand",
@@ -2581,7 +2965,16 @@
     "name": "Master of Shrouds",
     "description": "An evil spellcaster who magically seizes incorporeal undead and sets them to do her bidding. Plucking vile creatures such as wraiths and shadows from their restless haunts, she summons them to her presence and commands them to work her will.",
     "requirements": "Alignment: Any nongood. Skills: Knowledge (religion) 8 ranks. Feats: Spell Focus (necromancy). Spells: Ability to cast 3rd-level divine spells. Special: Able to rebuke undead.",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "metamind",
@@ -2616,7 +3009,14 @@
       "knowledge-psionics",
       "psicraft"
     ],
-    "source": "Expanded Psionics Handbook"
+    "source": "Expanded Psionics Handbook",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "isPrestige": true
   },
   {
     "id": "mindbender",
@@ -2804,7 +3204,16 @@
       },
       "special": "Ability to shape at least three soulmelds"
     },
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "nightsong-enforcer",
@@ -2923,7 +3332,16 @@
     "name": "Pale Master",
     "description": "A necromancer who studies the relationship between the quick and the dead and seeks to master the power of undeath. Pale masters gain power from creating and commanding undead, and many aspire to become undead themselves.",
     "requirements": "Alignment: Any nongood. Skills: Knowledge (religion) 8 ranks. Feats: Spell Focus (necromancy). Spells: Ability to cast 3rd-level arcane spells including at least two necromancy spells.",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "paragnostic-apostle",
@@ -2999,7 +3417,14 @@
     ],
     "skillPointsPerLevel": 8,
     "source": "Epic Level Handbook",
-    "epicPrestige": true
+    "epicPrestige": true,
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "isPrestige": true
   },
   {
     "id": "psibond-agent",
@@ -3089,7 +3514,14 @@
       "psicraft",
       "sense-motive"
     ],
-    "source": "Expanded Psionics Handbook"
+    "source": "Expanded Psionics Handbook",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "isPrestige": true
   },
   {
     "id": "purple-dragon-knight",
@@ -3145,7 +3577,14 @@
       "knowledge-psionics",
       "psicraft"
     ],
-    "source": "Expanded Psionics Handbook"
+    "source": "Expanded Psionics Handbook",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "isPrestige": true
   },
   {
     "id": "rage-mage",
@@ -3186,14 +3625,32 @@
     "name": "Ruby Knight Vindicator",
     "description": "Divine caster who combines faith with martial prowess",
     "requirements": "Divine caster level 3rd, Devoted Spirit maneuver, Concentration 4 ranks",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "sanctified-mind",
     "name": "Sanctified Mind",
     "description": "Sanctified minds are psionic warriors who have dedicated themselves to combating aberrations and protecting their allies from mental domination. They train their minds to resist the terrible mental powers of illithids and other aberrations.",
     "requirements": "Base Attack Bonus: +4. Skills: Concentration 8 ranks, Knowledge (dungeoneering) 2 ranks. Feats: Iron Will, Wild Talent. Psionics: Must be a psionic character.",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "sanctified-one",
@@ -3221,7 +3678,16 @@
       "feats": "Scorpion’s Resolve.",
       "spells": "Ability to cast 2nd-level divine spells."
     },
-    "source": "Sandstorm"
+    "source": "Sandstorm",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "sandstorm_pc_2",
@@ -3230,7 +3696,16 @@
     "requirements": {
       "skills": "Knowledge (nature) 4 ranks, Survival 4 ranks."
     },
-    "source": "Sandstorm"
+    "source": "Sandstorm",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "sandstorm_pc_3",
@@ -3241,7 +3716,16 @@
       "skills": "Diplomacy 8 ranks, Swim 4 ranks.",
       "special": "You must be blessed by Tem-Et-Nu in a ritual held in one of her temples. Possessions: quarterstaff, headband of intellect +2, burnoose of 1,001 thorns†, cloak of resistance +1, staff of the nomad†, wand of fireball (5th, 25 charges), scroll of endure elements, scroll CLASS FEATURES"
     },
-    "source": "Sandstorm"
+    "source": "Sandstorm",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "sandstorm_pc_4",
@@ -3252,7 +3736,16 @@
       "skills": "Hide 8 ranks, Knowledge (nature) 4 ranks, Survival",
       "special": "Must have survived the venomous sting of a has the same connection to an item or a place that the monstrous scorpion. mount does. Share Spells (Su): Karlott may have any spell she casts on"
     },
-    "source": "Sandstorm"
+    "source": "Sandstorm",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "sandstorm_pc_5",
@@ -3261,7 +3754,16 @@
     "requirements": {
       "spells": "Ability to cast at least three spells of the Sand or"
     },
-    "source": "Sandstorm"
+    "source": "Sandstorm",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "sapphire_hierarch",
@@ -3274,7 +3776,16 @@
       "spells": "Ability to cast 2nd-level divine spells",
       "special": "Ability to turn or rebuke undead"
     },
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "scarlet_corsair",
@@ -3286,7 +3797,16 @@
       "Skills": "Bluff 8 ranks, Intimidate 8 ranks, Profession (sailor) 4 ranks",
       "Special": "Must have established a reputation as a fearsome pirate"
     },
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "sea_witch",
@@ -3298,7 +3818,16 @@
       "Spells": "Ability to cast arcane spells, which must include at least one spell with the water descriptor",
       "Special": "Must have negotiated a bargain with a chaotic sea creature or power"
     },
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "seeker-of-the-song",
@@ -3322,7 +3851,16 @@
     "name": "Shadow Sun Ninja",
     "description": "Assassin combining Shadow Hand stealth with Setting Sun techniques",
     "requirements": "Shadow Hand and Setting Sun maneuvers, Hide 8 ranks, Move Silently 8 ranks",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "baseAttackBonus": "average",
+    "skillPointsPerLevel": 6,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "shadowbane-inquisitor",
@@ -3492,7 +4030,16 @@
       ],
       "special": "Ability to invest at least 1 point of essentia"
     },
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "soulguard",
@@ -3502,7 +4049,16 @@
       "Alignment: Lawful good or lawful neutral.",
       "Skills: Intimidate 4 ranks, Knowledge (religion) 9 ranks,"
     ],
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "spellwarp-sniper",
@@ -3562,7 +4118,16 @@
       ],
       "special": "Ability to shape at least one soulmeld"
     },
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "spymaster",
@@ -3591,7 +4156,16 @@
       "Spells": "Ability to cast 3rd-level arcane spells",
       "Special": "Must know at least two spells with the electricity or sonic descriptor"
     },
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "sublime-chord",
@@ -3714,21 +4288,46 @@
       "psicraft",
       "sense-motive"
     ],
-    "source": "Expanded Psionics Handbook"
+    "source": "Expanded Psionics Handbook",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "isPrestige": true
   },
   {
     "id": "tomb_warden",
     "name": "Tomb Warden",
     "description": "A guardian who protects sacred burial sites and fights against those who would desecrate the dead. Tomb wardens are devoted to maintaining the sanctity of the grave.",
     "requirements": "Alignment: Any lawful. Base Attack Bonus: +5. Skills: Knowledge (religion) 2 ranks. Feats: Improved Initiative. Special: Able to turn undead.",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "topaz-guardian",
     "name": "Topaz Guardian",
     "description": "The elite champions of the Topaz Order are known as topaz guardians. Each one carries a special topaz diadem, a magic gem that protects against evil magic. They are experts in fighting mind flayers and other aberrations, combining martial prowess with divine spellcasting.",
     "requirements": "Alignment: Lawful good. Base Attack Bonus: +5. Skills: Knowledge (dungeoneering) 2 ranks, Knowledge (religion) 4 ranks. Feats: Blind-Fight, Iron Will. Spells: Able to cast 1st-level divine spells.",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "average",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "totem_rager",
@@ -3740,14 +4339,32 @@
       },
       "special": "Ability to rage, ability to bind to totem chakra"
     },
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "true_necromancer",
     "name": "True Necromancer",
     "description": "A spellcaster who combines arcane and divine magic in pursuit of the secrets of life and death. True necromancers are masters of both positive and negative energy, able to wield the forces of life and death with equal facility.",
     "requirements": "Spells: Ability to cast 2nd-level arcane spells and 2nd-level divine spells. Special: Must have undead as an available wizard specialist school or have access to the Death domain.",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "umbral_disciple",
@@ -3761,7 +4378,16 @@
       },
       "special": "Sneak attack +2d6, ability to invest at least 1 point of essentia"
     },
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "uncanny-trickster",
@@ -3812,7 +4438,16 @@
     "name": "Undead Lieutenant",
     "description": "An undead creature that has retained its skills and serves as a commander of lesser undead. Undead lieutenants are intelligent undead who lead armies of the dead.",
     "requirements": "Type: Undead. Base Attack Bonus: +3. Skills: Intimidate 4 ranks. Special: Ability to rebuke or command undead.",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "vigilante",
@@ -3861,7 +4496,14 @@
       "psicraft",
       "swim"
     ],
-    "source": "Expanded Psionics Handbook"
+    "source": "Expanded Psionics Handbook",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "isPrestige": true
   },
   {
     "id": "warshaper",
@@ -3902,7 +4544,16 @@
       "Spellcasting": "Able to cast 1st-level divine spells",
       "Special": "Animal companion with aquatic subtype or swim speed"
     },
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "baseAttackBonus": "good",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   },
   {
     "id": "wayfarer-guide",
@@ -3992,6 +4643,15 @@
       "spells": "Ability to cast 1st-level arcane spells",
       "special": "Ability to shape at least one soulmeld"
     },
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "baseAttackBonus": "poor",
+    "skillPointsPerLevel": 2,
+    "classSkills": [],
+    "isPrestige": true
   }
 ]
