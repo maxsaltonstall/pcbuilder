@@ -19,7 +19,7 @@ interface SpellListProps {
   highestSpellLevel: number;
 }
 
-export function SpellList({ casterClass, casterLevel, highestSpellLevel }: SpellListProps) {
+export function SpellList({ casterClass, casterLevel: _casterLevel, highestSpellLevel }: SpellListProps) {
   const [searchTerm, setSearchTerm] = useState('');
 
   // Filter spells by class and level
@@ -43,6 +43,7 @@ export function SpellList({ casterClass, casterLevel, highestSpellLevel }: Spell
   const spellsByLevel: Record<number, Spell[]> = {};
   availableSpells.forEach(spell => {
     const spellLevel = spell.level[casterClass] || spell.level[casterClass.toLowerCase()];
+    if (spellLevel === null || spellLevel === undefined) return;
     const level = typeof spellLevel === 'string' ? parseInt(spellLevel) : spellLevel;
     if (!spellsByLevel[level]) spellsByLevel[level] = [];
     spellsByLevel[level].push(spell);

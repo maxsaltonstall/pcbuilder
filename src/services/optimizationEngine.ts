@@ -8,7 +8,6 @@ import {
   getMinimumPrestigeEntryLevel,
 } from './prerequisiteValidator';
 import {
-  detectOptimizationGoals,
   optimizeForDamage,
   optimizeForSpellcasting,
   optimizeForSkills,
@@ -71,7 +70,7 @@ function loadClassData(targetClasses: ClassSelection[]): Map<string, CharacterCl
 
   for (const selection of targetClasses) {
     // Check base classes
-    let classData = classesData.find(c => c.id === selection.classId);
+    let classData: any = classesData.find(c => c.id === selection.classId);
 
     // Check prestige classes
     if (!classData) {
@@ -129,7 +128,7 @@ function distributeClassLevels(
     if (classData && isPrestigeClass(classData)) {
       const minLevel = getMinimumPrestigeEntryLevel(
         classData,
-        targetClasses,
+        [], // Parameter not used by function
         {
           strength: abilityScores.strength,
           dexterity: abilityScores.dexterity,
@@ -226,12 +225,15 @@ export function buildFeatDependencyGraph(desiredFeats: string[]): Map<string, st
 
     const prereqFeats: string[] = [];
 
-    for (const prereq of feat.prerequisites) {
-      if (prereq.type === 'feat') {
-        const prereqFeatId = (prereq as any).featId;
-        prereqFeats.push(prereqFeatId);
-        // Recursively add prerequisites
-        addFeatDependencies(prereqFeatId, visited);
+    // Handle both string and object prerequisites
+    if (Array.isArray(feat.prerequisites)) {
+      for (const prereq of feat.prerequisites) {
+        if (typeof prereq === 'object' && prereq !== null && 'type' in prereq && prereq.type === 'feat') {
+          const prereqFeatId = (prereq as any).featId;
+          prereqFeats.push(prereqFeatId);
+          // Recursively add prerequisites
+          addFeatDependencies(prereqFeatId, visited);
+        }
       }
     }
 
@@ -261,7 +263,7 @@ function calculatePrestigeEntryLevels(
 
     const minLevel = getMinimumPrestigeEntryLevel(
       classData,
-      targetClasses,
+      [], // Parameter not used by function
       {
         strength: abilityScores.strength,
         dexterity: abilityScores.dexterity,
@@ -337,7 +339,7 @@ function orderClassesForSkills(
   // USE ADVANCED OPTIMIZATION STRATEGIES based on focus
   if (focus === 'melee' || focus === 'ranged') {
     return optimizeForDamage(targetClasses, classMap);
-  } else if (focus === 'spells') {
+  } else if (focus === 'spells' || focus === 'healing') {
     return optimizeForSpellcasting(targetClasses, classMap);
   } else if (focus === 'skills') {
     return optimizeForSkills(targetClasses, classMap, abilityScores);

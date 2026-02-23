@@ -62,7 +62,7 @@ function getNextRecommendedFeat(
   assignedFeats: Set<string>,
   desiredFeats: string[],
   focus: FocusType,
-  level: number
+  _level: number
 ): Omit<FeatRecommendation, 'level'> | null {
   // First, try to fulfill user's desired feats
   for (const featId of desiredFeats) {
@@ -87,12 +87,12 @@ function getNextRecommendedFeat(
 
   // Fallback generic feats
   const genericFeats = [
-    { featId: 'toughness', featName: 'Toughness', reason: 'Extra hit points' },
-    { featId: 'iron-will', featName: 'Iron Will', reason: '+2 to Will saves' },
-    { featId: 'lightning-reflexes', featName: 'Lightning Reflexes', reason: '+2 to Reflex saves' },
-    { featId: 'great-fortitude', featName: 'Great Fortitude', reason: '+2 to Fortitude saves' },
-    { featId: 'improved-initiative', featName: 'Improved Initiative', reason: '+4 to initiative' },
-    { featId: 'weapon-focus', featName: 'Weapon Focus', reason: '+1 to attack rolls' },
+    { featId: 'toughness', featName: 'Toughness', reason: 'Extra hit points', isUserRequested: false },
+    { featId: 'iron-will', featName: 'Iron Will', reason: '+2 to Will saves', isUserRequested: false },
+    { featId: 'lightning-reflexes', featName: 'Lightning Reflexes', reason: '+2 to Reflex saves', isUserRequested: false },
+    { featId: 'great-fortitude', featName: 'Great Fortitude', reason: '+2 to Fortitude saves', isUserRequested: false },
+    { featId: 'improved-initiative', featName: 'Improved Initiative', reason: '+4 to initiative', isUserRequested: false },
+    { featId: 'weapon-focus', featName: 'Weapon Focus', reason: '+1 to attack rolls', isUserRequested: false },
   ];
 
   for (const feat of genericFeats) {

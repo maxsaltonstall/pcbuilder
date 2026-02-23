@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
   Box,
   Typography,
@@ -12,7 +11,6 @@ import {
   TableHead,
   TableRow,
   Chip,
-  Divider,
 } from '@mui/material';
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 import { CharacterState } from '../types/character';

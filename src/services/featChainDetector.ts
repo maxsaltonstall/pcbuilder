@@ -1,5 +1,3 @@
-import featsData from '@data/feats.json';
-
 export interface FeatChain {
   chainName: string;
   description: string;

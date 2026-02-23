@@ -99,9 +99,6 @@ export function validatePrestigeRequirements(
     const isFirstLevel = i === 0 || progression[i - 1].class.id !== level.class.id;
     if (!isFirstLevel) continue;
 
-    // Check if requirements are met
-    const progressionBefore = progression.slice(0, i);
-
     // For now, just check that it's not the first level of the character
     if (i === 0) {
       errors.push(

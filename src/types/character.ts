@@ -2,6 +2,9 @@ import { ClassSelection, LevelProgression } from './classes';
 import { CompleteCharacter } from './complete';
 import { CharacterRace } from './races';
 
+// Re-export ClassSelection for use in tests
+export type { ClassSelection, LevelProgression };
+
 export type FocusType = 'melee' | 'ranged' | 'spells' | 'healing' | 'hp' | 'skills';
 
 export interface AbilityScores {

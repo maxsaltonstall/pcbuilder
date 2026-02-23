@@ -27,11 +27,8 @@ import FolderOpenIcon from '@mui/icons-material/FolderOpen';
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows';
 import PersonIcon from '@mui/icons-material/Person';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
-import ShieldIcon from '@mui/icons-material/Shield';
-import PsychologyIcon from '@mui/icons-material/Psychology';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import SchoolIcon from '@mui/icons-material/School';
-import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import { useState } from 'react';
 import { useCharacter } from '../context/CharacterContext';
 import { CharacterState } from '../types/character';
@@ -105,7 +102,6 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
   };
 
   const progression = state.optimizedProgression;
-  const finalLevel = progression.length > 0 ? progression[progression.length - 1] : null;
 
   // Calculate class distribution from progression
   const classDistribution: Record<string, number> = {};
@@ -131,7 +127,7 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
 
     // Account for INT increases at levels 4, 8, 12, 16, 20, etc.
     for (let i = 0; i < index; i++) {
-      if ((i + 1) % 4 === 0 && progression[i].abilityIncrease === 'intelligence') {
+      if ((i + 1) % 4 === 0 && progression[i].abilityIncrease === 'int') {
         currentInt += 1;
       }
     }
@@ -157,7 +153,7 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
       multiplier,
       pointsThisLevel,
       runningTotal,
-      intIncreased: characterLevel % 4 === 0 && level.abilityIncrease === 'intelligence',
+      intIncreased: characterLevel % 4 === 0 && level.abilityIncrease === 'int',
     };
   });
 
@@ -266,7 +262,7 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
                     <CardContent>
                       <Typography variant="caption" color="text.secondary">HP</Typography>
                       <Typography variant="h4" color="error.main">
-                        {combatStats.hitPoints}
+                        {combatStats.hp}
                       </Typography>
                     </CardContent>
                   </Card>
@@ -292,7 +288,7 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
                     <CardContent>
                       <Typography variant="caption" color="text.secondary">AC</Typography>
                       <Typography variant="h4" color="info.main">
-                        {combatStats.armorClass}
+                        {combatStats.ac}
                       </Typography>
                     </CardContent>
                   </Card>

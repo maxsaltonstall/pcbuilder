@@ -1,4 +1,4 @@
-import { Box, Typography, Paper, Chip, Tooltip } from '@mui/material';
+import { Box, Typography, Chip, Tooltip } from '@mui/material';
 import { LevelProgression } from '../types/classes';
 
 interface ProgressionTimelineProps {
@@ -17,7 +17,7 @@ function ProgressionTimeline({ progression }: ProgressionTimelineProps) {
   let startLevel = 1;
   let colorIndex = 0;
 
-  progression.forEach((level, index) => {
+  progression.forEach((_level, index) => {
     const isLastLevel = index === progression.length - 1;
     const classChanged = !isLastLevel && progression[index + 1]?.class.name !== currentClass;
 

@@ -124,8 +124,8 @@ export function calculateSpellcasting(
   // Group levels by class to calculate caster level
   const classLevels = new Map<string, number>();
   levelProgression.forEach(level => {
-    const current = classLevels.get(level.classId) || 0;
-    classLevels.set(level.classId, current + 1);
+    const current = classLevels.get(level.class.id) || 0;
+    classLevels.set(level.class.id, current + 1);
   });
 
   // Determine spellcasting for each class

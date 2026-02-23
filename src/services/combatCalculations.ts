@@ -130,9 +130,6 @@ export function calculateAttackBonuses(
   const hasWeaponFocus = feats.some(f => f.toLowerCase().includes('weapon focus'));
   const weaponFocusBonus = hasWeaponFocus ? 1 : 0;
 
-  const meleeTotal = baseAttackBonus + strMod + weaponFocusBonus;
-  const rangedTotal = baseAttackBonus + dexMod + weaponFocusBonus;
-
   // Format with iterative attacks for BAB 6+
   const formatAttack = (bab: number, mod: number, focus: number) => {
     const total = bab + mod + focus;

@@ -17,7 +17,7 @@ export interface OptimizationGoal {
  */
 export function detectOptimizationGoals(
   focus: FocusType,
-  targetClasses: ClassSelection[],
+  _targetClasses: ClassSelection[],
   desiredFeats: string[]
 ): OptimizationGoal[] {
   const goals: OptimizationGoal[] = [];
@@ -120,7 +120,7 @@ export function optimizeForDamage(
  */
 export function optimizeForSpellcasting(
   classesWithLevels: Array<ClassSelection & { levels: number }>,
-  classMap: Map<string, CharacterClass>
+  _classMap: Map<string, CharacterClass>
 ): Array<{ classId: string; startLevel: number; count: number }> {
   const result: Array<{ classId: string; startLevel: number; count: number }> = [];
   let currentLevel = 1;
@@ -271,12 +271,12 @@ export function calculateFeatChainScore(
  * Advanced feat selection strategy that considers feat chains
  */
 export function selectOptimalFeat(
-  characterLevel: number,
-  currentFeats: string[],
+  _characterLevel: number,
+  _currentFeats: string[],
   availableFeats: string[],
   targetFeats: string[],
   allFeatsData: Array<{ id: string; prerequisites: any[] }>,
-  focus: FocusType
+  _focus: FocusType
 ): string | null {
   if (availableFeats.length === 0) return null;
 

@@ -23,9 +23,6 @@ export function recommendEquipment(
 
   const equipment: EquipmentItem[] = [];
 
-  // Wealth thresholds from DMG (simplified)
-  const wealth = getWealthByLevel(characterLevel);
-
   // The "Big 6" magic items (priority order for spending)
   // 1. Weapon enhancement
   // 2. Armor enhancement
@@ -58,7 +55,7 @@ export function recommendEquipment(
   return equipment;
 }
 
-function getWealthByLevel(level: number): number {
+export function getWealthByLevel(level: number): number {
   // Simplified wealth-by-level from DMG Table 5-1 (in gp)
   if (level <= 1) return 0;
   if (level === 2) return 900;

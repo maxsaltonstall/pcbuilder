@@ -24,6 +24,7 @@ interface TestBuild {
     baseAttackBonus: number;
     casterLevel: number;
     hp: number;
+    keySkills?: string[];
   };
   expectedFeats: string[];
   validationCriteria: {
@@ -158,10 +159,6 @@ describe('Build Validation - Community Optimized Builds', () => {
         build.focus
       );
 
-      const allFeats = progression
-        .filter(l => l.featGained)
-        .map(l => l.featGained!);
-
       // Must have Persistent Spell before Divine Metamagic
       const persistentIndex = progression.findIndex(l =>
         l.featGained && l.featGained.toLowerCase().includes('persistent')
@@ -258,7 +255,7 @@ describe('Build Validation - Community Optimized Builds', () => {
         build.level,
         classSelections,
         convertFeatNamesToIds(build.expectedFeats),
-        build.expectedStats.keySkills,
+        build.expectedStats.keySkills || [],
         build.abilityScores,
         build.focus
       );
@@ -282,7 +279,7 @@ describe('Build Validation - Community Optimized Builds', () => {
         build.level,
         classSelections,
         convertFeatNamesToIds(build.expectedFeats),
-        build.expectedStats.keySkills,
+        build.expectedStats.keySkills || [],
         build.abilityScores,
         build.focus
       );
@@ -301,7 +298,7 @@ describe('Build Validation - Community Optimized Builds', () => {
         build.level,
         classSelections,
         convertFeatNamesToIds(build.expectedFeats),
-        build.expectedStats.keySkills,
+        build.expectedStats.keySkills || [],
         build.abilityScores,
         build.focus
       );
@@ -326,7 +323,7 @@ describe('Build Validation - Community Optimized Builds', () => {
         build.level,
         classSelections,
         convertFeatNamesToIds(build.expectedFeats),
-        build.expectedStats.keySkills,
+        build.expectedStats.keySkills || [],
         build.abilityScores,
         build.focus
       );
@@ -349,7 +346,7 @@ describe('Build Validation - Community Optimized Builds', () => {
         build.level,
         classSelections,
         convertFeatNamesToIds(build.expectedFeats),
-        build.expectedStats.keySkills,
+        build.expectedStats.keySkills || [],
         build.abilityScores,
         build.focus
       );
@@ -373,7 +370,7 @@ describe('Build Validation - Community Optimized Builds', () => {
         build.level,
         classSelections,
         convertFeatNamesToIds(build.expectedFeats),
-        build.expectedStats.keySkills,
+        build.expectedStats.keySkills || [],
         build.abilityScores,
         build.focus
       );
