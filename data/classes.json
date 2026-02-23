@@ -1,12 +1,5 @@
 [
   {
-    "name": "Dragonfire Adept",
-    "type": "Base Class",
-    "source": "Dragon Magic",
-    "hitDie": "d8",
-    "description": "A new base class that channels draconic power through breath weapons and invocations, emulating the abilities of dragons without being spellcasters."
-  },
-  {
     "id": "barbarian",
     "name": "Barbarian",
     "description": "A fierce warrior of primitive background who can enter a battle rage.",

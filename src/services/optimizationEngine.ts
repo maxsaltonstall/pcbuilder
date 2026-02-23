@@ -56,6 +56,7 @@ export function optimizeClassProgression(
 
 /**
  * Load class data from JSON files
+ * Filters out incomplete classes (missing id, saves, etc.)
  */
 function loadClassData(targetClasses: ClassSelection[]): Map<string, CharacterClass> {
   const classMap = new Map<string, CharacterClass>();
@@ -69,8 +70,11 @@ function loadClassData(targetClasses: ClassSelection[]): Map<string, CharacterCl
       classData = prestigeClassesData.find(c => c.id === selection.classId);
     }
 
-    if (classData) {
+    // Validate class has required data
+    if (classData && classData.id && classData.saves && classData.saves.fortitude !== undefined) {
       classMap.set(selection.classId, classData as CharacterClass);
+    } else if (classData) {
+      console.warn(`Skipping incomplete class: ${classData.name || selection.classId}`);
     }
   }
 
@@ -459,6 +463,13 @@ function generateProgression(
 
   for (let level = 1; level <= totalLevel && level <= Math.min(levelToClass.length, 30); level++) {
     const classData = levelToClass[level - 1];
+
+    // Skip classes with incomplete data
+    if (!classData || !classData.id || !classData.saves) {
+      console.warn(`Skipping invalid class at level ${level}:`, classData?.name || 'unknown');
+      continue;
+    }
+
     const classLevel = (classLevelCounts[classData.id] || 0) + 1;
     classLevelCounts[classData.id] = classLevel;
 
