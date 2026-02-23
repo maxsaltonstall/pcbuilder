@@ -5,7 +5,9 @@
     "description": "Your skin becomes like armor, granting you a natural armor bonus.",
     "prerequisites": [],
     "benefits": "You gain a +1 natural armor bonus to AC, or your existing natural armor bonus increases by +1. This feat can be taken multiple times.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -13,11 +15,19 @@
     "name": "Epic Weapon Focus",
     "description": "Choose one type of weapon. You are especially good at using that weapon in combat.",
     "prerequisites": [
-      {"type": "feat", "featId": "weapon-focus"},
-      {"type": "baseAttackBonus", "value": 20}
+      {
+        "type": "feat",
+        "featId": "weapon-focus"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 20
+      }
     ],
     "benefits": "+2 bonus on all attack rolls you make using the selected weapon.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -25,11 +35,19 @@
     "name": "Epic Weapon Specialization",
     "description": "Choose one type of weapon for which you have already selected Weapon Specialization. You deal extra damage when using this weapon.",
     "prerequisites": [
-      {"type": "feat", "featId": "weapon-specialization"},
-      {"type": "baseAttackBonus", "value": 20}
+      {
+        "type": "feat",
+        "featId": "weapon-specialization"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 20
+      }
     ],
     "benefits": "+4 bonus on all damage rolls you make using the selected weapon.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -38,7 +56,9 @@
     "description": "You are significantly tougher than normal.",
     "prerequisites": [],
     "benefits": "You gain +30 hit points. This feat can be taken multiple times.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -46,11 +66,20 @@
     "name": "Great Smiting",
     "description": "You can make exceptionally powerful smite attacks.",
     "prerequisites": [
-      {"type": "feat", "featId": "smite"},
-      {"type": "ability", "ability": "charisma", "value": 25}
+      {
+        "type": "feat",
+        "featId": "smite"
+      },
+      {
+        "type": "ability",
+        "ability": "charisma",
+        "value": 25
+      }
     ],
     "benefits": "When you make a smite attack, you deal +3 damage per point of Charisma bonus (instead of +1).",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -59,7 +88,9 @@
     "description": "You are more skilled in combat than you once were.",
     "prerequisites": [],
     "benefits": "+1 bonus on all attack rolls.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -67,11 +98,19 @@
     "name": "Epic Spell Penetration",
     "description": "Your spells break through spell resistance much more easily than normal.",
     "prerequisites": [
-      {"type": "feat", "featId": "spell-penetration"},
-      {"type": "feat", "featId": "greater-spell-penetration"}
+      {
+        "type": "feat",
+        "featId": "spell-penetration"
+      },
+      {
+        "type": "feat",
+        "featId": "greater-spell-penetration"
+      }
     ],
     "benefits": "+2 bonus on caster level checks to overcome a creature's spell resistance.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -79,10 +118,15 @@
     "name": "Improved Combat Casting",
     "description": "You are adept at casting spells in combat.",
     "prerequisites": [
-      {"type": "feat", "featId": "combat-casting"}
+      {
+        "type": "feat",
+        "featId": "combat-casting"
+      }
     ],
     "benefits": "+4 bonus on Concentration checks to cast defensively.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -90,11 +134,20 @@
     "name": "Improved Spell Capacity (10th)",
     "description": "You can use 10th-level spell slots.",
     "prerequisites": [
-      {"type": "ability", "ability": "intelligence or wisdom or charisma", "value": 30},
-      {"type": "casterLevel", "minimumLevel": 20}
+      {
+        "type": "ability",
+        "ability": "intelligence or wisdom or charisma",
+        "value": 30
+      },
+      {
+        "type": "casterLevel",
+        "minimumLevel": 20
+      }
     ],
     "benefits": "You gain one spell slot per day of any spell level up to 10th. You do not learn a spell of that level automatically. You must still have an ability score high enough to cast spells of that level.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -102,10 +155,16 @@
     "name": "Legendary Climber",
     "description": "You can climb rapidly.",
     "prerequisites": [
-      {"type": "skill", "skillId": "climb", "minimumRanks": 24}
+      {
+        "type": "skill",
+        "skillId": "climb",
+        "minimumRanks": 24
+      }
     ],
     "benefits": "You can ignore any penalties for accelerated climbing or rapid climbing.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -113,10 +172,16 @@
     "name": "Legendary Rider",
     "description": "You can ride creatures not normally suitable as mounts.",
     "prerequisites": [
-      {"type": "skill", "skillId": "ride", "minimumRanks": 24}
+      {
+        "type": "skill",
+        "skillId": "ride",
+        "minimumRanks": 24
+      }
     ],
     "benefits": "You can ride any creature, even creatures not trained for riding. You do not take penalties for riding a creature without a saddle.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -124,10 +189,15 @@
     "name": "Epic Reputation",
     "description": "You are famous throughout the land.",
     "prerequisites": [
-      {"type": "level", "value": 21}
+      {
+        "type": "level",
+        "value": 21
+      }
     ],
     "benefits": "Your reputation provides a +4 bonus on Diplomacy and Intimidate checks.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -135,11 +205,19 @@
     "name": "Overwhelming Critical",
     "description": "Your critical hits are incredibly deadly.",
     "prerequisites": [
-      {"type": "feat", "featId": "improved-critical"},
-      {"type": "baseAttackBonus", "value": 23}
+      {
+        "type": "feat",
+        "featId": "improved-critical"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 23
+      }
     ],
     "benefits": "When you score a critical hit, the target must make a Fortitude save (DC 10 + 1/2 your character level + your Strength modifier) or be killed instantly.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -147,13 +225,28 @@
     "name": "Perfect Two-Weapon Fighting",
     "description": "You are the ultimate two-weapon fighter.",
     "prerequisites": [
-      {"type": "feat", "featId": "two-weapon-fighting"},
-      {"type": "feat", "featId": "improved-two-weapon-fighting"},
-      {"type": "feat", "featId": "greater-two-weapon-fighting"},
-      {"type": "ability", "ability": "dexterity", "value": 25}
+      {
+        "type": "feat",
+        "featId": "two-weapon-fighting"
+      },
+      {
+        "type": "feat",
+        "featId": "improved-two-weapon-fighting"
+      },
+      {
+        "type": "feat",
+        "featId": "greater-two-weapon-fighting"
+      },
+      {
+        "type": "ability",
+        "ability": "dexterity",
+        "value": 25
+      }
     ],
     "benefits": "You can make as many attacks with your off-hand weapon as with your primary weapon, using the same base attack bonus.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -161,11 +254,19 @@
     "name": "Planar Turning",
     "description": "You can turn or rebuke outsiders.",
     "prerequisites": [
-      {"type": "ability", "value": 25},
-      {"type": "feat", "featId": "turn-undead"}
+      {
+        "type": "ability",
+        "value": 25
+      },
+      {
+        "type": "feat",
+        "featId": "turn-undead"
+      }
     ],
     "benefits": "You can use your turn/rebuke undead ability to turn/rebuke outsiders as if they were undead.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -173,10 +274,15 @@
     "name": "Superior Initiative",
     "description": "You react even faster than normal in combat.",
     "prerequisites": [
-      {"type": "feat", "featId": "improved-initiative"}
+      {
+        "type": "feat",
+        "featId": "improved-initiative"
+      }
     ],
     "benefits": "+4 bonus on initiative checks (stacks with Improved Initiative).",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -185,7 +291,9 @@
     "description": "You have tremendously high fortitude.",
     "prerequisites": [],
     "benefits": "+4 bonus on Fortitude saving throws.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -194,7 +302,9 @@
     "description": "You have tremendously fast reflexes.",
     "prerequisites": [],
     "benefits": "+4 bonus on Reflex saving throws.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -203,7 +313,9 @@
     "description": "You have tremendous willpower.",
     "prerequisites": [],
     "benefits": "+4 bonus on Will saving throws.",
-    "type": ["Epic"],
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   },
   {
@@ -211,10 +323,959 @@
     "name": "Damage Reduction",
     "description": "You can shrug off some damage from attacks.",
     "prerequisites": [
-      {"type": "level", "value": 21}
+      {
+        "type": "level",
+        "value": 21
+      }
     ],
-    "benefits": "You gain damage reduction 3/–. This feat can be taken multiple times, increasing DR by 3 each time.",
-    "type": ["Epic"],
+    "benefits": "You gain damage reduction 3/\u2013. This feat can be taken multiple times, increasing DR by 3 each time.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-skill-focus",
+    "name": "Epic Skill Focus",
+    "description": "Choose a skill. You have epic proficiency with that skill.",
+    "prerequisites": [
+      {
+        "type": "skill",
+        "skillId": "any",
+        "minimumRanks": 20
+      }
+    ],
+    "benefits": "+10 bonus to the selected skill (stacks with Skill Focus).",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "legendary-commander",
+    "name": "Legendary Commander",
+    "description": "You are an inspiration to your allies in battle.",
+    "prerequisites": [
+      {
+        "type": "level",
+        "value": 21
+      }
+    ],
+    "benefits": "Allies within 30 feet gain +2 morale bonus on saves against fear and +1 morale bonus on attack rolls.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "devastating-critical",
+    "name": "Devastating Critical",
+    "description": "Your critical hits deal tremendous damage.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "overwhelming-critical"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 25
+      }
+    ],
+    "benefits": "When you score a critical hit, you deal +2d6 bonus damage per point of your critical multiplier.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-dodge",
+    "name": "Epic Dodge",
+    "description": "Once per round, you can avoid any one attack.",
+    "prerequisites": [
+      {
+        "type": "ability",
+        "ability": "dexterity",
+        "value": 25
+      },
+      {
+        "type": "feat",
+        "featId": "dodge"
+      },
+      {
+        "type": "feat",
+        "featId": "mobility"
+      }
+    ],
+    "benefits": "Once per round, when struck by an attack, you may automatically avoid all damage from that attack.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-leadership",
+    "name": "Epic Leadership",
+    "description": "You attract more and more powerful followers.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "leadership"
+      }
+    ],
+    "benefits": "+4 to Leadership score.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-spell-capacity-11th",
+    "name": "Improved Spell Capacity (11th)",
+    "description": "You can use 11th-level spell slots.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "improved-spell-capacity-10th"
+      },
+      {
+        "type": "ability",
+        "value": 31
+      },
+      {
+        "type": "casterLevel",
+        "minimumLevel": 21
+      }
+    ],
+    "benefits": "You gain one spell slot per day of any spell level up to 11th.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-spell-capacity-12th",
+    "name": "Improved Spell Capacity (12th)",
+    "description": "You can use 12th-level spell slots.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "improved-spell-capacity-11th"
+      },
+      {
+        "type": "ability",
+        "value": 32
+      },
+      {
+        "type": "casterLevel",
+        "minimumLevel": 22
+      }
+    ],
+    "benefits": "You gain one spell slot per day of any spell level up to 12th.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "automatic-quicken-spell",
+    "name": "Automatic Quicken Spell",
+    "description": "You can quicken spells without using higher-level slots.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "quicken-spell"
+      },
+      {
+        "type": "casterLevel",
+        "minimumLevel": 21
+      }
+    ],
+    "benefits": "You may quicken spells of a chosen level (up to 6th) without increasing the spell level. Each time you take this feat, it applies to a new spell level.",
+    "type": [
+      "Epic",
+      "Metamagic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "automatic-silent-spell",
+    "name": "Automatic Silent Spell",
+    "description": "You can cast silent spells without using higher-level slots.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "silent-spell"
+      },
+      {
+        "type": "casterLevel",
+        "minimumLevel": 21
+      }
+    ],
+    "benefits": "You may cast silent spells of a chosen level (up to 9th) without increasing the spell level.",
+    "type": [
+      "Epic",
+      "Metamagic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "automatic-still-spell",
+    "name": "Automatic Still Spell",
+    "description": "You can cast still spells without using higher-level slots.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "still-spell"
+      },
+      {
+        "type": "casterLevel",
+        "minimumLevel": 21
+      }
+    ],
+    "benefits": "You may cast still spells of a chosen level (up to 9th) without increasing the spell level.",
+    "type": [
+      "Epic",
+      "Metamagic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "blinding-speed",
+    "name": "Blinding Speed",
+    "description": "You can act with incredible speed.",
+    "prerequisites": [
+      {
+        "type": "ability",
+        "ability": "dexterity",
+        "value": 25
+      }
+    ],
+    "benefits": "You can act as if hasted for 5 rounds per day. This feat can be taken multiple times, granting 5 additional rounds each time.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "combat-archery",
+    "name": "Combat Archery",
+    "description": "You can fire arrows in melee without penalty.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "point-blank-shot"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 21
+      }
+    ],
+    "benefits": "You do not provoke attacks of opportunity when firing a bow, and you can fire into melee without the standard -4 penalty.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "dire-charge",
+    "name": "Dire Charge",
+    "description": "Your charges are devastating.",
+    "prerequisites": [
+      {
+        "type": "baseAttackBonus",
+        "value": 20
+      }
+    ],
+    "benefits": "When you charge, you can make a full attack at the end of your charge.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "distant-shot",
+    "name": "Distant Shot",
+    "description": "You can fire projectile weapons at great distances.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "far-shot"
+      },
+      {
+        "type": "feat",
+        "featId": "point-blank-shot"
+      }
+    ],
+    "benefits": "You can shoot a projectile weapon at targets beyond normal range. Your range increment increases by 50%.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-endurance",
+    "name": "Epic Endurance",
+    "description": "You have tremendous stamina.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "endurance"
+      },
+      {
+        "type": "ability",
+        "ability": "constitution",
+        "value": 25
+      }
+    ],
+    "benefits": "+10 bonus on Constitution checks to avoid nonlethal damage, continue running, hold your breath, etc.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-speed",
+    "name": "Epic Speed",
+    "description": "You can move faster than normal.",
+    "prerequisites": [
+      {
+        "type": "ability",
+        "ability": "dexterity",
+        "value": 21
+      }
+    ],
+    "benefits": "+30 feet to speed. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "fast-healing",
+    "name": "Fast Healing",
+    "description": "You heal damage at an incredible rate.",
+    "prerequisites": [
+      {
+        "type": "ability",
+        "ability": "constitution",
+        "value": 25
+      }
+    ],
+    "benefits": "You gain fast healing 3. This feat can be taken multiple times, increasing fast healing by 3 each time.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "great-charisma",
+    "name": "Great Charisma",
+    "description": "Your force of personality is overwhelming.",
+    "prerequisites": [],
+    "benefits": "+1 to Charisma. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "great-constitution",
+    "name": "Great Constitution",
+    "description": "You are incredibly hardy.",
+    "prerequisites": [],
+    "benefits": "+1 to Constitution. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "great-dexterity",
+    "name": "Great Dexterity",
+    "description": "You are incredibly agile.",
+    "prerequisites": [],
+    "benefits": "+1 to Dexterity. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "great-intelligence",
+    "name": "Great Intelligence",
+    "description": "Your intellect is astounding.",
+    "prerequisites": [],
+    "benefits": "+1 to Intelligence. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "great-strength",
+    "name": "Great Strength",
+    "description": "Your might is legendary.",
+    "prerequisites": [],
+    "benefits": "+1 to Strength. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "great-wisdom",
+    "name": "Great Wisdom",
+    "description": "Your insight is profound.",
+    "prerequisites": [],
+    "benefits": "+1 to Wisdom. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-arrow-of-death",
+    "name": "Improved Arrow of Death",
+    "description": "Your arrows of death are more effective.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "arrow-of-death"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 25
+      }
+    ],
+    "benefits": "The DC of your arrow of death increases by 2.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-aura-of-courage",
+    "name": "Improved Aura of Courage",
+    "description": "Your aura of courage is more powerful.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "aura-of-courage"
+      }
+    ],
+    "benefits": "Your aura of courage grants immunity to fear to you and all allies within 30 feet.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-darkvision",
+    "name": "Improved Darkvision",
+    "description": "Your darkvision extends much farther.",
+    "prerequisites": [
+      {
+        "type": "ability",
+        "value": 60
+      }
+    ],
+    "benefits": "Your darkvision range increases by 60 feet. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-favored-enemy",
+    "name": "Improved Favored Enemy",
+    "description": "You are exceptionally deadly against your favored enemies.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "favored-enemy"
+      },
+      {
+        "type": "level",
+        "value": 21
+      }
+    ],
+    "benefits": "+3 bonus on Bluff, Listen, Sense Motive, Spot, and Survival checks, and +3 bonus on damage rolls against one favored enemy.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-ki-strike",
+    "name": "Improved Ki Strike",
+    "description": "Your ki strike is more powerful.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "ki-strike"
+      },
+      {
+        "type": "level",
+        "value": 21
+      }
+    ],
+    "benefits": "Your unarmed strikes are treated as epic weapons for the purpose of overcoming damage reduction.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-low-light-vision",
+    "name": "Improved Low-Light Vision",
+    "description": "You can see farther in dim light.",
+    "prerequisites": [],
+    "benefits": "Your low-light vision increases. You can see four times as far as a human in dim light.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-manyshot",
+    "name": "Improved Manyshot",
+    "description": "You can fire even more arrows simultaneously.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "manyshot"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 23
+      }
+    ],
+    "benefits": "As Manyshot, but you can fire two arrows per five points of base attack bonus.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-sneak-attack",
+    "name": "Improved Sneak Attack",
+    "description": "Your sneak attacks deal extra damage.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "sneak-attack"
+      },
+      {
+        "type": "level",
+        "value": 21
+      }
+    ],
+    "benefits": "+1d6 sneak attack damage. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-stunning-fist",
+    "name": "Improved Stunning Fist",
+    "description": "Your stunning fist is more effective.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "stunning-fist"
+      },
+      {
+        "type": "level",
+        "value": 21
+      }
+    ],
+    "benefits": "The DC of your stunning fist increases by 2.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "infinite-deflection",
+    "name": "Infinite Deflection",
+    "description": "You can deflect any number of projectiles.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "deflect-arrows"
+      },
+      {
+        "type": "feat",
+        "featId": "improved-unarmed-strike"
+      }
+    ],
+    "benefits": "You can deflect any number of ranged attacks per round, as long as you have at least one hand free.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "instant-reload",
+    "name": "Instant Reload",
+    "description": "You can reload crossbows instantly.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "quick-draw"
+      },
+      {
+        "type": "feat",
+        "featId": "rapid-reload"
+      }
+    ],
+    "benefits": "You can reload any crossbow as a free action.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "legendary-tracker",
+    "name": "Legendary Tracker",
+    "description": "You can track across any surface.",
+    "prerequisites": [
+      {
+        "type": "skill",
+        "skillId": "survival",
+        "minimumRanks": 24
+      }
+    ],
+    "benefits": "You can track creatures across water, through the air, or through solid rock. You can track creatures through teleportation.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "legendary-wrestler",
+    "name": "Legendary Wrestler",
+    "description": "You are exceptionally skilled at grappling.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "improved-grapple"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 21
+      }
+    ],
+    "benefits": "+4 bonus on grapple checks. You can grapple creatures up to two size categories larger than you.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "multispell",
+    "name": "Multispell",
+    "description": "You can cast an additional quickened spell per round.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "quicken-spell"
+      },
+      {
+        "type": "casterLevel",
+        "minimumLevel": 20
+      }
+    ],
+    "benefits": "You may cast one additional quickened spell per round.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "penetrate-damage-reduction",
+    "name": "Penetrate Damage Reduction",
+    "description": "Your attacks ignore some damage reduction.",
+    "prerequisites": [
+      {
+        "type": "baseAttackBonus",
+        "value": 21
+      }
+    ],
+    "benefits": "Your attacks ignore up to 5 points of a creature's damage reduction. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "permanent-emanation",
+    "name": "Permanent Emanation",
+    "description": "One of your spells becomes a permanent emanation around you.",
+    "prerequisites": [
+      {
+        "type": "casterLevel",
+        "minimumLevel": 21
+      }
+    ],
+    "benefits": "Choose a spell with a duration of concentration, rounds, or minutes that affects an area. That spell becomes a permanent emanation from you.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "positive-energy-aura",
+    "name": "Positive Energy Aura",
+    "description": "You radiate positive energy.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "turn-undead"
+      },
+      {
+        "type": "ability",
+        "ability": "charisma",
+        "value": 25
+      }
+    ],
+    "benefits": "You radiate a continuous positive energy aura in a 20-foot radius. Living creatures in the aura gain fast healing 2. Undead take 2d6 damage per round.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "spell-knowledge",
+    "name": "Spell Knowledge",
+    "description": "You know more spells than normal.",
+    "prerequisites": [
+      {
+        "type": "casterLevel",
+        "minimumLevel": 21
+      }
+    ],
+    "benefits": "Add two spells to your spells known. This feat can be taken multiple times.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "spell-opportunity",
+    "name": "Spell Opportunity",
+    "description": "You can cast spells as attacks of opportunity.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "combat-casting"
+      },
+      {
+        "type": "casterLevel",
+        "minimumLevel": 20
+      }
+    ],
+    "benefits": "You can cast a quickened spell as an attack of opportunity.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "spell-stowaway",
+    "name": "Spell Stowaway",
+    "description": "You can hide a spell within another spell.",
+    "prerequisites": [
+      {
+        "type": "casterLevel",
+        "minimumLevel": 21
+      },
+      {
+        "type": "feat",
+        "featId": "spellcraft"
+      }
+    ],
+    "benefits": "You can cast a spell and have it take effect later, triggered by a specified event.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "spontaneous-spell",
+    "name": "Spontaneous Spell",
+    "description": "You can spontaneously convert spells.",
+    "prerequisites": [
+      {
+        "type": "casterLevel",
+        "minimumLevel": 20
+      }
+    ],
+    "benefits": "Choose one spell you know. You can spontaneously convert other spells into this spell, as a cleric does with cure spells.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "storm-of-throws",
+    "name": "Storm of Throws",
+    "description": "You can throw multiple weapons simultaneously.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "quick-draw"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 25
+      }
+    ],
+    "benefits": "As a full-round action, you can throw up to four one-handed or light thrown weapons.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "swarm-of-arrows",
+    "name": "Swarm of Arrows",
+    "description": "You can fire arrows at multiple targets.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "point-blank-shot"
+      },
+      {
+        "type": "feat",
+        "featId": "rapid-shot"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 23
+      }
+    ],
+    "benefits": "As a full-round action, you can fire one arrow at each opponent within 30 feet.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "tenacious-magic",
+    "name": "Tenacious Magic",
+    "description": "Your spells are difficult to dispel.",
+    "prerequisites": [
+      {
+        "type": "casterLevel",
+        "minimumLevel": 21
+      }
+    ],
+    "benefits": "Choose one spell. Whenever that spell is targeted by dispel magic, the caster must make a dispel check against a DC of 25 + your caster level (instead of 11 + your caster level).",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "trap-sense",
+    "name": "Epic Trap Sense",
+    "description": "Your trap sense is legendary.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "trap-sense"
+      },
+      {
+        "type": "level",
+        "value": 21
+      }
+    ],
+    "benefits": "+2 bonus to AC and Reflex saves against traps. Stacks with other trap sense bonuses.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "two-weapon-rend",
+    "name": "Two-Weapon Rend",
+    "description": "Striking with both weapons, you can rend your foe.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "two-weapon-fighting"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 23
+      }
+    ],
+    "benefits": "If you hit with both weapons, you deal an extra 2d6+Strength modifier damage.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "uncanny-accuracy",
+    "name": "Uncanny Accuracy",
+    "description": "Your ranged attacks are supernaturally accurate.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "point-blank-shot"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 21
+      }
+    ],
+    "benefits": "You ignore all penalties for range, cover, and concealment when making ranged attacks.",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "vorpal-strike",
+    "name": "Vorpal Strike",
+    "description": "Your unarmed strikes can behead opponents.",
+    "prerequisites": [
+      {
+        "type": "feat",
+        "featId": "improved-unarmed-strike"
+      },
+      {
+        "type": "baseAttackBonus",
+        "value": 25
+      }
+    ],
+    "benefits": "On a natural 20 with an unarmed strike (when the roll is confirmed as a critical hit), you sever the opponent's head (if it has one).",
+    "type": [
+      "Epic"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "zone-of-animation",
+    "name": "Zone of Animation",
+    "description": "You can animate many undead at once.",
+    "prerequisites": [
+      {
+        "type": "casterLevel",
+        "minimumLevel": 21
+      },
+      {
+        "type": "feat",
+        "featId": "animate-dead"
+      }
+    ],
+    "benefits": "You can control up to 100 HD worth of undead per caster level (instead of 4 HD per level).",
+    "type": [
+      "Epic"
+    ],
     "source": "Epic Level Handbook"
   }
 ]

@@ -44,6 +44,7 @@ import CharacterComparison from '../components/CharacterComparison';
 import ProgressionTimeline from '../components/ProgressionTimeline';
 import ClassDistribution from '../components/ClassDistribution';
 import AbilityGrowthChart from '../components/AbilityGrowthChart';
+import SkillsDisplay from '../components/SkillsDisplay';
 
 interface CharacterReviewProps {
   onBack: () => void;
@@ -387,6 +388,46 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
             </Grid>
           </AccordionDetails>
         </Accordion>
+
+        <Divider sx={{ my: 2 }} />
+
+        {/* Skills Section */}
+        {(() => {
+          // Calculate class skills from all classes in progression
+          const classSkills: string[] = [];
+          const classSkillSet = new Set<string>();
+          progression.forEach(level => {
+            level.class.classSkills.forEach(skill => classSkillSet.add(skill));
+          });
+          classSkillSet.forEach(skill => classSkills.push(skill));
+
+          // For now, show key skills with estimated max ranks
+          // TODO: Replace with actual skill allocation when implemented
+          const skillRanks: Record<string, number> = {};
+          const characterLevel = progression.length;
+          const maxRanks = characterLevel + 3;
+
+          state.keySkills.forEach(skillId => {
+            // Allocate max ranks to key skills as a demonstration
+            skillRanks[skillId] = maxRanks;
+          });
+
+          return (
+            <Accordion defaultExpanded>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography variant="h6" color="primary">
+                  🎯 Skills ({totalSkillPoints} total points)
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <SkillsDisplay
+                  skillRanks={skillRanks}
+                  classSkills={classSkills}
+                />
+              </AccordionDetails>
+            </Accordion>
+          );
+        })()}
 
         <Divider sx={{ my: 2 }} />
 

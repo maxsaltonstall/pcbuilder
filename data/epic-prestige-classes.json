@@ -1,0 +1,323 @@
+[
+  {
+    "id": "legendary-dreadnought",
+    "name": "Legendary Dreadnought",
+    "description": "The legendary dreadnought is a nearly unstoppable warrior, capable of shrugging off attacks and dealing devastating damage in return.",
+    "hitDie": 12,
+    "skillPointsPerLevel": 2,
+    "classSkills": ["climb", "craft", "intimidate", "jump", "swim"],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "poor"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "baseAttackBonus", "value": 23},
+      {"type": "feat", "featId": "combat-reflexes"},
+      {"type": "feat", "featId": "toughness"},
+      {"type": "feat", "featId": "great-fortitude"}
+    ],
+    "specialAbilities": [
+      "Unstoppable: Damage reduction 5/- at 1st level, increasing by 5 every 2 levels",
+      "Unmovable: Immune to bull rush, trip, and grapple attempts",
+      "Devastating Critical: Critical hits deal double damage dice",
+      "Shrug Off: Can ignore one attack per round"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-infiltrator",
+    "name": "Epic Infiltrator",
+    "description": "The epic infiltrator is a master of stealth and deception, able to slip past any defenses and strike from the shadows.",
+    "hitDie": 6,
+    "skillPointsPerLevel": 8,
+    "classSkills": ["bluff", "disable-device", "disguise", "escape-artist", "hide", "listen", "move-silently", "open-lock", "search", "sleight-of-hand", "spot", "tumble", "use-magic-device"],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "skill", "skillId": "hide", "minimumRanks": 24},
+      {"type": "skill", "skillId": "move-silently", "minimumRanks": 24},
+      {"type": "skill", "skillId": "disable-device", "minimumRanks": 10},
+      {"type": "feat", "featId": "improved-evasion"}
+    ],
+    "specialAbilities": [
+      "Epic Sneak Attack: +1d6 sneak attack per level",
+      "Improved Uncanny Dodge: Cannot be flanked",
+      "Shadow Walk: Teleport through shadows",
+      "Death Attack: Kill with sneak attack on successful study"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "perfect-wight",
+    "name": "Perfect Wight",
+    "description": "The perfect wight has achieved a balance between body, mind, and soul, becoming a unified fighting machine.",
+    "hitDie": 12,
+    "skillPointsPerLevel": 4,
+    "classSkills": ["balance", "climb", "concentration", "jump", "knowledge-arcana", "knowledge-religion", "listen", "spot", "swim", "tumble"],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "good",
+      "will": "good"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "baseAttackBonus", "value": 21},
+      {"type": "skill", "skillId": "concentration", "minimumRanks": 24},
+      {"type": "feat", "featId": "stunning-fist"},
+      {"type": "feat", "featId": "improved-unarmed-strike"},
+      {"type": "ability", "ability": "wisdom", "value": 21}
+    ],
+    "specialAbilities": [
+      "Perfect Form: +2 bonus to all physical ability scores",
+      "Diamond Soul: Spell resistance equal to class level + 15",
+      "Ki Strike: Unarmed strikes count as epic for overcoming DR",
+      "Quivering Palm: Instant death touch 1/day"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-spellcaster",
+    "name": "Epic Spellcaster",
+    "description": "The epic spellcaster has mastered magic to such a degree that they can create spells of unprecedented power.",
+    "hitDie": 4,
+    "skillPointsPerLevel": 2,
+    "classSkills": ["concentration", "craft", "knowledge-arcana", "profession", "spellcraft"],
+    "baseAttackBonus": "poor",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "casterLevel", "minimumLevel": 21},
+      {"type": "skill", "skillId": "spellcraft", "minimumRanks": 24},
+      {"type": "skill", "skillId": "knowledge-arcana", "minimumRanks": 24},
+      {"type": "feat", "featId": "spell-focus"}
+    ],
+    "specialAbilities": [
+      "Epic Spell Slot: Gain one 10th-level spell slot per two levels",
+      "Bonus Epic Feat: Gain a bonus epic feat every 4 levels",
+      "Spell Power: +1 to spell DC per two levels",
+      "Metamagic Mastery: Apply metamagic without increasing casting time"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "legendary-champion",
+    "name": "Legendary Champion",
+    "description": "The legendary champion is a paragon of martial prowess, inspiring allies and devastating foes.",
+    "hitDie": 12,
+    "skillPointsPerLevel": 2,
+    "classSkills": ["climb", "handle-animal", "intimidate", "jump", "ride", "swim"],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "baseAttackBonus", "value": 21},
+      {"type": "feat", "featId": "weapon-focus"},
+      {"type": "feat", "featId": "weapon-specialization"},
+      {"type": "ability", "ability": "charisma", "value": 21}
+    ],
+    "specialAbilities": [
+      "Legendary Might: +2 to all attack rolls and damage rolls",
+      "Inspire Courage: Allies gain +4 morale bonus to attacks and saves",
+      "Devastating Blow: Once per day, deal quadruple damage on hit",
+      "Leadership: Attract epic-level followers"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-ranger",
+    "name": "Epic Ranger",
+    "description": "The epic ranger has become one with nature, able to track any quarry and survive any environment.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 6,
+    "classSkills": ["climb", "concentration", "handle-animal", "heal", "hide", "jump", "knowledge-nature", "listen", "move-silently", "ride", "search", "spot", "survival", "swim", "use-rope"],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "baseAttackBonus", "value": 20},
+      {"type": "skill", "skillId": "survival", "minimumRanks": 24},
+      {"type": "skill", "skillId": "knowledge-nature", "minimumRanks": 15},
+      {"type": "feat", "featId": "track"},
+      {"type": "feat", "featId": "endurance"}
+    ],
+    "specialAbilities": [
+      "Epic Favored Enemy: +6 bonus against one favored enemy",
+      "Swift Tracker: Can track at full speed",
+      "Camouflage: Can hide in any natural terrain",
+      "Animal Companion: Gain an epic-level animal companion"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "divine-emissary",
+    "name": "Divine Emissary",
+    "description": "The divine emissary is a direct agent of their deity, wielding divine power and commanding respect from all who follow the same faith.",
+    "hitDie": 12,
+    "skillPointsPerLevel": 2,
+    "classSkills": ["concentration", "craft", "diplomacy", "heal", "knowledge-religion", "profession", "spellcraft"],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "casterLevel", "minimumLevel": 20},
+      {"type": "skill", "skillId": "knowledge-religion", "minimumRanks": 24},
+      {"type": "feat", "featId": "turn-undead"},
+      {"type": "ability", "ability": "wisdom", "value": 25}
+    ],
+    "specialAbilities": [
+      "Divine Grace: Add Charisma bonus to all saves",
+      "Divine Power: +4 to Strength and Constitution",
+      "Lay on Hands: Heal 2 HP per class level, at will",
+      "Smite Evil: Deal extra damage equal to class level once per day"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "high-proselytizer",
+    "name": "High Proselytizer",
+    "description": "The high proselytizer spreads their faith through word and deed, converting others and performing miracles.",
+    "hitDie": 8,
+    "skillPointsPerLevel": 4,
+    "classSkills": ["bluff", "concentration", "craft", "diplomacy", "gather-information", "knowledge-religion", "profession", "sense-motive", "spellcraft"],
+    "baseAttackBonus": "average",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "casterLevel", "minimumLevel": 20},
+      {"type": "skill", "skillId": "diplomacy", "minimumRanks": 24},
+      {"type": "skill", "skillId": "knowledge-religion", "minimumRanks": 24},
+      {"type": "feat", "featId": "leadership"}
+    ],
+    "specialAbilities": [
+      "Divine Inspiration: Grant bonuses to followers",
+      "Mass Conversion: Convert groups to your faith",
+      "Miracle: Cast miracle as spell-like ability 1/day",
+      "Holy Word: Speak words of power that affect alignment"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "cosmic-descryer",
+    "name": "Cosmic Descryer",
+    "description": "The cosmic descryer has pierced the veil between planes, gaining knowledge of the multiverse and the ability to travel it at will.",
+    "hitDie": 4,
+    "skillPointsPerLevel": 4,
+    "classSkills": ["concentration", "craft", "decipher-script", "gather-information", "knowledge-all", "profession", "search", "spellcraft"],
+    "baseAttackBonus": "poor",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "casterLevel", "minimumLevel": 20},
+      {"type": "skill", "skillId": "knowledge-arcana", "minimumRanks": 24},
+      {"type": "skill", "skillId": "spellcraft", "minimumRanks": 24},
+      {"type": "feat", "featId": "spell-focus"}
+    ],
+    "specialAbilities": [
+      "Plane Shift: Travel to any plane at will",
+      "Planar Knowledge: Know all about any plane",
+      "Cosmic Awareness: Detect any creature or object on your plane",
+      "Transcendent Form: Become partially incorporeal"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-duelist",
+    "name": "Epic Duelist",
+    "description": "The epic duelist is a master of one-on-one combat, using finesse and precision to defeat any opponent.",
+    "hitDie": 10,
+    "skillPointsPerLevel": 4,
+    "classSkills": ["balance", "bluff", "escape-artist", "jump", "listen", "perform", "sense-motive", "spot", "tumble"],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "poor",
+      "reflex": "good",
+      "will": "poor"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "baseAttackBonus", "value": 21},
+      {"type": "feat", "featId": "weapon-finesse"},
+      {"type": "feat", "featId": "dodge"},
+      {"type": "feat", "featId": "mobility"}
+    ],
+    "specialAbilities": [
+      "Canny Defense: Add Intelligence bonus to AC",
+      "Precise Strike: +2d6 precision damage",
+      "Elaborate Parry: Add Intelligence bonus to AC against one opponent",
+      "Acrobatic Charge: Charge through threatened squares"
+    ],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "guardian-paramount",
+    "name": "Guardian Paramount",
+    "description": "The guardian paramount is the ultimate protector, able to defend allies from any threat and absorb tremendous punishment.",
+    "hitDie": 12,
+    "skillPointsPerLevel": 2,
+    "classSkills": ["climb", "concentration", "heal", "intimidate", "jump", "sense-motive", "swim"],
+    "baseAttackBonus": "good",
+    "saves": {
+      "fortitude": "good",
+      "reflex": "poor",
+      "will": "good"
+    },
+    "isPrestige": true,
+    "epicPrestige": true,
+    "requirements": [
+      {"type": "baseAttackBonus", "value": 20},
+      {"type": "feat", "featId": "combat-reflexes"},
+      {"type": "feat", "featId": "dodge"},
+      {"type": "ability", "ability": "constitution", "value": 21}
+    ],
+    "specialAbilities": [
+      "Shield Other: Absorb damage for allies",
+      "Defensive Stance: Grant AC bonus to nearby allies",
+      "Intercept Blow: Take damage meant for ally",
+      "Unstoppable: Cannot be killed while allies remain"
+    ],
+    "source": "Epic Level Handbook"
+  }
+]
