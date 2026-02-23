@@ -1,0 +1,109 @@
+{
+  "buildName": "Batman Wizard - Diviner Specialist",
+  "source": "GitP Wizard Handbook - Tier 1 Optimization",
+  "description": "Tier 1 prepared arcane caster with divination specialization",
+  "level": 20,
+  "focus": "spells",
+  "concept": "Ultimate prepared spellcaster with forewarned ability",
+
+  "abilityScores": {
+    "strength": 8,
+    "dexterity": 14,
+    "constitution": 14,
+    "intelligence": 20,
+    "wisdom": 12,
+    "charisma": 8
+  },
+
+  "targetClasses": [
+    { "className": "Wizard", "levels": 20 }
+  ],
+
+  "expectedProgression": [
+    { "level": 1, "class": "Wizard", "feats": ["Scribe Scroll", "Spell Focus (Evocation)"] },
+    { "level": 2, "class": "Wizard" },
+    { "level": 3, "class": "Wizard", "feats": ["Greater Spell Focus (Evocation)"] },
+    { "level": 4, "class": "Wizard" },
+    { "level": 5, "class": "Wizard", "feats": ["Craft Wondrous Item"] },
+    { "level": 6, "class": "Wizard" },
+    { "level": 7, "class": "Wizard" },
+    { "level": 8, "class": "Wizard" },
+    { "level": 9, "class": "Wizard", "feats": ["Spell Penetration"] },
+    { "level": 10, "class": "Wizard" },
+    { "level": 11, "class": "Wizard" },
+    { "level": 12, "class": "Wizard", "feats": ["Greater Spell Penetration"] },
+    { "level": 13, "class": "Wizard" },
+    { "level": 14, "class": "Wizard" },
+    { "level": 15, "class": "Wizard", "feats": ["Empower Spell"] },
+    { "level": 16, "class": "Wizard" },
+    { "level": 17, "class": "Wizard" },
+    { "level": 18, "class": "Wizard", "feats": ["Maximize Spell"] },
+    { "level": 19, "class": "Wizard" },
+    { "level": 20, "class": "Wizard" }
+  ],
+
+  "expectedStats": {
+    "totalSkillPoints": 230,
+    "keySkills": ["Spellcraft", "Concentration", "Knowledge (arcana)", "Knowledge (the planes)"],
+    "maxRanksSkills": ["Spellcraft", "Concentration", "Knowledge (arcana)"],
+    "baseAttackBonus": 10,
+    "casterLevel": 20,
+    "spellsPerDay": {
+      "0": 4,
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5,
+      "5": 4,
+      "6": 4,
+      "7": 4,
+      "8": 3,
+      "9": 3
+    },
+    "hp": 100,
+    "ac": 18,
+    "saves": {
+      "fortitude": 8,
+      "reflex": 8,
+      "will": 16
+    }
+  },
+
+  "expectedFeats": [
+    "Scribe Scroll",
+    "Spell Focus (Evocation)",
+    "Greater Spell Focus (Evocation)",
+    "Craft Wondrous Item",
+    "Spell Penetration",
+    "Greater Spell Penetration",
+    "Empower Spell",
+    "Maximize Spell"
+  ],
+
+  "criticalFeatures": [
+    "Divination specialization for Forewarned ability (always act in surprise rounds)",
+    "9th level spells at level 17",
+    "Prepared casting allows complete spell versatility",
+    "High INT for skill points and spell DCs",
+    "Item creation feats for wealth optimization"
+  ],
+
+  "knownIssues": [
+    "Low HP (d4 hit die)",
+    "Poor Fortitude saves",
+    "Requires large spell library (expensive)"
+  ],
+
+  "validationCriteria": {
+    "mustHave": {
+      "casterLevel": { "min": 20, "ideal": 20 },
+      "baseAttackBonus": { "min": 10, "ideal": 10 },
+      "totalSkillPoints": { "min": 200, "ideal": 230 }
+    },
+    "shouldHave": {
+      "feats": ["Spell Focus", "Greater Spell Focus", "Spell Penetration"],
+      "spellLevel": 9,
+      "maxedSkills": ["Spellcraft", "Concentration"]
+    }
+  }
+}

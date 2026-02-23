@@ -1,0 +1,86 @@
+{
+  "buildName": "Crusader - Tome of Battle Maneuvers",
+  "source": "GitP Tome of Battle Handbook",
+  "description": "Tier 3 martial adept with self-healing and strong defenses",
+  "level": 12,
+  "focus": "melee",
+  "concept": "Tanky melee fighter with healing maneuvers and boosts",
+
+  "abilityScores": {
+    "strength": 16,
+    "dexterity": 12,
+    "constitution": 16,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 8
+  },
+
+  "targetClasses": [
+    { "className": "Crusader", "levels": 12 }
+  ],
+
+  "expectedProgression": [
+    { "level": 1, "class": "Crusader", "feats": ["Improved Initiative"] },
+    { "level": 2, "class": "Crusader" },
+    { "level": 3, "class": "Crusader", "feats": ["Stone Power"] },
+    { "level": 4, "class": "Crusader" },
+    { "level": 5, "class": "Crusader" },
+    { "level": 6, "class": "Crusader", "feats": ["Ironheart Aura"] },
+    { "level": 7, "class": "Crusader" },
+    { "level": 8, "class": "Crusader" },
+    { "level": 9, "class": "Crusader", "feats": ["White Raven Defense"] },
+    { "level": 10, "class": "Crusader" },
+    { "level": 11, "class": "Crusader" },
+    { "level": 12, "class": "Crusader", "feats": ["Iron Guard's Glare"] }
+  ],
+
+  "expectedStats": {
+    "totalSkillPoints": 72,
+    "keySkills": ["Concentration", "Diplomacy", "Intimidate", "Jump"],
+    "maxRanksSkills": ["Concentration", "Diplomacy"],
+    "baseAttackBonus": 12,
+    "casterLevel": 0,
+    "hp": 132,
+    "ac": 24,
+    "saves": {
+      "fortitude": 12,
+      "reflex": 6,
+      "will": 10
+    }
+  },
+
+  "expectedFeats": [
+    "Improved Initiative",
+    "Stone Power",
+    "Ironheart Aura",
+    "White Raven Defense",
+    "Iron Guard's Glare"
+  ],
+
+  "criticalFeatures": [
+    "Crusader gets random maneuver recovery (different from other ToB classes)",
+    "Access to Devoted Spirit for healing maneuvers",
+    "Stone Power gives +2 initiative from Stone Dragon",
+    "Ironheart Aura grants bonus to allies' attacks",
+    "Self-healing through maneuvers makes very durable"
+  ],
+
+  "knownIssues": [
+    "Requires Tome of Battle sourcebook",
+    "Random maneuver recovery can be unpredictable",
+    "No spellcasting ability"
+  ],
+
+  "validationCriteria": {
+    "mustHave": {
+      "baseAttackBonus": { "min": 12, "ideal": 12 },
+      "totalSkillPoints": { "min": 60, "ideal": 72 },
+      "hp": { "min": 108, "ideal": 132 }
+    },
+    "shouldHave": {
+      "feats": ["Improved Initiative", "Stone Power"],
+      "spellLevel": 0,
+      "maxedSkills": ["Concentration", "Diplomacy"]
+    }
+  }
+}

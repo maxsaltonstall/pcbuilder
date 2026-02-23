@@ -1,0 +1,100 @@
+{
+  "buildName": "CoDzilla - Persistent Spell Cleric",
+  "source": "GitP Cleric Handbook - Divine Metamagic optimization",
+  "description": "Tier 1 cleric using Divine Metamagic to persist buffs all day",
+  "level": 15,
+  "focus": "spells",
+  "concept": "Self-buffed combat monster with full spellcasting",
+
+  "abilityScores": {
+    "strength": 14,
+    "dexterity": 10,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 18,
+    "charisma": 14
+  },
+
+  "targetClasses": [
+    { "className": "Cleric", "levels": 15 }
+  ],
+
+  "expectedProgression": [
+    { "level": 1, "class": "Cleric", "feats": ["Extra Turning"] },
+    { "level": 2, "class": "Cleric" },
+    { "level": 3, "class": "Cleric", "feats": ["Persistent Spell"] },
+    { "level": 4, "class": "Cleric" },
+    { "level": 5, "class": "Cleric" },
+    { "level": 6, "class": "Cleric", "feats": ["Divine Metamagic (Persistent)"] },
+    { "level": 7, "class": "Cleric" },
+    { "level": 8, "class": "Cleric" },
+    { "level": 9, "class": "Cleric", "feats": ["Extend Spell"] },
+    { "level": 10, "class": "Cleric" },
+    { "level": 11, "class": "Cleric" },
+    { "level": 12, "class": "Cleric", "feats": ["Empower Spell"] },
+    { "level": 13, "class": "Cleric" },
+    { "level": 14, "class": "Cleric" },
+    { "level": 15, "class": "Cleric", "feats": ["Quicken Spell"] }
+  ],
+
+  "expectedStats": {
+    "totalSkillPoints": 120,
+    "keySkills": ["Concentration", "Spellcraft", "Knowledge (religion)"],
+    "maxRanksSkills": ["Concentration", "Spellcraft"],
+    "baseAttackBonus": 11,
+    "casterLevel": 15,
+    "spellsPerDay": {
+      "0": 6,
+      "1": 6,
+      "2": 5,
+      "3": 5,
+      "4": 5,
+      "5": 4,
+      "6": 4,
+      "7": 3,
+      "8": 2
+    },
+    "hp": 120,
+    "ac": 26,
+    "saves": {
+      "fortitude": 14,
+      "reflex": 8,
+      "will": 18
+    }
+  },
+
+  "expectedFeats": [
+    "Extra Turning",
+    "Persistent Spell",
+    "Divine Metamagic (Persistent)",
+    "Extend Spell",
+    "Empower Spell",
+    "Quicken Spell"
+  ],
+
+  "criticalFeatures": [
+    "Must have Divine Metamagic (Persistent) by level 6",
+    "Must have Persistent Spell before Divine Metamagic",
+    "Extra Turning required for turn undead fuel",
+    "Should maximize Wisdom for spell DC and turning",
+    "Persistent Divine Power + Righteous Might = all-day combat form"
+  ],
+
+  "knownIssues": [
+    "Turn attempts run out without Extra Turning investment",
+    "Build really comes online at level 6+"
+  ],
+
+  "validationCriteria": {
+    "mustHave": {
+      "casterLevel": { "min": 15, "ideal": 15 },
+      "baseAttackBonus": { "min": 11, "ideal": 11 },
+      "totalSkillPoints": { "min": 100, "ideal": 120 }
+    },
+    "shouldHave": {
+      "feats": ["Extra Turning", "Persistent Spell", "Divine Metamagic"],
+      "spellLevel": 8,
+      "maxedSkills": ["Concentration", "Spellcraft"]
+    }
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "buildName": "Natural Spell Druid - Wildshape Focus",
+  "source": "GitP Druid Handbook - Tier 1 Wildshaping",
+  "description": "Tier 1 druid focused on wildshape combat forms",
+  "level": 15,
+  "focus": "hp",
+  "concept": "Transform into powerful animals while maintaining full spellcasting",
+
+  "abilityScores": {
+    "strength": 12,
+    "dexterity": 12,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 18,
+    "charisma": 10
+  },
+
+  "targetClasses": [
+    { "className": "Druid", "levels": 15 }
+  ],
+
+  "expectedProgression": [
+    { "level": 1, "class": "Druid", "feats": ["Augment Summoning"] },
+    { "level": 2, "class": "Druid" },
+    { "level": 3, "class": "Druid", "feats": ["Spell Focus (Conjuration)"] },
+    { "level": 4, "class": "Druid" },
+    { "level": 5, "class": "Druid", "feats": ["Natural Spell"] },
+    { "level": 6, "class": "Druid" },
+    { "level": 7, "class": "Druid" },
+    { "level": 8, "class": "Druid" },
+    { "level": 9, "class": "Druid", "feats": ["Rapid Metamagic"] },
+    { "level": 10, "class": "Druid" },
+    { "level": 11, "class": "Druid" },
+    { "level": 12, "class": "Druid", "feats": ["Empower Spell"] },
+    { "level": 13, "class": "Druid" },
+    { "level": 14, "class": "Druid" },
+    { "level": 15, "class": "Druid", "feats": ["Extend Spell"] }
+  ],
+
+  "expectedStats": {
+    "totalSkillPoints": 120,
+    "keySkills": ["Concentration", "Spellcraft", "Knowledge (nature)", "Survival"],
+    "maxRanksSkills": ["Concentration", "Spellcraft"],
+    "baseAttackBonus": 11,
+    "casterLevel": 15,
+    "spellsPerDay": {
+      "0": 6,
+      "1": 6,
+      "2": 5,
+      "3": 5,
+      "4": 5,
+      "5": 4,
+      "6": 4,
+      "7": 3,
+      "8": 2
+    },
+    "hp": 120,
+    "ac": 24,
+    "saves": {
+      "fortitude": 14,
+      "reflex": 8,
+      "will": 18
+    }
+  },
+
+  "expectedFeats": [
+    "Augment Summoning",
+    "Spell Focus (Conjuration)",
+    "Natural Spell",
+    "Rapid Metamagic",
+    "Empower Spell",
+    "Extend Spell"
+  ],
+
+  "criticalFeatures": [
+    "Natural Spell allows casting in wildshape form (essential at level 5)",
+    "Wildshape into dire animals for combat",
+    "Full divine spellcasting (9th level at 17)",
+    "Animal companion as secondary combatant",
+    "Augment Summoning for superior summons"
+  ],
+
+  "knownIssues": [
+    "Build comes fully online after Natural Spell at level 5",
+    "Dependent on available wildshape forms",
+    "Multiple forms to track (wildshape, companion, summons)"
+  ],
+
+  "validationCriteria": {
+    "mustHave": {
+      "casterLevel": { "min": 15, "ideal": 15 },
+      "baseAttackBonus": { "min": 11, "ideal": 11 },
+      "totalSkillPoints": { "min": 100, "ideal": 120 }
+    },
+    "shouldHave": {
+      "feats": ["Natural Spell", "Augment Summoning", "Spell Focus (Conjuration)"],
+      "spellLevel": 8,
+      "maxedSkills": ["Concentration", "Spellcraft"]
+    }
+  }
+}

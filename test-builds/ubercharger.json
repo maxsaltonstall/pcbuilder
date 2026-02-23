@@ -1,0 +1,89 @@
+{
+  "buildName": "Ubercharger - Pounce Build",
+  "source": "GitP Melee Handbook - Barbarian/Fighter Optimization",
+  "description": "Tier 2 melee build maximizing charge attacks with pounce",
+  "level": 12,
+  "focus": "melee",
+  "concept": "Full attack on charge using Lion Totem + Shock Trooper",
+
+  "abilityScores": {
+    "strength": 18,
+    "dexterity": 14,
+    "constitution": 16,
+    "intelligence": 10,
+    "wisdom": 10,
+    "charisma": 8
+  },
+
+  "targetClasses": [
+    { "className": "Barbarian", "levels": 6 },
+    { "className": "Fighter", "levels": 6 }
+  ],
+
+  "expectedProgression": [
+    { "level": 1, "class": "Barbarian", "feats": ["Power Attack"] },
+    { "level": 2, "class": "Barbarian" },
+    { "level": 3, "class": "Barbarian", "feats": ["Leap Attack"] },
+    { "level": 4, "class": "Barbarian" },
+    { "level": 5, "class": "Barbarian", "feats": ["Lion Totem Barbarian"] },
+    { "level": 6, "class": "Barbarian" },
+    { "level": 7, "class": "Fighter", "feats": ["Shock Trooper", "Cleave"] },
+    { "level": 8, "class": "Fighter" },
+    { "level": 9, "class": "Fighter", "feats": ["Improved Bull Rush"] },
+    { "level": 10, "class": "Fighter" },
+    { "level": 11, "class": "Fighter", "feats": ["Reckless Charge"] },
+    { "level": 12, "class": "Fighter" }
+  ],
+
+  "expectedStats": {
+    "totalSkillPoints": 60,
+    "keySkills": ["Jump", "Intimidate", "Survival"],
+    "maxRanksSkills": ["Jump"],
+    "baseAttackBonus": 12,
+    "casterLevel": 0,
+    "hp": 144,
+    "ac": 22,
+    "saves": {
+      "fortitude": 14,
+      "reflex": 7,
+      "will": 6
+    }
+  },
+
+  "expectedFeats": [
+    "Power Attack",
+    "Leap Attack",
+    "Lion Totem Barbarian",
+    "Shock Trooper",
+    "Cleave",
+    "Improved Bull Rush",
+    "Reckless Charge"
+  ],
+
+  "criticalFeatures": [
+    "Lion Totem gives pounce (full attack on charge) at 5th level",
+    "Shock Trooper allows Power Attack penalty to AC instead of attack",
+    "Leap Attack doubles Power Attack bonus on charge",
+    "Can make 10+ attacks on charge at higher levels",
+    "Barbarian rage adds to charge damage"
+  ],
+
+  "knownIssues": [
+    "Lion Totem requires Complete Champion sourcebook",
+    "Low skill points (2+INT per level)",
+    "Vulnerable when not charging"
+  ],
+
+  "validationCriteria": {
+    "mustHave": {
+      "baseAttackBonus": { "min": 12, "ideal": 12 },
+      "totalSkillPoints": { "min": 48, "ideal": 60 },
+      "hp": { "min": 120, "ideal": 144 }
+    },
+    "shouldHave": {
+      "feats": ["Power Attack", "Leap Attack", "Lion Totem Barbarian", "Shock Trooper"],
+      "spellLevel": 0,
+      "maxedSkills": ["Jump"]
+    }
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "buildName": "Ultimate Skill Monkey - Factotum/Rogue",
+  "source": "GitP Skill Optimization Guide",
+  "description": "Tier 2 skill specialist maximizing skill points and versatility",
+  "level": 15,
+  "focus": "skills",
+  "concept": "Maximum skill coverage with Factotum versatility",
+
+  "abilityScores": {
+    "strength": 10,
+    "dexterity": 16,
+    "constitution": 12,
+    "intelligence": 18,
+    "wisdom": 12,
+    "charisma": 10
+  },
+
+  "targetClasses": [
+    { "className": "Rogue", "levels": 1 },
+    { "className": "Factotum", "levels": 14 }
+  ],
+
+  "expectedProgression": [
+    { "level": 1, "class": "Rogue", "feats": ["Able Learner"] },
+    { "level": 2, "class": "Factotum" },
+    { "level": 3, "class": "Factotum", "feats": ["Skill Focus (Use Magic Device)"] },
+    { "level": 4, "class": "Factotum" },
+    { "level": 5, "class": "Factotum" },
+    { "level": 6, "class": "Factotum", "feats": ["Jack of All Trades"] },
+    { "level": 7, "class": "Factotum" },
+    { "level": 8, "class": "Factotum" },
+    { "level": 9, "class": "Factotum", "feats": ["Apprentice (Spellcraft)"] },
+    { "level": 10, "class": "Factotum" },
+    { "level": 11, "class": "Factotum" },
+    { "level": 12, "class": "Factotum", "feats": ["Open Minded"] },
+    { "level": 13, "class": "Factotum" },
+    { "level": 14, "class": "Factotum" },
+    { "level": 15, "class": "Factotum", "feats": ["Clever Wrestling"] }
+  ],
+
+  "expectedStats": {
+    "totalSkillPoints": 450,
+    "keySkills": [
+      "Use Magic Device",
+      "Disable Device",
+      "Open Lock",
+      "Search",
+      "Spot",
+      "Listen",
+      "Diplomacy",
+      "Bluff",
+      "Spellcraft",
+      "Knowledge (arcana)",
+      "Knowledge (dungeoneering)",
+      "Tumble",
+      "Balance",
+      "Climb",
+      "Jump"
+    ],
+    "maxRanksSkills": [
+      "Use Magic Device",
+      "Disable Device",
+      "Spellcraft",
+      "Diplomacy"
+    ],
+    "baseAttackBonus": 11,
+    "casterLevel": 0,
+    "hp": 90,
+    "ac": 20,
+    "saves": {
+      "fortitude": 9,
+      "reflex": 12,
+      "will": 10
+    }
+  },
+
+  "expectedFeats": [
+    "Able Learner",
+    "Skill Focus (Use Magic Device)",
+    "Jack of All Trades",
+    "Apprentice (Spellcraft)",
+    "Open Minded"
+  ],
+
+  "criticalFeatures": [
+    "Rogue 1 gives 40 skill points at first level (8+4 INT)*4",
+    "Factotum gives 8+INT per level (11 skill points with INT 18)",
+    "Able Learner allows cross-class skills at 1 point per rank",
+    "Jack of All Trades allows using any skill untrained",
+    "Factotum can mimic spells and abilities",
+    "Should have 15+ skills maxed out by level 15"
+  ],
+
+  "knownIssues": [
+    "Factotum requires Dungeonscape sourcebook",
+    "Low HP compared to combat builds",
+    "Moderate combat ability (3/4 BAB)"
+  ],
+
+  "validationCriteria": {
+    "mustHave": {
+      "totalSkillPoints": { "min": 400, "ideal": 450 },
+      "baseAttackBonus": { "min": 10, "ideal": 11 }
+    },
+    "shouldHave": {
+      "feats": ["Able Learner", "Jack of All Trades"],
+      "spellLevel": 0,
+      "maxedSkills": ["Use Magic Device", "Disable Device", "Spellcraft", "Diplomacy"]
+    }
+  }
+}

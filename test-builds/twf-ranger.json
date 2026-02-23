@@ -1,0 +1,97 @@
+{
+  "buildName": "Two-Weapon Fighting Ranger",
+  "source": "GitP Ranger Optimization - TWF Focus",
+  "description": "Tier 3 ranger specializing in dual-wielding with full attack routine",
+  "level": 15,
+  "focus": "melee",
+  "concept": "Multiple attacks per round with favored enemy bonuses",
+
+  "abilityScores": {
+    "strength": 14,
+    "dexterity": 18,
+    "constitution": 14,
+    "intelligence": 10,
+    "wisdom": 14,
+    "charisma": 8
+  },
+
+  "targetClasses": [
+    { "className": "Ranger", "levels": 15 }
+  ],
+
+  "expectedProgression": [
+    { "level": 1, "class": "Ranger", "feats": ["Two-Weapon Fighting"] },
+    { "level": 2, "class": "Ranger", "feats": ["Rapid Shot"] },
+    { "level": 3, "class": "Ranger", "feats": ["Weapon Focus (Scimitar)"] },
+    { "level": 4, "class": "Ranger" },
+    { "level": 5, "class": "Ranger" },
+    { "level": 6, "class": "Ranger", "feats": ["Improved Two-Weapon Fighting", "Endurance"] },
+    { "level": 7, "class": "Ranger" },
+    { "level": 8, "class": "Ranger" },
+    { "level": 9, "class": "Ranger", "feats": ["Power Attack"] },
+    { "level": 10, "class": "Ranger" },
+    { "level": 11, "class": "Ranger", "feats": ["Greater Two-Weapon Fighting"] },
+    { "level": 12, "class": "Ranger", "feats": ["Improved Critical (Scimitar)"] },
+    { "level": 13, "class": "Ranger" },
+    { "level": 14, "class": "Ranger" },
+    { "level": 15, "class": "Ranger", "feats": ["Weapon Specialization (Scimitar)"] }
+  ],
+
+  "expectedStats": {
+    "totalSkillPoints": 180,
+    "keySkills": ["Spot", "Listen", "Survival", "Hide", "Move Silently"],
+    "maxRanksSkills": ["Spot", "Listen", "Survival"],
+    "baseAttackBonus": 15,
+    "casterLevel": 5,
+    "spellsPerDay": {
+      "1": 3,
+      "2": 2,
+      "3": 1
+    },
+    "hp": 120,
+    "ac": 22,
+    "saves": {
+      "fortitude": 12,
+      "reflex": 14,
+      "will": 9
+    }
+  },
+
+  "expectedFeats": [
+    "Two-Weapon Fighting",
+    "Rapid Shot",
+    "Weapon Focus (Scimitar)",
+    "Improved Two-Weapon Fighting",
+    "Endurance",
+    "Power Attack",
+    "Greater Two-Weapon Fighting",
+    "Improved Critical (Scimitar)"
+  ],
+
+  "criticalFeatures": [
+    "TWF chain gives 5 attacks per round at full attack (BAB 15/10/5, offhand 15/10)",
+    "Favored enemy bonuses stack on all attacks",
+    "Combat style feats don't require prerequisites",
+    "Limited spellcasting starts at level 4",
+    "Good skill points (6+INT per level)"
+  ],
+
+  "knownIssues": [
+    "Multiple ability score dependencies (STR and DEX)",
+    "Spell progression is slow (half-caster)",
+    "Favored enemy bonuses situational"
+  ],
+
+  "validationCriteria": {
+    "mustHave": {
+      "baseAttackBonus": { "min": 15, "ideal": 15 },
+      "totalSkillPoints": { "min": 150, "ideal": 180 },
+      "casterLevel": { "min": 4, "ideal": 5 }
+    },
+    "shouldHave": {
+      "feats": ["Two-Weapon Fighting", "Improved Two-Weapon Fighting", "Greater Two-Weapon Fighting"],
+      "spellLevel": 3,
+      "maxedSkills": ["Spot", "Listen", "Survival"]
+    }
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "buildName": "Optimized Arcane Archer",
+  "source": "GitP Character Optimization Handbook",
+  "description": "Standard optimized Arcane Archer build balancing BAB and caster level",
+  "level": 20,
+  "focus": "ranged",
+  "concept": "Gish archer with full spellcasting",
+
+  "abilityScores": {
+    "strength": 10,
+    "dexterity": 18,
+    "constitution": 14,
+    "intelligence": 16,
+    "wisdom": 10,
+    "charisma": 8
+  },
+
+  "targetClasses": [
+    { "className": "Wizard", "levels": 5 },
+    { "className": "Fighter", "levels": 2 },
+    { "className": "Arcane Archer", "levels": 10 },
+    { "className": "Wizard", "levels": 3 }
+  ],
+
+  "expectedProgression": [
+    { "level": 1, "class": "Wizard", "feats": ["Scribe Scroll", "Point Blank Shot"] },
+    { "level": 2, "class": "Wizard" },
+    { "level": 3, "class": "Wizard", "feats": ["Precise Shot"] },
+    { "level": 4, "class": "Wizard" },
+    { "level": 5, "class": "Wizard" },
+    { "level": 6, "class": "Fighter", "feats": ["Weapon Focus (Longbow)", "Rapid Shot"] },
+    { "level": 7, "class": "Fighter" },
+    { "level": 8, "class": "Arcane Archer" },
+    { "level": 9, "class": "Arcane Archer", "feats": ["Manyshot"] },
+    { "level": 10, "class": "Arcane Archer" },
+    { "level": 11, "class": "Arcane Archer" },
+    { "level": 12, "class": "Arcane Archer", "feats": ["Improved Initiative"] },
+    { "level": 13, "class": "Arcane Archer" },
+    { "level": 14, "class": "Arcane Archer" },
+    { "level": 15, "class": "Arcane Archer", "feats": ["Empower Spell"] },
+    { "level": 16, "class": "Arcane Archer" },
+    { "level": 17, "class": "Arcane Archer" },
+    { "level": 18, "class": "Wizard", "feats": ["Maximize Spell"] },
+    { "level": 19, "class": "Wizard" },
+    { "level": 20, "class": "Wizard" }
+  ],
+
+  "expectedStats": {
+    "totalSkillPoints": 200,
+    "keySkills": ["Spellcraft", "Concentration", "Spot"],
+    "maxRanksSkills": ["Spellcraft"],
+    "baseAttackBonus": 17,
+    "casterLevel": 18,
+    "spellsPerDay": {
+      "0": 4,
+      "1": 5,
+      "2": 5,
+      "3": 4,
+      "4": 4,
+      "5": 3,
+      "6": 3,
+      "7": 2,
+      "8": 1
+    },
+    "hp": 140,
+    "ac": 22,
+    "saves": {
+      "fortitude": 12,
+      "reflex": 14,
+      "will": 14
+    }
+  },
+
+  "expectedFeats": [
+    "Scribe Scroll",
+    "Point Blank Shot",
+    "Precise Shot",
+    "Weapon Focus (Longbow)",
+    "Rapid Shot",
+    "Manyshot",
+    "Improved Initiative",
+    "Empower Spell",
+    "Maximize Spell"
+  ],
+
+  "criticalFeatures": [
+    "Must enter Arcane Archer by level 8 (Wizard 5, Fighter 2, AA 1)",
+    "Must have Point Blank Shot + Precise Shot + Weapon Focus before AA entry",
+    "Should maintain caster level progression (18 minimum at 20)",
+    "Should have 8th level spell slots by level 20",
+    "BAB should be 17+ for 4 iterative attacks"
+  ],
+
+  "knownIssues": [
+    "Caster level is -2 from pure wizard (acceptable trade-off for BAB)",
+    "Skill points are lower than pure wizard",
+    "Missing 9th level spells (significant but expected)"
+  ],
+
+  "validationCriteria": {
+    "mustHave": {
+      "casterLevel": { "min": 16, "ideal": 18 },
+      "baseAttackBonus": { "min": 15, "ideal": 17 },
+      "totalSkillPoints": { "min": 180, "ideal": 200 },
+      "aaEntryLevel": { "min": 7, "max": 9, "ideal": 8 }
+    },
+    "shouldHave": {
+      "feats": ["Point Blank Shot", "Precise Shot", "Weapon Focus", "Rapid Shot"],
+      "spellLevel": 8,
+      "maxedSkills": ["Spellcraft"]
+    }
+  }
+}

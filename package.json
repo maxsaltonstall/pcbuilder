@@ -13,8 +13,13 @@
     "build:electron": "tsc -p electron/tsconfig.json",
     "package": "npm run build && electron-builder",
     "test": "vitest",
+    "test:validation": "vitest run src/tests/buildValidation.test.ts",
+    "test:validation:watch": "vitest src/tests/buildValidation.test.ts",
+    "validate-builds": "tsx scripts/validateBuilds.ts",
+    "validate-builds:all": "tsx scripts/validateBuilds.ts",
     "type-check": "tsc --noEmit",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "ci": "npm run type-check && npm run lint && npm run test:validation"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
