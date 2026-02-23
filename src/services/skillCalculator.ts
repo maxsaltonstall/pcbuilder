@@ -1,5 +1,7 @@
 import { CharacterClass, LevelProgression } from '../types/classes';
 import { AbilityScores } from '../types/character';
+import { Skill, SkillSynergy } from '../types/skills';
+import skillsData from '@data/skills.json';
 
 /**
  * Get ability modifier from ability score
@@ -279,5 +281,61 @@ export function getOptimalClassOrder(
     const aPoints = calculateSkillPointsForLevel(1, a, intelligenceScore);
     const bPoints = calculateSkillPointsForLevel(1, b, intelligenceScore);
     return bPoints - aPoints; // Descending order
+  });
+}
+
+/**
+ * Calculate synergy bonuses for a skill based on ranks in related skills
+ * 
+ * D&D 3.5 Rules:
+ * - Having 5+ ranks in certain skills grants a +2 synergy bonus to related skills
+ * - Example: 5 ranks in Bluff grants +2 to Diplomacy, Disguise, Intimidate, Sleight of Hand
+ */
+export function calculateSynergyBonus(
+  skillId: string,
+  skillRanks: Record<string, number>
+): number {
+  const skills = skillsData as Skill[];
+  const skill = skills.find(s => s.id === skillId);
+  
+  if (!skill || !skill.synergiesFrom) {
+    return 0;
+  }
+  
+  let totalBonus = 0;
+  
+  for (const synergy of skill.synergiesFrom) {
+    const sourceRanks = skillRanks[synergy.sourceSkillId] || 0;
+    if (sourceRanks >= synergy.minimumRanks) {
+      totalBonus += synergy.bonus;
+    }
+  }
+  
+  return totalBonus;
+}
+
+/**
+ * Get all synergies that apply to a skill, with their status
+ */
+export function getSkillSynergies(
+  skillId: string,
+  skillRanks: Record<string, number>
+): Array<SkillSynergy & { sourceSkillName: string; active: boolean }> {
+  const skills = skillsData as Skill[];
+  const skill = skills.find(s => s.id === skillId);
+  
+  if (!skill || !skill.synergiesFrom) {
+    return [];
+  }
+  
+  return skill.synergiesFrom.map(synergy => {
+    const sourceSkill = skills.find(s => s.id === synergy.sourceSkillId);
+    const sourceRanks = skillRanks[synergy.sourceSkillId] || 0;
+    
+    return {
+      ...synergy,
+      sourceSkillName: sourceSkill?.name || synergy.sourceSkillId,
+      active: sourceRanks >= synergy.minimumRanks
+    };
   });
 }

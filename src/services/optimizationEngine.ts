@@ -607,8 +607,8 @@ function shouldGainFeat(characterLevel: number, classData: CharacterClass, class
       return true;
     }
   } else {
-    // Epic progression: every 3 levels starting at 21
-    if (characterLevel === 21 || (characterLevel > 21 && (characterLevel - 21) % 3 === 0)) {
+    // Epic progression: every 2 levels starting at 21 (21, 23, 25, 27, 29, 31, 33, 35, 37, 39)
+    if (characterLevel >= 21 && (characterLevel - 21) % 2 === 0) {
       return true;
     }
   }

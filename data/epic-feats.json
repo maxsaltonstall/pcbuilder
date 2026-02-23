@@ -1,0 +1,220 @@
+[
+  {
+    "id": "armor-skin",
+    "name": "Armor Skin",
+    "description": "Your skin becomes like armor, granting you a natural armor bonus.",
+    "prerequisites": [],
+    "benefits": "You gain a +1 natural armor bonus to AC, or your existing natural armor bonus increases by +1. This feat can be taken multiple times.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-weapon-focus",
+    "name": "Epic Weapon Focus",
+    "description": "Choose one type of weapon. You are especially good at using that weapon in combat.",
+    "prerequisites": [
+      {"type": "feat", "featId": "weapon-focus"},
+      {"type": "baseAttackBonus", "value": 20}
+    ],
+    "benefits": "+2 bonus on all attack rolls you make using the selected weapon.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-weapon-specialization",
+    "name": "Epic Weapon Specialization",
+    "description": "Choose one type of weapon for which you have already selected Weapon Specialization. You deal extra damage when using this weapon.",
+    "prerequisites": [
+      {"type": "feat", "featId": "weapon-specialization"},
+      {"type": "baseAttackBonus", "value": 20}
+    ],
+    "benefits": "+4 bonus on all damage rolls you make using the selected weapon.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-toughness",
+    "name": "Epic Toughness",
+    "description": "You are significantly tougher than normal.",
+    "prerequisites": [],
+    "benefits": "You gain +30 hit points. This feat can be taken multiple times.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "great-smiting",
+    "name": "Great Smiting",
+    "description": "You can make exceptionally powerful smite attacks.",
+    "prerequisites": [
+      {"type": "feat", "featId": "smite"},
+      {"type": "ability", "ability": "charisma", "value": 25}
+    ],
+    "benefits": "When you make a smite attack, you deal +3 damage per point of Charisma bonus (instead of +1).",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-prowess",
+    "name": "Epic Prowess",
+    "description": "You are more skilled in combat than you once were.",
+    "prerequisites": [],
+    "benefits": "+1 bonus on all attack rolls.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-spell-penetration",
+    "name": "Epic Spell Penetration",
+    "description": "Your spells break through spell resistance much more easily than normal.",
+    "prerequisites": [
+      {"type": "feat", "featId": "spell-penetration"},
+      {"type": "feat", "featId": "greater-spell-penetration"}
+    ],
+    "benefits": "+2 bonus on caster level checks to overcome a creature's spell resistance.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-combat-casting",
+    "name": "Improved Combat Casting",
+    "description": "You are adept at casting spells in combat.",
+    "prerequisites": [
+      {"type": "feat", "featId": "combat-casting"}
+    ],
+    "benefits": "+4 bonus on Concentration checks to cast defensively.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "improved-spell-capacity-10th",
+    "name": "Improved Spell Capacity (10th)",
+    "description": "You can use 10th-level spell slots.",
+    "prerequisites": [
+      {"type": "ability", "ability": "intelligence or wisdom or charisma", "value": 30},
+      {"type": "casterLevel", "minimumLevel": 20}
+    ],
+    "benefits": "You gain one spell slot per day of any spell level up to 10th. You do not learn a spell of that level automatically. You must still have an ability score high enough to cast spells of that level.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "legendary-climber",
+    "name": "Legendary Climber",
+    "description": "You can climb rapidly.",
+    "prerequisites": [
+      {"type": "skill", "skillId": "climb", "minimumRanks": 24}
+    ],
+    "benefits": "You can ignore any penalties for accelerated climbing or rapid climbing.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "legendary-rider",
+    "name": "Legendary Rider",
+    "description": "You can ride creatures not normally suitable as mounts.",
+    "prerequisites": [
+      {"type": "skill", "skillId": "ride", "minimumRanks": 24}
+    ],
+    "benefits": "You can ride any creature, even creatures not trained for riding. You do not take penalties for riding a creature without a saddle.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-reputation",
+    "name": "Epic Reputation",
+    "description": "You are famous throughout the land.",
+    "prerequisites": [
+      {"type": "level", "value": 21}
+    ],
+    "benefits": "Your reputation provides a +4 bonus on Diplomacy and Intimidate checks.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "overwhelming-critical",
+    "name": "Overwhelming Critical",
+    "description": "Your critical hits are incredibly deadly.",
+    "prerequisites": [
+      {"type": "feat", "featId": "improved-critical"},
+      {"type": "baseAttackBonus", "value": 23}
+    ],
+    "benefits": "When you score a critical hit, the target must make a Fortitude save (DC 10 + 1/2 your character level + your Strength modifier) or be killed instantly.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "perfect-two-weapon-fighting",
+    "name": "Perfect Two-Weapon Fighting",
+    "description": "You are the ultimate two-weapon fighter.",
+    "prerequisites": [
+      {"type": "feat", "featId": "two-weapon-fighting"},
+      {"type": "feat", "featId": "improved-two-weapon-fighting"},
+      {"type": "feat", "featId": "greater-two-weapon-fighting"},
+      {"type": "ability", "ability": "dexterity", "value": 25}
+    ],
+    "benefits": "You can make as many attacks with your off-hand weapon as with your primary weapon, using the same base attack bonus.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "planar-turning",
+    "name": "Planar Turning",
+    "description": "You can turn or rebuke outsiders.",
+    "prerequisites": [
+      {"type": "ability", "value": 25},
+      {"type": "feat", "featId": "turn-undead"}
+    ],
+    "benefits": "You can use your turn/rebuke undead ability to turn/rebuke outsiders as if they were undead.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "superior-initiative",
+    "name": "Superior Initiative",
+    "description": "You react even faster than normal in combat.",
+    "prerequisites": [
+      {"type": "feat", "featId": "improved-initiative"}
+    ],
+    "benefits": "+4 bonus on initiative checks (stacks with Improved Initiative).",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-fortitude",
+    "name": "Epic Fortitude",
+    "description": "You have tremendously high fortitude.",
+    "prerequisites": [],
+    "benefits": "+4 bonus on Fortitude saving throws.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-reflexes",
+    "name": "Epic Reflexes",
+    "description": "You have tremendously fast reflexes.",
+    "prerequisites": [],
+    "benefits": "+4 bonus on Reflex saving throws.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "epic-will",
+    "name": "Epic Will",
+    "description": "You have tremendous willpower.",
+    "prerequisites": [],
+    "benefits": "+4 bonus on Will saving throws.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  },
+  {
+    "id": "damage-reduction",
+    "name": "Damage Reduction",
+    "description": "You can shrug off some damage from attacks.",
+    "prerequisites": [
+      {"type": "level", "value": 21}
+    ],
+    "benefits": "You gain damage reduction 3/–. This feat can be taken multiple times, increasing DR by 3 each time.",
+    "type": ["Epic"],
+    "source": "Epic Level Handbook"
+  }
+]

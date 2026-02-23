@@ -15,7 +15,14 @@
     "keyAbility": "dex",
     "trainedOnly": false,
     "armorCheckPenalty": true,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "tumble",
+        "minimumRanks": 5,
+        "bonus": 2
+      }
+    ]
   },
   {
     "id": "bluff",
@@ -24,7 +31,15 @@
     "keyAbility": "cha",
     "trainedOnly": false,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "diplomacy",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "when making a feint"
+      }
+    ]
   },
   {
     "id": "climb",
@@ -33,7 +48,15 @@
     "keyAbility": "str",
     "trainedOnly": false,
     "armorCheckPenalty": true,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "use-rope",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "when using a rope"
+      }
+    ]
   },
   {
     "id": "concentration",
@@ -60,7 +83,15 @@
     "keyAbility": "int",
     "trainedOnly": true,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "use-magic-device",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "involving scrolls"
+      }
+    ]
   },
   {
     "id": "diplomacy",
@@ -69,7 +100,19 @@
     "keyAbility": "cha",
     "trainedOnly": false,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "bluff",
+        "minimumRanks": 5,
+        "bonus": 2
+      },
+      {
+        "sourceSkillId": "sense-motive",
+        "minimumRanks": 5,
+        "bonus": 2
+      }
+    ]
   },
   {
     "id": "disable-device",
@@ -87,7 +130,15 @@
     "keyAbility": "cha",
     "trainedOnly": false,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "bluff",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "when acting in character"
+      }
+    ]
   },
   {
     "id": "escape-artist",
@@ -96,7 +147,15 @@
     "keyAbility": "dex",
     "trainedOnly": false,
     "armorCheckPenalty": true,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "use-rope",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "when escaping from rope bonds"
+      }
+    ]
   },
   {
     "id": "forgery",
@@ -123,7 +182,15 @@
     "keyAbility": "cha",
     "trainedOnly": true,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "ride",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "with animals you can ride"
+      }
+    ]
   },
   {
     "id": "heal",
@@ -150,7 +217,14 @@
     "keyAbility": "cha",
     "trainedOnly": false,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "bluff",
+        "minimumRanks": 5,
+        "bonus": 2
+      }
+    ]
   },
   {
     "id": "jump",
@@ -159,7 +233,14 @@
     "keyAbility": "str",
     "trainedOnly": false,
     "armorCheckPenalty": true,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "tumble",
+        "minimumRanks": 5,
+        "bonus": 2
+      }
+    ]
   },
   {
     "id": "knowledge-arcana",
@@ -168,7 +249,15 @@
     "keyAbility": "int",
     "trainedOnly": true,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "spellcraft",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "identifying magic items"
+      }
+    ]
   },
   {
     "id": "knowledge-architecture-and-engineering",
@@ -222,7 +311,14 @@
     "keyAbility": "int",
     "trainedOnly": true,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "survival",
+        "minimumRanks": 5,
+        "bonus": 2
+      }
+    ]
   },
   {
     "id": "knowledge-nobility-and-royalty",
@@ -303,7 +399,14 @@
     "keyAbility": "dex",
     "trainedOnly": false,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "handle-animal",
+        "minimumRanks": 5,
+        "bonus": 2
+      }
+    ]
   },
   {
     "id": "search",
@@ -321,7 +424,15 @@
     "keyAbility": "wis",
     "trainedOnly": false,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "diplomacy",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "when negotiating"
+      }
+    ]
   },
   {
     "id": "sleight-of-hand",
@@ -330,7 +441,14 @@
     "keyAbility": "dex",
     "trainedOnly": true,
     "armorCheckPenalty": true,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "bluff",
+        "minimumRanks": 5,
+        "bonus": 2
+      }
+    ]
   },
   {
     "id": "speak-language",
@@ -348,7 +466,20 @@
     "keyAbility": "int",
     "trainedOnly": true,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "knowledge-arcana",
+        "minimumRanks": 5,
+        "bonus": 2
+      },
+      {
+        "sourceSkillId": "use-magic-device",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "involving scrolls"
+      }
+    ]
   },
   {
     "id": "spot",
@@ -366,7 +497,20 @@
     "keyAbility": "wis",
     "trainedOnly": false,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "knowledge-nature",
+        "minimumRanks": 5,
+        "bonus": 2
+      },
+      {
+        "sourceSkillId": "search",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "when tracking"
+      }
+    ]
   },
   {
     "id": "swim",
@@ -384,7 +528,19 @@
     "keyAbility": "dex",
     "trainedOnly": true,
     "armorCheckPenalty": true,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "balance",
+        "minimumRanks": 5,
+        "bonus": 2
+      },
+      {
+        "sourceSkillId": "jump",
+        "minimumRanks": 5,
+        "bonus": 2
+      }
+    ]
   },
   {
     "id": "use-magic-device",
@@ -393,7 +549,21 @@
     "keyAbility": "cha",
     "trainedOnly": true,
     "armorCheckPenalty": false,
-    "source": "Player's Handbook"
+    "source": "Player's Handbook",
+    "synergiesFrom": [
+      {
+        "sourceSkillId": "spellcraft",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "involving scrolls"
+      },
+      {
+        "sourceSkillId": "decipher-script",
+        "minimumRanks": 5,
+        "bonus": 2,
+        "condition": "involving scrolls"
+      }
+    ]
   },
   {
     "id": "use-rope",

@@ -98,19 +98,20 @@ function InitialSetup({ onNext }: InitialSetupProps) {
           value={level}
           onChange={(_, value) => setLevel(value as number)}
           min={1}
-          max={30}
+          max={40}
           step={1}
           marks={[
             { value: 1, label: '1' },
             { value: 10, label: '10' },
             { value: 20, label: '20' },
             { value: 30, label: '30' },
+            { value: 40, label: '40' },
           ]}
           valueLabelDisplay="auto"
         />
         {level > 20 && (
-          <Typography variant="caption" color="warning.main" sx={{ mt: 1, display: 'block' }}>
-            Epic Level (21+) - Some features may be limited
+          <Typography variant="caption" color="info.main" sx={{ mt: 1, display: 'block' }}>
+            Epic Level ({level}) - Epic feats every 2 levels, ability increases every 4 levels
           </Typography>
         )}
       </Box>

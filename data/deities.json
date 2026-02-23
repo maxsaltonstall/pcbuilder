@@ -1,0 +1,200 @@
+[
+  {
+    "id": "pelor",
+    "name": "Pelor",
+    "title": "The Shining One, God of the Sun",
+    "alignment": "NG",
+    "domains": ["good", "healing", "strength", "sun"],
+    "favoredWeapon": "heavy mace",
+    "portfolio": "Sun, light, strength, healing",
+    "worshipers": "Rangers, bards, healers, commoners",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "heironeous",
+    "name": "Heironeous",
+    "title": "The Invincible, God of Valor",
+    "alignment": "LG",
+    "domains": ["good", "law", "war"],
+    "favoredWeapon": "longsword",
+    "portfolio": "Valor, chivalry, justice, honor, war, daring",
+    "worshipers": "Paladins, fighters, monks, good-aligned warriors",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "moradin",
+    "name": "Moradin",
+    "title": "Soul Forger, God of the Dwarves",
+    "alignment": "LG",
+    "domains": ["earth", "good", "law", "protection"],
+    "favoredWeapon": "warhammer",
+    "portfolio": "Dwarves, creation, smithing, protection, metalcraft, stonework",
+    "worshipers": "Dwarves, engineers, fighters, monks, paladins",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "yondalla",
+    "name": "Yondalla",
+    "title": "The Protector and Provider, Goddess of Halflings",
+    "alignment": "LG",
+    "domains": ["good", "law", "protection"],
+    "favoredWeapon": "short sword",
+    "portfolio": "Halflings, protection, fertility, the home",
+    "worshipers": "Halflings",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "ehlonna",
+    "name": "Ehlonna",
+    "title": "Goddess of the Forests",
+    "alignment": "NG",
+    "domains": ["animal", "good", "sun"],
+    "favoredWeapon": "longbow",
+    "portfolio": "Forests, woodlands, flora and fauna, fertility",
+    "worshipers": "Druids, rangers, bards, elves, gnomes, halflings, half-elves",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "garl-glittergold",
+    "name": "Garl Glittergold",
+    "title": "The Joker, God of Gnomes",
+    "alignment": "NG",
+    "domains": ["good", "protection", "trickery"],
+    "favoredWeapon": "battleaxe",
+    "portfolio": "Gnomes, humor, wit, gemcutting, jewelrymaking",
+    "worshipers": "Gnomes, bards, illusionists, jewelers",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "corellon-larethian",
+    "name": "Corellon Larethian",
+    "title": "Creator of the Elves, God of the Elves",
+    "alignment": "CG",
+    "domains": ["chaos", "good", "protection", "war"],
+    "favoredWeapon": "longsword",
+    "portfolio": "Elves, magic, music, arts, crafts, poetry, war",
+    "worshipers": "Elves, bards, fighters, rangers, sorcerers, wizards",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "gruumsh",
+    "name": "Gruumsh",
+    "title": "He Who Watches, God of Orcs",
+    "alignment": "CE",
+    "domains": ["chaos", "evil", "strength", "war"],
+    "favoredWeapon": "spear",
+    "portfolio": "Orcs, conquest, survival, strength, territory",
+    "worshipers": "Orcs, half-orcs, barbarians, fighters",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "st-cuthbert",
+    "name": "St. Cuthbert",
+    "title": "St. Cuthbert of the Cudgel",
+    "alignment": "LN",
+    "domains": ["destruction", "law", "protection", "strength"],
+    "favoredWeapon": "heavy mace",
+    "portfolio": "Retribution, honesty, truth, discipline",
+    "worshipers": "Fighters, monks, paladins, judges",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "wee-jas",
+    "name": "Wee Jas",
+    "title": "Witch Goddess, Goddess of Death and Magic",
+    "alignment": "LN",
+    "domains": ["death", "law", "magic"],
+    "favoredWeapon": "dagger",
+    "portfolio": "Death, magic, vanity, law",
+    "worshipers": "Wizards, sorcerers, necromancers, pale masters",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "boccob",
+    "name": "Boccob",
+    "title": "The Uncaring, God of Magic",
+    "alignment": "N",
+    "domains": ["knowledge", "magic", "trickery"],
+    "favoredWeapon": "quarterstaff",
+    "portfolio": "Magic, arcane knowledge, foresight, balance",
+    "worshipers": "Wizards, sorcerers, sages, monks",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "fharlanghn",
+    "name": "Fharlanghn",
+    "title": "Dweller on the Horizon, God of Roads",
+    "alignment": "N",
+    "domains": ["luck", "protection", "travel"],
+    "favoredWeapon": "quarterstaff",
+    "portfolio": "Horizons, distance, travel, roads",
+    "worshipers": "Bards, adventurers, merchants",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "olidammara",
+    "name": "Olidammara",
+    "title": "The Laughing Rogue",
+    "alignment": "CN",
+    "domains": ["chaos", "luck", "trickery"],
+    "favoredWeapon": "rapier",
+    "portfolio": "Rogues, music, wine, humor, tricks",
+    "worshipers": "Rogues, bards, entertainers",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "kord",
+    "name": "Kord",
+    "title": "The Brawler, God of Strength",
+    "alignment": "CG",
+    "domains": ["chaos", "good", "luck", "strength"],
+    "favoredWeapon": "greatsword",
+    "portfolio": "Athletics, sports, brawling, strength, courage",
+    "worshipers": "Fighters, barbarians, athletes, monks",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "nerull",
+    "name": "Nerull",
+    "title": "The Reaper, God of Death",
+    "alignment": "NE",
+    "domains": ["death", "evil", "trickery"],
+    "favoredWeapon": "scythe",
+    "portfolio": "Death, darkness, murder, the underworld",
+    "worshipers": "Necromancers, rogues, assassins",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "vecna",
+    "name": "Vecna",
+    "title": "The Whispered One, God of Secrets",
+    "alignment": "NE",
+    "domains": ["evil", "knowledge", "magic"],
+    "favoredWeapon": "dagger",
+    "portfolio": "Destructive and evil secrets, magic, the undead",
+    "worshipers": "Evil wizards, necromancers, liches",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "hextor",
+    "name": "Hextor",
+    "title": "Champion of Evil, God of Tyranny",
+    "alignment": "LE",
+    "domains": ["destruction", "evil", "law", "war"],
+    "favoredWeapon": "flail",
+    "portfolio": "War, discord, massacre, conflict, fitness, tyranny",
+    "worshipers": "Evil fighters, monks, blackguards",
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "erythnul",
+    "name": "Erythnul",
+    "title": "The Many, God of Slaughter",
+    "alignment": "CE",
+    "domains": ["chaos", "evil", "trickery", "war"],
+    "favoredWeapon": "morningstar",
+    "portfolio": "Hate, envy, malice, panic, ugliness, slaughter",
+    "worshipers": "Barbarians, evil fighters, evil rogues",
+    "source": "Player's Handbook"
+  }
+]

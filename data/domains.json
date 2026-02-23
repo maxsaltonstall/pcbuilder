@@ -1,0 +1,380 @@
+[
+  {
+    "id": "air",
+    "name": "Air",
+    "description": "Deities of the air grant power over wind, weather, and flight.",
+    "grantedPower": "Turn or destroy earth creatures as a good cleric turns undead. Rebuke, command, or bolster air creatures as an evil cleric rebukes undead. Use these abilities a total number of times per day equal to 3 + your Charisma modifier.",
+    "domainSpells": {
+      "1": "Obscuring Mist",
+      "2": "Wind Wall",
+      "3": "Gaseous Form",
+      "4": "Air Walk",
+      "5": "Control Winds",
+      "6": "Chain Lightning",
+      "7": "Control Weather",
+      "8": "Whirlwind",
+      "9": "Elemental Swarm (air spell only)"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "animal",
+    "name": "Animal",
+    "description": "Deities of the animal domain grant power over beasts and nature.",
+    "grantedPower": "You can use speak with animals once per day as a spell-like ability. Add Knowledge (nature) to your list of cleric class skills.",
+    "domainSpells": {
+      "1": "Calm Animals",
+      "2": "Hold Animal",
+      "3": "Dominate Animal",
+      "4": "Summon Nature's Ally IV (animals only)",
+      "5": "Commune with Nature",
+      "6": "Antilife Shell",
+      "7": "Animal Shapes",
+      "8": "Summon Nature's Ally VIII (animals only)",
+      "9": "Shapechange"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "chaos",
+    "name": "Chaos",
+    "description": "Deities of chaos grant power to disrupt order and embrace randomness.",
+    "grantedPower": "You cast chaos spells at +1 caster level.",
+    "domainSpells": {
+      "1": "Protection from Law",
+      "2": "Shatter",
+      "3": "Magic Circle against Law",
+      "4": "Chaos Hammer",
+      "5": "Dispel Law",
+      "6": "Animate Objects",
+      "7": "Word of Chaos",
+      "8": "Cloak of Chaos",
+      "9": "Summon Monster IX (chaos spell only)"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "death",
+    "name": "Death",
+    "description": "Deities of death grant power over the forces of mortality and undeath.",
+    "grantedPower": "You may use a death touch once per day. Your death touch is a supernatural ability that produces a death effect. You must succeed on a melee touch attack against a living creature (using the rules for touch spells). When you touch, roll 1d6 per cleric level you possess. If the total at least equals the creature's current hit points, it dies (no save).",
+    "domainSpells": {
+      "1": "Cause Fear",
+      "2": "Death Knell",
+      "3": "Animate Dead",
+      "4": "Death Ward",
+      "5": "Slay Living",
+      "6": "Create Undead",
+      "7": "Destruction",
+      "8": "Create Greater Undead",
+      "9": "Wail of the Banshee"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "destruction",
+    "name": "Destruction",
+    "description": "Deities of destruction grant power to bring ruin and devastation.",
+    "grantedPower": "You gain the smite power, the supernatural ability to make a single melee attack with a +4 bonus on attack rolls and a bonus on damage rolls equal to your cleric level (if you hit). You must declare the smite before making the attack. This ability is usable once per day.",
+    "domainSpells": {
+      "1": "Inflict Light Wounds",
+      "2": "Shatter",
+      "3": "Contagion",
+      "4": "Inflict Critical Wounds",
+      "5": "Inflict Light Wounds, Mass",
+      "6": "Harm",
+      "7": "Disintegrate",
+      "8": "Earthquake",
+      "9": "Implosion"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "earth",
+    "name": "Earth",
+    "description": "Deities of earth grant power over stone, metal, and the ground itself.",
+    "grantedPower": "Turn or destroy air creatures as a good cleric turns undead. Rebuke, command, or bolster earth creatures as an evil cleric rebukes undead. Use these abilities a total number of times per day equal to 3 + your Charisma modifier.",
+    "domainSpells": {
+      "1": "Magic Stone",
+      "2": "Soften Earth and Stone",
+      "3": "Stone Shape",
+      "4": "Spike Stones",
+      "5": "Wall of Stone",
+      "6": "Stoneskin",
+      "7": "Earthquake",
+      "8": "Iron Body",
+      "9": "Elemental Swarm (earth spell only)"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "evil",
+    "name": "Evil",
+    "description": "Deities of evil grant power to corrupt and destroy goodness.",
+    "grantedPower": "You cast evil spells at +1 caster level.",
+    "domainSpells": {
+      "1": "Protection from Good",
+      "2": "Desecrate",
+      "3": "Magic Circle against Good",
+      "4": "Unholy Blight",
+      "5": "Dispel Good",
+      "6": "Create Undead",
+      "7": "Blasphemy",
+      "8": "Unholy Aura",
+      "9": "Summon Monster IX (evil spell only)"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "fire",
+    "name": "Fire",
+    "description": "Deities of fire grant power over flame and heat.",
+    "grantedPower": "Turn or destroy water creatures as a good cleric turns undead. Rebuke, command, or bolster fire creatures as an evil cleric rebukes undead. Use these abilities a total number of times per day equal to 3 + your Charisma modifier.",
+    "domainSpells": {
+      "1": "Burning Hands",
+      "2": "Produce Flame",
+      "3": "Resist Energy (fire only)",
+      "4": "Wall of Fire",
+      "5": "Fire Shield",
+      "6": "Fire Seeds",
+      "7": "Fire Storm",
+      "8": "Incendiary Cloud",
+      "9": "Elemental Swarm (fire spell only)"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "good",
+    "name": "Good",
+    "description": "Deities of good grant power to protect and nurture life.",
+    "grantedPower": "You cast good spells at +1 caster level.",
+    "domainSpells": {
+      "1": "Protection from Evil",
+      "2": "Aid",
+      "3": "Magic Circle against Evil",
+      "4": "Holy Smite",
+      "5": "Dispel Evil",
+      "6": "Blade Barrier",
+      "7": "Holy Word",
+      "8": "Holy Aura",
+      "9": "Summon Monster IX (good spell only)"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "healing",
+    "name": "Healing",
+    "description": "Deities of healing grant power to restore health and vitality.",
+    "grantedPower": "You cast healing spells at +1 caster level.",
+    "domainSpells": {
+      "1": "Cure Light Wounds",
+      "2": "Cure Moderate Wounds",
+      "3": "Cure Serious Wounds",
+      "4": "Cure Critical Wounds",
+      "5": "Cure Light Wounds, Mass",
+      "6": "Heal",
+      "7": "Regenerate",
+      "8": "Cure Critical Wounds, Mass",
+      "9": "Heal, Mass"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "knowledge",
+    "name": "Knowledge",
+    "description": "Deities of knowledge grant power over learning and wisdom.",
+    "grantedPower": "Add all Knowledge skills to your list of cleric class skills. You cast divination spells at +1 caster level.",
+    "domainSpells": {
+      "1": "Detect Secret Doors",
+      "2": "Detect Thoughts",
+      "3": "Clairaudience/Clairvoyance",
+      "4": "Divination",
+      "5": "True Seeing",
+      "6": "Find the Path",
+      "7": "Legend Lore",
+      "8": "Discern Location",
+      "9": "Foresight"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "law",
+    "name": "Law",
+    "description": "Deities of law grant power to enforce order and structure.",
+    "grantedPower": "You cast law spells at +1 caster level.",
+    "domainSpells": {
+      "1": "Protection from Chaos",
+      "2": "Calm Emotions",
+      "3": "Magic Circle against Chaos",
+      "4": "Order's Wrath",
+      "5": "Dispel Chaos",
+      "6": "Hold Monster",
+      "7": "Dictum",
+      "8": "Shield of Law",
+      "9": "Summon Monster IX (law spell only)"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "luck",
+    "name": "Luck",
+    "description": "Deities of luck grant power over fortune and chance.",
+    "grantedPower": "You gain the power of good fortune, which is usable once per day. This extraordinary ability allows you to reroll one roll that you have just made before the DM declares whether the roll results in success or failure. You must take the result of the reroll, even if it's worse than the original roll.",
+    "domainSpells": {
+      "1": "Entropic Shield",
+      "2": "Aid",
+      "3": "Protection from Energy",
+      "4": "Freedom of Movement",
+      "5": "Break Enchantment",
+      "6": "Mislead",
+      "7": "Spell Turning",
+      "8": "Moment of Prescience",
+      "9": "Miracle"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "magic",
+    "name": "Magic",
+    "description": "Deities of magic grant power over arcane forces.",
+    "grantedPower": "Use scrolls, wands, and other devices with spell completion or spell trigger activation as a wizard of one-half your cleric level (at least 1st level). For the purpose of using a scroll or other magic device, if you are also a wizard, actual wizard levels and these effective wizard levels stack.",
+    "domainSpells": {
+      "1": "Magic Aura",
+      "2": "Identify",
+      "3": "Dispel Magic",
+      "4": "Imbue with Spell Ability",
+      "5": "Spell Resistance",
+      "6": "Antimagic Field",
+      "7": "Spell Turning",
+      "8": "Protection from Spells",
+      "9": "Mage's Disjunction"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "protection",
+    "name": "Protection",
+    "description": "Deities of protection grant power to defend and shield others.",
+    "grantedPower": "You can generate a protective ward as a supernatural ability. Grant someone you touch a resistance bonus equal to your cleric level on his or her next saving throw. Activating this power is a standard action. The protective ward is an abjuration effect with a duration of 1 hour that is usable once per day.",
+    "domainSpells": {
+      "1": "Sanctuary",
+      "2": "Shield Other",
+      "3": "Protection from Energy",
+      "4": "Spell Immunity",
+      "5": "Spell Resistance",
+      "6": "Antimagic Field",
+      "7": "Repulsion",
+      "8": "Mind Blank",
+      "9": "Prismatic Sphere"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "strength",
+    "name": "Strength",
+    "description": "Deities of strength grant power over physical might.",
+    "grantedPower": "You can perform a feat of strength as a supernatural ability. You gain an enhancement bonus to Strength equal to your cleric level. Activating the power is a free action, the power lasts 1 round, and it is usable once per day.",
+    "domainSpells": {
+      "1": "Enlarge Person",
+      "2": "Bull's Strength",
+      "3": "Magic Vestment",
+      "4": "Spell Immunity",
+      "5": "Righteous Might",
+      "6": "Stoneskin",
+      "7": "Grasping Hand",
+      "8": "Clenched Fist",
+      "9": "Crushing Hand"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "sun",
+    "name": "Sun",
+    "description": "Deities of the sun grant power over light and radiance.",
+    "grantedPower": "Once per day, you can perform a greater turning against undead in place of a regular turning. The greater turning is like a normal turning except that the undead creatures that would be turned are destroyed instead.",
+    "domainSpells": {
+      "1": "Endure Elements",
+      "2": "Heat Metal",
+      "3": "Searing Light",
+      "4": "Fire Shield",
+      "5": "Flame Strike",
+      "6": "Fire Seeds",
+      "7": "Sunbeam",
+      "8": "Sunburst",
+      "9": "Prismatic Sphere"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "travel",
+    "name": "Travel",
+    "description": "Deities of travel grant power over movement and journeys.",
+    "grantedPower": "For a total time per day of 1 round per cleric level you possess, you can act normally regardless of magical effects that impede movement as if you were affected by the spell freedom of movement. This effect occurs automatically as soon as it applies, lasts until it runs out or is no longer needed, and can operate multiple times per day (up to the total daily limit of rounds). This granted power is a supernatural ability.",
+    "domainSpells": {
+      "1": "Longstrider",
+      "2": "Locate Object",
+      "3": "Fly",
+      "4": "Dimension Door",
+      "5": "Teleport",
+      "6": "Find the Path",
+      "7": "Teleport, Greater",
+      "8": "Phase Door",
+      "9": "Astral Projection"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "trickery",
+    "name": "Trickery",
+    "description": "Deities of trickery grant power over deception and illusion.",
+    "grantedPower": "Add Bluff, Disguise, and Hide to your list of cleric class skills.",
+    "domainSpells": {
+      "1": "Disguise Self",
+      "2": "Invisibility",
+      "3": "Nondetection",
+      "4": "Confusion",
+      "5": "False Vision",
+      "6": "Mislead",
+      "7": "Screen",
+      "8": "Polymorph Any Object",
+      "9": "Time Stop"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "war",
+    "name": "War",
+    "description": "Deities of war grant power over battle and combat.",
+    "grantedPower": "Free Martial Weapon Proficiency with deity's favored weapon (if necessary) and Weapon Focus with the deity's favored weapon.",
+    "domainSpells": {
+      "1": "Magic Weapon",
+      "2": "Spiritual Weapon",
+      "3": "Magic Vestment",
+      "4": "Divine Power",
+      "5": "Flame Strike",
+      "6": "Blade Barrier",
+      "7": "Power Word Blind",
+      "8": "Power Word Stun",
+      "9": "Power Word Kill"
+    },
+    "source": "Player's Handbook"
+  },
+  {
+    "id": "water",
+    "name": "Water",
+    "description": "Deities of water grant power over seas, rivers, and rain.",
+    "grantedPower": "Turn or destroy fire creatures as a good cleric turns undead. Rebuke, command, or bolster water creatures as an evil cleric rebukes undead. Use these abilities a total number of times per day equal to 3 + your Charisma modifier.",
+    "domainSpells": {
+      "1": "Obscuring Mist",
+      "2": "Fog Cloud",
+      "3": "Water Breathing",
+      "4": "Control Water",
+      "5": "Ice Storm",
+      "6": "Cone of Cold",
+      "7": "Acid Fog",
+      "8": "Horrid Wilting",
+      "9": "Elemental Swarm (water spell only)"
+    },
+    "source": "Player's Handbook"
+  }
+]
