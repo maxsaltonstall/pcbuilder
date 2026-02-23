@@ -26,6 +26,9 @@ npm-debug.log*
 # PDFs (too large for git)
 pdfs/
 
+# Extraction scripts (not for external sharing)
+classes/
+
 # Temporary files
 /tmp/
 *.tmp
