@@ -270,6 +270,9 @@ function calculatePrestigeEntryLevels(
  * Order classes to maximize skill points
  * Prestige classes are placed at their minimum entry level
  * Supports epic levels (up to 30)
+ *
+ * IMPORTANT: When prestige classes are present, respect the input order
+ * to ensure prerequisites are met at the correct levels.
  */
 function orderClassesForSkills(
   targetClasses: Array<ClassSelection & { levels: number }>,
@@ -299,6 +302,24 @@ function orderClassesForSkills(
         classData,
       });
     }
+  }
+
+  // If prestige classes are present, preserve input order for prerequisite timing
+  // Re-sorting base classes can delay prestige class entry
+  if (prestigeClasses.length > 0) {
+    const ordered: { classId: string; startLevel: number; count: number }[] = [];
+    let currentLevel = 1;
+
+    for (const selection of targetClasses) {
+      ordered.push({
+        classId: selection.classId,
+        startLevel: currentLevel,
+        count: selection.levels,
+      });
+      currentLevel += selection.levels;
+    }
+
+    return ordered;
   }
 
   // Sort base classes by skill points (descending) with focus-aware optimization
