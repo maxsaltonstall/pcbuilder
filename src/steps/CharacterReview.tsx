@@ -44,6 +44,9 @@ import { detectActiveFeatChains, analyzeFeatSynergies } from '../services/featCh
 import { saveCharacterToFile, loadCharacterFromFile } from '../services/characterStorage';
 import { SpellList } from '../components/SpellList';
 import CharacterComparison from '../components/CharacterComparison';
+import ProgressionTimeline from '../components/ProgressionTimeline';
+import ClassDistribution from '../components/ClassDistribution';
+import AbilityGrowthChart from '../components/AbilityGrowthChart';
 
 interface CharacterReviewProps {
   onBack: () => void;
@@ -360,6 +363,34 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
             ))}
           </Box>
         </Box>
+
+        <Divider sx={{ my: 2 }} />
+
+        {/* Visualizations */}
+        <Accordion defaultExpanded>
+          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+            <Typography variant="h6" color="primary">
+              📊 Character Visualizations
+            </Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Grid container spacing={3}>
+              <Grid item xs={12} md={6}>
+                <ProgressionTimeline progression={progression} />
+              </Grid>
+              <Grid item xs={12} md={6}>
+                <ClassDistribution progression={progression} />
+              </Grid>
+              <Grid item xs={12}>
+                <AbilityGrowthChart
+                  progression={progression}
+                  baseAbilityScores={state.baseAbilityScores}
+                  finalAbilityScores={state.abilityScores}
+                />
+              </Grid>
+            </Grid>
+          </AccordionDetails>
+        </Accordion>
 
         <Divider sx={{ my: 2 }} />
 
