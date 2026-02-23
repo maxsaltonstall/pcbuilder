@@ -1,6 +1,24 @@
-import { Box, Button, Typography, Paper, Grid, Chip, Divider } from '@mui/material';
+import {
+  Box,
+  Button,
+  Typography,
+  Paper,
+  Grid,
+  Chip,
+  Divider,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useCharacter } from '../context/CharacterContext';
-import { calculateTotalSkillPoints, getAbilityModifier } from '../services/skillCalculator';
+import { calculateTotalSkillPoints, getAbilityModifier, getSkillPointsPerLevel, getMagicItemIntBonus } from '../services/skillCalculator';
 
 interface CharacterReviewProps {
   onBack: () => void;
@@ -49,8 +67,50 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
 
   // Calculate total skill points
   const totalSkillPoints = state.abilityScores && progression.length > 0
-    ? calculateTotalSkillPoints(progression, state.abilityScores)
+    ? calculateTotalSkillPoints(progression, state.abilityScores, state.assumeMagicItems)
     : 0;
+
+  // Get skill points per level breakdown
+  const skillPointsPerLevel = state.abilityScores && progression.length > 0
+    ? getSkillPointsPerLevel(progression, state.abilityScores, state.assumeMagicItems)
+    : [];
+
+  // Calculate running total and INT tracking for display
+  const skillPointBreakdown = progression.map((level, index) => {
+    const characterLevel = index + 1;
+    let currentInt = state.abilityScores?.intelligence || 10;
+
+    // Account for INT increases at levels 4, 8, 12, 16, 20, etc.
+    for (let i = 0; i < index; i++) {
+      if ((i + 1) % 4 === 0 && progression[i].abilityIncrease === 'intelligence') {
+        currentInt += 1;
+      }
+    }
+
+    // Add magic item bonus if enabled
+    const magicItemBonus = state.assumeMagicItems ? getMagicItemIntBonus(characterLevel) : 0;
+    const effectiveInt = currentInt + magicItemBonus;
+
+    const intMod = getAbilityModifier(effectiveInt);
+    const basePoints = level.class.skillPointsPerLevel;
+    const multiplier = characterLevel === 1 ? 4 : 1;
+    const pointsThisLevel = skillPointsPerLevel[index] || 0;
+    const runningTotal = skillPointsPerLevel.slice(0, index + 1).reduce((sum, pts) => sum + pts, 0);
+
+    return {
+      level: characterLevel,
+      className: level.class.name,
+      basePoints,
+      intMod,
+      currentInt,
+      magicItemBonus,
+      effectiveInt,
+      multiplier,
+      pointsThisLevel,
+      runningTotal,
+      intIncreased: characterLevel % 4 === 0 && level.abilityIncrease === 'intelligence',
+    };
+  });
 
   // Get all feats from progression
   const allFeats = progression
@@ -180,12 +240,106 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
         <Divider sx={{ my: 2 }} />
 
         <Box sx={{ mb: 2 }}>
-          <Typography variant="subtitle2" color="text.secondary" gutterBottom>
-            Total Skill Points: {totalSkillPoints}
+          <Typography variant="h6" color="primary" gutterBottom>
+            Skill Points
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="h5" gutterBottom>
+            Total: {totalSkillPoints} points
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
             Priority Skills: {state.keySkills.join(', ') || 'None selected'}
           </Typography>
+
+          <Accordion>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography variant="subtitle1">
+                📊 Detailed Level-by-Level Breakdown
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                This shows how your skill points accumulate through multiclassing.
+                The optimizer front-loads high skill-point classes to maximize your total.
+                Level 1 gets ×4 multiplier. INT increases at levels 4, 8, 12, 16, 20+ apply forward from that level onwards (not retroactive).
+              </Typography>
+
+              <TableContainer>
+                <Table size="small">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell><strong>Level</strong></TableCell>
+                      <TableCell><strong>Class</strong></TableCell>
+                      <TableCell align="right"><strong>Base</strong></TableCell>
+                      <TableCell align="right"><strong>INT</strong></TableCell>
+                      <TableCell align="right"><strong>Multiplier</strong></TableCell>
+                      <TableCell align="right"><strong>Points</strong></TableCell>
+                      <TableCell align="right"><strong>Total</strong></TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {skillPointBreakdown.map((row) => (
+                      <TableRow
+                        key={row.level}
+                        sx={{
+                          backgroundColor: row.level === 1 ? 'success.50' :
+                                          row.intIncreased ? 'info.50' :
+                                          'inherit'
+                        }}
+                      >
+                        <TableCell>{row.level}</TableCell>
+                        <TableCell>
+                          {row.className}
+                          {row.intIncreased && (
+                            <Chip
+                              label="INT +1"
+                              size="small"
+                              color="info"
+                              sx={{ ml: 1, height: 20, fontSize: '0.7rem' }}
+                            />
+                          )}
+                        </TableCell>
+                        <TableCell align="right">{row.basePoints}</TableCell>
+                        <TableCell align="right">
+                          {row.effectiveInt} ({row.intMod >= 0 ? '+' : ''}{row.intMod})
+                          {row.magicItemBonus > 0 && (
+                            <Typography variant="caption" display="block" color="success.main">
+                              +{row.magicItemBonus} item
+                            </Typography>
+                          )}
+                        </TableCell>
+                        <TableCell align="right">
+                          {row.multiplier > 1 ? (
+                            <strong style={{ color: 'green' }}>×{row.multiplier}</strong>
+                          ) : (
+                            '×1'
+                          )}
+                        </TableCell>
+                        <TableCell align="right">
+                          <strong>{row.pointsThisLevel}</strong>
+                        </TableCell>
+                        <TableCell align="right">
+                          <strong>{row.runningTotal}</strong>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+
+              <Box sx={{ mt: 2, p: 2, backgroundColor: 'info.50', borderRadius: 1 }}>
+                <Typography variant="subtitle2" gutterBottom>
+                  💡 Why This Class Order?
+                </Typography>
+                <Typography variant="body2">
+                  <strong>Front-loading high skill-point classes</strong> (like Rogue, Bard, Ranger)
+                  maximizes total points due to the level 1 ×4 multiplier.
+                  A Rogue 1 with 14 INT gets (8+2)×4 = <strong>40 points</strong>,
+                  while Fighter 1 gets only (2+2)×4 = <strong>16 points</strong>.
+                  The optimizer arranges your classes to give you the most skill points possible.
+                </Typography>
+              </Box>
+            </AccordionDetails>
+          </Accordion>
         </Box>
 
         <Divider sx={{ my: 2 }} />

@@ -9,6 +9,22 @@ export function getAbilityModifier(abilityScore: number): number {
 }
 
 /**
+ * Get expected INT bonus from magic items based on character level and wealth
+ * Based on DMG Table 5-1: Character Wealth by Level
+ *
+ * Typical progression:
+ * - Level 5-7: +2 INT (Headband of Intellect +2, 4,000 gp)
+ * - Level 8-11: +4 INT (Headband of Intellect +4, 16,000 gp)
+ * - Level 12+: +6 INT (Headband of Intellect +6, 36,000 gp)
+ */
+export function getMagicItemIntBonus(characterLevel: number): number {
+  if (characterLevel < 5) return 0;
+  if (characterLevel < 8) return 2;
+  if (characterLevel < 12) return 4;
+  return 6;
+}
+
+/**
  * Calculate skill points gained at a specific level
  *
  * D&D 3.5 Rules:
@@ -41,10 +57,12 @@ export function calculateSkillPointsForLevel(
 /**
  * Calculate total skill points available across entire progression
  * Accounts for ability score increases at levels 4, 8, 12, 16, 20
+ * Optionally accounts for magic item INT bonuses
  */
 export function calculateTotalSkillPoints(
   progression: LevelProgression[],
-  baseAbilityScores: AbilityScores
+  baseAbilityScores: AbilityScores,
+  assumeMagicItems: boolean = false
 ): number {
   let totalPoints = 0;
   let currentIntelligence = baseAbilityScores.intelligence;
@@ -58,10 +76,14 @@ export function calculateTotalSkillPoints(
       currentIntelligence += 1;
     }
 
+    // Add magic item bonus (enhancement bonus, not retroactive)
+    const magicItemBonus = assumeMagicItems ? getMagicItemIntBonus(characterLevel) : 0;
+    const effectiveInt = currentIntelligence + magicItemBonus;
+
     const points = calculateSkillPointsForLevel(
       characterLevel,
       level.class,
-      currentIntelligence
+      effectiveInt
     );
 
     totalPoints += points;
@@ -137,10 +159,12 @@ export function canAssignSkillRanks(
 /**
  * Calculate skill points gained at each level in progression
  * Returns array of skill points per level
+ * Optionally accounts for magic item INT bonuses
  */
 export function getSkillPointsPerLevel(
   progression: LevelProgression[],
-  baseAbilityScores: AbilityScores
+  baseAbilityScores: AbilityScores,
+  assumeMagicItems: boolean = false
 ): number[] {
   const pointsPerLevel: number[] = [];
   let currentIntelligence = baseAbilityScores.intelligence;
@@ -154,10 +178,14 @@ export function getSkillPointsPerLevel(
       currentIntelligence += 1;
     }
 
+    // Add magic item bonus
+    const magicItemBonus = assumeMagicItems ? getMagicItemIntBonus(characterLevel) : 0;
+    const effectiveInt = currentIntelligence + magicItemBonus;
+
     const points = calculateSkillPointsForLevel(
       characterLevel,
       level.class,
-      currentIntelligence
+      effectiveInt
     );
 
     pointsPerLevel.push(points);

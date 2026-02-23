@@ -7,6 +7,8 @@ import {
   Grid,
   Paper,
   Alert,
+  FormControlLabel,
+  Checkbox,
 } from '@mui/material';
 import { useCharacter } from '../context/CharacterContext';
 import { AbilityScores } from '../types/character';
@@ -28,6 +30,7 @@ function AbilityScoresComponent({ onNext, onBack }: AbilityScoresProps) {
       charisma: 10,
     }
   );
+  const [assumeMagicItems, setAssumeMagicItems] = useState(state.assumeMagicItems || false);
 
   const handleScoreChange = (ability: keyof AbilityScores, value: string) => {
     const numValue = parseInt(value) || 0;
@@ -35,7 +38,7 @@ function AbilityScoresComponent({ onNext, onBack }: AbilityScoresProps) {
   };
 
   const handleNext = () => {
-    updateAbilityScores(scores);
+    updateAbilityScores(scores, assumeMagicItems);
     onNext();
   };
 
@@ -59,10 +62,30 @@ function AbilityScoresComponent({ onNext, onBack }: AbilityScoresProps) {
         Enter your character's base ability scores (before racial modifiers or magic items).
       </Typography>
 
-      <Alert severity="info" sx={{ mb: 3 }}>
+      <Alert severity="info" sx={{ mb: 2 }}>
         For high-level characters, you may want to use elite array (15, 14, 13, 12, 10, 8) or
         point buy. Remember to account for ability increases at levels 4, 8, 12, 16, and 20.
       </Alert>
+
+      <FormControlLabel
+        control={
+          <Checkbox
+            checked={assumeMagicItems}
+            onChange={(e) => setAssumeMagicItems(e.target.checked)}
+          />
+        }
+        label={
+          <Box>
+            <Typography variant="body2">
+              Assume standard INT-boosting magic items (wealth-appropriate)
+            </Typography>
+            <Typography variant="caption" color="text.secondary">
+              Level 5+: Headband +2 (+4 at 8th, +6 at 12th) - Enhancement bonus, not retroactive
+            </Typography>
+          </Box>
+        }
+        sx={{ mb: 3 }}
+      />
 
       <Grid container spacing={2} sx={{ mb: 4 }}>
         {[

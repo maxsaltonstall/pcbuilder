@@ -20,6 +20,7 @@ export interface CharacterState {
 
   // Step 2: Ability Scores
   abilityScores?: AbilityScores;
+  assumeMagicItems?: boolean; // Assume standard wealth-appropriate INT-boosting items
 
   // Step 3: Goal Setting
   targetClasses: ClassSelection[];
@@ -37,7 +38,7 @@ export interface CharacterState {
 export interface CharacterContextType {
   state: CharacterState;
   updateInitialSetup: (level: number, concept: string, sources: string[]) => void;
-  updateAbilityScores: (scores: AbilityScores) => void;
+  updateAbilityScores: (scores: AbilityScores, assumeMagicItems?: boolean) => void;
   updateGoals: (
     classes: ClassSelection[],
     feats: string[],

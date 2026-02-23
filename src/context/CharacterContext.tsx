@@ -11,7 +11,7 @@ import { CompleteCharacter } from '../types/complete';
 
 type CharacterAction =
   | { type: 'UPDATE_INITIAL_SETUP'; payload: { level: number; concept: string; sources: string[] } }
-  | { type: 'UPDATE_ABILITY_SCORES'; payload: AbilityScores }
+  | { type: 'UPDATE_ABILITY_SCORES'; payload: { scores: AbilityScores; assumeMagicItems?: boolean } }
   | {
       type: 'UPDATE_GOALS';
       payload: {
@@ -37,7 +37,8 @@ function characterReducer(state: CharacterState, action: CharacterAction): Chara
     case 'UPDATE_ABILITY_SCORES':
       return {
         ...state,
-        abilityScores: action.payload,
+        abilityScores: action.payload.scores,
+        assumeMagicItems: action.payload.assumeMagicItems,
       };
     case 'UPDATE_GOALS':
       return {
@@ -73,8 +74,8 @@ export function CharacterProvider({ children }: { children: ReactNode }) {
     state,
     updateInitialSetup: (level, concept, sources) =>
       dispatch({ type: 'UPDATE_INITIAL_SETUP', payload: { level, concept, sources } }),
-    updateAbilityScores: (scores) =>
-      dispatch({ type: 'UPDATE_ABILITY_SCORES', payload: scores }),
+    updateAbilityScores: (scores, assumeMagicItems) =>
+      dispatch({ type: 'UPDATE_ABILITY_SCORES', payload: { scores, assumeMagicItems } }),
     updateGoals: (classes, feats, skills, focus) =>
       dispatch({ type: 'UPDATE_GOALS', payload: { classes, feats, skills, focus } }),
     setOptimizedProgression: (progression) =>
