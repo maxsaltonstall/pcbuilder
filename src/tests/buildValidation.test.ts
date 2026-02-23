@@ -55,6 +55,16 @@ function convertToClassSelections(targetClasses: { className: string; levels: nu
   });
 }
 
+function convertFeatNamesToIds(featNames: string[]): string[] {
+  // Convert feat names to IDs (lowercase, hyphenated, handle parentheses)
+  return featNames.map(name => {
+    // Remove content in parentheses (e.g., "Weapon Focus (Longsword)" → "Weapon Focus")
+    const baseName = name.replace(/\s*\([^)]*\)/g, '');
+    // Convert to lowercase and replace spaces with hyphens
+    return baseName.toLowerCase().trim().replace(/\s+/g, '-');
+  });
+}
+
 describe('Build Validation - Community Optimized Builds', () => {
 
   describe('Arcane Archer - Gish Optimization', () => {
@@ -65,7 +75,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         ['Spellcraft', 'Concentration', 'Spot'],
         build.abilityScores,
         build.focus
@@ -92,7 +102,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         ['Spellcraft', 'Concentration'],
         build.abilityScores,
         build.focus
@@ -118,7 +128,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         ['Concentration', 'Spellcraft'],
         build.abilityScores,
         build.focus
@@ -142,7 +152,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         ['Concentration', 'Spellcraft'],
         build.abilityScores,
         build.focus
@@ -174,7 +184,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         ['Jump', 'Intimidate'],
         build.abilityScores,
         build.focus
@@ -193,7 +203,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         ['Jump'],
         build.abilityScores,
         build.focus
@@ -217,7 +227,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         ['Jump'],
         build.abilityScores,
         build.focus
@@ -247,7 +257,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         build.expectedStats.keySkills,
         build.abilityScores,
         build.focus
@@ -270,7 +280,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         build.expectedStats.keySkills,
         build.abilityScores,
         build.focus
@@ -289,7 +299,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         build.expectedStats.keySkills,
         build.abilityScores,
         build.focus
@@ -314,7 +324,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         build.expectedStats.keySkills,
         build.abilityScores,
         build.focus
@@ -337,15 +347,15 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         build.expectedStats.keySkills,
         build.abilityScores,
         build.focus
       );
 
-      // Natural Spell should be acquired by level 5
+      // Natural Spell should be acquired by level 5 (check for feat ID)
       const naturalSpellLevel = progression.findIndex(l =>
-        l.featGained && l.featGained.toLowerCase().includes('natural') && l.featGained.toLowerCase().includes('spell')
+        l.featGained && (l.featGained === 'natural-spell' || (l.featGained.toLowerCase().includes('natural') && l.featGained.toLowerCase().includes('spell')))
       );
 
       expect(naturalSpellLevel).toBeGreaterThan(-1);
@@ -361,7 +371,7 @@ describe('Build Validation - Community Optimized Builds', () => {
       const progression = optimizeClassProgression(
         build.level,
         classSelections,
-        build.expectedFeats,
+        convertFeatNamesToIds(build.expectedFeats),
         build.expectedStats.keySkills,
         build.abilityScores,
         build.focus
@@ -371,15 +381,15 @@ describe('Build Validation - Community Optimized Builds', () => {
         .filter(l => l.featGained)
         .map(l => l.featGained!);
 
-      // Should have complete TWF chain
+      // Should have complete TWF chain (check for feat IDs with hyphens)
       const hasTWF = allFeats.some(f =>
-        f.toLowerCase().includes('two-weapon fighting') && !f.toLowerCase().includes('improved') && !f.toLowerCase().includes('greater')
+        f === 'two-weapon-fighting' || (f.toLowerCase().includes('two-weapon') && !f.toLowerCase().includes('improved') && !f.toLowerCase().includes('greater'))
       );
       const hasImprovedTWF = allFeats.some(f =>
-        f.toLowerCase().includes('improved') && f.toLowerCase().includes('two-weapon')
+        f === 'improved-two-weapon-fighting' || (f.toLowerCase().includes('improved') && f.toLowerCase().includes('two-weapon'))
       );
       const hasGreaterTWF = allFeats.some(f =>
-        f.toLowerCase().includes('greater') && f.toLowerCase().includes('two-weapon')
+        f === 'greater-two-weapon-fighting' || (f.toLowerCase().includes('greater') && f.toLowerCase().includes('two-weapon'))
       );
 
       expect(hasTWF).toBe(true);
@@ -412,7 +422,7 @@ describe('Build Validation - Community Optimized Builds', () => {
           const progression = optimizeClassProgression(
             build.level,
             classSelections,
-            build.expectedFeats,
+            convertFeatNamesToIds(build.expectedFeats),
             build.expectedStats.keySkills || [],
             build.abilityScores,
             build.focus
