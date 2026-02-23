@@ -292,5 +292,298 @@
     "automaticLanguages": ["Common", "Orc"],
     "bonusLanguages": ["Draconic", "Giant", "Gnoll", "Goblin", "Abyssal"],
     "source": "Player's Handbook"
+  },
+  {
+    "id": "aasimar",
+    "name": "Aasimar",
+    "description": "Aasimars are humans with a trace of celestial blood. They are good-aligned and often become paladins or clerics. They have keen senses and a natural resistance to acid, cold, and electricity.",
+    "abilityModifiers": {
+      "wisdom": 2,
+      "charisma": 2
+    },
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "description": "Aasimars can see in the dark up to 60 feet."
+      },
+      {
+        "name": "Daylight",
+        "description": "Aasimars can use daylight once per day as a spell-like ability (caster level equals the aasimar's class levels)."
+      },
+      {
+        "name": "Resistance to Energy",
+        "description": "Aasimars have acid resistance 5, cold resistance 5, and electricity resistance 5."
+      }
+    ],
+    "skillBonuses": [
+      {
+        "skillId": "listen",
+        "bonus": 2
+      },
+      {
+        "skillId": "spot",
+        "bonus": 2
+      }
+    ],
+    "favoredClass": "paladin",
+    "automaticLanguages": ["Common", "Celestial"],
+    "bonusLanguages": ["Draconic", "Dwarven", "Elven", "Gnome", "Halfling", "Sylvan"],
+    "source": "Races of Destiny"
+  },
+  {
+    "id": "tiefling",
+    "name": "Tiefling",
+    "description": "Tieflings are humans with a trace of infernal blood. They tend toward evil alignments and often become rogues or sorcerers. They have a natural resistance to cold, electricity, and fire.",
+    "abilityModifiers": {
+      "dexterity": 2,
+      "intelligence": 2,
+      "charisma": -2
+    },
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "description": "Tieflings can see in the dark up to 60 feet."
+      },
+      {
+        "name": "Darkness",
+        "description": "Tieflings can use darkness once per day as a spell-like ability (caster level equals the tiefling's class levels)."
+      },
+      {
+        "name": "Resistance to Energy",
+        "description": "Tieflings have cold resistance 5, electricity resistance 5, and fire resistance 5."
+      }
+    ],
+    "skillBonuses": [
+      {
+        "skillId": "bluff",
+        "bonus": 2
+      },
+      {
+        "skillId": "hide",
+        "bonus": 2
+      }
+    ],
+    "favoredClass": "rogue",
+    "automaticLanguages": ["Common", "Infernal"],
+    "bonusLanguages": ["Draconic", "Dwarven", "Elven", "Gnome", "Halfling", "Orc"],
+    "source": "Races of Destiny"
+  },
+  {
+    "id": "genasi-air",
+    "name": "Air Genasi",
+    "description": "Air genasi are one of the four types of planetouched descended from outsiders native to the Elemental Planes. Air genasi are fast and free-spirited. They are often found in high places and open spaces.",
+    "abilityModifiers": {
+      "dexterity": 2,
+      "intelligence": 2,
+      "wisdom": -2,
+      "charisma": -2
+    },
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "description": "Air genasi can see in the dark up to 60 feet."
+      },
+      {
+        "name": "Levitate",
+        "description": "Air genasi can use levitate once per day (caster level equals character level)."
+      },
+      {
+        "name": "Breathless",
+        "description": "Air genasi do not breathe, so they are immune to drowning, suffocation, and attacks that require inhalation."
+      },
+      {
+        "name": "Outsider",
+        "description": "Air genasi are native outsiders."
+      }
+    ],
+    "favoredClass": "fighter",
+    "automaticLanguages": ["Common", "Auran"],
+    "bonusLanguages": ["Aquan", "Draconic", "Dwarven", "Elven", "Gnome", "Halfling", "Ignan", "Terran"],
+    "source": "Races of Destiny"
+  },
+  {
+    "id": "genasi-earth",
+    "name": "Earth Genasi",
+    "description": "Earth genasi are slow and methodical, but extremely strong and durable. They tend to be patient and thoughtful, preferring to consider all options before acting.",
+    "abilityModifiers": {
+      "strength": 2,
+      "constitution": 2,
+      "wisdom": -2,
+      "charisma": -2
+    },
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "description": "Earth genasi can see in the dark up to 60 feet."
+      },
+      {
+        "name": "Pass Without Trace",
+        "description": "Earth genasi can use pass without trace once per day (caster level equals character level)."
+      },
+      {
+        "name": "Stability",
+        "description": "+4 bonus on ability checks made to resist being bull rushed or tripped when standing on the ground."
+      },
+      {
+        "name": "Outsider",
+        "description": "Earth genasi are native outsiders."
+      }
+    ],
+    "favoredClass": "fighter",
+    "automaticLanguages": ["Common", "Terran"],
+    "bonusLanguages": ["Aquan", "Auran", "Draconic", "Dwarven", "Elven", "Gnome", "Halfling", "Ignan"],
+    "source": "Races of Destiny"
+  },
+  {
+    "id": "genasi-fire",
+    "name": "Fire Genasi",
+    "description": "Fire genasi are hot-blooded and quick to anger. They are passionate and often impulsive. Fire genasi have an affinity for flame and often become sorcerers or barbarians.",
+    "abilityModifiers": {
+      "intelligence": 2,
+      "charisma": -2
+    },
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "description": "Fire genasi can see in the dark up to 60 feet."
+      },
+      {
+        "name": "Burning Hands",
+        "description": "Fire genasi can use burning hands once per day (caster level equals character level, save DC is Charisma-based)."
+      },
+      {
+        "name": "Fire Resistance",
+        "description": "Fire genasi have fire resistance 5."
+      },
+      {
+        "name": "Outsider",
+        "description": "Fire genasi are native outsiders."
+      }
+    ],
+    "favoredClass": "fighter",
+    "automaticLanguages": ["Common", "Ignan"],
+    "bonusLanguages": ["Aquan", "Auran", "Draconic", "Dwarven", "Elven", "Gnome", "Halfling", "Terran"],
+    "source": "Races of Destiny"
+  },
+  {
+    "id": "genasi-water",
+    "name": "Water Genasi",
+    "description": "Water genasi are patient and independent. They are often found near bodies of water and are excellent swimmers. They tend to be adaptable and can thrive in many environments.",
+    "abilityModifiers": {
+      "constitution": 2,
+      "charisma": -2
+    },
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "description": "Water genasi can see in the dark up to 60 feet."
+      },
+      {
+        "name": "Create Water",
+        "description": "Water genasi can use create water once per day (caster level equals character level)."
+      },
+      {
+        "name": "Swim Speed",
+        "description": "Water genasi have a swim speed of 30 feet and gain a +8 racial bonus on Swim checks."
+      },
+      {
+        "name": "Amphibious",
+        "description": "Water genasi can breathe both air and water."
+      },
+      {
+        "name": "Outsider",
+        "description": "Water genasi are native outsiders."
+      }
+    ],
+    "skillBonuses": [
+      {
+        "skillId": "swim",
+        "bonus": 8
+      }
+    ],
+    "favoredClass": "fighter",
+    "automaticLanguages": ["Common", "Aquan"],
+    "bonusLanguages": ["Auran", "Draconic", "Dwarven", "Elven", "Gnome", "Halfling", "Ignan", "Terran"],
+    "source": "Races of Destiny"
+  },
+  {
+    "id": "dragonborn",
+    "name": "Dragonborn",
+    "description": "Dragonborn are humanoids who have undergone the Rite of Rebirth, replacing their original racial traits with draconic features. They are devoted to Bahamut and often become paladins or fighters.",
+    "abilityModifiers": {
+      "constitution": 2,
+      "charisma": 2,
+      "dexterity": -2
+    },
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Darkvision",
+        "description": "Dragonborn can see in the dark up to 60 feet."
+      },
+      {
+        "name": "Breath Weapon",
+        "description": "Dragonborn can use a breath weapon once per day as a supernatural ability. The type depends on their draconic ancestry."
+      },
+      {
+        "name": "Immunity to Sleep and Paralysis",
+        "description": "Dragonborn are immune to magic sleep effects and paralysis effects."
+      },
+      {
+        "name": "Natural Armor",
+        "description": "+1 natural armor bonus to AC from their scaly hide."
+      }
+    ],
+    "favoredClass": "paladin",
+    "automaticLanguages": ["Common", "Draconic"],
+    "bonusLanguages": ["Dwarven", "Elven", "Gnome", "Halfling", "Orc"],
+    "source": "Races of the Dragon"
+  },
+  {
+    "id": "warforged",
+    "name": "Warforged",
+    "description": "Warforged are living constructs created for war. They are humanoid in shape but made of wood, leather, metal, and stone. They do not need to eat, sleep, or breathe.",
+    "abilityModifiers": {
+      "constitution": 2,
+      "wisdom": -2,
+      "charisma": -2
+    },
+    "size": "Medium",
+    "speed": 30,
+    "traits": [
+      {
+        "name": "Living Construct",
+        "description": "Warforged are living constructs. They do not need to eat, sleep, or breathe, but can benefit from consumable spells as if they were living creatures."
+      },
+      {
+        "name": "Composite Plating",
+        "description": "+2 natural armor bonus to AC. Warforged can be affected by spells that target wood or metal."
+      },
+      {
+        "name": "Light Fortification",
+        "description": "25% chance to ignore critical hits and sneak attacks."
+      },
+      {
+        "name": "Immunity to Disease, Poison, and Fatigue",
+        "description": "Warforged are immune to disease, poison, fatigue, exhaustion, and energy drain."
+      }
+    ],
+    "favoredClass": "fighter",
+    "automaticLanguages": ["Common"],
+    "bonusLanguages": ["Any"],
+    "source": "Eberron Campaign Setting"
   }
 ]
