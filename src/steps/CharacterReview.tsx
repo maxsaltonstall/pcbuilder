@@ -29,6 +29,7 @@ import { calculateCombatStats, calculateSpellSlots } from '../services/combatCal
 import { recommendEquipment } from '../services/equipmentRecommendations';
 import { detectActiveFeatChains, analyzeFeatSynergies } from '../services/featChainDetector';
 import { saveCharacterToFile, loadCharacterFromFile } from '../services/characterStorage';
+import { SpellList } from '../components/SpellList';
 
 interface CharacterReviewProps {
   onBack: () => void;
@@ -402,6 +403,24 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
                       </Typography>
                     </Box>
                   )}
+
+                  {/* Spell List */}
+                  <Box sx={{ mt: 2 }}>
+                    <Accordion>
+                      <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                        <Typography variant="subtitle2">
+                          📜 Available Spells
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <SpellList
+                          casterClass={caster.casterClass}
+                          casterLevel={caster.casterLevel}
+                          highestSpellLevel={Math.max(...Object.keys(caster.spellsPerDay).map(Number))}
+                        />
+                      </AccordionDetails>
+                    </Accordion>
+                  </Box>
                 </Paper>
               ))}
             </Box>

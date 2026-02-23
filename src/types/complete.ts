@@ -2,6 +2,7 @@ import { AbilityScores } from './character';
 import { LevelProgression } from './classes';
 import { FeatSelection } from './feats';
 import { SkillRanks } from './skills';
+import { CharacterSpells } from './spells';
 
 export interface CompleteCharacter {
   // Basic Info
@@ -34,6 +35,9 @@ export interface CompleteCharacter {
 
   // Feats
   feats: FeatSelection[];
+
+  // Spells (for spellcasting characters)
+  spells?: CharacterSpells;
 
   // Summary
   classSummary: string; // e.g., "Fighter 5 / Wizard 3 / Eldritch Knight 7"
