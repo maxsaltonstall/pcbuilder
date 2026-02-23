@@ -137,8 +137,24 @@ export function canAssignSkillRanks(
   characterLevel: number,
   isClassSkill: boolean
 ): { valid: boolean; error?: string } {
-  const maxRanks = getMaxRanks(characterLevel, isClassSkill);
+  // Check for negative ranks
+  if (proposedRanks < 0) {
+    return {
+      valid: false,
+      error: 'Cannot assign negative skill ranks',
+    };
+  }
 
+  // Check for fractional ranks (D&D 3.5 only allows whole number ranks)
+  if (!Number.isInteger(proposedRanks)) {
+    return {
+      valid: false,
+      error: `Cannot assign fractional skill ranks (${proposedRanks}). Ranks must be whole numbers.`,
+    };
+  }
+
+  // Check maximum ranks
+  const maxRanks = getMaxRanks(characterLevel, isClassSkill);
   if (proposedRanks > maxRanks) {
     return {
       valid: false,
@@ -148,14 +164,31 @@ export function canAssignSkillRanks(
     };
   }
 
-  if (proposedRanks < 0) {
-    return {
-      valid: false,
-      error: 'Cannot assign negative skill ranks',
-    };
+  return { valid: true };
+}
+
+/**
+ * Validate that all skill ranks in a record are valid (non-negative integers)
+ */
+export function validateSkillRanks(
+  skillRanks: Record<string, number>
+): { valid: boolean; errors: string[] } {
+  const errors: string[] = [];
+
+  for (const [skillId, ranks] of Object.entries(skillRanks)) {
+    if (ranks < 0) {
+      errors.push(`Skill ${skillId} has negative ranks: ${ranks}`);
+    }
+
+    if (!Number.isInteger(ranks)) {
+      errors.push(`Skill ${skillId} has fractional ranks: ${ranks}`);
+    }
   }
 
-  return { valid: true };
+  return {
+    valid: errors.length === 0,
+    errors
+  };
 }
 
 /**
@@ -286,31 +319,48 @@ export function getOptimalClassOrder(
 
 /**
  * Calculate synergy bonuses for a skill based on ranks in related skills
- * 
+ *
  * D&D 3.5 Rules:
  * - Having 5+ ranks in certain skills grants a +2 synergy bonus to related skills
  * - Example: 5 ranks in Bluff grants +2 to Diplomacy, Disguise, Intimidate, Sleight of Hand
  */
 export function calculateSynergyBonus(
   skillId: string,
-  skillRanks: Record<string, number>
+  skillRanks: Record<string, number> | null | undefined
 ): number {
-  const skills = skillsData as Skill[];
-  const skill = skills.find(s => s.id === skillId);
-  
-  if (!skill || !skill.synergiesFrom) {
+  // Handle null/undefined skillRanks
+  if (!skillRanks) {
     return 0;
   }
-  
+
+  const skills = skillsData as Skill[];
+  const skill = skills.find(s => s.id === skillId);
+
+  if (!skill || !skill.synergiesFrom || skill.synergiesFrom.length === 0) {
+    return 0;
+  }
+
   let totalBonus = 0;
-  
+
   for (const synergy of skill.synergiesFrom) {
     const sourceRanks = skillRanks[synergy.sourceSkillId] || 0;
+
+    // Validate ranks are non-negative and not fractional
+    if (sourceRanks < 0) {
+      console.warn(`Invalid negative ranks for skill ${synergy.sourceSkillId}: ${sourceRanks}`);
+      continue;
+    }
+
+    if (!Number.isInteger(sourceRanks)) {
+      console.warn(`Invalid fractional ranks for skill ${synergy.sourceSkillId}: ${sourceRanks}`);
+      continue;
+    }
+
     if (sourceRanks >= synergy.minimumRanks) {
       totalBonus += synergy.bonus;
     }
   }
-  
+
   return totalBonus;
 }
 
@@ -319,23 +369,29 @@ export function calculateSynergyBonus(
  */
 export function getSkillSynergies(
   skillId: string,
-  skillRanks: Record<string, number>
+  skillRanks: Record<string, number> | null | undefined
 ): Array<SkillSynergy & { sourceSkillName: string; active: boolean }> {
   const skills = skillsData as Skill[];
   const skill = skills.find(s => s.id === skillId);
-  
-  if (!skill || !skill.synergiesFrom) {
+
+  if (!skill || !skill.synergiesFrom || skill.synergiesFrom.length === 0) {
     return [];
   }
-  
+
+  // Handle null/undefined skillRanks
+  const safeSkillRanks = skillRanks || {};
+
   return skill.synergiesFrom.map(synergy => {
     const sourceSkill = skills.find(s => s.id === synergy.sourceSkillId);
-    const sourceRanks = skillRanks[synergy.sourceSkillId] || 0;
-    
+    const sourceRanks = safeSkillRanks[synergy.sourceSkillId] || 0;
+
+    // Validate source ranks
+    const validRanks = sourceRanks >= 0 && Number.isInteger(sourceRanks);
+
     return {
       ...synergy,
       sourceSkillName: sourceSkill?.name || synergy.sourceSkillId,
-      active: sourceRanks >= synergy.minimumRanks
+      active: validRanks && sourceRanks >= synergy.minimumRanks
     };
   });
 }

@@ -1,6 +1,7 @@
 import { ClassSelection, LevelProgression } from './classes';
 import { CompleteCharacter } from './complete';
 import { CharacterRace } from './races';
+import { CharacterDeitySelection } from './deities';
 
 // Re-export ClassSelection for use in tests
 export type { ClassSelection, LevelProgression };
@@ -22,6 +23,7 @@ export interface CharacterState {
   concept: string;
   rulesSources: string[];
   race?: CharacterRace;
+  deity?: CharacterDeitySelection;
 
   // Step 2: Ability Scores (base scores before racial modifiers)
   baseAbilityScores?: AbilityScores;
@@ -45,6 +47,7 @@ export interface CharacterContextType {
   state: CharacterState;
   updateInitialSetup: (level: number, concept: string, sources: string[]) => void;
   updateRace: (race: CharacterRace) => void;
+  updateDeity: (deity: CharacterDeitySelection | undefined) => void;
   updateAbilityScores: (scores: AbilityScores, assumeMagicItems?: boolean) => void;
   updateGoals: (
     classes: ClassSelection[],

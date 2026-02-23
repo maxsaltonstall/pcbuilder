@@ -10,6 +10,7 @@ import {
 } from '../types/requirements';
 import { PrestigeClass, LevelProgression } from '../types/classes';
 import featsData from '@data/feats.json';
+import epicFeatsData from '@data/epic-feats.json';
 import prestigeClassesData from '@data/prestige-classes.json';
 
 export interface ValidationResult {
@@ -261,7 +262,15 @@ export function canTakeFeat(
   progression: LevelProgression[],
   abilityScores: Record<string, number>
 ): ValidationResult {
-  const feat = featsData.find(f => f.id === featId);
+  // Check regular feats first
+  let feat = featsData.find(f => f.id === featId);
+  let isEpic = false;
+
+  // If not found, check epic feats
+  if (!feat) {
+    feat = epicFeatsData.find(f => f.id === featId) as any;
+    isEpic = true;
+  }
 
   if (!feat) {
     return {
@@ -272,6 +281,16 @@ export function canTakeFeat(
   }
 
   const context = buildRequirementContext(progression, abilityScores);
+
+  // Epic feats require character level 21+
+  if (isEpic && progression.length < 21) {
+    return {
+      valid: false,
+      errors: [`Epic feats require character level 21 or higher (current level: ${progression.length})`],
+      warnings: [],
+    };
+  }
+
   return validateAllRequirements(feat.prerequisites as unknown as Requirement[], context);
 }
 
@@ -330,4 +349,65 @@ export function getMinimumPrestigeEntryLevel(
   }
 
   return minLevel;
+}
+
+/**
+ * Check if a feat is an epic feat
+ */
+export function isEpicFeat(featId: string): boolean {
+  return epicFeatsData.some(f => f.id === featId);
+}
+
+/**
+ * Get list of all available epic feats
+ */
+export function getAvailableEpicFeats(
+  progression: LevelProgression[],
+  abilityScores: Record<string, number>
+): Array<{ id: string; name: string; canTake: boolean; errors: string[] }> {
+  const characterLevel = progression.length;
+
+  // Epic feats only available at level 21+
+  if (characterLevel < 21) {
+    return [];
+  }
+
+  const context = buildRequirementContext(progression, abilityScores);
+
+  return epicFeatsData.map(feat => {
+    const validation = validateAllRequirements(
+      feat.prerequisites as unknown as Requirement[],
+      context
+    );
+
+    return {
+      id: feat.id,
+      name: feat.name,
+      canTake: validation.valid,
+      errors: validation.errors,
+    };
+  });
+}
+
+/**
+ * Check if character can enter an epic prestige class
+ */
+export function canEnterEpicPrestigeClass(
+  classId: string,
+  progression: LevelProgression[],
+  abilityScores: Record<string, number>
+): ValidationResult {
+  const characterLevel = progression.length;
+
+  // Epic prestige classes require level 21+
+  if (characterLevel < 21) {
+    return {
+      valid: false,
+      errors: [`Epic prestige classes require character level 21 or higher (current level: ${characterLevel})`],
+      warnings: [],
+    };
+  }
+
+  // Use the same validation as regular prestige classes
+  return canEnterPrestigeClass(classId, progression, abilityScores);
 }

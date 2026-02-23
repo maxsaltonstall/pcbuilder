@@ -18,6 +18,7 @@ import {
 import classesData from '@data/classes.json';
 import prestigeClassesData from '@data/prestige-classes.json';
 import featsData from '@data/feats.json';
+import epicFeatsData from '@data/epic-feats.json';
 
 /**
  * Main optimization function
@@ -220,7 +221,11 @@ export function buildFeatDependencyGraph(desiredFeats: string[]): Map<string, st
     if (visited.has(featId)) return; // Prevent infinite loops
     visited.add(featId);
 
-    const feat = featsData.find(f => f.id === featId);
+    // Check both regular feats and epic feats
+    let feat = featsData.find(f => f.id === featId);
+    if (!feat) {
+      feat = epicFeatsData.find(f => f.id === featId) as any;
+    }
     if (!feat) return;
 
     const prereqFeats: string[] = [];

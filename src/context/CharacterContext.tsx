@@ -9,10 +9,12 @@ import {
 import { ClassSelection, LevelProgression } from '../types/classes';
 import { CompleteCharacter } from '../types/complete';
 import { CharacterRace } from '../types/races';
+import { CharacterDeitySelection } from '../types/deities';
 
 type CharacterAction =
   | { type: 'UPDATE_INITIAL_SETUP'; payload: { level: number; concept: string; sources: string[] } }
   | { type: 'UPDATE_RACE'; payload: CharacterRace }
+  | { type: 'UPDATE_DEITY'; payload: CharacterDeitySelection | undefined }
   | { type: 'UPDATE_ABILITY_SCORES'; payload: { scores: AbilityScores; assumeMagicItems?: boolean } }
   | {
       type: 'UPDATE_GOALS';
@@ -41,6 +43,11 @@ function characterReducer(state: CharacterState, action: CharacterAction): Chara
       return {
         ...state,
         race: action.payload,
+      };
+    case 'UPDATE_DEITY':
+      return {
+        ...state,
+        deity: action.payload,
       };
     case 'UPDATE_ABILITY_SCORES':
       // Apply racial modifiers to base scores
@@ -101,6 +108,8 @@ export function CharacterProvider({ children }: { children: ReactNode }) {
       dispatch({ type: 'UPDATE_INITIAL_SETUP', payload: { level, concept, sources } }),
     updateRace: (race) =>
       dispatch({ type: 'UPDATE_RACE', payload: race }),
+    updateDeity: (deity) =>
+      dispatch({ type: 'UPDATE_DEITY', payload: deity }),
     updateAbilityScores: (scores, assumeMagicItems) =>
       dispatch({ type: 'UPDATE_ABILITY_SCORES', payload: { scores, assumeMagicItems } }),
     updateGoals: (classes, feats, skills, focus) =>

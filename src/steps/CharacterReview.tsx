@@ -345,6 +345,68 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
           </Box>
         )}
 
+        {state.deity && (() => {
+          const deitiesData = require('@data/deities.json');
+          const domainsData = require('@data/domains.json');
+          const deity = deitiesData.find((d: any) => d.id === state.deity!.deityId);
+          const selectedDomains = state.deity.selectedDomains
+            .map((domainId: string) => domainsData.find((d: any) => d.id === domainId))
+            .filter(Boolean);
+
+          const getAlignmentColor = (alignment: string): string => {
+            if (alignment.includes('G')) return '#4caf50';
+            if (alignment.includes('E')) return '#f44336';
+            return '#9e9e9e';
+          };
+
+          return (
+            <Box sx={{ mb: 2 }}>
+              <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+                Deity & Domains
+              </Typography>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="body2" component="span">
+                  <strong>{deity?.name}</strong> - {deity?.title}
+                </Typography>
+                <Chip
+                  label={deity?.alignment}
+                  size="small"
+                  sx={{
+                    bgcolor: getAlignmentColor(deity?.alignment || ''),
+                    color: 'white',
+                    ml: 1,
+                    fontSize: '0.75rem'
+                  }}
+                />
+              </Box>
+              <Typography variant="caption" color="text.secondary" display="block" sx={{ mb: 1 }}>
+                {deity?.portfolio}
+              </Typography>
+              <Box sx={{ mb: 1 }}>
+                <Typography variant="caption" color="text.secondary" component="span">
+                  Domains:{' '}
+                </Typography>
+                {selectedDomains.map((domain: any, index: number) => (
+                  <Chip
+                    key={index}
+                    label={domain.name}
+                    size="small"
+                    variant="outlined"
+                    sx={{ mr: 0.5 }}
+                  />
+                ))}
+              </Box>
+              {selectedDomains.map((domain: any) => (
+                <Box key={domain.id} sx={{ mt: 1, pl: 2, borderLeft: '2px solid #1976d2' }}>
+                  <Typography variant="caption" display="block">
+                    <strong>{domain.name}:</strong> {domain.grantedPower}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
+          );
+        })()}
+
         <Box sx={{ mb: 2 }}>
           <Typography variant="subtitle2" color="text.secondary" gutterBottom>
             Selected Classes (Priorities)
