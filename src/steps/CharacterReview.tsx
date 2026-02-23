@@ -19,6 +19,8 @@ import {
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useCharacter } from '../context/CharacterContext';
 import { calculateTotalSkillPoints, getAbilityModifier, getSkillPointsPerLevel, getMagicItemIntBonus } from '../services/skillCalculator';
+import { allocateSkillPoints } from '../services/skillRecommendations';
+import { recommendFeats } from '../services/featRecommendations';
 
 interface CharacterReviewProps {
   onBack: () => void;
@@ -111,6 +113,24 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
       intIncreased: characterLevel % 4 === 0 && level.abilityIncrease === 'intelligence',
     };
   });
+
+  // Generate skill recommendations
+  const skillAllocations = state.abilityScores && progression.length > 0
+    ? allocateSkillPoints(
+        totalSkillPoints,
+        state.keySkills,
+        progression,
+        state.abilityScores,
+        state.focus
+      )
+    : [];
+
+  // Generate feat recommendations
+  const featRecommendations = recommendFeats(
+    progression,
+    state.desiredFeats,
+    state.focus
+  );
 
   // Get all feats from progression
   const allFeats = progression
@@ -345,17 +365,139 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
         <Divider sx={{ my: 2 }} />
 
         <Box sx={{ mb: 2 }}>
-          <Typography variant="subtitle2" color="text.secondary" gutterBottom>
-            Feats ({allFeats.length})
+          <Typography variant="h6" color="primary" gutterBottom>
+            Recommended Skills
           </Typography>
-          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-            {allFeats.map((feat, index) => (
-              <Chip key={index} label={feat} size="small" color="primary" />
-            ))}
-            {allFeats.length === 0 && (
-              <Typography variant="body2" color="text.secondary">No feats selected</Typography>
-            )}
-          </Box>
+          <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+            Optimized allocation based on your priorities and class skills
+          </Typography>
+
+          <Accordion defaultExpanded>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography variant="subtitle1">
+                📋 Skill Allocations ({skillAllocations.length} skills)
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer>
+                <Table size="small">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell><strong>Skill</strong></TableCell>
+                      <TableCell align="center"><strong>Ranks</strong></TableCell>
+                      <TableCell align="center"><strong>Ability</strong></TableCell>
+                      <TableCell align="center"><strong>Class</strong></TableCell>
+                      <TableCell align="center"><strong>Total</strong></TableCell>
+                      <TableCell><strong>Why?</strong></TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {skillAllocations.map((skill) => (
+                      <TableRow key={skill.skillId}>
+                        <TableCell>
+                          <strong>{skill.skillName}</strong>
+                          {state.keySkills.includes(skill.skillId) && (
+                            <Chip
+                              label="Priority"
+                              size="small"
+                              color="primary"
+                              sx={{ ml: 1, height: 18, fontSize: '0.65rem' }}
+                            />
+                          )}
+                        </TableCell>
+                        <TableCell align="center">{skill.ranks}</TableCell>
+                        <TableCell align="center">
+                          {skill.abilityMod >= 0 ? '+' : ''}{skill.abilityMod}
+                        </TableCell>
+                        <TableCell align="center">
+                          {skill.classSkillBonus > 0 ? (
+                            <Chip
+                              label={`+${skill.classSkillBonus}`}
+                              size="small"
+                              color="success"
+                              sx={{ height: 18, fontSize: '0.65rem' }}
+                            />
+                          ) : (
+                            '-'
+                          )}
+                        </TableCell>
+                        <TableCell align="center">
+                          <Typography variant="body2" fontWeight="bold" color="primary">
+                            {skill.totalModifier >= 0 ? '+' : ''}{skill.totalModifier}
+                          </Typography>
+                        </TableCell>
+                        <TableCell>
+                          <Typography variant="caption" color="text.secondary">
+                            {skill.explanation}
+                          </Typography>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
+        </Box>
+
+        <Divider sx={{ my: 2 }} />
+
+        <Box sx={{ mb: 2 }}>
+          <Typography variant="h6" color="primary" gutterBottom>
+            Recommended Feats
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+            Build-optimized feat progression for your {state.focus} focus
+          </Typography>
+
+          <Accordion defaultExpanded>
+            <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+              <Typography variant="subtitle1">
+                ⚔️ Feat Progression ({featRecommendations.length} feats)
+              </Typography>
+            </AccordionSummary>
+            <AccordionDetails>
+              <TableContainer>
+                <Table size="small">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell><strong>Level</strong></TableCell>
+                      <TableCell><strong>Feat</strong></TableCell>
+                      <TableCell><strong>Why?</strong></TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {featRecommendations.map((feat, index) => (
+                      <TableRow
+                        key={index}
+                        sx={{
+                          backgroundColor: feat.isUserRequested ? 'primary.50' : 'inherit'
+                        }}
+                      >
+                        <TableCell>{feat.level}</TableCell>
+                        <TableCell>
+                          <strong>{feat.featName}</strong>
+                          {feat.isUserRequested && (
+                            <Chip
+                              label="Your Choice"
+                              size="small"
+                              color="primary"
+                              sx={{ ml: 1, height: 18, fontSize: '0.65rem' }}
+                            />
+                          )}
+                        </TableCell>
+                        <TableCell>
+                          <Typography variant="caption" color="text.secondary">
+                            {feat.reason}
+                          </Typography>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </TableContainer>
+            </AccordionDetails>
+          </Accordion>
         </Box>
 
         {abilityIncreases.length > 0 && (
