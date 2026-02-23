@@ -4,14 +4,18 @@
     "type": "General",
     "source": "Complete Divine",
     "prerequisites": "Knowledge (religion) 4 ranks, Spellcraft 4 ranks, deity's alignment",
-    "benefit": "Add spells from a domain to your class list"
+    "benefit": "Add spells from a domain to your class list",
+    "id": "arcane-disciple"
   },
   {
     "id": "aberration-banemagic",
     "name": "Aberration Banemagic",
     "description": "When you cast a spell that deals damage to an aberration, you deal an extra 2d6 points of damage. A single spell can never gain this extra damage more than once per casting. If the spell allows a saving throw, the DC increases by 2.",
     "prerequisites": "None",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "aberration-blood",
@@ -42,7 +46,10 @@
     "name": "Adaptive Style",
     "description": "Swap readied maneuvers faster",
     "prerequisites": "",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "advantageous-avoidance",
@@ -167,21 +174,30 @@
     "name": "Apprentice (Libris Mortis)",
     "description": "You have studied under a master and gained knowledge of necromancy.",
     "prerequisites": "None",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "aquatic-spellcasting",
     "name": "Aquatic Spellcasting",
     "description": "Water does not impede your spells. Creatures partially or completely submerged do not gain cover or total cover when you cast a spell from outside the water. The surface does not block line of effect for any spell, including spells with the fire descriptor. You need not make a Spellcraft check to cast a fire spell underwater.",
     "prerequisites": "None",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "aquatic_shot",
     "name": "Aquatic Shot",
     "description": "You can use ranged weapons underwater more effectively. You can use bows and crossbows underwater with a -2 penalty for every 10 feet of water passed through, and water does not provide cover against your ranged attacks when firing from outside the water.",
     "prerequisites": "Point Blank Shot",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "arcane-defense",
@@ -504,35 +520,50 @@
     "name": "Azure Enmity",
     "description": "You can invest essentia to increase your sneak attack damage.",
     "prerequisites": "Sneak attack class feature, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "azure_talent",
     "name": "Azure Talent",
     "description": "You can invest essentia to gain extra power points.",
     "prerequisites": "Manifester level 1st, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "azure_toughness",
     "name": "Azure Toughness",
     "description": "You gain bonus hit points equal to your current essentia investment.",
     "prerequisites": "Ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "azure_turning",
     "name": "Azure Turning",
     "description": "You can invest essentia to increase your turn undead attempts and effectiveness.",
     "prerequisites": "Turn or rebuke undead class feature, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "azure_wild_shape",
     "name": "Azure Wild Shape",
     "description": "You can invest essentia to enhance your wild shape ability.",
     "prerequisites": "Wild shape class feature, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "Wild"
+    ]
   },
   {
     "id": "bane-of-enemies",
@@ -662,14 +693,20 @@
     "name": "Blackwater Invocation",
     "description": "You can call upon negative energy to transform normal water around you into the dark, cold water found at the bottom of deepest ocean trenches. Those entering the water take 1d6 nonlethal cold damage unless protected from cold, and those within gain concealment.",
     "prerequisites": "Ability to channel negative energy",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "blade-meditation",
     "name": "Blade Meditation",
     "description": "Discipline Focus benefits",
     "prerequisites": "",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "blinding-speed",
@@ -737,7 +774,10 @@
     "name": "Bolster Resistance",
     "description": "Undead you create or raise have greater resistance to turning. Your animated undead gain a bonus to turn resistance.",
     "prerequisites": "Corpsecrafter, ability to cast animate dead or create undead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "bonus-domain",
@@ -759,7 +799,10 @@
     "name": "Bonus Essentia",
     "description": "You gain access to 1 point of essentia.",
     "prerequisites": "None",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "boost-construct",
@@ -806,14 +849,20 @@
     "name": "Brand of the Nine Hells",
     "description": "Gain benefit based on allegiance to a Lord of the Nine",
     "prerequisites": "Lawful evil, devil",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "breathing_link",
     "name": "Breathing Link",
     "description": "You can allow a creature adjacent to you to breathe water as a free action. The ability renews automatically until you direct it to another creature or withdraw your power.",
     "prerequisites": "Aquatic elf or water genasi, base Will save +2",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "brutal-throw",
@@ -898,21 +947,30 @@
     "name": "Cerulean Fortitude",
     "description": "You can invest essentia to increase your Fortitude saves.",
     "prerequisites": "Ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "cerulean_reflexes",
     "name": "Cerulean Reflexes",
     "description": "You can invest essentia to increase your Reflex saves.",
     "prerequisites": "Ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "cerulean_will",
     "name": "Cerulean Will",
     "description": "You can invest essentia to increase your Will saves.",
     "prerequisites": "Ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "chain-power",
@@ -1119,7 +1177,10 @@
     "name": "Clarion Commander",
     "description": "Advanced White Raven tactics",
     "prerequisites": "Knowledge of White Raven discipline",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "claws_of_the_beast",
@@ -1173,7 +1234,10 @@
     "name": "Clever Wrestling",
     "description": "You have a better than normal chance to escape or wriggle free from a big creature's grapple or pin. You gain a circumstance bonus on grapple checks to escape based on opponent size (+2 Large, +4 Huge, +6 Gargantuan, +8 Colossal).",
     "prerequisites": "Small or Medium size, Improved Unarmed Strike",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "climb-like-an-ape",
@@ -1253,42 +1317,60 @@
     "name": "Cobalt Charge",
     "description": "You can invest essentia to increase your damage when charging.",
     "prerequisites": "Ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "cobalt_critical",
     "name": "Cobalt Critical",
     "description": "You can invest essentia to increase your critical threat range.",
     "prerequisites": "Ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "cobalt_expertise",
     "name": "Cobalt Expertise",
     "description": "You can invest essentia to gain bonuses when using Combat Expertise.",
     "prerequisites": "Combat Expertise, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "cobalt_power",
     "name": "Cobalt Power",
     "description": "You can invest essentia to increase your damage with Power Attack.",
     "prerequisites": "Power Attack, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "cobalt_precision",
     "name": "Cobalt Precision",
     "description": "You can invest essentia to increase your attack rolls.",
     "prerequisites": "Ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "cobalt_rage",
     "name": "Cobalt Rage",
     "description": "You can invest essentia to enhance your rage ability.",
     "prerequisites": "Rage class feature, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "combat-archery",
@@ -1433,7 +1515,10 @@
     "name": "Corpsecrafter",
     "description": "You can create more powerful undead through the use of necromantic energy. When you create undead, they gain additional abilities.",
     "prerequisites": "Spell Focus (necromancy), ability to cast animate dead or create undead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "Item Creation"
+    ]
   },
   {
     "id": "cougars-vision",
@@ -1668,7 +1753,10 @@
     "name": "Curling Wave Strike",
     "description": "If you trip an opponent in melee combat, you can immediately make another trip attempt against another foe within reach at the same attack bonus. This replaces the free attack from Improved Trip.",
     "prerequisites": "Dex 13, Improved Trip",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "damage-reduction",
@@ -1762,7 +1850,10 @@
     "name": "Darkstalker",
     "description": "When you hide, creatures with blindsense, blindsight, scent, or tremorsense must make a Listen check or a Spot check (whichever DC is higher) to notice you, just as sighted creatures would make Spot checks to detect you. You cannot hide in plain sight unless you have that ability as a class feature. In addition, you can flank creatures that have the all-around vision special quality.",
     "prerequisites": "None",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "dash",
@@ -1868,7 +1959,10 @@
     "name": "Death's Embrace",
     "description": "You have a close affinity with negative energy and are treated as undead for some effects.",
     "prerequisites": "Tomb-Tainted Soul, character level 3rd",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "deep-impact",
@@ -2024,7 +2118,10 @@
     "name": "Desert Wind Dodge",
     "description": "Bonuses while in Desert Wind stance",
     "prerequisites": "",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "destruction-devotion",
@@ -2060,7 +2157,10 @@
     "name": "Destructive Retribution",
     "description": "Undead you create explode when destroyed. When an undead you created is destroyed, it releases a burst of negative energy.",
     "prerequisites": "Corpsecrafter, ability to cast animate dead or create undead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "devastating-critical",
@@ -2107,49 +2207,70 @@
     "name": "Devil's Aura",
     "description": "Create aura of fear for 1 round",
     "prerequisites": "Cha 13, Intimidate 9 ranks, Devil's Favor",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "devils_favor",
     "name": "Devil's Favor",
     "description": "+2 bonus on attack, save, or check 1/day per devil-touched feat you have",
     "prerequisites": "Pact with devil",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "devils_flesh",
     "name": "Devil's Flesh",
     "description": "Gain bonus to natural armor and Intimidate based on number of devil-touched feats you have",
     "prerequisites": "Con 15, Devil's Favor",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "devils_sight",
     "name": "Devil's Sight",
     "description": "Gain darkvision 60 ft. and blindsight 30 ft. for 5 rounds 1/day per devil-touched feat you have",
     "prerequisites": "Wis 15, Devil's Favor",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "devils_stamina",
     "name": "Devil's Stamina",
     "description": "Gain 2 hp per devil-touched feat you have, and 1/day fast healing equal to number of devil-touched feats you have for 5 rounds",
     "prerequisites": "Devil's Favor, base Fort save +3",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "devils_tongue",
     "name": "Devil's Tongue",
     "description": "Daze one creature as standard action 1/day per devil-touched feat you have",
     "prerequisites": "Cha 15, Devil's Favor",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "devoted-bulwark",
     "name": "Devoted Bulwark",
     "description": "Better defense in Devoted Spirit stance",
     "prerequisites": "",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "devoted-inquisitor",
@@ -2241,7 +2362,10 @@
     "name": "Dilate Aura",
     "description": "Once/encounter, double range of your aura",
     "prerequisites": "Aura ability",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "dire-charge",
@@ -2297,14 +2421,20 @@
     "name": "Disrupting Spell",
     "description": "Your spell interferes with the spellcasting of an enemy",
     "prerequisites": "—",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "distant-horizon",
     "name": "Distant Horizon",
     "description": "Advanced Setting Sun tactics",
     "prerequisites": "Knowledge of Setting Sun discipline",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "distant-shot",
@@ -2400,35 +2530,50 @@
     "name": "Divine Censure",
     "description": "Cause evil outsiders to become shaken",
     "prerequisites": "Ability to turn undead, good alignment",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "Divine"
+    ]
   },
   {
     "id": "divine_defiance",
     "name": "Divine Defiance",
     "description": "Counter enemy's spell as an immediate action",
     "prerequisites": "Divine caster level 3rd, ability to turn or rebuke undead",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "Divine"
+    ]
   },
   {
     "id": "divine_justice",
     "name": "Divine Justice",
     "description": "Deal +2d6 damage with melee attacks against evil outsiders for 1 round",
     "prerequisites": "Ability to turn or rebuke undead",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "Divine"
+    ]
   },
   {
     "id": "divine_necromancer",
     "name": "Divine Necromancer",
     "description": "You can use your divine magic to enhance your necromancy spells.",
     "prerequisites": "Spell Focus (necromancy), ability to cast 3rd-level divine spells",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "Divine"
+    ]
   },
   {
     "id": "divine_soultouch",
     "name": "Divine Soultouch",
     "description": "You can invest essentia to improve your ability to turn or rebuke undead.",
     "prerequisites": "Turn or rebuke undead, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "Divine"
+    ]
   },
   {
     "id": "dodge",
@@ -3039,14 +3184,20 @@
     "name": "Encysted Soul",
     "description": "Your soul is protected within your body, making it difficult for you to be turned into an undead creature against your will.",
     "prerequisites": "Tomb-Tainted Soul",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "endure_sunlight",
     "name": "Endure Sunlight",
     "description": "You can withstand exposure to sunlight better than other undead.",
     "prerequisites": "Type: Undead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "enduring-ki",
@@ -3108,7 +3259,10 @@
     "name": "Enervating Touch",
     "description": "Your touch can drain the life force from living creatures.",
     "prerequisites": "Base attack bonus +4, Tomb-Tainted Soul",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "enhance-spell",
@@ -3131,7 +3285,10 @@
     "name": "Enhanced Animation",
     "description": "You can create more powerful skeletons and zombies.",
     "prerequisites": "Corpsecrafter, ability to cast animate dead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "enlarge-power",
@@ -3493,7 +3650,10 @@
     "name": "Expanded Soulmeld Capacity",
     "description": "One of your soulmelds has an increased essentia capacity.",
     "prerequisites": "Ability to shape soulmelds",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "expert-tactician",
@@ -3515,7 +3675,10 @@
     "name": "Expert Swimmer",
     "description": "You can hold your breath for 3 rounds per point of Constitution and gain a +4 bonus on Constitution checks to continue holding your breath. On a successful Swim check, you swim your land speed as a full-round action or half your land speed as a move action. Your natural swim speed increases by 10 feet.",
     "prerequisites": "Swim 4 ranks, Endurance",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "explosive-spell",
@@ -3769,7 +3932,10 @@
     "name": "Eyes of the Dead",
     "description": "You can see through the eyes of undead creatures you control.",
     "prerequisites": "Ability to rebuke or command undead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "fade-into-violence",
@@ -3792,7 +3958,10 @@
     "name": "Faith Unswerving",
     "description": "Advanced Devoted Spirit tactics",
     "prerequisites": "Knowledge of Devoted Spirit discipline",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "fast-healing",
@@ -3946,7 +4115,10 @@
     "name": "Flying Fish Leap",
     "description": "When leaping out of the water with a high jump, you ignore the penalty on the Jump check. You can also fling yourself over the surface of the water, leaping laterally just as far as you leap vertically.",
     "prerequisites": "Jump 8 ranks, Swim 4 ranks",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "focused-mind",
@@ -4131,224 +4303,320 @@
     "name": "Altitude Adaptation",
     "description": "Your body adapts quickly to changes in altitude, preventing you from suffering as much from altitude sickness. You gain a +4 bonus on all Fortitude saving throws to avoid the effects of altitude. Additionally, when you determine what effect the altitude has on you, you apply the effect for the next lower category of altitude than the category you are actually in.",
     "prerequisites": "Base Fortitude save bonus +2",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_arctic_priest",
     "name": "Arctic Priest",
     "description": "You can swap out prepared spells to cast spells to aid in exploring and surviving in frostfell areas. You can 'lose' any prepared spell that is not a domain spell to cast spells like control weather, create food and water, endure elements, heroes' feast, hibernate, protection from energy, and resist energy.",
     "prerequisites": "Access to Cold or Winter cleric domain",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_beckon_frozen",
     "name": "Beckon the Frozen",
     "description": "Creatures you summon are infused with cold energy and have the cold subtype. When you summon a creature using any summon spell, you can opt to summon a version from an extraplanar frostfell. The summoned creature gains the cold subtype, and its natural attacks deal an additional 1d6 points of cold damage.",
     "prerequisites": "Augment Summoning, Spell Focus (conjuration)",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_chosen_iborighu",
     "name": "Chosen of Iborighu",
     "description": "Your skin has a noticeable blue tint and your left eye is pale blue; these features identify you as an ally to the church of Iborighu and grant you supernatural qualities. Cleric is now a favored class. Once per day, you can cause one creature within 30 feet that meets your gaze to take cold damage equal to your Charisma modifier + 3 and become fatigued (Fortitude negates).",
     "prerequisites": "Patron deity must be Iborighu",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_cold_endurance",
     "name": "Cold Endurance",
     "description": "Either because of growing up in a frostfell or training your body and mind to ignore the biting effect of cold, you can exist with ease in low-temperature environments. You can exist comfortably in conditions between 0° F and 90° F without having to make Fortitude saves. You also gain a +2 bonus on saving throws against cold effects.",
     "prerequisites": "Base Fortitude save bonus +2",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_cold_focus",
     "name": "Cold Focus",
     "description": "Your cold spells are more potent than normal. Add +1 to the DC for all saving throws against spells you cast with the cold descriptor. This bonus stacks with similar bonuses, such as those granted by Spell Focus and Greater Spell Focus.",
     "prerequisites": "None",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_cold_spell_specialization",
     "name": "Cold Spell Specialization",
     "description": "You do additional damage with cold spells. In cold areas (temperature at or below 40° F), you gain a +1 bonus per die to any dice rolled to determine damage caused by cold spells you cast. In areas of extreme cold (below –20° F), the damage bonus increases to +2 per die.",
     "prerequisites": "Con 13, Snowcasting, Frozen Magic",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_craft_skull_talisman",
     "name": "Craft Skull Talisman",
     "description": "You can create skull talismans, which carry spells within themselves. You can create a skull talisman of any spell you know that targets one or more creatures. Whoever destroys the skull is the target of the spell. The art was perfected by neanderthal druids.",
     "prerequisites": "Caster level 6th",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "Item Creation"
+    ]
   },
   {
     "id": "frostburn_feat_faith_frost",
     "name": "Faith in the Frost",
     "description": "You channel frozen energies from your deity when you turn or rebuke creatures. When you successfully turn or rebuke a creature, it takes cold damage equal to your Charisma modifier as blasts of ice and cold energy tear through its body.",
     "prerequisites": "Ability to turn or rebuke creatures, access to Cold or Winter cleric domain",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_frostfell_prodigy",
     "name": "Frostfell Prodigy",
     "description": "You gain additional bonus spells in cold regions. In cold areas (temperature at or below 40° F), the ability score used to determine how many bonus spells you may prepare or cast is treated as if it were 2 higher. In areas of extreme cold (below –20° F), the ability score is treated as if it were 4 higher.",
     "prerequisites": "Con 13, Snowcasting, Frozen Magic, Cold Focus",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_frozen_berserker",
     "name": "Frozen Berserker",
     "description": "When you enter your barbarian rage, your body becomes infused with cold energy. As long as you are under the effects of a barbarian rage, you gain the cold subtype. You gain immunity to cold, but have vulnerability to fire.",
     "prerequisites": "Ability to rage",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_frozen_magic",
     "name": "Frozen Magic",
     "description": "Your cold spells are more powerful when you cast them in a cold region. In cold areas (temperature at or below 40° F), spells with the cold descriptor cast by you manifest at caster level +1. In areas of extreme cold (below –20° F), cold spells cast by you manifest at caster level +2.",
     "prerequisites": "Con 13, Snowcasting",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_frozen_wild_shape",
     "name": "Frozen Wild Shape",
     "description": "You can assume the form of magical beasts with the cold subtype. You may use your wild shape ability to assume the form of any magical beast with the cold subtype. Your new form must still fall within the size limitations of your wild shape ability.",
     "prerequisites": "Base Fortitude save bonus +6, wild shape ability",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "Wild"
+    ]
   },
   {
     "id": "frostburn_feat_greater_cold_focus",
     "name": "Greater Cold Focus",
     "description": "Your cold spells are now even more potent than before. Add +1 to the DC for all saving throws against spells with the cold descriptor. This bonus stacks with similar bonuses, such as those from Cold Focus, Spell Focus, and Greater Spell Focus.",
     "prerequisites": "Cold Focus",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_ice_harmonics",
     "name": "Ice Harmonics",
     "description": "You can use your voice to shatter ice. By expending one of your daily uses of bardic music, you can cause any unattended nonmagical ice object or portion of ice within 30 feet to explode violently. Any creature in the 5-foot square takes 2d6 + your Charisma modifier piercing damage. Creatures made of ice take double damage.",
     "prerequisites": "Bardic music ability, Perform (sing) 6 ranks",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_icy_calling",
     "name": "Icy Calling",
     "description": "Your summon spells work better in the frostfell if you summon native creatures. In cold areas (temperature at or below 40° F), creatures native to cold environments and creatures with the cold subtype summoned by you gain a +4 enhancement bonus to Strength and Dexterity. In areas of extreme cold (below –20° F), summoned creatures have maximum hit points.",
     "prerequisites": "Con 13, Snowcasting",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_improved_cold_endurance",
     "name": "Improved Cold Endurance",
     "description": "Your training and natural hardiness have improved your natural resistance to cold temperatures. You gain resistance to cold 5. If you already have resistance to cold, it increases by 5 (maximum resistance to cold 15). You can gain this feat multiple times.",
     "prerequisites": "Base Fortitude save bonus +6, Cold Endurance",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_improved_frosty_touch",
     "name": "Improved Frosty Touch",
     "description": "Your frosty touch causes more cold damage. Your frosty touch ability now deals 2 points of cold damage instead of 1 point.",
     "prerequisites": "Uldra",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_mark_hleid",
     "name": "Mark of Hleid",
     "description": "You bear a birthmark in the shape of the holy symbol of Hleid somewhere on your body; this mark identifies you as an ally of the church of Hleid and grants you supernatural qualities. You are immune to the frost touch special attack of a rimefire eidolon and can handle rimefire ice barehanded. Cleric is now a favored class. You gain a +2 sacred bonus to AC against evil-aligned creatures with the cold subtype.",
     "prerequisites": "Your patron deity must be Hleid",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_mountaineer",
     "name": "Mountaineer",
     "description": "You are a particularly gifted explorer and mountain climber. You get a +2 bonus on all Climb and Survival checks.",
     "prerequisites": "None",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_piercing_cold",
     "name": "Piercing Cold",
     "description": "Your cold spells are so cold that they can damage creatures normally resistant or immune to cold. Piercing cold spells completely ignore any resistance to cold a creature possesses. Creatures normally immune to cold take half damage (or one-quarter on a successful saving throw). A piercing cold spell uses up a spell slot one level higher than the spell's actual level.",
     "prerequisites": "None",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_primeval_wild_shape",
     "name": "Primeval Wild Shape",
     "description": "Your wild shape forms are stronger than normal. When you assume a wild shape form, you can opt to cause the shape to be a primeval form from the ancient past during a vast ice age. Grants +2 racial bonus to Strength, +2 bonus to natural armor, and resistance to cold 10, but duration is 1 round per druid level instead of 1 hour per druid level.",
     "prerequisites": "Wild shape ability",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "Wild"
+    ]
   },
   {
     "id": "frostburn_feat_primitive_caster",
     "name": "Primitive Caster",
     "description": "You use screeches, wild gesticulations, and extra material components to give your spells additional power. For each component (verbal, somatic, or material) you voluntarily add to a spell that doesn't already have it, you increase the effective caster level by +1.",
     "prerequisites": "None",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_sea_legs",
     "name": "Sea Legs",
     "description": "You are accustomed to the rolling motion on board a ship. As long as you are on board a ship, you get a +2 bonus on all Balance and Tumble checks, and a +1 bonus on Initiative checks.",
     "prerequisites": "None",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_smite_fiery_foe",
     "name": "Smite Fiery Foe",
     "description": "You can smite creatures with the fire subtype. Once per day, you may attempt to smite a creature with the fire subtype. You add your Charisma modifier to your attack roll and deal 1 extra point of cold damage per character level.",
     "prerequisites": "Smite ability",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_snowcasting",
     "name": "Snowcasting",
     "description": "You add ice or snow to your spell's components to make them more powerful. If you add a handful of snow or ice as an additional material component, the spell gains the cold descriptor. If added to a spell with the cold descriptor, you increase the effective level by +1.",
     "prerequisites": "Con 13",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_snowflake_wardance",
     "name": "Snowflake Wardance",
     "description": "You have mastered the snowflake wardance, a mystical fighting style with slashing weapons. By expending one daily use of bardic music, you add your Charisma modifier to attack rolls with any slashing melee weapon you wield in one hand for a number of rounds equal to your ranks in Perform (dance).",
     "prerequisites": "Bardic music ability, Perform (dance) 6 ranks",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_snowrunner",
     "name": "Snowrunner",
     "description": "You are particularly adept at moving through snow and over ice. You can move through loose snow at full speed. You gain a +5 competence bonus on Balance checks to avoid slipping when you move across icy surfaces.",
     "prerequisites": "Woodland stride ability",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_storm_magic",
     "name": "Storm Magic",
     "description": "You gain a boost in spellcasting power during storms. All spells you cast while you are affected by a storm (either natural or magical) manifest at +1 caster level.",
     "prerequisites": "None",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_sugliin_mastery",
     "name": "Sugliin Mastery",
     "description": "You are a master at fighting with the massive sugliin. You can attack with a sugliin as if it were a normal weapon, making a single attack as a standard action or a full attack as a full-round action.",
     "prerequisites": "Base attack bonus +5, Exotic Weapon Proficiency (sugliin)",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_winters_champion",
     "name": "Winter's Champion",
     "description": "Your paladin spell list is enhanced. You may add the 1st-, 2nd-, 3rd-, and 4th-level spells granted by the Cold and Winter domains as paladin spells of the same levels.",
     "prerequisites": "Paladin level 1st",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "frostburn_feat_winters_mount",
     "name": "Winter's Mount",
     "description": "Your special mount is native to the frostfell. Your special mount gains the cold subtype, immunity to cold, vulnerability to fire, and a +2 racial bonus to Constitution.",
     "prerequisites": "Special mount ability",
-    "source": "Frostburn"
+    "source": "Frostburn",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "ghost-attack",
@@ -4370,7 +4638,10 @@
     "name": "Gloom Razor",
     "description": "Advanced Shadow Hand tactics",
     "prerequisites": "Knowledge of Shadow Hand discipline",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "gnome-foe-killer",
@@ -4523,7 +4794,10 @@
     "name": "Great Captain",
     "description": "If you are in command of a vessel, you can use the aid another action to assist all other persons on board who are performing the same action in the current round. Commanding the vessel in combat is a move action for you.",
     "prerequisites": "Profession (sailor) 7 ranks, Knowledge (geography) 7 ranks, Leadership",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "greater-kiai-shout",
@@ -4794,7 +5068,10 @@
     "name": "Hardened Flesh",
     "description": "Zombies you create have tougher, more resilient flesh.",
     "prerequisites": "Corpsecrafter, ability to cast animate dead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "hawks-vision",
@@ -4860,7 +5137,10 @@
     "name": "Healing Soul",
     "description": "You can invest essentia to heal yourself as a swift action.",
     "prerequisites": "Ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "hear-the-unseen",
@@ -5516,14 +5796,20 @@
     "name": "Incarnum-Fortified Body",
     "description": "You can invest essentia to gain damage reduction.",
     "prerequisites": "Con 13, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "incarnum_spellshaping",
     "name": "Incarnum Spellshaping",
     "description": "You can invest essentia into a spell to increase its save DC.",
     "prerequisites": "Ability to cast spells, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "inhuman-reach",
@@ -5691,7 +5977,10 @@
     "name": "Jack of All Trades (Libris Mortis)",
     "description": "You can use any skill untrained.",
     "prerequisites": "Intelligence 13+",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "karmic-strike",
@@ -5816,7 +6105,10 @@
     "name": "Landwalker",
     "description": "You can survive out of the water for 3 hours per point of Constitution. After this point you must make a Fortitude saving throw each hour (DC 15, +1 for each previous check) or begin to suffocate.",
     "prerequisites": "Aquatic elf",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "law-devotion",
@@ -6191,63 +6483,90 @@
     "name": "Mark of Avernus",
     "description": "Once/encounter, make melee or ranged attack, or use a spell-like ability as an immediate action",
     "prerequisites": "Brand of the Nine Hells, allegiance to Bel",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "mark_of_cania",
     "name": "Mark of Cania",
     "description": "When you fail at an attack, gain cumulative bonus on attacks, saves, checks until you succeed",
     "prerequisites": "Brand of the Nine Hells, allegiance to Mephistopheles",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "mark_of_dis",
     "name": "Mark of Dis",
     "description": "Your starting square is not threatened, +4 to AC or on a save as immediate action 1/round",
     "prerequisites": "Brand of the Nine Hells, allegiance to Dispater",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "mark_of_maladomini",
     "name": "Mark of Maladomini",
     "description": "Issue pool of filth that forces Balance checks and causes creatures to become sickened",
     "prerequisites": "Brand of the Nine Hells, allegiance to Baalzebul",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "mark_of_malbolge",
     "name": "Mark of Malbolge",
     "description": "Gain fleshy tumors that can give you a variety of benefits",
     "prerequisites": "Brand of the Nine Hells, allegiance to Glasya",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "mark_of_minauros",
     "name": "Mark of Minauros",
     "description": "Gain +2 bonus on charge attacks, and your starting square is not threatened",
     "prerequisites": "Brand of the Nine Hells, allegiance to Mammon",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "mark_of_nessus",
     "name": "Mark of Nessus",
     "description": "An enemy must make a Will save before it can attack you, or it must target another foe",
     "prerequisites": "Brand of the Nine Hells, allegiance to Asmodeus",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "mark_of_phlegethos",
     "name": "Mark of Phlegethos",
     "description": "When you take damage, you can gain bonuses on attacks, saves, or checks",
     "prerequisites": "Brand of the Nine Hells, allegiance to Belial or Fierna",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "mark_of_stygia",
     "name": "Mark of Stygia",
     "description": "Do not need to make Balance checks on slippery surfaces, deal +1d6 cold damage, other benefits",
     "prerequisites": "Brand of the Nine Hells, allegiance to Levistus",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "markings-of-the-blessed",
@@ -6373,14 +6692,20 @@
     "name": "Martial Stance",
     "description": "Learn one martial stance",
     "prerequisites": "",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "martial-study",
     "name": "Martial Study",
     "description": "Learn one martial maneuver (up to 3 times)",
     "prerequisites": "",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "martial-weapon-proficiency",
@@ -6525,21 +6850,30 @@
     "name": "Midnight Augmentation",
     "description": "You can invest essentia to reduce the cost of augmenting psionic powers.",
     "prerequisites": "Ability to manifest powers, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "midnight_dodge",
     "name": "Midnight Dodge",
     "description": "You can invest essentia to increase your AC against one opponent.",
     "prerequisites": "Dex 13, Dodge, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "midnight_metamagic",
     "name": "Midnight Metamagic",
     "description": "You can invest essentia to reduce the spell slot increase for metamagic feats.",
     "prerequisites": "Any metamagic feat, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "Metamagic"
+    ]
   },
   {
     "id": "mind-drain",
@@ -6714,7 +7048,10 @@
     "name": "Music of the Outer Spheres",
     "description": "You can use your bardic music to create discordant, insane sounds particularly effective against aberrations. You gain three additional bardic music abilities: Lull Aberration (slows aberrations), Sicken Aberration (makes aberrations sickened), and Vitalize Aberration (+2 morale bonus to special attack DCs and +1 dodge bonus to AC for aberrations).",
     "prerequisites": "Perform (any) 11 ranks, bard level 9th",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "narrow-mind",
@@ -6772,14 +7109,20 @@
     "name": "Necromantic Might",
     "description": "Your necromancy spells are more difficult to resist.",
     "prerequisites": "Spell Focus (necromancy)",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "necromantic_presence",
     "name": "Necromantic Presence",
     "description": "Your presence unnerves living creatures and empowers undead.",
     "prerequisites": "Ability to rebuke or command undead, Charisma 13+",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "necropolis-born",
@@ -6842,7 +7185,10 @@
     "name": "Nimble Bones",
     "description": "Skeletons you create are faster and more agile than normal.",
     "prerequisites": "Corpsecrafter, ability to cast animate dead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "nonlethal-substitution",
@@ -6902,7 +7248,10 @@
     "name": "Old Salt",
     "description": "You gain a +1 bonus on Balance, Profession (sailor), and Use Rope checks. You can use a Profession (sailor) check to predict the weather (as described in the Survival skill).",
     "prerequisites": "Profession (sailor) 5 ranks",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "open-minded",
@@ -6919,21 +7268,30 @@
     "name": "Open Greater Chakra",
     "description": "You can bind one soulmeld to your throat or waist chakra.",
     "prerequisites": "Ability to shape soulmelds, Open Lesser Chakra",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "open_least_chakra",
     "name": "Open Least Chakra",
     "description": "You can bind one soulmeld to your crown, feet, or hands chakra.",
     "prerequisites": "Ability to shape soulmelds",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "open_lesser_chakra",
     "name": "Open Lesser Chakra",
     "description": "You can bind one soulmeld to your arms, brow, or shoulders chakra.",
     "prerequisites": "Ability to shape soulmelds, Open Least Chakra",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "opportunity-power",
@@ -7042,14 +7400,20 @@
     "name": "Parrying Shield",
     "description": "You have studied advanced techniques for battling foes whose attacks normally bypass armor. You use your shield to block or deflect rays and other touch attacks. You gain your shield bonus (and the shield's enhancement bonus, if any) as an addition to your touch AC.",
     "prerequisites": "Shield proficiency",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "perfect-clarity-of-mind-and-body",
     "name": "Perfect Clarity of Mind and Body",
     "description": "Advanced Diamond Mind tactics",
     "prerequisites": "Knowledge of Diamond Mind discipline",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "perfect-health",
@@ -7150,7 +7514,10 @@
     "name": "Persistent Refusal",
     "description": "Make another save against ongoing effect",
     "prerequisites": "Ability to turn or rebuke undead",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "phalanx-fighting",
@@ -7234,7 +7601,10 @@
     "name": "Pious Defiance",
     "description": "Gain bonus on Will saves equal to 1/2 character level as an immediate action",
     "prerequisites": "Ability to turn or rebuke undead",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "planar-turning",
@@ -7399,7 +7769,10 @@
     "name": "Positive Energy Resistance",
     "description": "You have some resistance to positive energy effects.",
     "prerequisites": "Tomb-Tainted Soul",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "power-attack",
@@ -7817,21 +8190,30 @@
     "name": "Psycarnum Blade",
     "description": "You can invest essentia to enhance your mind blade.",
     "prerequisites": "Mind blade class feature, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "psycarnum_crystal",
     "name": "Psycarnum Crystal",
     "description": "You can invest essentia to enhance your psicrystal.",
     "prerequisites": "Psicrystal, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "psycarnum_infusion",
     "name": "Psycarnum Infusion",
     "description": "You can invest essentia to increase the save DC of your psionic powers.",
     "prerequisites": "Ability to manifest powers, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "psychic-luck",
@@ -7872,7 +8254,10 @@
     "name": "Quick Recovery",
     "description": "Whenever you begin your turn stunned or dazed, you can make a new saving throw at the original DC of the effect in an attempt to recover. Recovering is a move action. If the effect did not allow a saving throw, you can recover by succeeding on a Will save (DC 10 + 1/2 HD or caster level of originator + relevant ability modifier).",
     "prerequisites": "None",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "quicken-power",
@@ -7889,7 +8274,10 @@
     "name": "Quicken Turning",
     "description": "You can attempt to turn or rebuke undead as a free action.",
     "prerequisites": "Ability to turn or rebuke undead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "Metamagic"
+    ]
   },
   {
     "id": "ranged-disarm",
@@ -8054,14 +8442,20 @@
     "name": "Rapid Regeneration",
     "description": "Regeneration increases by 1",
     "prerequisites": "Regeneration ability",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "rapid_swimming",
     "name": "Rapid Swimming",
     "description": "Your swim speed increases by 20 feet.",
     "prerequisites": "Natural swim speed, base Fortitude save +2",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "razing-strike",
@@ -8083,7 +8477,10 @@
     "name": "Reaping Talons",
     "description": "Advanced Tiger Claw two-weapon tactics",
     "prerequisites": "Knowledge of Tiger Claw discipline",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "reckless-offense",
@@ -8280,21 +8677,30 @@
     "name": "Sahuagin Flip",
     "description": "After making a single melee attack, you can use the withdraw action (moving up to twice your swim speed) as a move action. You can only use this feat while swimming.",
     "prerequisites": "Swim speed, Dex 13, Dodge",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "sailors_balance",
     "name": "Sailor's Balance",
     "description": "You gain a +5 competence bonus on Balance checks made while on the deck or in the rigging of a ship. You can move across a slippery deck at your normal speed.",
     "prerequisites": "Profession (sailor) 4 ranks",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "sanctify_water",
     "name": "Sanctify Water",
     "description": "By expending a daily turn undead attempt, you can infuse the water around you with positive energy. All creatures in a 20-foot radius take damage as though struck by holy water. The water retains positive energy for 1 + Charisma modifier rounds.",
     "prerequisites": "Cha 13, ability to channel positive energy",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "sanctum-spell",
@@ -8572,21 +8978,30 @@
     "name": "Sapphire Fist",
     "description": "You can invest essentia to enhance your unarmed strikes.",
     "prerequisites": "Improved Unarmed Strike, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "sapphire_smite",
     "name": "Sapphire Smite",
     "description": "You can invest essentia to enhance your smite ability.",
     "prerequisites": "Smite ability, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "sapphire_sprint",
     "name": "Sapphire Sprint",
     "description": "You can invest essentia to increase your base land speed.",
     "prerequisites": "Ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "savage-grapple",
@@ -8646,14 +9061,20 @@
     "name": "Scorching Sirocco",
     "description": "Advanced Desert Wind fire tactics",
     "prerequisites": "Knowledge of Desert Wind discipline",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "scourge_of_the_seas",
     "name": "Scourge of the Seas",
     "description": "You can make an Intimidate check to daunt the captain of another ship who can see you or your distinctive colors. If successful, the target is frightened for as long as they can see you and for 1d6x10 minutes afterward.",
     "prerequisites": "Cha 15, Intimidate 5 ranks",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "scribe-epic-scroll",
@@ -8716,7 +9137,10 @@
     "name": "Sea Legs",
     "description": "As long as you are on board a ship, you get a +2 bonus on Balance and Tumble checks, and a +1 bonus on initiative checks.",
     "prerequisites": "None",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "self-concealment",
@@ -8753,28 +9177,40 @@
     "name": "Shadow Blade",
     "description": "Add Dex to damage in Shadow Hand stance",
     "prerequisites": "",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "shape_soulmeld",
     "name": "Shape Soulmeld",
     "description": "You can shape one specific soulmeld.",
     "prerequisites": "None",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "shards-of-granite",
     "name": "Shards of Granite",
     "description": "Advanced Stone Dragon power tactics",
     "prerequisites": "Knowledge of Stone Dragon discipline",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "share_soulmeld",
     "name": "Share Soulmeld",
     "description": "You can share the benefits of your soulmelds with your animal companion or familiar.",
     "prerequisites": "Animal companion or familiar, ability to shape soulmelds",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "sharp-shooting",
@@ -8858,7 +9294,10 @@
     "name": "Ship's Mage",
     "description": "Add +1 to the caster level of all spells cast while you are aboard a ship that is familiar to you. In addition, spells you cast while aboard a ship that is familiar to you deal no damage to that ship. It takes one week to become familiar with a ship.",
     "prerequisites": "Profession (sailor) 2 ranks, Spellcraft 4 ranks",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "sidestep-charge",
@@ -8944,14 +9383,20 @@
     "name": "Soulsight",
     "description": "You can invest essentia to gain the ability to detect incarnum auras.",
     "prerequisites": "Ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "soultouched_spellcasting",
     "name": "Soultouched Spellcasting",
     "description": "You can convert spell slots into essentia.",
     "prerequisites": "Ability to cast spells, ability to invest essentia",
-    "source": "Magic of Incarnum"
+    "source": "Magic of Incarnum",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "sound-of-silence",
@@ -9190,14 +9635,20 @@
     "name": "Stealthy Bones",
     "description": "Skeletons you create are more difficult to detect.",
     "prerequisites": "Corpsecrafter, ability to cast animate dead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "steam_magic",
     "name": "Steam Magic",
     "description": "You can cast fire spells into water without a Spellcraft check, causing terrible gouts of scalding steam instead of extinguishing the effect.",
     "prerequisites": "Spellcraft 4 ranks",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "stone-form",
@@ -9224,7 +9675,10 @@
     "name": "Stone Power",
     "description": "Trade attack for temp HP (like Power Attack)",
     "prerequisites": "",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "stone-rage",
@@ -9278,14 +9732,20 @@
     "name": "Storm Magic",
     "description": "Spells you cast that affect storms gain +1 caster level.",
     "prerequisites": "None",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "stormguard-warrior",
     "name": "Stormguard Warrior",
     "description": "Advanced Iron Heart weapon tactics",
     "prerequisites": "Knowledge of Iron Heart discipline",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "strength-devotion",
@@ -9420,7 +9880,10 @@
     "name": "Sunken Song",
     "description": "You can produce bardic music effects underwater, despite the difficulty of singing or playing instruments in such an environment.",
     "prerequisites": "Bardic music, Perform (sing) 4 ranks",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "superior-initiative",
@@ -9442,14 +9905,20 @@
     "name": "Superior Unarmed Strike",
     "description": "Improved unarmed damage",
     "prerequisites": "",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "supernatural_instincts",
     "name": "Supernatural Instincts",
     "description": "Creature using a supernatural ability provokes attack of opportunity from you",
     "prerequisites": "Combat Reflexes",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "sure-hand",
@@ -9616,7 +10085,10 @@
     "name": "Swim-By Attack",
     "description": "When swimming, you can take a move action and another standard action (such as an attack) at any point during the move.",
     "prerequisites": "Swim speed",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "tactile-trapsmith",
@@ -9727,7 +10199,10 @@
     "name": "Thrall Bred",
     "description": "You were spawned in the breeding pits of the mind flayers or the beholders. When you are within 30 feet of your designated special charge, you gain a +1 morale bonus on damage rolls and saving throws. If your special charge is not within 30 feet, or is dead or incapacitated, you take a -2 morale penalty. You can designate a special charge only once per month. Your charge must have more Hit Dice than you.",
     "prerequisites": "Humanoid, Con 13",
-    "source": "Lords of Madness"
+    "source": "Lords of Madness",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "thrall_to_demon",
@@ -9817,14 +10292,20 @@
     "name": "Tomb-Tainted Soul",
     "description": "Your soul is tainted by the negative energy of undeath. You are healed by negative energy and harmed by positive energy as if you were undead.",
     "prerequisites": "None",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "toothed_blow",
     "name": "Toothed Blow",
     "description": "Your unarmed strikes avoid the usual underwater penalties for bludgeoning weapons.",
     "prerequisites": "Str 13, Improved Unarmed Strike",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "touch-of-healing",
@@ -10123,7 +10604,10 @@
     "name": "Undead Leadership",
     "description": "You can attract and command undead followers.",
     "prerequisites": "Ability to rebuke or command undead, character level 6th",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "underfoot-combat",
@@ -10151,7 +10635,10 @@
     "name": "Undo Resistance",
     "description": "Deal sneak attack with cold iron weapon and reduce a creature's spell resistance",
     "prerequisites": "Sneak attack, sudden strike, or skirmish ability",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "unholy-strike",
@@ -10192,7 +10679,10 @@
     "name": "Vengeful Surge",
     "description": "When you save against a spell or a spell-like or supernatural ability, gain +2 on damage against creature that targeted you for 1 round",
     "prerequisites": "Iron Will",
-    "source": "Fiendish Codex II: Tyrants of the Nine Hells"
+    "source": "Fiendish Codex II: Tyrants of the Nine Hells",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "venoms-gift",
@@ -10254,7 +10744,10 @@
     "name": "Vicious Claws",
     "description": "Undead you create have more dangerous natural attacks.",
     "prerequisites": "Corpsecrafter, ability to cast animate dead or create undead",
-    "source": "Libris Mortis"
+    "source": "Libris Mortis",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "victors-luck",
@@ -10346,7 +10839,10 @@
     "name": "Water Adaptation",
     "description": "You can breathe water and air equally well, and gain a swim speed of 20 feet.",
     "prerequisites": "Aquatic half-elf",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "waterspawn",
@@ -10436,7 +10932,10 @@
     "name": "White Raven Defense",
     "description": "AC bonus in White Raven stance with allies",
     "prerequisites": "",
-    "source": "Tome of Battle"
+    "source": "Tome of Battle",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "widen-power",
@@ -10463,7 +10962,10 @@
     "name": "Windsinger",
     "description": "You can use bardic music to alter the wind's direction or intensity, helping ships avoid battles or navigate more effectively.",
     "prerequisites": "Bardic music, Perform (sing or wind instruments) 5 ranks",
-    "source": "Stormwrack"
+    "source": "Stormwrack",
+    "type": [
+      "General"
+    ]
   },
   {
     "id": "winged-warrior",
