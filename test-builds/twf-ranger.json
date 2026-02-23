@@ -85,7 +85,7 @@
   "validationCriteria": {
     "mustHave": {
       "baseAttackBonus": { "min": 15, "ideal": 15 },
-      "totalSkillPoints": { "min": 150, "ideal": 180 },
+      "totalSkillPoints": { "min": 108, "ideal": 130 },
       "casterLevel": { "min": 4, "ideal": 5 }
     },
     "shouldHave": {

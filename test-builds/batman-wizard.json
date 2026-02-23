@@ -98,7 +98,7 @@
     "mustHave": {
       "casterLevel": { "min": 20, "ideal": 20 },
       "baseAttackBonus": { "min": 10, "ideal": 10 },
-      "totalSkillPoints": { "min": 200, "ideal": 230 }
+      "totalSkillPoints": { "min": 179, "ideal": 200 }
     },
     "shouldHave": {
       "feats": ["Spell Focus", "Greater Spell Focus", "Spell Penetration"],

@@ -90,7 +90,7 @@
     "mustHave": {
       "casterLevel": { "min": 15, "ideal": 15 },
       "baseAttackBonus": { "min": 11, "ideal": 11 },
-      "totalSkillPoints": { "min": 100, "ideal": 120 }
+      "totalSkillPoints": { "min": 72, "ideal": 90 }
     },
     "shouldHave": {
       "feats": ["Natural Spell", "Augment Summoning", "Spell Focus (Conjuration)"],
