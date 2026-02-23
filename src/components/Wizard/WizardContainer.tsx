@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Box, Stepper, Step, StepLabel, Paper } from '@mui/material';
 import InitialSetup from '../../steps/InitialSetup';
+import RaceSelection from '../../steps/RaceSelection';
 import AbilityScores from '../../steps/AbilityScores';
 import GoalSetting from '../../steps/GoalSetting';
 import OptimizationResults from '../../steps/OptimizationResults';
@@ -8,6 +9,7 @@ import CharacterReview from '../../steps/CharacterReview';
 
 const steps = [
   'Initial Setup',
+  'Race Selection',
   'Ability Scores',
   'Goal Setting',
   'Optimization',
@@ -30,12 +32,14 @@ function WizardContainer() {
       case 0:
         return <InitialSetup onNext={handleNext} />;
       case 1:
-        return <AbilityScores onNext={handleNext} onBack={handleBack} />;
+        return <RaceSelection onNext={handleNext} onBack={handleBack} />;
       case 2:
-        return <GoalSetting onNext={handleNext} onBack={handleBack} />;
+        return <AbilityScores onNext={handleNext} onBack={handleBack} />;
       case 3:
-        return <OptimizationResults onNext={handleNext} onBack={handleBack} />;
+        return <GoalSetting onNext={handleNext} onBack={handleBack} />;
       case 4:
+        return <OptimizationResults onNext={handleNext} onBack={handleBack} />;
+      case 5:
         return <CharacterReview onBack={handleBack} />;
       default:
         return null;

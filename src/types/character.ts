@@ -1,7 +1,8 @@
 import { ClassSelection, LevelProgression } from './classes';
 import { CompleteCharacter } from './complete';
+import { CharacterRace } from './races';
 
-export type FocusType = 'melee' | 'ranged' | 'spells' | 'healing' | 'hp';
+export type FocusType = 'melee' | 'ranged' | 'spells' | 'healing' | 'hp' | 'skills';
 
 export interface AbilityScores {
   strength: number;
@@ -17,9 +18,11 @@ export interface CharacterState {
   totalLevel: number;
   concept: string;
   rulesSources: string[];
+  race?: CharacterRace;
 
-  // Step 2: Ability Scores
-  abilityScores?: AbilityScores;
+  // Step 2: Ability Scores (base scores before racial modifiers)
+  baseAbilityScores?: AbilityScores;
+  abilityScores?: AbilityScores; // Final scores with racial modifiers
   assumeMagicItems?: boolean; // Assume standard wealth-appropriate INT-boosting items
 
   // Step 3: Goal Setting
@@ -38,6 +41,7 @@ export interface CharacterState {
 export interface CharacterContextType {
   state: CharacterState;
   updateInitialSetup: (level: number, concept: string, sources: string[]) => void;
+  updateRace: (race: CharacterRace) => void;
   updateAbilityScores: (scores: AbilityScores, assumeMagicItems?: boolean) => void;
   updateGoals: (
     classes: ClassSelection[],

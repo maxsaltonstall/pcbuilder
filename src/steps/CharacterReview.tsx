@@ -277,9 +277,45 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
               .map(([className, levels]) => `${className} ${levels}`)
               .join(' / ')}
           </Typography>
+          {state.race && (
+            <Chip
+              label={state.race.raceName}
+              size="small"
+              color="secondary"
+              sx={{ mt: 1 }}
+            />
+          )}
         </Box>
 
         <Divider sx={{ my: 2 }} />
+
+        {state.race && (
+          <Box sx={{ mb: 2 }}>
+            <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+              Racial Traits
+            </Typography>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
+              {Object.entries(state.race.abilityModifiers).length > 0 && (
+                Object.entries(state.race.abilityModifiers).map(([ability, modifier]) => (
+                  <Chip
+                    key={ability}
+                    label={`${ability.substring(0, 3).toUpperCase()} ${modifier > 0 ? '+' : ''}${modifier}`}
+                    size="small"
+                    color={modifier > 0 ? 'success' : 'default'}
+                  />
+                ))
+              )}
+              {state.race.traits.slice(0, 3).map((trait, index) => (
+                <Chip
+                  key={index}
+                  label={trait.name}
+                  size="small"
+                  variant="outlined"
+                />
+              ))}
+            </Box>
+          </Box>
+        )}
 
         <Box sx={{ mb: 2 }}>
           <Typography variant="subtitle2" color="text.secondary" gutterBottom>

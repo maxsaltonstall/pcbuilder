@@ -8,9 +8,11 @@ import {
 } from '../types/character';
 import { ClassSelection, LevelProgression } from '../types/classes';
 import { CompleteCharacter } from '../types/complete';
+import { CharacterRace } from '../types/races';
 
 type CharacterAction =
   | { type: 'UPDATE_INITIAL_SETUP'; payload: { level: number; concept: string; sources: string[] } }
+  | { type: 'UPDATE_RACE'; payload: CharacterRace }
   | { type: 'UPDATE_ABILITY_SCORES'; payload: { scores: AbilityScores; assumeMagicItems?: boolean } }
   | {
       type: 'UPDATE_GOALS';
@@ -35,10 +37,27 @@ function characterReducer(state: CharacterState, action: CharacterAction): Chara
         concept: action.payload.concept,
         rulesSources: action.payload.sources,
       };
-    case 'UPDATE_ABILITY_SCORES':
+    case 'UPDATE_RACE':
       return {
         ...state,
-        abilityScores: action.payload.scores,
+        race: action.payload,
+      };
+    case 'UPDATE_ABILITY_SCORES':
+      // Apply racial modifiers to base scores
+      const baseScores = action.payload.scores;
+      const finalScores = state.race ? {
+        strength: baseScores.strength + (state.race.abilityModifiers.strength || 0),
+        dexterity: baseScores.dexterity + (state.race.abilityModifiers.dexterity || 0),
+        constitution: baseScores.constitution + (state.race.abilityModifiers.constitution || 0),
+        intelligence: baseScores.intelligence + (state.race.abilityModifiers.intelligence || 0),
+        wisdom: baseScores.wisdom + (state.race.abilityModifiers.wisdom || 0),
+        charisma: baseScores.charisma + (state.race.abilityModifiers.charisma || 0),
+      } : baseScores;
+
+      return {
+        ...state,
+        baseAbilityScores: baseScores,
+        abilityScores: finalScores,
         assumeMagicItems: action.payload.assumeMagicItems,
       };
     case 'UPDATE_GOALS':
@@ -80,6 +99,8 @@ export function CharacterProvider({ children }: { children: ReactNode }) {
     state,
     updateInitialSetup: (level, concept, sources) =>
       dispatch({ type: 'UPDATE_INITIAL_SETUP', payload: { level, concept, sources } }),
+    updateRace: (race) =>
+      dispatch({ type: 'UPDATE_RACE', payload: race }),
     updateAbilityScores: (scores, assumeMagicItems) =>
       dispatch({ type: 'UPDATE_ABILITY_SCORES', payload: { scores, assumeMagicItems } }),
     updateGoals: (classes, feats, skills, focus) =>
