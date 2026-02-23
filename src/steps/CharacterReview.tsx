@@ -15,12 +15,17 @@ import {
   Accordion,
   AccordionSummary,
   AccordionDetails,
+  Alert,
+  LinearProgress,
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { useCharacter } from '../context/CharacterContext';
 import { calculateTotalSkillPoints, getAbilityModifier, getSkillPointsPerLevel, getMagicItemIntBonus } from '../services/skillCalculator';
 import { allocateSkillPoints } from '../services/skillRecommendations';
 import { recommendFeats } from '../services/featRecommendations';
+import { calculateCombatStats, calculateSpellSlots } from '../services/combatCalculations';
+import { recommendEquipment } from '../services/equipmentRecommendations';
+import { detectActiveFeatChains, analyzeFeatSynergies } from '../services/featChainDetector';
 
 interface CharacterReviewProps {
   onBack: () => void;
@@ -137,6 +142,32 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
     .filter(l => l.featGained)
     .map(l => l.featGained!);
 
+  // Calculate combat stats
+  const combatStats = state.abilityScores && progression.length > 0
+    ? calculateCombatStats(
+        progression,
+        state.abilityScores,
+        state.assumeMagicItems || false,
+        allFeats
+      )
+    : null;
+
+  // Calculate spell slots for casters
+  const spellSlots = state.abilityScores && progression.length > 0
+    ? calculateSpellSlots(progression, state.abilityScores)
+    : [];
+
+  // Get equipment recommendations
+  const recommendedEquipment = recommendEquipment(
+    state.totalLevel,
+    state.focus,
+    state.assumeMagicItems || false
+  );
+
+  // Detect feat chains and synergies
+  const featChainProgress = detectActiveFeatChains(allFeats, state.focus);
+  const featSynergies = analyzeFeatSynergies(allFeats);
+
   // Get ability score increases
   const abilityIncreases = progression
     .filter(l => l.abilityIncrease)
@@ -236,25 +267,202 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
 
         <Divider sx={{ my: 2 }} />
 
-        {finalLevel && (
-          <Grid container spacing={2}>
-            <Grid item xs={6} sm={3}>
-              <Typography variant="subtitle2" color="text.secondary">Base Attack</Typography>
-              <Typography variant="h6">+{finalLevel.baseAttackBonus}</Typography>
+        {combatStats && (
+          <Box sx={{ mb: 2 }}>
+            <Typography variant="h6" color="primary" gutterBottom>
+              Combat Statistics
+            </Typography>
+
+            <Grid container spacing={2} sx={{ mb: 2 }}>
+              <Grid item xs={6} sm={3}>
+                <Paper variant="outlined" sx={{ p: 2, textAlign: 'center', bgcolor: 'error.50' }}>
+                  <Typography variant="subtitle2" color="text.secondary">Hit Points</Typography>
+                  <Typography variant="h4" color="error.main">{combatStats.hp}</Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={6} sm={3}>
+                <Paper variant="outlined" sx={{ p: 2, textAlign: 'center', bgcolor: 'primary.50' }}>
+                  <Typography variant="subtitle2" color="text.secondary">Armor Class</Typography>
+                  <Typography variant="h4" color="primary.main">{combatStats.ac}</Typography>
+                  <Typography variant="caption" color="text.secondary">
+                    Touch {combatStats.touchAC}, FF {combatStats.flatFootedAC}
+                  </Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={6} sm={3}>
+                <Paper variant="outlined" sx={{ p: 2, textAlign: 'center' }}>
+                  <Typography variant="subtitle2" color="text.secondary">Initiative</Typography>
+                  <Typography variant="h4">{combatStats.initiative >= 0 ? '+' : ''}{combatStats.initiative}</Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={6} sm={3}>
+                <Paper variant="outlined" sx={{ p: 2, textAlign: 'center' }}>
+                  <Typography variant="subtitle2" color="text.secondary">BAB</Typography>
+                  <Typography variant="h4">+{combatStats.baseAttackBonus}</Typography>
+                </Paper>
+              </Grid>
             </Grid>
-            <Grid item xs={6} sm={3}>
-              <Typography variant="subtitle2" color="text.secondary">Fort Save</Typography>
-              <Typography variant="h6">+{finalLevel.saves.fortitude}</Typography>
+
+            <Grid container spacing={2} sx={{ mb: 2 }}>
+              <Grid item xs={12} sm={6}>
+                <Paper variant="outlined" sx={{ p: 2 }}>
+                  <Typography variant="subtitle2" color="text.secondary">Melee Attack</Typography>
+                  <Typography variant="h5">{combatStats.meleeAttack}</Typography>
+                  <Typography variant="caption" color="text.secondary">
+                    BAB + STR{allFeats.includes('weapon-focus') ? ' + Weapon Focus' : ''}
+                  </Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <Paper variant="outlined" sx={{ p: 2 }}>
+                  <Typography variant="subtitle2" color="text.secondary">Ranged Attack</Typography>
+                  <Typography variant="h5">{combatStats.rangedAttack}</Typography>
+                  <Typography variant="caption" color="text.secondary">
+                    BAB + DEX{allFeats.includes('weapon-focus') ? ' + Weapon Focus' : ''}
+                  </Typography>
+                </Paper>
+              </Grid>
             </Grid>
-            <Grid item xs={6} sm={3}>
-              <Typography variant="subtitle2" color="text.secondary">Ref Save</Typography>
-              <Typography variant="h6">+{finalLevel.saves.reflex}</Typography>
+
+            <Grid container spacing={2}>
+              <Grid item xs={4}>
+                <Paper variant="outlined" sx={{ p: 2, textAlign: 'center', bgcolor: 'success.50' }}>
+                  <Typography variant="subtitle2" color="text.secondary">Fortitude</Typography>
+                  <Typography variant="h5">+{combatStats.saves.fortitude}</Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={4}>
+                <Paper variant="outlined" sx={{ p: 2, textAlign: 'center', bgcolor: 'warning.50' }}>
+                  <Typography variant="subtitle2" color="text.secondary">Reflex</Typography>
+                  <Typography variant="h5">+{combatStats.saves.reflex}</Typography>
+                </Paper>
+              </Grid>
+              <Grid item xs={4}>
+                <Paper variant="outlined" sx={{ p: 2, textAlign: 'center', bgcolor: 'info.50' }}>
+                  <Typography variant="subtitle2" color="text.secondary">Will</Typography>
+                  <Typography variant="h5">+{combatStats.saves.will}</Typography>
+                </Paper>
+              </Grid>
             </Grid>
-            <Grid item xs={6} sm={3}>
-              <Typography variant="subtitle2" color="text.secondary">Will Save</Typography>
-              <Typography variant="h6">+{finalLevel.saves.will}</Typography>
-            </Grid>
-          </Grid>
+
+            {state.assumeMagicItems && (
+              <Alert severity="info" sx={{ mt: 2 }}>
+                AC includes wealth-appropriate magic armor, shield, natural armor bonus, and ring of protection
+              </Alert>
+            )}
+          </Box>
+        )}
+
+        {spellSlots.length > 0 && (
+          <>
+            <Divider sx={{ my: 2 }} />
+            <Box sx={{ mb: 2 }}>
+              <Typography variant="h6" color="primary" gutterBottom>
+                Spells Per Day
+              </Typography>
+              {spellSlots.map((caster) => (
+                <Paper key={caster.casterClass} variant="outlined" sx={{ p: 2, mb: 2 }}>
+                  <Typography variant="subtitle1" gutterBottom>
+                    <strong>{caster.casterClass}</strong> (Caster Level {caster.casterLevel})
+                  </Typography>
+                  <Grid container spacing={1}>
+                    {Object.entries(caster.spellsPerDay)
+                      .sort(([a], [b]) => Number(a) - Number(b))
+                      .map(([level, slots]) => (
+                        <Grid item xs={6} sm={4} md={3} key={level}>
+                          <Paper variant="outlined" sx={{ p: 1, textAlign: 'center', bgcolor: 'secondary.50' }}>
+                            <Typography variant="caption" color="text.secondary">
+                              {level === '0' ? 'Cantrips' : `Level ${level}`}
+                            </Typography>
+                            <Typography variant="h6">
+                              {slots}
+                            </Typography>
+                          </Paper>
+                        </Grid>
+                      ))}
+                  </Grid>
+                  {caster.spellsKnown && (
+                    <Box sx={{ mt: 1 }}>
+                      <Typography variant="caption" color="text.secondary">
+                        Spells Known: {Object.entries(caster.spellsKnown)
+                          .sort(([a], [b]) => Number(a) - Number(b))
+                          .map(([level, known]) => `${level}: ${known}`)
+                          .join(', ')}
+                      </Typography>
+                    </Box>
+                  )}
+                </Paper>
+              ))}
+            </Box>
+          </>
+        )}
+
+        {recommendedEquipment.length > 0 && (
+          <>
+            <Divider sx={{ my: 2 }} />
+            <Box sx={{ mb: 2 }}>
+              <Typography variant="h6" color="primary" gutterBottom>
+                Recommended Equipment
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                Wealth-appropriate magic items for level {state.totalLevel} ({state.focus} focus)
+              </Typography>
+
+              <Accordion defaultExpanded>
+                <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                  <Typography variant="subtitle1">
+                    🎒 Equipment List ({recommendedEquipment.length} items)
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <TableContainer>
+                    <Table size="small">
+                      <TableHead>
+                        <TableRow>
+                          <TableCell><strong>Item</strong></TableCell>
+                          <TableCell><strong>Slot</strong></TableCell>
+                          <TableCell><strong>Bonus</strong></TableCell>
+                          <TableCell align="right"><strong>Cost (gp)</strong></TableCell>
+                          <TableCell><strong>Purpose</strong></TableCell>
+                        </TableRow>
+                      </TableHead>
+                      <TableBody>
+                        {recommendedEquipment.map((item, index) => (
+                          <TableRow key={index}>
+                            <TableCell>
+                              <strong>{item.name}</strong>
+                            </TableCell>
+                            <TableCell>
+                              <Chip
+                                label={item.slot}
+                                size="small"
+                                variant="outlined"
+                                sx={{ fontSize: '0.7rem' }}
+                              />
+                            </TableCell>
+                            <TableCell>{item.bonus}</TableCell>
+                            <TableCell align="right">
+                              {item.cost.toLocaleString()}
+                            </TableCell>
+                            <TableCell>
+                              <Typography variant="caption" color="text.secondary">
+                                {item.reason}
+                              </Typography>
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </TableContainer>
+
+                  <Alert severity="info" sx={{ mt: 2 }}>
+                    <strong>The "Big 6" Priority:</strong> Weapon, Armor, Ability Booster, Cloak of Resistance, Ring of Protection, Amulet of Natural Armor.
+                    These items provide the most essential bonuses for any build.
+                  </Alert>
+                </AccordionDetails>
+              </Accordion>
+            </Box>
+          </>
         )}
 
         <Divider sx={{ my: 2 }} />
@@ -499,6 +707,135 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
             </AccordionDetails>
           </Accordion>
         </Box>
+
+        {(featChainProgress.length > 0 || featSynergies.synergies.length > 0 || featSynergies.recommendations.length > 0) && (
+          <>
+            <Divider sx={{ my: 2 }} />
+            <Box sx={{ mb: 2 }}>
+              <Typography variant="h6" color="primary" gutterBottom>
+                Feat Chain Analysis
+              </Typography>
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                Track your progress through feat chains and discover synergies
+              </Typography>
+
+              {featChainProgress.length > 0 && (
+                <Accordion defaultExpanded>
+                  <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography variant="subtitle1">
+                      🔗 Active Feat Chains ({featChainProgress.length})
+                    </Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    {featChainProgress.map((chain, index) => (
+                      <Paper key={index} variant="outlined" sx={{ p: 2, mb: 2 }}>
+                        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                          <Typography variant="subtitle1">
+                            <strong>{chain.chain.chainName}</strong>
+                          </Typography>
+                          <Chip
+                            label={`${chain.completed}/${chain.total} complete`}
+                            color={chain.percentComplete === 100 ? 'success' : chain.percentComplete > 0 ? 'primary' : 'default'}
+                            size="small"
+                          />
+                        </Box>
+                        <Typography variant="caption" color="text.secondary" sx={{ mb: 1, display: 'block' }}>
+                          {chain.chain.description}
+                        </Typography>
+                        <LinearProgress
+                          variant="determinate"
+                          value={chain.percentComplete}
+                          sx={{ mb: 2, height: 8, borderRadius: 1 }}
+                          color={chain.percentComplete === 100 ? 'success' : 'primary'}
+                        />
+                        <TableContainer>
+                          <Table size="small">
+                            <TableHead>
+                              <TableRow>
+                                <TableCell width="40">Status</TableCell>
+                                <TableCell>Feat</TableCell>
+                                <TableCell>Suggested Level</TableCell>
+                                <TableCell>Purpose</TableCell>
+                              </TableRow>
+                            </TableHead>
+                            <TableBody>
+                              {chain.chain.feats.map((feat, featIndex) => (
+                                <TableRow
+                                  key={featIndex}
+                                  sx={{
+                                    backgroundColor: feat.acquired ? 'success.50' :
+                                                    chain.nextFeat?.featId === feat.featId ? 'warning.50' :
+                                                    'inherit'
+                                  }}
+                                >
+                                  <TableCell>
+                                    {feat.acquired ? (
+                                      <Chip label="✓" color="success" size="small" sx={{ width: 32, height: 24 }} />
+                                    ) : chain.nextFeat?.featId === feat.featId ? (
+                                      <Chip label="→" color="warning" size="small" sx={{ width: 32, height: 24 }} />
+                                    ) : (
+                                      <Chip label="○" variant="outlined" size="small" sx={{ width: 32, height: 24 }} />
+                                    )}
+                                  </TableCell>
+                                  <TableCell>
+                                    <strong>{feat.featName}</strong>
+                                    {chain.nextFeat?.featId === feat.featId && (
+                                      <Chip
+                                        label="Next"
+                                        color="warning"
+                                        size="small"
+                                        sx={{ ml: 1, height: 18, fontSize: '0.65rem' }}
+                                      />
+                                    )}
+                                  </TableCell>
+                                  <TableCell>{feat.level}</TableCell>
+                                  <TableCell>
+                                    <Typography variant="caption" color="text.secondary">
+                                      {feat.reason}
+                                    </Typography>
+                                  </TableCell>
+                                </TableRow>
+                              ))}
+                            </TableBody>
+                          </Table>
+                        </TableContainer>
+                      </Paper>
+                    ))}
+                  </AccordionDetails>
+                </Accordion>
+              )}
+
+              {(featSynergies.synergies.length > 0 || featSynergies.recommendations.length > 0) && (
+                <Box sx={{ mt: 2 }}>
+                  {featSynergies.synergies.length > 0 && (
+                    <Alert severity="success" sx={{ mb: 1 }}>
+                      <Typography variant="subtitle2" gutterBottom>
+                        <strong>✨ Synergies Detected:</strong>
+                      </Typography>
+                      {featSynergies.synergies.map((synergy, index) => (
+                        <Typography key={index} variant="body2">
+                          • {synergy}
+                        </Typography>
+                      ))}
+                    </Alert>
+                  )}
+                  {featSynergies.recommendations.length > 0 && (
+                    <Alert severity="info">
+                      <Typography variant="subtitle2" gutterBottom>
+                        <strong>💡 Chain Recommendations:</strong>
+                      </Typography>
+                      {featSynergies.recommendations.map((rec, index) => (
+                        <Typography key={index} variant="body2">
+                          • {rec}
+                        </Typography>
+                      ))}
+                    </Alert>
+                  )}
+                </Box>
+              )}
+            </Box>
+          </>
+        )}
 
         {abilityIncreases.length > 0 && (
           <>
