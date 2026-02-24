@@ -106,3 +106,113 @@ export function loadCharacterFromFile(): Promise<SavedCharacter> {
     input.click();
   });
 }
+
+// ============================================
+// LocalStorage Functions (Auto-save)
+// ============================================
+
+const STORAGE_KEY = 'dnd-character-builder-autosave';
+const STORAGE_LIST_KEY = 'dnd-character-builder-saved-list';
+
+/**
+ * Save character to localStorage (auto-save)
+ */
+export function saveCharacterToLocalStorage(state: CharacterState, characterName?: string): void {
+  try {
+    const json = exportCharacterToJSON(state, characterName);
+    localStorage.setItem(STORAGE_KEY, json);
+
+    // Also add to saved characters list
+    const list = getSavedCharactersList();
+    const id = `char-${Date.now()}`;
+    const entry = {
+      id,
+      name: characterName || state.concept || 'Unnamed Character',
+      level: state.totalLevel,
+      savedAt: new Date().toISOString(),
+    };
+
+    // Keep only last 5 auto-saves
+    const updated = [entry, ...list].slice(0, 5);
+    localStorage.setItem(STORAGE_LIST_KEY, JSON.stringify(updated));
+  } catch (error) {
+    console.error('Failed to save to localStorage:', error);
+    // localStorage might be full or disabled
+  }
+}
+
+/**
+ * Load character from localStorage (auto-save)
+ */
+export function loadCharacterFromLocalStorage(): SavedCharacter | null {
+  try {
+    const json = localStorage.getItem(STORAGE_KEY);
+    if (!json) return null;
+
+    return importCharacterFromJSON(json);
+  } catch (error) {
+    console.error('Failed to load from localStorage:', error);
+    return null;
+  }
+}
+
+/**
+ * Check if auto-save exists
+ */
+export function hasAutoSave(): boolean {
+  return localStorage.getItem(STORAGE_KEY) !== null;
+}
+
+/**
+ * Clear auto-save
+ */
+export function clearAutoSave(): void {
+  localStorage.removeItem(STORAGE_KEY);
+}
+
+/**
+ * Get list of saved characters
+ */
+export function getSavedCharactersList(): Array<{
+  id: string;
+  name: string;
+  level: number;
+  savedAt: string;
+}> {
+  try {
+    const json = localStorage.getItem(STORAGE_LIST_KEY);
+    return json ? JSON.parse(json) : [];
+  } catch (error) {
+    console.error('Failed to load saved characters list:', error);
+    return [];
+  }
+}
+
+/**
+ * Get localStorage usage info
+ */
+export function getStorageInfo(): {
+  used: number;
+  available: number;
+  percentUsed: number;
+} {
+  try {
+    let total = 0;
+    for (let key in localStorage) {
+      if (localStorage.hasOwnProperty(key)) {
+        total += localStorage[key].length + key.length;
+      }
+    }
+
+    // Most browsers allow ~5-10MB, assume 5MB
+    const available = 5 * 1024 * 1024;
+
+    return {
+      used: total,
+      available,
+      percentUsed: (total / available) * 100,
+    };
+  } catch (error) {
+    return { used: 0, available: 0, percentUsed: 0 };
+  }
+}

@@ -29,7 +29,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import SchoolIcon from '@mui/icons-material/School';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useCharacter } from '../context/CharacterContext';
 import { CharacterState } from '../types/character';
 import { calculateTotalSkillPoints, getAbilityModifier, getSkillPointsPerLevel, getMagicItemIntBonus } from '../services/skillCalculator';
@@ -40,7 +40,13 @@ import { recommendEquipment } from '../services/equipmentRecommendations';
 import { calculateSpellcasting } from '../services/spellcastingCalculator';
 import { generateEquipmentRecommendations } from '../services/equipmentCalculator';
 import { detectActiveFeatChains, analyzeFeatSynergies } from '../services/featChainDetector';
-import { saveCharacterToFile, loadCharacterFromFile } from '../services/characterStorage';
+import {
+  saveCharacterToFile,
+  loadCharacterFromFile,
+  saveCharacterToLocalStorage,
+  loadCharacterFromLocalStorage,
+  hasAutoSave,
+} from '../services/characterStorage';
 import { SpellList } from '../components/SpellList';
 import CharacterComparison from '../components/CharacterComparison';
 import ProgressionTimeline from '../components/ProgressionTimeline';
@@ -56,6 +62,26 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
   const { state, resetCharacter, loadCharacter } = useCharacter();
   const [comparisonCharacter, setComparisonCharacter] = useState<CharacterState | null>(null);
   const [showComparison, setShowComparison] = useState(false);
+
+  // Auto-save to localStorage whenever state changes
+  useEffect(() => {
+    if (state.totalLevel > 0 && state.optimizedProgression.length > 0) {
+      saveCharacterToLocalStorage(state, state.concept);
+    }
+  }, [state]);
+
+  const handleRestoreAutoSave = () => {
+    try {
+      const savedCharacter = loadCharacterFromLocalStorage();
+      if (savedCharacter) {
+        loadCharacter(savedCharacter);
+        alert(`Auto-saved character restored!`);
+      }
+    } catch (error) {
+      console.error('Error restoring auto-save:', error);
+      alert('Failed to restore auto-save');
+    }
+  };
 
   const handleSave = () => {
     try {
@@ -230,9 +256,13 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
       <Typography variant="h5" gutterBottom>
         Character Review
       </Typography>
-      <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
+      <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
         Review your completed character and export when ready.
       </Typography>
+      <Alert severity="info" sx={{ mb: 3 }}>
+        💾 <strong>Auto-save enabled:</strong> Your character is automatically saved to your browser.
+        Use "Download Character" to save a backup file.
+      </Alert>
 
       <Paper elevation={3} sx={{ p: 3, mb: 3, background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white' }}>
         <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
@@ -1313,13 +1343,23 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
           >
             Load Character
           </Button>
+          {hasAutoSave() && (
+            <Button
+              onClick={handleRestoreAutoSave}
+              variant="outlined"
+              color="info"
+              sx={{ fontStyle: 'italic' }}
+            >
+              Restore Auto-save
+            </Button>
+          )}
           <Button
             startIcon={<SaveIcon />}
             onClick={handleSave}
             variant="contained"
             color="success"
           >
-            Save Character
+            Download Character
           </Button>
           <Button
             startIcon={<CompareArrowsIcon />}
