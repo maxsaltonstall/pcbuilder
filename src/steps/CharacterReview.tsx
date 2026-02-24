@@ -37,6 +37,7 @@ import { allocateSkillPoints } from '../services/skillRecommendations';
 import { recommendFeats } from '../services/featRecommendations';
 import { calculateCombatStats, calculateSpellSlots } from '../services/combatCalculations';
 import { recommendEquipment } from '../services/equipmentRecommendations';
+import { calculateSpellcasting } from '../services/spellcastingCalculator';
 import { detectActiveFeatChains, analyzeFeatSynergies } from '../services/featChainDetector';
 import { saveCharacterToFile, loadCharacterFromFile } from '../services/characterStorage';
 import { SpellList } from '../components/SpellList';
@@ -486,6 +487,74 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
                   skillRanks={skillRanks}
                   classSkills={classSkills}
                 />
+              </AccordionDetails>
+            </Accordion>
+          );
+        })()}
+
+        {/* Spells Section */}
+        {(() => {
+          const spellcasting = state.abilityScores && progression.length > 0
+            ? calculateSpellcasting(progression, state.abilityScores)
+            : undefined;
+
+          if (!spellcasting || spellcasting.spellcastingClasses.length === 0) {
+            return null;
+          }
+
+          return (
+            <Accordion defaultExpanded sx={{ mt: 2 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography variant="h6" color="primary">
+                  ✨ Spellcasting ({spellcasting.spellcastingClasses.length} {spellcasting.spellcastingClasses.length === 1 ? 'class' : 'classes'})
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                {spellcasting.spellcastingClasses.map((casterInfo, idx) => (
+                  <Card key={idx} sx={{ mb: 2 }}>
+                    <CardContent>
+                      <Typography variant="h6" gutterBottom sx={{ textTransform: 'capitalize' }}>
+                        {casterInfo.className} (CL {casterInfo.casterLevel})
+                      </Typography>
+
+                      <Box sx={{ mb: 2 }}>
+                        <Typography variant="subtitle2" gutterBottom>
+                          Spells Per Day:
+                        </Typography>
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                          {Object.entries(casterInfo.spellsPerDayByLevel).map(([level, count]) => (
+                            <Chip
+                              key={level}
+                              label={`${level}: ${count === Infinity ? '∞' : count}`}
+                              size="small"
+                              color="primary"
+                              variant="outlined"
+                            />
+                          ))}
+                        </Box>
+                      </Box>
+
+                      {casterInfo.spellsKnownByLevel && (
+                        <Box>
+                          <Typography variant="subtitle2" gutterBottom>
+                            Spells Known:
+                          </Typography>
+                          <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                            {Object.entries(casterInfo.spellsKnownByLevel).map(([level, count]) => (
+                              <Chip
+                                key={level}
+                                label={`${level}: ${count === Infinity ? 'All' : count}`}
+                                size="small"
+                                color="secondary"
+                                variant="outlined"
+                              />
+                            ))}
+                          </Box>
+                        </Box>
+                      )}
+                    </CardContent>
+                  </Card>
+                ))}
               </AccordionDetails>
             </Accordion>
           );
