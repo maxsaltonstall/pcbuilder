@@ -38,6 +38,7 @@ import { recommendFeats } from '../services/featRecommendations';
 import { calculateCombatStats, calculateSpellSlots } from '../services/combatCalculations';
 import { recommendEquipment } from '../services/equipmentRecommendations';
 import { calculateSpellcasting } from '../services/spellcastingCalculator';
+import { generateEquipmentRecommendations } from '../services/equipmentCalculator';
 import { detectActiveFeatChains, analyzeFeatSynergies } from '../services/featChainDetector';
 import { saveCharacterToFile, loadCharacterFromFile } from '../services/characterStorage';
 import { SpellList } from '../components/SpellList';
@@ -555,6 +556,90 @@ function CharacterReview({ onBack }: CharacterReviewProps) {
                     </CardContent>
                   </Card>
                 ))}
+              </AccordionDetails>
+            </Accordion>
+          );
+        })()}
+
+        {/* Equipment Section */}
+        {(() => {
+          if (!state.focus) return null;
+
+          const equipment = generateEquipmentRecommendations(state.totalLevel, state.focus);
+
+          return (
+            <Accordion defaultExpanded sx={{ mt: 2 }}>
+              <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                <Typography variant="h6" color="primary">
+                  💰 Equipment & Wealth ({equipment.totalBudget.toLocaleString()} gp)
+                </Typography>
+              </AccordionSummary>
+              <AccordionDetails>
+                <Grid container spacing={2} sx={{ mb: 2 }}>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Chip
+                      label={`Weapons: ${equipment.allocations.weapons.toLocaleString()} gp`}
+                      color="primary"
+                      sx={{ width: '100%' }}
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Chip
+                      label={`Armor: ${equipment.allocations.armor.toLocaleString()} gp`}
+                      color="primary"
+                      sx={{ width: '100%' }}
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Chip
+                      label={`Ability Items: ${equipment.allocations.abilityItems.toLocaleString()} gp`}
+                      color="secondary"
+                      sx={{ width: '100%' }}
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Chip
+                      label={`Protection: ${equipment.allocations.protectionItems.toLocaleString()} gp`}
+                      color="secondary"
+                      sx={{ width: '100%' }}
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Chip
+                      label={`Utility: ${equipment.allocations.utilityItems.toLocaleString()} gp`}
+                      sx={{ width: '100%' }}
+                    />
+                  </Grid>
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Chip
+                      label={`Consumables: ${equipment.allocations.consumables.toLocaleString()} gp`}
+                      sx={{ width: '100%' }}
+                    />
+                  </Grid>
+                </Grid>
+
+                {equipment.recommendedItems.length > 0 && (
+                  <Box sx={{ mt: 2 }}>
+                    <Typography variant="subtitle2" gutterBottom fontWeight="bold">
+                      Priority Items:
+                    </Typography>
+                    {equipment.recommendedItems.map((item, idx) => (
+                      <Card key={idx} sx={{ mb: 1, bgcolor: 'warning.50' }}>
+                        <CardContent sx={{ py: 1 }}>
+                          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                            <Typography variant="subtitle2" fontWeight="bold">
+                              {item.name}
+                            </Typography>
+                            <Chip label={`${item.cost.toLocaleString()} gp`} size="small" />
+                          </Box>
+                          <Typography variant="caption" color="text.secondary">
+                            {item.description}
+                          </Typography>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </Box>
+                )}
               </AccordionDetails>
             </Accordion>
           );

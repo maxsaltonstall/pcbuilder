@@ -7,6 +7,7 @@ import AbilityScores from '../../steps/AbilityScores';
 import GoalSetting from '../../steps/GoalSetting';
 import OptimizationResults from '../../steps/OptimizationResults';
 import SpellSelection from '../../steps/SpellSelection';
+import EquipmentSelection from '../../steps/EquipmentSelection';
 import CharacterReview from '../../steps/CharacterReview';
 
 const steps = [
@@ -17,6 +18,7 @@ const steps = [
   'Goal Setting',
   'Optimization',
   'Spell Selection',
+  'Equipment & Wealth',
   'Character Review',
 ];
 
@@ -48,6 +50,8 @@ function WizardContainer() {
       case 6:
         return <SpellSelection onNext={handleNext} onBack={handleBack} />;
       case 7:
+        return <EquipmentSelection onNext={handleNext} onBack={handleBack} />;
+      case 8:
         return <CharacterReview onBack={handleBack} />;
       default:
         return null;
